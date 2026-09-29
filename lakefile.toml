@@ -1,0 +1,33 @@
+name = "quantumChannelContinuity"
+version = "0.2.0"
+defaultTargets = ["All"]
+
+[[require]]
+name = "Quantum"
+git = "https://github.com/Hayata-Yamasaki-Group/lean-quantum.git"
+rev = "bf1c4f6aaec84948f1a1c76c0728432813404a0f"
+
+[[lean_lib]]
+name = "ChannelContinuity"
+
+[[lean_lib]]
+name = "QuantumChannelContinuity"
+
+[[require]]
+name = "Comparator"
+git = "https://github.com/leanprover/comparator.git"
+rev = "066c3bc9e966ccad9a633d780ae4de13cd0f27b6"
+
+[[lean_lib]]
+name = "All"
+
+[[lean_lib]]
+name = "ChannelRenyiContinuity"
+
+[[lean_lib]]
+name = "ComparatorChallenges"
+roots = [
+  "ComparatorChallenges.ChannelRenyiContinuity",
+  "ComparatorChallenges.WrongStatement",
+  "ComparatorChallenges.MissingProof",
+]

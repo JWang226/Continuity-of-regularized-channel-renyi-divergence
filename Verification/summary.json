@@ -1,0 +1,60 @@
+{
+  "schema": "public-verification-summary-v1",
+  "kind": "derived public summary of an unchanged historical verification record",
+  "historical_record_created_utc": "2026-09-29T15:58:43.184687+00:00",
+  "historical_certificate_sha256": "82e88be8e0450ced78fe482a9495b97533c2a60a548743ccf300786ef721e5ed",
+  "status": "PASS",
+  "theorems": [
+    "QuantumChannelContinuity.theorem_one",
+    "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+    "QuantumChannelContinuity.blockRelative_tendsto_regularized"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "comparator": {
+    "commit": "066c3bc9e966ccad9a633d780ae4de13cd0f27b6",
+    "exit_status": 0,
+    "accepted": true
+  },
+  "independent_kernel": {
+    "checker": "nanoda_lib",
+    "checker_version": "0.4.19",
+    "checker_commit": "3a2407216ee84a75f9e1aead6803d0578be06ae7",
+    "exit_status": 0,
+    "checked_declarations": 61851,
+    "export_sha256": "57fb97982ebd07c707f47484966d87cbfd1b1a39af19eee3e21d082649f5c5bc",
+    "export_bytes": 495343344,
+    "export_unchanged_during_check": true
+  },
+  "negative_controls": {
+    "negative-statement": {
+      "exit_status": 1,
+      "expected_diagnostic": "Challenge and solution theorem statement do not match",
+      "expected_outcome_observed": true
+    },
+    "negative-axiom": {
+      "exit_status": 1,
+      "expected_diagnostic": "Illegal axiom detected: 'sorryAx'",
+      "expected_outcome_observed": true
+    }
+  },
+  "original_proof_source_unchanged": true,
+  "original_proof_source_files_hashed": 85,
+  "public_byte_identical_lean_source_files": 82,
+  "sandbox": {
+    "mode": "upstream macOS development shim; unsandboxed",
+    "shim_upstream_commit": "fd5d5bcf14177b187f66d4502071268d877887c3",
+    "hardened_linux_guarantee_claimed": false
+  },
+  "trust_scope": [
+    "Comparator matched the recorded target types and their referenced definitions, checked permitted axioms, and replayed solution proof terms in Lean.",
+    "Nanoda independently checked the identical retained solution export with strict axiom settings and all three targets required.",
+    "The reference specification was recorded after proof development and uses reviewed existing definition imports.",
+    "This does not provide adversarial sandbox isolation, a third-party signature, or an independent proof of correspondence to the English manuscript."
+  ],
+  "artifact_delivery": "Complete proof exports and the unchanged historical certificate are release assets, not files in Git.",
+  "summary_policy": "This is a newly generated summary. It omits private machine paths; historical file hashes refer only to unchanged original artifacts."
+}

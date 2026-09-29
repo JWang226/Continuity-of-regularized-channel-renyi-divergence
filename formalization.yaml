@@ -1,0 +1,75 @@
+version: "v0.3"
+
+project:
+  name: "continuity-of-regularized-channel-renyi-divergence"
+  authors: ["Jinzhao Wang"]
+  license: "Apache-2.0"
+
+sources:
+  - title: "Continuity of Regularized Channel Rényi Divergences"
+    authors: ["Jinzhao Wang", "Yuxiang Yang"]
+    id: "docs/source-manuscript.tex"
+    type: "manuscript"
+    notes: >-
+      User-supplied manuscript. SHA-256:
+      76a8d6a961f9e8b70c7ffd0bb40fc351fcb1fa431cdbbbc30e70e25d73725eba.
+      No publication date or external publication identifier is asserted.
+
+status:
+  scope: >-
+    Theorem 1: the two-sided order-one limit of regularized stabilized
+    sandwiched Rényi channel divergence, including infinite divergence;
+    also the two normalized block-limit identities. The later operational
+    corollaries in the manuscript are outside scope.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  notes: >-
+    Counts apply to the completed proof library. Comparator challenge holes
+    and the intentional missing-proof negative control are separate and are
+    not imported by the solution. The final theorem has no quantum divergence,
+    Stinespring/filter, Schatten, or regularization hypotheses.
+  main_results:
+    - name: "Continuity at order one"
+      declaration: "QuantumChannelContinuity.theorem_one"
+      file: "QuantumChannelContinuity/Main.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "ComparatorChallenges/ChannelRenyiContinuity.json"
+    - name: "Rényi regularization as a block limit"
+      declaration: "QuantumChannelContinuity.blockRenyi_tendsto_regularized"
+      file: "QuantumChannelContinuity/RegularizationLimits.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "ComparatorChallenges/ChannelRenyiContinuity.json"
+    - name: "Relative entropy regularization as a block limit"
+      declaration: "QuantumChannelContinuity.blockRelative_tendsto_regularized"
+      file: "QuantumChannelContinuity/RegularizationLimits.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "ComparatorChallenges/ChannelRenyiContinuity.json"
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["GPT-6 Astra (OpenAI)"]
+      framework: "Codex"
+  notes: >-
+    Developed with AI assistance at the author's request. The manuscript
+    separately discloses AI assistance with the mathematical proof and drafting.
+    No unrecorded runtime or cost estimate is asserted.
+
+review:
+  status: "agent-reviewed"
+  notes: >-
+    Lean axiom audit, Comparator statement/definition comparison, fresh Lean
+    kernel replay, independent nanoda replay, and two rejecting negative
+    controls passed for the recorded original source. Historical check used
+    unsandboxed macOS development mode and a reference recorded after proof
+    development. See Verification/README.md for scope and source identity.
+
+acknowledgements: >-
+  Built on Lean, mathlib, and Lean-Quantum. Comparator and nanoda were used for
+  verification. Repository presentation follows openai/ten-proofs. Adapted
+  source attribution and license notices are retained in THIRD_PARTY.md and
+  the relevant files.

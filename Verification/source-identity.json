@@ -1,0 +1,347 @@
+{
+  "schema": "public-source-identity-v1",
+  "kind": "derived source mapping; not a replacement historical certificate",
+  "historical_certificate_sha256": "82e88be8e0450ced78fe482a9495b97533c2a60a548743ccf300786ef721e5ed",
+  "historical_source_inventory_sha256": "f281d42b07d63d4e42fae711b66b06771ba460de52af7e2f1a46145c1f4b1f5e",
+  "historical_source_root": "lean-quantum",
+  "public_source_root": ".",
+  "mapping": "Each listed historical path is preserved at the same relative path in this repository.",
+  "byte_identical_lean_source_files": 82,
+  "files": [
+    {
+      "path": "Audit.lean",
+      "sha256": "a0aaa5ebb81b4b527c836ec55ad4fa29ba5209da275d41bbfc7f18c366397c0a"
+    },
+    {
+      "path": "ChannelContinuity/LeftContinuity.lean",
+      "sha256": "cb18aaf39470f7eb101ba682570751762dfe444fd6e135f27476182e9c0f12b7"
+    },
+    {
+      "path": "ChannelContinuity/Limsup.lean",
+      "sha256": "2613afbd1a9e7546292146d332c396cbd8a86bca4fb3d94d070f305e41855ddf"
+    },
+    {
+      "path": "ChannelContinuity/Main.lean",
+      "sha256": "f3ff885c0eebd82425b134a2bab3675f6fff08c42f24937fe48f0332fd49c67d"
+    },
+    {
+      "path": "ChannelContinuity/OperatorAlgebra.lean",
+      "sha256": "372c1a2a72be694758eecfd237cbd82495289cb6c4ce551cb32fee0e42939fe4"
+    },
+    {
+      "path": "ChannelContinuity/Parameters.lean",
+      "sha256": "4ff443643d4277393b19f4b225bb88c9b231959dfa55eaef9a8c15ab5faa84d5"
+    },
+    {
+      "path": "ChannelContinuity/Testing.lean",
+      "sha256": "625000277ee778f2dcdb46bd40c99c92c53059af3eb17e2592e6a9b1de1404ad"
+    },
+    {
+      "path": "ChannelContinuity/ThreePiece.lean",
+      "sha256": "8bd6dee7e3922a0a61900d6bc15c7e47334da1f866f6380de9d3d2fcc6e4a783"
+    },
+    {
+      "path": "ChannelContinuity/Threshold.lean",
+      "sha256": "2247d37737d84c9f90f88830c348ad6c147ccec3cc8a6e3749d133172aaea520"
+    },
+    {
+      "path": "ChannelContinuity.lean",
+      "sha256": "13caa53f6c9befae905b29d9e35a631f7041fe47c819dd3c4266a1b244c2c40e"
+    },
+    {
+      "path": "QuantumChannelContinuity/ChannelDominationBounds.lean",
+      "sha256": "1562391f69e21485ad3b333ec8012fb886cf9dd7a077234efccde10f9ce90b4b"
+    },
+    {
+      "path": "QuantumChannelContinuity/ChannelProducts.lean",
+      "sha256": "9cb29a0bc08c77991b2f7c4fde32d799370ed874fe452b259fdeb5e0279c3bf4"
+    },
+    {
+      "path": "QuantumChannelContinuity/ChannelTesting.lean",
+      "sha256": "ca66e76f53c1c538fc8c7aee489bc7fb4970439950ce0bb37a22048f714810e6"
+    },
+    {
+      "path": "QuantumChannelContinuity/Channels.lean",
+      "sha256": "485396fcf1c49d137494bb1ff956d0c7908175d345bf4e2f407ed4d8a18498ab"
+    },
+    {
+      "path": "QuantumChannelContinuity/ChoiSupport.lean",
+      "sha256": "b2c79168817c35573b204b522cee4e57975331d9b768ce2c25c3d708d1396482"
+    },
+    {
+      "path": "QuantumChannelContinuity/ComplexTraceHolder.lean",
+      "sha256": "85eee0898ad76e7629ba28346877433c9d175289199deba6436c2692c7990658"
+    },
+    {
+      "path": "QuantumChannelContinuity/ConcreteMain.lean",
+      "sha256": "6ae7118ea708e1eb6ac7ae380f9d76a8d8344903bf880cc71dcad64653815d89"
+    },
+    {
+      "path": "QuantumChannelContinuity/ContinuityAssembly.lean",
+      "sha256": "ea981bd9b3b924f58661d1e662774093ec0cb80cb79188163046ff6f91fef3e4"
+    },
+    {
+      "path": "QuantumChannelContinuity/DilationExistence.lean",
+      "sha256": "7b1c36eae7a852232392225f2bf6f0bcc663670ec7e50fdc9e89f1f136e9c549"
+    },
+    {
+      "path": "QuantumChannelContinuity/DivergenceSchatten.lean",
+      "sha256": "25ec354e297f7c8edb8bce2a807895ccef02e7667e0379c5c51dd161c79dbf78"
+    },
+    {
+      "path": "QuantumChannelContinuity/ExtendedFekete.lean",
+      "sha256": "aa34aa6768988558a0362373df52271ec6a0a9732d82ad99213276cb8ea093dd"
+    },
+    {
+      "path": "QuantumChannelContinuity/Filter.lean",
+      "sha256": "63df681bf0e873911e69ba597d94fdbcbe79baf68185907a5e646396bf9da164"
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterAlignment.lean",
+      "sha256": "8e3e579cc32546cdecf9539b346add8353f5c52a601af9587e99d26e90679b14"
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterHockey.lean",
+      "sha256": "d19f61e0abeba665bc274eeb3610bca3a438f1c27785e46a21090797587723e0"
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterSlack.lean",
+      "sha256": "297ce7bd91c75c9b8856854355b5103128a609c2cf3ea5ace4439624ed018881"
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterTensor.lean",
+      "sha256": "9917baffc8245e9d2fcef8b341b59b38a862e3c5ba7cbc19770e37eabb497045"
+    },
+    {
+      "path": "QuantumChannelContinuity/FiniteInfinite.lean",
+      "sha256": "e94a26505e972e4d85ab5d7026f0a5a517c21d652de719e1cc3b8d1ab563751d"
+    },
+    {
+      "path": "QuantumChannelContinuity/Foundations.lean",
+      "sha256": "821a16e55f4cc2b276bb7396603842f6505aec3492e4fe0a35345916f2dcea35"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsAudit.lean",
+      "sha256": "e6a84f43502766ddbce2836c7dc7b6f49a0d45942d3cef914b574e20774ced41"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsDiagonal.lean",
+      "sha256": "613944982de95add00e02c70665bb2e9a099f339de2ff56b28336f25c0a59180"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsInfiniteLimit.lean",
+      "sha256": "166255a0e238e20ed61a1391f0c4f37568ee82585e3bb5b7c160e1720fbcae86"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsMeasurement.lean",
+      "sha256": "b77cd534219cb427dc5bfb76d0222267dccaaf162624daf133fd41a4f59ea448"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsSingularLimits.lean",
+      "sha256": "6f47e78099e2f9ff04d262ad263c68732965c1a436d9efdf1f2042364c7f527a"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsTesting.lean",
+      "sha256": "c6da368f690d82d30acc22ba469fe9aca2c31b04acd9c67698cfbe68feee5304"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsWeakTesting.lean",
+      "sha256": "7b6b57802e4b651fb89be810a1bbd7a1780a80232869145e447a1080ba7a99ca"
+    },
+    {
+      "path": "QuantumChannelContinuity/HockeyStick.lean",
+      "sha256": "d19a3f61d702e2e57da2891a0fee383864b8c1d91dee0c96be4dd8936195d987"
+    },
+    {
+      "path": "QuantumChannelContinuity/Main.lean",
+      "sha256": "f547a2bc0a84480df37bdc1e4097df7cbc173b44537639f73775e8dc470b716c"
+    },
+    {
+      "path": "QuantumChannelContinuity/Minimax.lean",
+      "sha256": "d8c5dd2ae20fd0956d0292b7b80a2a772316feb34bede35b52ed4acbfb43a727"
+    },
+    {
+      "path": "QuantumChannelContinuity/OrderConvexity.lean",
+      "sha256": "18d89e5dddbbfa394e437662a3da6ec7d870c159ed932c2cafbdf6bc64163346"
+    },
+    {
+      "path": "QuantumChannelContinuity/PowerRegrouping.lean",
+      "sha256": "d538b87a60ac872c0e3bb01839e1ae8bd9f25eaf65229ecce7158c9005cdcfef"
+    },
+    {
+      "path": "QuantumChannelContinuity/QuantumMain.lean",
+      "sha256": "6a548fb33dcb678530cc402cd62aa055b8b686fec1ffebe0d991d50c7489a153"
+    },
+    {
+      "path": "QuantumChannelContinuity/Regularization.lean",
+      "sha256": "54400a6b296139acac28f0a606283490382a1f6a8ade3e02f10522ce72497ab0"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationIdentities.lean",
+      "sha256": "4ba34922dcf808518f42511895251542696694fae59efdf7808839e7ac61024b"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationLimits.lean",
+      "sha256": "7ecdf5aebb5f8b779e6fef9e222dd11b5bcc8c27a78edf8e557775e85a82cd43"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationSup.lean",
+      "sha256": "ef703fdafdb9cfa4a1be1c3c4a7a7cdba0a2bc1c9396c1cf5428d7ea54b499cd"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizedExponential.lean",
+      "sha256": "4c928d08c89cc0b213c598f34eb75ad7e8ce8ce747ed5bac1ecc32911c224367"
+    },
+    {
+      "path": "QuantumChannelContinuity/SDPCone.lean",
+      "sha256": "6b11e346bcd5822f4b65456aa1b221b755ddc8b2d47fc4e0d8d64387a25c5daf"
+    },
+    {
+      "path": "QuantumChannelContinuity/SDPPartialTrace.lean",
+      "sha256": "a5047fe19f199a6c11fe2cbed7b1a3fa7676cc418040795cfedc8cf3f5b075c6"
+    },
+    {
+      "path": "QuantumChannelContinuity/SDPTrace.lean",
+      "sha256": "5fc7b05797b72427db65205af8ca5e4ea5fdc8542bf814403cc2097721af9387"
+    },
+    {
+      "path": "QuantumChannelContinuity/Schatten.lean",
+      "sha256": "19db66c3549ac53e310c85287d130fa3ea1128883b75409185310ebd5da54c0c"
+    },
+    {
+      "path": "QuantumChannelContinuity/SlackAttainment.lean",
+      "sha256": "0f5b590f0caebb9b75dd8c75cb63a397fc35d07fbf39ecce3fb3a27f0d4ddfc1"
+    },
+    {
+      "path": "QuantumChannelContinuity/SlackTester.lean",
+      "sha256": "3dc7bfe17578e7780b1e48b6d3beb7b15876501309f7f84fe5547d4c4e702e50"
+    },
+    {
+      "path": "QuantumChannelContinuity/SlackTraceBound.lean",
+      "sha256": "67104116518b53f11ccbaa94fd3c75e907e0eebaf6319e016dd261d04b6dcb3c"
+    },
+    {
+      "path": "QuantumChannelContinuity/StabilizedSchatten.lean",
+      "sha256": "bc1f1053d3be42de2dc1f187749b863efabec898d61c29bcc99379f3dc114216"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateDominationBounds.lean",
+      "sha256": "6a2bd8bc2be9b19068139d0ff0d9444fb046c96a35ba89e0dded8da854618c0a"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateLimits.lean",
+      "sha256": "4e75f6331307836723b84aa1f964ce611d1573933a62283842edc64196becd52"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrder.lean",
+      "sha256": "3c2fb64b575f697d023a921b128c4963565943a5752a3db3db2a019b08ca7d5b"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderApprox.lean",
+      "sha256": "b09a0d4ba8a5634ab60e4875be0f36cb4e363d74a4e28cf3b2f2634911c75ee6"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderBoundary.lean",
+      "sha256": "ee509681d1ee0039f2a7c3518680a05613adad766b6dd12012e579de40661519"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderBoundaryNorms.lean",
+      "sha256": "144113216c0aa74be8e946bd53c1cace358168ebb446fd6ed48a0bcde718d75a"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderDuality.lean",
+      "sha256": "0505b3af039f02d2359a6d38e1611e845dded913b39513873b2afd72d271cdf6"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderFaithful.lean",
+      "sha256": "80f922c16feae310914a76e9fefeeb68450a03c35f6ece74925a692825b00f8f"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderInterpolation.lean",
+      "sha256": "94d66be3c75328bfe189905cf0e5de0b9a4c939f7ddcb3bc8083e75fbe275eeb"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderInterpolationAudit.lean",
+      "sha256": "3bb1a7821572e24efde7d3bc081791375006543b125b72a7070f65f23808bfec"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderPowers.lean",
+      "sha256": "5c8648dfb42bfd25f6b5bdfacfe552b13282e4bf320d24a7b4ff5a1ecc1ffd50"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderRenyi.lean",
+      "sha256": "e1cc01ce273d0ae91942899d3b0ca31815e01af9a1610c44be16f1f8bbd3a56d"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateSupportLimits.lean",
+      "sha256": "3029979b275cc9c8a3287c6ee7d5778622e0f58ff8e0bcc021e670017b129a6e"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateSupportLimitsAudit.lean",
+      "sha256": "f9708d09940259310f022467656182bbfebe75a620a83072722524d2795d2220"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorChannels.lean",
+      "sha256": "857961636fb547466ce49f98b023460860494a25f69c0f27361c1ae08f3bcb98"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorDilation.lean",
+      "sha256": "10aea861cff620e484586479f1522b98b911863ca4bc867f65439faae09fde62"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorNaturality.lean",
+      "sha256": "7e1d3f10bded99043e7f46aea49dae866a8f3abad3fe82642206c4e0557243d7"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorOrder.lean",
+      "sha256": "b7b61b97bf3c1c1cd989d6e6005369fa55ca8c211e4ed63b6c833ebf35a16de9"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorPowers.lean",
+      "sha256": "c2b57844ebcf64c0d8e25e97d027e8fba4f0b080224de43370a38bf5b37a75fa"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorRegrouping.lean",
+      "sha256": "62125d180de0cdd4dce383e55e68f8e34075385f0dbb35c9fa4d5bae874a2874"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorRelative.lean",
+      "sha256": "49664855167da5cc10c392a1a7cda714fe79fabd1719891d4e945f60b4698c6c"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorStates.lean",
+      "sha256": "3c8d988994bfc4702db40decdfca43315c4b4fb31359dfb025c77f42520860bd"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorWords.lean",
+      "sha256": "6bd1d1a22095a19e48452bcf2b320321bf80c275af6b032825d6b3fadcab8768"
+    },
+    {
+      "path": "QuantumChannelContinuity/ThreePieceExponential.lean",
+      "sha256": "3e1b0908c915c2638a8da26a28d6363a9ff6489d956bff89ae19cace1af0189f"
+    },
+    {
+      "path": "QuantumChannelContinuity/ThreePieceFilter.lean",
+      "sha256": "020f83b9307247997b2b1fd295ae8fbd93ae0f9703298faedd893099d7b1db90"
+    },
+    {
+      "path": "QuantumChannelContinuity/ThreePieceSchatten.lean",
+      "sha256": "3584779e3d227d5d5025a3eeed697d6480f1e0593d1acd8f8ceeab0ae583b806"
+    },
+    {
+      "path": "QuantumChannelContinuity/TracePowerBounds.lean",
+      "sha256": "2f8b55d32459ed7e09e907446f727e848d3c6cae1db7ee3116d7df67b269da00"
+    },
+    {
+      "path": "QuantumChannelContinuity.lean",
+      "sha256": "bd6db7cdf7cbc37f7701f154cf89e7cbabfac7e670854d20db3dfc84f57d043b"
+    }
+  ],
+  "packaging_changes": [
+    "New All.lean and ChannelRenyiContinuity.lean are import-only entry points.",
+    "ComparatorChallenges modules/configs relocate the independently stated reference and rejection controls.",
+    "lakefile.toml and lake-manifest.json include the pinned Comparator tooling for public reproduction.",
+    "Build helpers, metadata, and documentation are adapted for a standalone public repository."
+  ],
+  "not_claimed": "The historical certificate does not hash the newly added public packaging or certify a later rerun."
+}

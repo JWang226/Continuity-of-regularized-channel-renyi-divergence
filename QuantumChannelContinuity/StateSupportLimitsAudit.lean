@@ -1,0 +1,5 @@
+import QuantumChannelContinuity.StateSupportLimits
+#print axioms QuantumChannelContinuity.hasDerivAt_sandwichedQuasi_one_of_support
+#print axioms QuantumChannelContinuity.stateRenyi_tendsto_one_of_support
+#print axioms QuantumChannelContinuity.stateRenyi_tendsto_one
+#print axioms QuantumChannelContinuity.stateRenyi_tendsto_one_left

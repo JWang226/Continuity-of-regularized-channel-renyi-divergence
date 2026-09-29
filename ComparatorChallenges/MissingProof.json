@@ -1,0 +1,13 @@
+{
+  "challenge_module": "ComparatorChallenges.ChannelRenyiContinuity",
+  "solution_module": "ComparatorChallenges.MissingProof",
+  "theorem_names": [
+    "QuantumChannelContinuity.theorem_one"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": false
+}

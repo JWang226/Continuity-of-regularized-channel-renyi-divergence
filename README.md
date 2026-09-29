@@ -1,8 +1,8 @@
 # Continuity of regularized channel Rényi divergence
 
 A Lean formalization of Theorem 1 in **Continuity of Regularized Channel Rényi
-Divergences**, by Jinzhao Wang and Yuxiang Yang. The exact supplied manuscript is
-included as [LaTeX source](docs/source-manuscript.tex).
+Divergences**, by Jinzhao Wang and Yuxiang Yang. Read the paper on
+[arXiv:2609.28635](https://arxiv.org/abs/2609.28635).
 
 For every pair of finite-dimensional quantum channels, the regularized,
 stabilized sandwiched Rényi divergence converges to the regularized channel

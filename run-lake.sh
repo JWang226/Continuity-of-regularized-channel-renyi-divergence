@@ -19,7 +19,7 @@ Lean's lake command was not found. Install elan, then retry:
   ./run-lake.sh --version
 
 If elan is installed in a custom directory, set ELAN_HOME to that directory.
-See README.md, "Build the Lean proof and audit its axioms".
+See README.md, "Build and check".
 EOF
   exit 127
 fi

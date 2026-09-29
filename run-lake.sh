@@ -10,4 +10,17 @@ fi
 if [ "$(uname -s)" = Darwin ] && [ -d /Library/Developer/CommandLineTools ]; then
   export DEVELOPER_DIR=/Library/Developer/CommandLineTools
 fi
+if ! command -v lake >/dev/null 2>&1; then
+  cat >&2 <<'EOF'
+Lean's lake command was not found. Install elan, then retry:
+
+  curl -fsSL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none --no-modify-path
+  export PATH="$HOME/.elan/bin:$PATH"
+  ./run-lake.sh --version
+
+If elan is installed in a custom directory, set ELAN_HOME to that directory.
+See README.md, "Build the Lean proof and audit its axioms".
+EOF
+  exit 127
+fi
 exec lake "$@"

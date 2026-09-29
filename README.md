@@ -39,16 +39,36 @@ use a macOS or Linux terminal and do not require the author's local files.
 
 ### 1. Build the Lean proof and audit its axioms
 
-Install Git, native build tools (Xcode Command Line Tools on macOS, or C/C++
-build tools on Linux), and [elan](https://github.com/leanprover/elan#installation).
-Open a terminal where `lake --version` works, then run:
+Install Git and native build tools (Xcode Command Line Tools on macOS, or C/C++
+build tools on Linux). If Lean is not installed, install
+[elan](https://github.com/leanprover/elan#installation), its toolchain manager:
+
+```sh
+curl -fsSL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none --no-modify-path
+export PATH="$HOME/.elan/bin:$PATH"
+```
+
+This installs the `lake` launcher in `~/.elan/bin` without changing shell
+profiles. The project wrapper finds it there automatically; the `PATH` export
+also makes it available to the certificate bundle's setup scripts in this
+terminal. The exact Lean version is selected by the project's `lean-toolchain`
+file and downloaded on first use. You do not need to choose a default version.
+
+For a new checkout, run:
 
 ```sh
 git clone https://github.com/JWang226/continuity-of-regularized-channel-renyi-divergence.git
 cd continuity-of-regularized-channel-renyi-divergence
+./run-lake.sh --version
 ./run-lake.sh exe cache get
 ./check.sh
 ```
+
+If you already cloned the repository, run these last three commands inside
+your existing checkout after installing elan. If you see `lake: not found`,
+complete the installation above first. For a custom installation, set
+`ELAN_HOME` to the directory containing elan's `bin` and `toolchains` folders.
+The version check should identify Lake built for Lean `4.29.0-rc6`.
 
 `check.sh` builds the proof and separate Comparator challenge modules, then
 audits the transitive axiom dependencies of every project declaration in the

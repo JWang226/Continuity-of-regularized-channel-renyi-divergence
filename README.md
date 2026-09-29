@@ -59,15 +59,17 @@ separate formal reference and replayed the proofs in Lean's kernel. Independent
 nanoda replay accepted **61,851 declarations**; both rejection controls behaved
 as expected.
 
-To reproduce the Comparator checks from this checkout (Python 3.9+ required):
+Reproduce either check from this checkout (Python 3.9+ required):
 
 ```sh
-./check-comparator.sh
+./check-comparator.sh  # Statement comparison, Lean replay, and rejection controls
+./check-nanoda.sh      # Independent Nanoda kernel check of a fresh proof export
 ```
 
-This prepares the pinned tools, checks all three targets, replays the proofs in
-Lean, and runs both rejection controls. It uses unsandboxed development mode
-and saves fresh logs and `result.json` under `.lake/comparator-check/`.
+Both scripts prepare pinned tools and check all three targets. Each saves fresh
+logs and `result.json` under `.lake/comparator-check/` or `.lake/nanoda-check/`.
+Comparator uses unsandboxed development mode. Nanoda builds its checker from
+source and installs Rust locally if Cargo is unavailable.
 
 - [Verification guide](VERIFYING.md): commands, prerequisites, expected outputs,
   checksums, and troubleshooting for reproducing every check.

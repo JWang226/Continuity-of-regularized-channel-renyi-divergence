@@ -37,3 +37,8 @@ uses a proved finite-dimensional Douglas contraction argument instead.
 [`scripts/fake-landrun.sh` in Comparator at `fd5d5bcf14177b187f66d4502071268d877887c3`](https://github.com/leanprover/comparator/blob/fd5d5bcf14177b187f66d4502071268d877887c3/scripts/fake-landrun.sh).
 It is Apache-2.0 licensed, covered by the included `LICENSE`, and deliberately
 provides no sandbox isolation. The reproducer verifies its SHA-256 before use.
+
+The Nanoda reproducer builds
+[`nanoda_lib` at `3a2407216ee84a75f9e1aead6803d0578be06ae7`](https://github.com/ammkrn/nanoda_lib/tree/3a2407216ee84a75f9e1aead6803d0578be06ae7)
+from unmodified upstream source. Nanoda is Apache-2.0 licensed; its source and
+license are retained in the local tool checkout under `.lake/nanoda-tools`.

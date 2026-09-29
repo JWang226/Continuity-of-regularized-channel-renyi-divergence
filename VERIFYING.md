@@ -3,7 +3,7 @@
 [Back to the README](README.md)
 
 There are three useful checks. You can build the Lean source and audit its
-axioms, independently replay the retained proof certificate with nanoda, or
+axioms, independently check proof exports with Nanoda, or
 reproduce the full Comparator check and its rejection tests. The commands below
 use a macOS or Linux terminal and do not require the author's local files.
 
@@ -39,6 +39,37 @@ This reproducer uses the pinned upstream **unsandboxed development launcher**
 on both macOS and Linux. It runs Comparator's Lean kernel replay; the separate
 nanoda replay and historical release-certificate reproduction are described
 below. It does not regenerate or overwrite the released certificate.
+
+## Nanoda reproducer for this checkout
+
+With the same elan, Git, native build tools, and Python 3.9+ prerequisites, run:
+
+```sh
+./check-nanoda.sh
+```
+
+This builds the current Lean proof and pinned exporter, builds Nanoda at
+`3a2407216ee84a75f9e1aead6803d0578be06ae7`, and runs the checker's own tests.
+It exports the three theorem targets and their dependencies, then checks that
+fresh export with Nanoda's independent kernel. All three target names must
+exist, and only `propext`, `Quot.sound`, and `Classical.choice` are permitted.
+Any other axiom is a hard error. The source and export must remain unchanged.
+
+An existing Rust/Cargo installation is reused. If Cargo is unavailable, the
+bootstrap installs Rust 1.98.1 inside `.lake/nanoda-tools`, without changing
+shell profiles. curl is needed for that installation. If an existing compiler
+is too old, select Rust 1.98.1 with rustup before running the script.
+
+Success ends with `NANODA CHECK PASSED`. A fresh directory under
+`.lake/nanoda-check/` retains `Solution.ndjson`, `nanoda.log`, `theorems.txt`,
+source/export hashes, the strict checker configuration, and `result.json`.
+The uncompressed export needs about 500 MB of disk space. Use
+`./check-nanoda.sh --skip-cache` when dependencies are already prepared.
+
+This checks a fresh export from the current checkout. It complements
+Comparator's statement comparison; Nanoda alone checks proof terms and the
+configured axiom restrictions. To replay the exact historical export from the
+released certificate instead, follow step 2 below.
 
 ## 1. Build the Lean proof and audit its axioms
 

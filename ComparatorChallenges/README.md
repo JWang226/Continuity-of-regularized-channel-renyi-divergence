@@ -29,6 +29,7 @@ and requires both controls to fail for the expected reasons. It saves logs and
 a machine-readable result in a fresh `.lake/comparator-check/` directory.
 Success ends with `COMPARATOR CHECK PASSED`. The reproducer uses the upstream
 development launcher without sandbox isolation; nanoda is a separate check.
+Run `./check-nanoda.sh` for that independent check of a fresh proof export.
 See [VERIFYING.md](../VERIFYING.md) for setup and expected outputs.
 
 ## Manual configuration

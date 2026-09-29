@@ -15,6 +15,24 @@ The [wrong-statement](WrongStatement.json) and
 [missing-proof](MissingProof.json) configurations are rejection controls. They
 should fail, respectively, with a statement mismatch and an illegal `sorryAx`.
 
+## One-command reproduction
+
+With elan, Git, native build tools, and Python 3.9+ installed, run from the
+repository root:
+
+```sh
+./check-comparator.sh
+```
+
+This builds the pinned tools, runs the positive check and Lean kernel replay,
+and requires both controls to fail for the expected reasons. It saves logs and
+a machine-readable result in a fresh `.lake/comparator-check/` directory.
+Success ends with `COMPARATOR CHECK PASSED`. The reproducer uses the upstream
+development launcher without sandbox isolation; nanoda is a separate check.
+See [VERIFYING.md](../VERIFYING.md) for setup and expected outputs.
+
+## Manual configuration
+
 The project pins Lean `v4.29.0-rc6`, Lean-Quantum
 `bf1c4f6aaec84948f1a1c76c0728432813404a0f`, mathlib
 `f156f7abd91ac67adb22bf999e5a71ba22e22e41`, and Comparator

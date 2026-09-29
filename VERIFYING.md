@@ -7,6 +7,39 @@ axioms, independently replay the retained proof certificate with nanoda, or
 reproduce the full Comparator check and its rejection tests. The commands below
 use a macOS or Linux terminal and do not require the author's local files.
 
+## Comparator reproducer for this checkout
+
+With elan, Git, native build tools, and Python 3.9+ installed, run from the
+repository root:
+
+```sh
+./check-comparator.sh
+```
+
+The script downloads dependency caches, builds the pinned Comparator and
+exporter, verifies their source revisions, and checks the three theorem targets
+with Lean kernel replay. It then requires the wrong-statement and missing-proof
+controls to fail for their intended reasons. Build failures are not accepted
+as successful rejection tests. Proof sources and configurations must remain
+unchanged during the run.
+
+Success ends with:
+
+```text
+COMPARATOR CHECK PASSED: three theorem targets, Lean kernel replay, and both rejection controls.
+```
+
+Every run gets a new directory under `.lake/comparator-check/`, containing
+`positive.log`, the two rejection logs, source hashes, and `result.json` with
+exit statuses and a final `PASS` or `FAIL`. Use `./check-comparator.sh --skip-cache`
+when dependency caches are already prepared. The script does not install elan;
+follow the setup below if `lake` is missing.
+
+This reproducer uses the pinned upstream **unsandboxed development launcher**
+on both macOS and Linux. It runs Comparator's Lean kernel replay; the separate
+nanoda replay and historical release-certificate reproduction are described
+below. It does not regenerate or overwrite the released certificate.
+
 ## 1. Build the Lean proof and audit its axioms
 
 Install Git and native build tools (Xcode Command Line Tools on macOS, or C/C++

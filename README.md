@@ -59,6 +59,16 @@ separate formal reference and replayed the proofs in Lean's kernel. Independent
 nanoda replay accepted **61,851 declarations**; both rejection controls behaved
 as expected.
 
+To reproduce the Comparator checks from this checkout (Python 3.9+ required):
+
+```sh
+./check-comparator.sh
+```
+
+This prepares the pinned tools, checks all three targets, replays the proofs in
+Lean, and runs both rejection controls. It uses unsandboxed development mode
+and saves fresh logs and `result.json` under `.lake/comparator-check/`.
+
 - [Verification guide](VERIFYING.md): commands, prerequisites, expected outputs,
   checksums, and troubleshooting for reproducing every check.
 - [v1.0.0 release](https://github.com/JWang226/continuity-of-regularized-channel-renyi-divergence/releases/tag/v1.0.0):

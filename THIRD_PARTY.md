@@ -32,3 +32,8 @@ reproduced in `LICENSE-MATHLIB`.
 QICLean was inspected as a possible source of ordered dilation factorization.
 No QICLean source is copied into this project. The implemented factorization
 uses a proved finite-dimensional Douglas contraction argument instead.
+
+`scripts/comparator-development-landrun.sh` is copied unchanged from
+[`scripts/fake-landrun.sh` in Comparator at `fd5d5bcf14177b187f66d4502071268d877887c3`](https://github.com/leanprover/comparator/blob/fd5d5bcf14177b187f66d4502071268d877887c3/scripts/fake-landrun.sh).
+It is Apache-2.0 licensed, covered by the included `LICENSE`, and deliberately
+provides no sandbox isolation. The reproducer verifies its SHA-256 before use.

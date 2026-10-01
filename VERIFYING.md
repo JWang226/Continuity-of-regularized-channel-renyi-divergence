@@ -231,8 +231,10 @@ After `setup-tools.sh`, to run **only Comparator** from the bundle's
 `enable_nanoda: false` in that configuration disables only Comparator's optional
 nanoda integration. **Lean kernel replay still runs**; `run-checks.py` runs
 nanoda separately. The archive's `Challenge` and `Solution` module names differ
-from the repository's entry points, but their original mathematical sources
-are identical, as recorded in [Verification/source-identity.json](Verification/source-identity.json).
+from the repository's entry points. Their original mathematical sources match
+the historical public checkout recorded in [Verification/source-identity.json](Verification/source-identity.json).
+The current checkout adds only copyright/license headers to those proof files,
+as checked by [Verification/current-source-identity.json](Verification/current-source-identity.json).
 
 These bundled scripts reproduce the recorded **unsandboxed development mode**.
 For Linux sandbox isolation, follow the

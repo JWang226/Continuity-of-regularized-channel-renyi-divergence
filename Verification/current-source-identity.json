@@ -1,0 +1,587 @@
+{
+  "schema": "current-source-identity-v1",
+  "baseline_public_commit": "70f9371910f418c02f96f561510daa4260c733ae",
+  "historical_mapping": "Verification/source-identity.json",
+  "historical_certificate_sha256": "82e88be8e0450ced78fe482a9495b97533c2a60a548743ccf300786ef721e5ed",
+  "policy": "Historical certificate, source hashes, and release artifacts remain unchanged. Current proof sources differ only by the exact added copyright/license header recorded below.",
+  "added_header": "/-\nCopyright (c) 2026 Jinzhao Wang. All rights reserved.\nReleased under Apache 2.0 license as described in the file LICENSE.\nAuthors: Jinzhao Wang (AI-assisted formalization)\n-/\n\n",
+  "files": [
+    {
+      "path": "Audit.lean",
+      "sha256": "a9c923ab33361a789d83043807e815b329ef0f713827b1472be146042c2df1d4",
+      "historical_sha256": "a0aaa5ebb81b4b527c836ec55ad4fa29ba5209da275d41bbfc7f18c366397c0a",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "ChannelContinuity/LeftContinuity.lean",
+      "sha256": "5455416ecccc5f5545ce7eaf9abefb31f00b8767c5a0965203ff7d619efcfce9",
+      "historical_sha256": "cb18aaf39470f7eb101ba682570751762dfe444fd6e135f27476182e9c0f12b7",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "ChannelContinuity/Limsup.lean",
+      "sha256": "ddddd0a5409956d0f2894390b261ebffdc2bcc2edb669e043941c07dc139d9aa",
+      "historical_sha256": "2613afbd1a9e7546292146d332c396cbd8a86bca4fb3d94d070f305e41855ddf",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "ChannelContinuity/Main.lean",
+      "sha256": "cc4303631748636b357ac66d4b906c8b3cf7e32edd9c2aade9c8a0f3f48cae38",
+      "historical_sha256": "f3ff885c0eebd82425b134a2bab3675f6fff08c42f24937fe48f0332fd49c67d",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "ChannelContinuity/OperatorAlgebra.lean",
+      "sha256": "6845c2806adffa842a9771ff9fbf129254a26906a8668aa5a9cc7532a36f5fb6",
+      "historical_sha256": "372c1a2a72be694758eecfd237cbd82495289cb6c4ce551cb32fee0e42939fe4",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "ChannelContinuity/Parameters.lean",
+      "sha256": "64c1d699bb306d042b1d639932813aa0ffd41531663cfeb30c9a17da59d0ceca",
+      "historical_sha256": "4ff443643d4277393b19f4b225bb88c9b231959dfa55eaef9a8c15ab5faa84d5",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "ChannelContinuity/Testing.lean",
+      "sha256": "fb6613ba402999802b2f6046648237575cd96f6eb0a9437af48334a2828574f9",
+      "historical_sha256": "625000277ee778f2dcdb46bd40c99c92c53059af3eb17e2592e6a9b1de1404ad",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "ChannelContinuity/ThreePiece.lean",
+      "sha256": "efe31b5a7a48261890f7a12835662d8b508e7216676fa62857795181eaef6680",
+      "historical_sha256": "8bd6dee7e3922a0a61900d6bc15c7e47334da1f866f6380de9d3d2fcc6e4a783",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "ChannelContinuity/Threshold.lean",
+      "sha256": "b931b8ddf3ec65c6c2223beaaf868dd795a43aa156da6ec44c0660a327a60a3c",
+      "historical_sha256": "2247d37737d84c9f90f88830c348ad6c147ccec3cc8a6e3749d133172aaea520",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "ChannelContinuity.lean",
+      "sha256": "eafc4a456db8a52551fd13302bbdb220160b9c78734fdfcc460a9eae34f3ae65",
+      "historical_sha256": "13caa53f6c9befae905b29d9e35a631f7041fe47c819dd3c4266a1b244c2c40e",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ChannelDominationBounds.lean",
+      "sha256": "42931cc42d112cdf7b96521ea69b180f41699b6c604fe31c4ea57bd49eb8838d",
+      "historical_sha256": "1562391f69e21485ad3b333ec8012fb886cf9dd7a077234efccde10f9ce90b4b",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ChannelProducts.lean",
+      "sha256": "803601278f60516e05bd3e347d5e8cb6a6b0c7fe9354c16e55701741d9eafabf",
+      "historical_sha256": "9cb29a0bc08c77991b2f7c4fde32d799370ed874fe452b259fdeb5e0279c3bf4",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ChannelTesting.lean",
+      "sha256": "3a5e37522f29ca35cd3dd0548a28ca3b2bfffd4bee5020181de887bf5bc48373",
+      "historical_sha256": "ca66e76f53c1c538fc8c7aee489bc7fb4970439950ce0bb37a22048f714810e6",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/Channels.lean",
+      "sha256": "8e3d9d32a7f3ee4fa2037e872027b83fc9ec3e38e6c9ea065e1b3019890dc977",
+      "historical_sha256": "485396fcf1c49d137494bb1ff956d0c7908175d345bf4e2f407ed4d8a18498ab",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ChoiSupport.lean",
+      "sha256": "070c3a54ad0a6dedf956cfa7264771bed67568b821a4b198340104569428d46d",
+      "historical_sha256": "b2c79168817c35573b204b522cee4e57975331d9b768ce2c25c3d708d1396482",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ComplexTraceHolder.lean",
+      "sha256": "67a4d411744df9acb50ea6d236e0e4dec62527607ce30da66dfd862e95912421",
+      "historical_sha256": "85eee0898ad76e7629ba28346877433c9d175289199deba6436c2692c7990658",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ConcreteMain.lean",
+      "sha256": "69dd780f4bcf6c516bb15ecc5e0fbdf282bf8932dcbd4a8110c44e63ae8d8802",
+      "historical_sha256": "6ae7118ea708e1eb6ac7ae380f9d76a8d8344903bf880cc71dcad64653815d89",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ContinuityAssembly.lean",
+      "sha256": "1ae01633f5a95d0d01490cb5d35a943bf78ac642e6275a22388448362bfc014a",
+      "historical_sha256": "ea981bd9b3b924f58661d1e662774093ec0cb80cb79188163046ff6f91fef3e4",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/DilationExistence.lean",
+      "sha256": "a75d0dd139ac25642eefbc9c7cbb79d9e7989f716f14cd313bdda94868f489f8",
+      "historical_sha256": "7b1c36eae7a852232392225f2bf6f0bcc663670ec7e50fdc9e89f1f136e9c549",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/DivergenceSchatten.lean",
+      "sha256": "ed347e167359b7fbf48351bbf70f242535e1bab863f3b20d2bc2ebc512f7f5bc",
+      "historical_sha256": "25ec354e297f7c8edb8bce2a807895ccef02e7667e0379c5c51dd161c79dbf78",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ExtendedFekete.lean",
+      "sha256": "34703fbae6e0b1c6df2b6cdad06cd872b42ad340c171d009775544e85260057e",
+      "historical_sha256": "aa34aa6768988558a0362373df52271ec6a0a9732d82ad99213276cb8ea093dd",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/Filter.lean",
+      "sha256": "fb391a13524509379adc5bc8aa80bf846155f2d76cdbaaf028ec6d857f742da2",
+      "historical_sha256": "63df681bf0e873911e69ba597d94fdbcbe79baf68185907a5e646396bf9da164",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterAlignment.lean",
+      "sha256": "eab78d995aec86038f213000a12ebef7bf58effa8a86e757acd27c2a5db787c4",
+      "historical_sha256": "8e3e579cc32546cdecf9539b346add8353f5c52a601af9587e99d26e90679b14",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterHockey.lean",
+      "sha256": "80176ce3cf51f1f60183e63783fdd939a65b7a55500ff2598130d49c71890290",
+      "historical_sha256": "d19f61e0abeba665bc274eeb3610bca3a438f1c27785e46a21090797587723e0",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterSlack.lean",
+      "sha256": "7647607ac03d538c1b8296a7a0a229a456bd7e0939ce68581749ad6fb049d359",
+      "historical_sha256": "297ce7bd91c75c9b8856854355b5103128a609c2cf3ea5ace4439624ed018881",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterTensor.lean",
+      "sha256": "239468c292d765070cdd157c41ef1b291635dab49f061afa7551e75f28729cb3",
+      "historical_sha256": "9917baffc8245e9d2fcef8b341b59b38a862e3c5ba7cbc19770e37eabb497045",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FiniteInfinite.lean",
+      "sha256": "c3d6f7f0964cfaf2f8dd7182bb8fa3764f78a3ff95fea054fb2362aae60f9a2a",
+      "historical_sha256": "e94a26505e972e4d85ab5d7026f0a5a517c21d652de719e1cc3b8d1ab563751d",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/Foundations.lean",
+      "sha256": "ff8fbe22a95734b2bf62e5041b096b5a29f7c118bf2f043c5d23d19a132c151a",
+      "historical_sha256": "821a16e55f4cc2b276bb7396603842f6505aec3492e4fe0a35345916f2dcea35",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsAudit.lean",
+      "sha256": "4ae1af288320fbd89bd8335d3ba83780b6d4eceea8309e31a1eb6c77b5b58a68",
+      "historical_sha256": "e6a84f43502766ddbce2836c7dc7b6f49a0d45942d3cef914b574e20774ced41",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsDiagonal.lean",
+      "sha256": "d9a79bf0c1718e7989703d5550dbd60a32dff350e43f0d1b00d0eb542d3b68b4",
+      "historical_sha256": "613944982de95add00e02c70665bb2e9a099f339de2ff56b28336f25c0a59180",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsInfiniteLimit.lean",
+      "sha256": "167f3707ad86f56b8fdd33ce7361c5074f169c172ed75abe9261085c7052137e",
+      "historical_sha256": "166255a0e238e20ed61a1391f0c4f37568ee82585e3bb5b7c160e1720fbcae86",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsMeasurement.lean",
+      "sha256": "4b34a146357a799db31715ad2c2ce7418a8f15705df2925bbbe8385cbf18a744",
+      "historical_sha256": "b77cd534219cb427dc5bfb76d0222267dccaaf162624daf133fd41a4f59ea448",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsSingularLimits.lean",
+      "sha256": "2a723297b98c57be5c1843889fabbcc704bfefc20f01d7e229d42e52587f8eee",
+      "historical_sha256": "6f47e78099e2f9ff04d262ad263c68732965c1a436d9efdf1f2042364c7f527a",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsTesting.lean",
+      "sha256": "f7698fcca5f34eb08ed001b4f599fafc8307204726b098af1e539f6bd35af0cc",
+      "historical_sha256": "c6da368f690d82d30acc22ba469fe9aca2c31b04acd9c67698cfbe68feee5304",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsWeakTesting.lean",
+      "sha256": "0481b13815052b6478210225c69aca1893e05e0990eb57a82516397e7f68fb04",
+      "historical_sha256": "7b6b57802e4b651fb89be810a1bbd7a1780a80232869145e447a1080ba7a99ca",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/HockeyStick.lean",
+      "sha256": "0c727a6eca851e324dca3886512f2ad35d9c5d1ac6a4315d68beb631114b9903",
+      "historical_sha256": "d19a3f61d702e2e57da2891a0fee383864b8c1d91dee0c96be4dd8936195d987",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/Main.lean",
+      "sha256": "619798f2c81b54544a537ed863977f1ce593e059ac36eeb741699a7f9d2f1fd8",
+      "historical_sha256": "f547a2bc0a84480df37bdc1e4097df7cbc173b44537639f73775e8dc470b716c",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/Minimax.lean",
+      "sha256": "d8c5dd2ae20fd0956d0292b7b80a2a772316feb34bede35b52ed4acbfb43a727",
+      "historical_sha256": "d8c5dd2ae20fd0956d0292b7b80a2a772316feb34bede35b52ed4acbfb43a727",
+      "added_project_header": false,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/OrderConvexity.lean",
+      "sha256": "fb94c303540e604639a0e0ac2c0f3c627c0d1ff072d91567be059828be197afb",
+      "historical_sha256": "18d89e5dddbbfa394e437662a3da6ec7d870c159ed932c2cafbdf6bc64163346",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/PowerRegrouping.lean",
+      "sha256": "85d3f2d0fbd7137a58a5e09a3f3baefcab5b31343c2680ef611fa52a4c54096f",
+      "historical_sha256": "d538b87a60ac872c0e3bb01839e1ae8bd9f25eaf65229ecce7158c9005cdcfef",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/QuantumMain.lean",
+      "sha256": "2ed45d9b9a59f16589e383e00470d09849b9143d64efdba89fa78e5a3f68bc31",
+      "historical_sha256": "6a548fb33dcb678530cc402cd62aa055b8b686fec1ffebe0d991d50c7489a153",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/Regularization.lean",
+      "sha256": "17250832e964b8776cd784946f78ce4537c304514d24026ce39aea6a8800340d",
+      "historical_sha256": "54400a6b296139acac28f0a606283490382a1f6a8ade3e02f10522ce72497ab0",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationIdentities.lean",
+      "sha256": "d5fdc880a1134a211dbdf120ded5a0b022c72765eb4ad831062ea5f5d39b25d3",
+      "historical_sha256": "4ba34922dcf808518f42511895251542696694fae59efdf7808839e7ac61024b",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationLimits.lean",
+      "sha256": "f438e09d0f3dd159520d7a63383e0003ccdb7ea8e2592c20d63b04fd76255802",
+      "historical_sha256": "7ecdf5aebb5f8b779e6fef9e222dd11b5bcc8c27a78edf8e557775e85a82cd43",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationSup.lean",
+      "sha256": "e5bba3db0c8dc9d2923a340f0dd7fce2b5c87c53fc925bfe07eae518f7d7c450",
+      "historical_sha256": "ef703fdafdb9cfa4a1be1c3c4a7a7cdba0a2bc1c9396c1cf5428d7ea54b499cd",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizedExponential.lean",
+      "sha256": "a58832e576909908a137b29c0a6d2b2d3f430f469e924269d7342522685aea45",
+      "historical_sha256": "4c928d08c89cc0b213c598f34eb75ad7e8ce8ce747ed5bac1ecc32911c224367",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/SDPCone.lean",
+      "sha256": "ab2cca84a5d65809d5cffd93eac986dcb3ddab7e357b37295725d22ded440413",
+      "historical_sha256": "6b11e346bcd5822f4b65456aa1b221b755ddc8b2d47fc4e0d8d64387a25c5daf",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/SDPPartialTrace.lean",
+      "sha256": "ef65df7cd374248a73ba7dcd87cb502af7731d9b0979df45bce17a38e04f94cb",
+      "historical_sha256": "a5047fe19f199a6c11fe2cbed7b1a3fa7676cc418040795cfedc8cf3f5b075c6",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/SDPTrace.lean",
+      "sha256": "42376ffe8705eb9591d75e599c87060502b2763c824dcb6c84020346579e48bb",
+      "historical_sha256": "5fc7b05797b72427db65205af8ca5e4ea5fdc8542bf814403cc2097721af9387",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/Schatten.lean",
+      "sha256": "15b6bfdfbfea1da59b25aeb2915780a6955a1907175231ab0611d379cce48675",
+      "historical_sha256": "19db66c3549ac53e310c85287d130fa3ea1128883b75409185310ebd5da54c0c",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/SlackAttainment.lean",
+      "sha256": "5e1c26884c96ad68fd2d4f1a321a37171ebc6ec479512398d1ad9484c0c889ab",
+      "historical_sha256": "0f5b590f0caebb9b75dd8c75cb63a397fc35d07fbf39ecce3fb3a27f0d4ddfc1",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/SlackTester.lean",
+      "sha256": "934fe660c5c10e15227e8591cc4c077d2af9d03d50f78594ac3fe18bfdbbc38f",
+      "historical_sha256": "3dc7bfe17578e7780b1e48b6d3beb7b15876501309f7f84fe5547d4c4e702e50",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/SlackTraceBound.lean",
+      "sha256": "227d7be9cf6f95f347c1aa28aeff1bedcb10b58be285c00edf3def3424c01870",
+      "historical_sha256": "67104116518b53f11ccbaa94fd3c75e907e0eebaf6319e016dd261d04b6dcb3c",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StabilizedSchatten.lean",
+      "sha256": "6b15d380e8d6cc26b64095ffc868828581b38b24a33a9dce3eefdf155ed03419",
+      "historical_sha256": "bc1f1053d3be42de2dc1f187749b863efabec898d61c29bcc99379f3dc114216",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateDominationBounds.lean",
+      "sha256": "4dd603739efddf84072486bf5fb5170d54dc450186017c3e0605b30bf857836b",
+      "historical_sha256": "6a2bd8bc2be9b19068139d0ff0d9444fb046c96a35ba89e0dded8da854618c0a",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateLimits.lean",
+      "sha256": "a7d11ec7ba16477a28f437ea085091c6423fb11d2d2ab95fbea2a3ec1abf21b7",
+      "historical_sha256": "4e75f6331307836723b84aa1f964ce611d1573933a62283842edc64196becd52",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrder.lean",
+      "sha256": "007ea6c06c12731b09c4e49daf7deff3312452c88fb757ba2d10043e8072c3c6",
+      "historical_sha256": "3c2fb64b575f697d023a921b128c4963565943a5752a3db3db2a019b08ca7d5b",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderApprox.lean",
+      "sha256": "b09a0d4ba8a5634ab60e4875be0f36cb4e363d74a4e28cf3b2f2634911c75ee6",
+      "historical_sha256": "b09a0d4ba8a5634ab60e4875be0f36cb4e363d74a4e28cf3b2f2634911c75ee6",
+      "added_project_header": false,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderBoundary.lean",
+      "sha256": "6e2001bfaab08f9fd073008ba9e69f01faa0fa53616c0c5eff49bfe056317127",
+      "historical_sha256": "ee509681d1ee0039f2a7c3518680a05613adad766b6dd12012e579de40661519",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderBoundaryNorms.lean",
+      "sha256": "de12a7565ec52317acd26ae77cc90b430e0098d5e40fdfedbb11b896df8a8158",
+      "historical_sha256": "144113216c0aa74be8e946bd53c1cace358168ebb446fd6ed48a0bcde718d75a",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderDuality.lean",
+      "sha256": "e53ab5b0b14de3bed5b91f4d6a94a74658efaf5ead524dbebf5693ba9b16159b",
+      "historical_sha256": "0505b3af039f02d2359a6d38e1611e845dded913b39513873b2afd72d271cdf6",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderFaithful.lean",
+      "sha256": "73eae42e892a0d79131aa1cf170423fae8eafad8bf18485133beee302fd133b8",
+      "historical_sha256": "80f922c16feae310914a76e9fefeeb68450a03c35f6ece74925a692825b00f8f",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderInterpolation.lean",
+      "sha256": "83f37efce94f2f313c2c2cc9690f542d839f4f6bb1cab4fbde6bfd3abd7cf04a",
+      "historical_sha256": "94d66be3c75328bfe189905cf0e5de0b9a4c939f7ddcb3bc8083e75fbe275eeb",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderInterpolationAudit.lean",
+      "sha256": "7c87ee3b42ff24c95999676e1550e29f270475072257a3415f549948ace744f1",
+      "historical_sha256": "3bb1a7821572e24efde7d3bc081791375006543b125b72a7070f65f23808bfec",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderPowers.lean",
+      "sha256": "263f7e2edf1921105a6f86e673c4d2d9a285da75d326b3526817a9816d78c9ed",
+      "historical_sha256": "5c8648dfb42bfd25f6b5bdfacfe552b13282e4bf320d24a7b4ff5a1ecc1ffd50",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderRenyi.lean",
+      "sha256": "e40047f9d97659f8f8fdc527ca8c7f07cb67000d5ff87996d9325aa41f6339af",
+      "historical_sha256": "e1cc01ce273d0ae91942899d3b0ca31815e01af9a1610c44be16f1f8bbd3a56d",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateSupportLimits.lean",
+      "sha256": "673c72b18b79cbf32ba023f9f34aebd2a185f7ff84ffaa57eb22c027c0532dad",
+      "historical_sha256": "3029979b275cc9c8a3287c6ee7d5778622e0f58ff8e0bcc021e670017b129a6e",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/StateSupportLimitsAudit.lean",
+      "sha256": "c1a50ce493d9b25f1768be4c4470ca17ca1887900b5df5ae6b7377108fd4e652",
+      "historical_sha256": "f9708d09940259310f022467656182bbfebe75a620a83072722524d2795d2220",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorChannels.lean",
+      "sha256": "e561e8318f2f13c9c3a7773c21ed84e5bfda4adc6bed966aacd38903c40edfa6",
+      "historical_sha256": "857961636fb547466ce49f98b023460860494a25f69c0f27361c1ae08f3bcb98",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorDilation.lean",
+      "sha256": "0ffd275813f1ce07cec3aaec1b4f32454d57a20f6b46baef7530b64093c757df",
+      "historical_sha256": "10aea861cff620e484586479f1522b98b911863ca4bc867f65439faae09fde62",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorNaturality.lean",
+      "sha256": "1e83a5fb1583f11906018650b38ee76bb0de539ea002c54c2cab9cd13033284e",
+      "historical_sha256": "7e1d3f10bded99043e7f46aea49dae866a8f3abad3fe82642206c4e0557243d7",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorOrder.lean",
+      "sha256": "418454e459db964d2cdfc2acd0bd2cb5645c179ac3b81dd69fc53327bf8d7a05",
+      "historical_sha256": "b7b61b97bf3c1c1cd989d6e6005369fa55ca8c211e4ed63b6c833ebf35a16de9",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorPowers.lean",
+      "sha256": "326a1d56f988b297d670b8172a37dbc93e0a91e29085f30f5299724254b602ca",
+      "historical_sha256": "c2b57844ebcf64c0d8e25e97d027e8fba4f0b080224de43370a38bf5b37a75fa",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorRegrouping.lean",
+      "sha256": "7cbdac35a825828e4bf953e72935d86e15267a6810412f77d51ce0c9547287e8",
+      "historical_sha256": "62125d180de0cdd4dce383e55e68f8e34075385f0dbb35c9fa4d5bae874a2874",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorRelative.lean",
+      "sha256": "2a0d02a7df0acd8696155a293e6a571ff18a1ba86bc7b53dcbb550dd6acc3685",
+      "historical_sha256": "49664855167da5cc10c392a1a7cda714fe79fabd1719891d4e945f60b4698c6c",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorStates.lean",
+      "sha256": "db2ea01e452b3eaf77305cf6e53e4f183a8a2670b93b87e8697946b268b5e961",
+      "historical_sha256": "3c8d988994bfc4702db40decdfca43315c4b4fb31359dfb025c77f42520860bd",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorWords.lean",
+      "sha256": "cc12e890776b2dd4e1b0e154b10e471e3563e81b6e3bc4927bc8ad64e7f8b78c",
+      "historical_sha256": "6bd1d1a22095a19e48452bcf2b320321bf80c275af6b032825d6b3fadcab8768",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ThreePieceExponential.lean",
+      "sha256": "2b719474a40194efbd5e6e478bafca12ccb1a74e5f3f356dbd06b77c0e19a8e4",
+      "historical_sha256": "3e1b0908c915c2638a8da26a28d6363a9ff6489d956bff89ae19cace1af0189f",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ThreePieceFilter.lean",
+      "sha256": "ccdc7a5621cd52499cd6a1e9f8523c8a73b61a7e61de2ef045168e29d4d46ae9",
+      "historical_sha256": "020f83b9307247997b2b1fd295ae8fbd93ae0f9703298faedd893099d7b1db90",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/ThreePieceSchatten.lean",
+      "sha256": "bb122b074ba95659828a34a54e1d09e1fc4f83e832ff5b15840d92b8442e5530",
+      "historical_sha256": "3584779e3d227d5d5025a3eeed697d6480f1e0593d1acd8f8ceeab0ae583b806",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity/TracePowerBounds.lean",
+      "sha256": "f212130ebdd97ac8f52be7c0a4435fee2a80437a646b8d5fe694d7e3e309cc9b",
+      "historical_sha256": "2f8b55d32459ed7e09e907446f727e848d3c6cae1db7ee3116d7df67b269da00",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    },
+    {
+      "path": "QuantumChannelContinuity.lean",
+      "sha256": "077668924b32a2a3d1035b3d10be28e33699360e0a6dcc81bfcc313739d8896a",
+      "historical_sha256": "bd6db7cdf7cbc37f7701f154cf89e7cbabfac7e670854d20db3dfc84f57d043b",
+      "added_project_header": true,
+      "unchanged_except_added_header": true
+    }
+  ],
+  "source_file_count": 82,
+  "files_with_added_headers": 80,
+  "all_changes_are_headers_only": true
+}

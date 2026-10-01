@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jinzhao Wang. All rights reserved.
+# Released under Apache 2.0 license as described in the file LICENSE.
 version: "v0.3"
 
 project:
@@ -8,12 +10,23 @@ project:
 sources:
   - title: "Continuity of Regularized Channel Rényi Divergences"
     authors: ["Jinzhao Wang", "Yuxiang Yang"]
-    id: "docs/source-manuscript.tex"
-    type: "manuscript"
+    id: "arXiv:2609.28635v1"
+    type: "preprint"
+    url: "https://arxiv.org/abs/2609.28635v1"
+    html: "https://arxiv.org/html/2609.28635v1"
+    submitted: "2026-09-23"
     notes: >-
-      User-supplied manuscript. SHA-256:
-      76a8d6a961f9e8b70c7ffd0bb40fc351fcb1fa431cdbbbc30e70e25d73725eba.
-      No publication date or external publication identifier is asserted.
+      Published paper used for the theorem and equation locators below.
+      The retained development manuscript is recorded separately; it is not
+      asserted to be byte-identical to the arXiv source archive.
+  - title: "Development manuscript snapshot"
+    authors: ["Jinzhao Wang", "Yuxiang Yang"]
+    id: "docs/source-manuscript.tex"
+    type: "manuscript-snapshot"
+    sha256: "76a8d6a961f9e8b70c7ffd0bb40fc351fcb1fa431cdbbbc30e70e25d73725eba"
+    notes: >-
+      User-supplied source used during proof development. Its LaTeX labels
+      provide stable local locators in docs/paper-mapping.json.
 
 status:
   scope: >-
@@ -33,18 +46,30 @@ status:
     - name: "Continuity at order one"
       declaration: "QuantumChannelContinuity.theorem_one"
       file: "QuantumChannelContinuity/Main.lean"
+      source_id: "arXiv:2609.28635v1"
+      source_result: "Theorem 1"
+      source_equations: ["1.1"]
+      manuscript_labels: ["thm:main", "eq:main"]
       sorry_count: 0
       axioms: ["propext", "Classical.choice", "Quot.sound"]
       comparator_config: "ComparatorChallenges/ChannelRenyiContinuity.json"
     - name: "Rényi regularization as a block limit"
       declaration: "QuantumChannelContinuity.blockRenyi_tendsto_regularized"
       file: "QuantumChannelContinuity/RegularizationLimits.lean"
+      source_id: "arXiv:2609.28635v1"
+      source_result: "Rényi instance of the regularization identity"
+      source_equations: ["1.5"]
+      manuscript_labels: ["eq:regularized"]
       sorry_count: 0
       axioms: ["propext", "Classical.choice", "Quot.sound"]
       comparator_config: "ComparatorChallenges/ChannelRenyiContinuity.json"
     - name: "Relative entropy regularization as a block limit"
       declaration: "QuantumChannelContinuity.blockRelative_tendsto_regularized"
       file: "QuantumChannelContinuity/RegularizationLimits.lean"
+      source_id: "arXiv:2609.28635v1"
+      source_result: "Relative-entropy instance of the regularization identity"
+      source_equations: ["1.5"]
+      manuscript_labels: ["eq:regularized"]
       sorry_count: 0
       axioms: ["propext", "Classical.choice", "Quot.sound"]
       comparator_config: "ComparatorChallenges/ChannelRenyiContinuity.json"
@@ -66,7 +91,22 @@ review:
     kernel replay, independent nanoda replay, and two rejecting negative
     controls passed for the recorded original source. Historical check used
     unsandboxed macOS development mode and a reference recorded after proof
-    development. See Verification/README.md for scope and source identity.
+    development. A separate agent read-back from Lean definitions and a
+    subsequent manuscript comparison are recorded in docs/LEAN_READBACK.md
+    and docs/PAPER_COMPARISON.md. They are AI-assisted review, not independent
+    human certification. See Verification/README.md for scope and source identity.
+
+artifacts:
+  paper_mapping: "docs/paper-mapping.json"
+  dependency_index: "docs/proof-index.json"
+  proof_map: "docs/PROOF_MAP.md"
+  lemma_descriptions: "docs/lemma-descriptions.json"
+  statement_readback: "docs/lean-readback.json"
+  statement_comparison: "docs/paper-comparison.json"
+  source_identity: "Verification/current-source-identity.json"
+  metadata_check: "python3 scripts/check-artifacts.py"
+  lemma_search: "./search-lemmas.sh"
+  platform_status: "Local Prove2Me-inspired artifacts; no platform upload"
 
 acknowledgements: >-
   Built on Lean, mathlib, and Lean-Quantum. Comparator and nanoda were used for

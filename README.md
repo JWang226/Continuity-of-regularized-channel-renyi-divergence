@@ -26,6 +26,19 @@ The [block-limit identities](QuantumChannelContinuity/RegularizationLimits.lean)
 connect the formal definitions to the paper's regularization limits.
 The paper's later operational corollaries are outside this formalization's scope.
 
+## Review and reuse
+
+- [Proof map](docs/PROOF_MAP.md): the key lemmas and how the earlier hypotheses are discharged.
+- [Lean read-back](docs/LEAN_READBACK.md) and [paper comparison](docs/PAPER_COMPARISON.md):
+  a separate agent's translation of the formal statements, followed by comparison
+  with the paper. These support human review; they are not human certification.
+- [Paper mappings](docs/paper-mapping.json) and [declaration index](docs/proof-index.json):
+  machine-readable locators and dependencies extracted from Lean.
+
+Search lemma descriptions locally with Python 3.9+: `./search-lemmas.sh "slack attainment"`.
+Check headers, mappings, and artifact hashes with `python3 scripts/check-artifacts.py`.
+The proof map explains regeneration. These tools run locally; no Prove2Me account is needed.
+
 ## Build and check
 
 Requires Git and native build tools (Xcode Command Line Tools on macOS).
@@ -81,6 +94,9 @@ source and installs Rust locally if Cargo is unavailable.
 The certificate is an unsigned local record from an unsandboxed macOS run.
 The reference was written after proof development; correspondence to the paper
 still requires mathematical review.
+
+Copyright headers were added after the release. The [current source record](Verification/current-source-identity.json)
+verifies that the 82 historical proof files differ only by those added comments.
 
 ## Attribution
 

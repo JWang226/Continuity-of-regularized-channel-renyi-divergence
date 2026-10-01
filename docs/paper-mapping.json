@@ -1,0 +1,410 @@
+{
+  "schema": "paper-formalization-mapping-v1",
+  "paper": {
+    "id": "arXiv:2609.28635v1",
+    "url": "https://arxiv.org/abs/2609.28635v1",
+    "html": "https://arxiv.org/html/2609.28635v1",
+    "title": "Continuity of Regularized Channel Rényi Divergences",
+    "authors": [
+      "Jinzhao Wang",
+      "Yuxiang Yang"
+    ],
+    "submitted": "2026-09-23"
+  },
+  "snapshot": {
+    "file": "docs/source-manuscript.tex",
+    "sha256": "76a8d6a961f9e8b70c7ffd0bb40fc351fcb1fa431cdbbbc30e70e25d73725eba",
+    "relation": "Development source snapshot; not asserted byte-identical to published arXiv sources."
+  },
+  "review_status": "agent-reviewed-mapping; human mathematical review remains required",
+  "entries": [
+    {
+      "id": "theorem-1",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Theorem 1: continuity at order one",
+        "equations": [
+          "1.1"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "thm:main",
+          "eq:main"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.theorem_one",
+          "file": "QuantumChannelContinuity/Main.lean"
+        }
+      ],
+      "relation": "corresponding-formal-statement",
+      "conditions": [
+        "Nonzero finite-dimensional complex Hilbert input/output spaces",
+        "Completely positive trace-preserving maps with common input and output"
+      ],
+      "notes": "Punctured two-sided limit in the extended nonnegative reals, including infinity. No support, finiteness, filter, or Schatten premise."
+    },
+    {
+      "id": "renyi-block-limit",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Rényi instance of regularization",
+        "equations": [
+          "1.5"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "eq:regularized"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+          "file": "QuantumChannelContinuity/RegularizationLimits.lean"
+        }
+      ],
+      "relation": "corresponding-formal-statement",
+      "conditions": [
+        "p >= 1/2",
+        "p != 1"
+      ],
+      "notes": "Identifies the positive-block supremum with the limit of normalized block divergences. n=0 is irrelevant to the limit at infinity."
+    },
+    {
+      "id": "relative-block-limit",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Relative-entropy instance of regularization",
+        "equations": [
+          "1.5"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "eq:regularized"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.blockRelative_tendsto_regularized",
+          "file": "QuantumChannelContinuity/RegularizationLimits.lean"
+        }
+      ],
+      "relation": "corresponding-formal-statement",
+      "conditions": [],
+      "notes": "Includes infinite regularized relative entropy."
+    },
+    {
+      "id": "state-divergences",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "State divergence definitions in bits",
+        "equations": [
+          "1.2",
+          "1.3"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "eq:stateD",
+          "eq:stateRenyi"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.stateRelative",
+          "file": "QuantumChannelContinuity/Foundations.lean"
+        },
+        {
+          "declaration": "QuantumChannelContinuity.stateRenyi",
+          "file": "QuantumChannelContinuity/Foundations.lean"
+        }
+      ],
+      "relation": "definition-correspondence",
+      "conditions": [
+        "Normalized positive density operators",
+        "Admissible Renyi orders exclude one"
+      ],
+      "notes": "Underlying EReal definitions retain support-mismatch and zero-overlap infinity conventions."
+    },
+    {
+      "id": "stabilized-divergences",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Stabilized channel divergence",
+        "equations": [
+          "1.4"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "eq:channel"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.channelRelative",
+          "file": "QuantumChannelContinuity/Channels.lean"
+        },
+        {
+          "declaration": "QuantumChannelContinuity.channelRenyi",
+          "file": "QuantumChannelContinuity/Channels.lean"
+        }
+      ],
+      "relation": "definition-correspondence",
+      "conditions": [],
+      "notes": "Supremum over pure entangled inputs with the reference a copy of the input space. EReal.toENNReal truncates negative values; nonnegativity is proved for the orders used."
+    },
+    {
+      "id": "block-suprema",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Positive-block regularization suprema",
+        "equations": [
+          "1.5"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "eq:regularized"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.regularizedRelative",
+          "file": "QuantumChannelContinuity/Regularization.lean"
+        },
+        {
+          "declaration": "QuantumChannelContinuity.regularizedRenyi",
+          "file": "QuantumChannelContinuity/Regularization.lean"
+        }
+      ],
+      "relation": "definition-correspondence",
+      "conditions": [],
+      "notes": "The two separate block-limit theorems establish the limit equality; it is not assumed in these definitions."
+    },
+    {
+      "id": "cp-order",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Completely positive order",
+        "equations": [
+          "1.6"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "eq:choi"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.CPLe",
+          "file": "QuantumChannelContinuity/Filter.lean"
+        }
+      ],
+      "relation": "definition-correspondence",
+      "conditions": [],
+      "notes": "The Choi convention is a supporting representation; CPLe itself is defined by complete positivity of the map difference."
+    },
+    {
+      "id": "dilation-map",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Channel represented by a dilation operator",
+        "equations": [
+          "1.8"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "eq:Phi"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.dilationChannel",
+          "file": "QuantumChannelContinuity/Filter.lean"
+        }
+      ],
+      "relation": "definition-correspondence",
+      "conditions": [],
+      "notes": ""
+    },
+    {
+      "id": "hockey-stick",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Variational state/channel hockey-stick divergences",
+        "equations": [
+          "2.3",
+          "2.4"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "eq:hstate",
+          "eq:hchannel"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.stateHockey",
+          "file": "QuantumChannelContinuity/HockeyStick.lean"
+        },
+        {
+          "declaration": "QuantumChannelContinuity.channelHockey",
+          "file": "QuantumChannelContinuity/HockeyStick.lean"
+        }
+      ],
+      "relation": "variational-definition-correspondence",
+      "conditions": [
+        "Nonnegative threshold"
+      ],
+      "notes": "Formal definitions use the variational expressions; this mapping does not claim a separately named positive-part formula theorem."
+    },
+    {
+      "id": "fixed-dilation-filter",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Lemma 2: Gour filter in a prescribed dilation",
+        "equations": [
+          "2.5"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "lem:filter",
+          "eq:filter"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.fixed_dilation_hockey_filter",
+          "file": "QuantumChannelContinuity/SlackAttainment.lean"
+        }
+      ],
+      "relation": "stronger-threshold-range",
+      "conditions": [
+        "Supplied dilation represents N",
+        "gamma >= 0"
+      ],
+      "notes": "The paper states gamma >= 1. The formal theorem proves the stated operator and CP-order conclusions for every gamma >= 0. Its exact CP-slack attainment premise is proved internally."
+    },
+    {
+      "id": "schatten-decomposition",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Lemma 3: regularized Schatten decomposition bound",
+        "equations": [
+          "2.6"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "lem:decomposition",
+          "eq:decomposition"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.regularizedRenyi_dilation_bound",
+          "file": "QuantumChannelContinuity/TensorWords.lean"
+        },
+        {
+          "declaration": "QuantumChannelContinuity.regularizedRenyi_dilation_exponential_bound",
+          "file": "QuantumChannelContinuity/RegularizedExponential.lean"
+        },
+        {
+          "declaration": "QuantumChannelContinuity.regularizedRenyi_power_scaling",
+          "file": "QuantumChannelContinuity/RegularizationIdentities.lean"
+        }
+      ],
+      "relation": "restricted-supporting-version",
+      "conditions": [
+        "1 < p <= 2",
+        "Finite decomposition in a prescribed dilation",
+        "Nonnegative norm and CP-order bounds"
+      ],
+      "notes": "The paper states the bound for every alpha > 1. These formal operator estimates cover 1 < p <= 2, which suffices near order one; exact block scaling supplies the n-block normalization. This is not a claim that all of Lemma 3 for p > 2 is formalized."
+    },
+    {
+      "id": "relative-testing",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Lemma 4: relative-entropy testing bound",
+        "equations": [
+          "2.11"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "lem:testing",
+          "eq:weak"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.regularized_weak_testing",
+          "file": "QuantumChannelContinuity/Regularization.lean"
+        }
+      ],
+      "relation": "corresponding-formal-statement",
+      "conditions": [
+        "Positive block length",
+        "Positive testing rate",
+        "Finite regularized relative entropy"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "renyi-testing",
+      "natural_language": {
+        "source_id": "arXiv:2609.28635v1",
+        "title": "Lemma 4: Renyi testing bound",
+        "equations": [
+          "2.12"
+        ],
+        "snapshot_file": "docs/source-manuscript.tex",
+        "latex_labels": [
+          "lem:testing",
+          "eq:high"
+        ]
+      },
+      "formal": [
+        {
+          "declaration": "QuantumChannelContinuity.regularized_renyi_testing",
+          "file": "QuantumChannelContinuity/Regularization.lean"
+        }
+      ],
+      "relation": "corresponding-formal-statement",
+      "conditions": [
+        "Positive block length",
+        "alpha > 1",
+        "Finite regularized Renyi divergence"
+      ],
+      "notes": ""
+    }
+  ],
+  "outside_scope": [
+    {
+      "source_id": "arXiv:2609.28635v1",
+      "title": "Strong converse and Stein's lemma for channel discrimination",
+      "snapshot_file": "docs/source-manuscript.tex",
+      "latex_label": "cor:discrimination",
+      "status": "outside-formalization-scope"
+    },
+    {
+      "source_id": "arXiv:2609.28635v1",
+      "title": "Subchannel AEP",
+      "snapshot_file": "docs/source-manuscript.tex",
+      "latex_label": "cor:subchannel-aep",
+      "status": "outside-formalization-scope"
+    },
+    {
+      "source_id": "arXiv:2609.28635v1",
+      "title": "Exponential subchannel approximation",
+      "snapshot_file": "docs/source-manuscript.tex",
+      "latex_label": "cor:subchannel",
+      "status": "outside-formalization-scope"
+    },
+    {
+      "source_id": "arXiv:2609.28635v1",
+      "title": "Sharp parallel testing threshold",
+      "snapshot_file": "docs/source-manuscript.tex",
+      "latex_label": "cor:sharp-testing",
+      "status": "outside-formalization-scope"
+    }
+  ]
+}

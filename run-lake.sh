@@ -1,4 +1,8 @@
 #!/bin/sh
+# Copyright (c) 2026 Jinzhao Wang. All rights reserved.
+# Released under Apache 2.0 license as described in the file LICENSE.
+# Authors: Jinzhao Wang (AI-assisted formalization)
+
 set -eu
 cd "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 if [ -n "${ELAN_HOME:-}" ] && [ -x "$ELAN_HOME/bin/lake" ]; then

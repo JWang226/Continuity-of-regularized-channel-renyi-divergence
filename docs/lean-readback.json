@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "status": "agent-readback-not-human-review",
+  "human_review_completed": false,
+  "manuscript_faithfulness_claimed": false,
+  "manuscript_comparison_performed": false,
+  "created_utc": "2026-10-01T03:43:33.311675+00:00",
+  "agent_task": "blind_readback",
+  "method": {
+    "interpretation_basis": "Lean definitions and proposition statements; implementation comments and docstrings removed for interpretation",
+    "source_restrictions": [
+      "Lean source and dependency source files only, plus lakefile.toml and lean-toolchain",
+      "Do not consult docs/source-manuscript.tex, README, formalization.yaml, paper links, or prior prose audit reports"
+    ],
+    "prohibited_material_consulted": false,
+    "external_sources_used": false,
+    "declaration_discovery": "Repository-local rg searches for declaration and definition names",
+    "hash_scope": "Every file whose definitions or proposition statements were examined, plus the two configuration files; discovery-only name searches are not represented as interpreted inputs",
+    "proof_dependency_audit_performed": false,
+    "compilation_performed": false,
+    "concurrent_changes_observed": "Comment-header additions shifted line numbers during examination. Parent reported all header-only modifications finished before final hashes were computed.",
+    "files_changed_since_intermediate_hash_snapshot": [],
+    "hash_algorithm": "SHA-256 over full raw bytes, including comments",
+    "path_convention": "Repository-relative portable paths; dependency sources reside under .lake/packages"
+  },
+  "configuration": {
+    "lean_toolchain": "leanprover/lean4:v4.29.0-rc6",
+    "quantum_git_revision_from_lakefile": "bf1c4f6aaec84948f1a1c76c0728432813404a0f",
+    "comparator_git_revision_from_lakefile": "066c3bc9e966ccad9a633d780ae4de13cd0f27b6"
+  },
+  "common_hypotheses": {
+    "spaces": "H and K are nonzero finite-dimensional complex inner-product spaces. Qudit supplies the normed additive group, complex inner product, completeness and finite dimensionality; Nontrivial excludes dimension zero.",
+    "channels": "N and M are CPTP maps L(H) -> L(K): complex-linear, positive under every finite matrix amplification, and trace-preserving for every operator. Input and output dimensions need not agree.",
+    "finite_divergence_required": false,
+    "support_inclusion_required": false
+  },
+  "definitions": [
+    {
+      "formal_name": "QuantumChannelContinuity.DensityState",
+      "mathematics": "A positive semidefinite operator rho with Tr(rho)=1; invertibility is not required."
+    },
+    {
+      "formal_name": "SandwichedRenyiRelativeEntropy.suppLE",
+      "mathematics": "ker(sigma) is a subspace of ker(rho); for the positive states at issue this is supp(rho) subset supp(sigma)."
+    },
+    {
+      "formal_name": "SandwichedRenyiRelativeEntropy.sandwichedQuasi",
+      "mathematics": "sandwichedQuasi returns the complex trace Tr[(sigma^((1-alpha)/(2 alpha)) rho sigma^((1-alpha)/(2 alpha)))^alpha]. This report denotes its real part by Q_alpha(rho,sigma). All powers use CFC.rpow."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.toBits",
+      "mathematics": "Multiply an extended-real value by 1/ln(2). All divergence formulas in this report use base-2 logarithms (bits)."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.stateRenyi",
+      "mathematics": "For normalized states and alpha >= 1/2, alpha != 1: +infinity if alpha>1 and supp(rho) is not contained in supp(sigma); +infinity if alpha<1 and Q_alpha=0; otherwise log_2(Q_alpha)/(alpha-1). The actual total definition is toBits(sandwichedRenyiDivNN alpha rho.op sigma.op); the lower-order infinity test also requires rho!=0, automatic for normalized states."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.stateRelative",
+      "mathematics": "If supp(rho) subset supp(sigma), Re Tr[rho (CFC.log rho - CFC.log sigma)]/ln(2); otherwise +infinity. Trace normalization removes the dependency expression division by Re Tr(rho)."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.PureInput",
+      "mathematics": "A unit vector psi in the specified complex Hilbert space; PureInput.density is |psi><psi|."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.amplifiedOutput",
+      "mathematics": "For E:L(H)->L(K), apply E tensor id_H to a state on H tensor H, yielding a state on K tensor H."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.channelRenyi",
+      "mathematics": "Supremum over all unit vectors psi in H tensor H of stateRenyi alpha ((N tensor id_H)(|psi><psi|)) ((M tensor id_H)(|psi><psi|)), after EReal.toENNReal conversion."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.channelRelative",
+      "mathematics": "Same pure-state, same-reference-space supremum as channelRenyi, using stateRelative and then EReal.toENNReal conversion."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.TensorPower",
+      "mathematics": "H_0 is EuclideanSpace C (Fin 1); H_(n+1)=H tensor H_n. Thus H_n is H^tensor n with a terminal one-dimensional tensor factor and specified association."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.channelPower",
+      "mathematics": "N_0 is the identity on the one-dimensional tensor unit and N_(n+1)=N tensor N_n, hence N^tensor n under ordinary tensor-unit identifications."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.blockRenyi",
+      "mathematics": "B_alpha(n)=channelRenyi alpha N_n M_n. Pure inputs are on H_n tensor H_n, reference dimension is (dim H)^n, and output states lie on K_n tensor H_n."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.blockRelative",
+      "mathematics": "B(n)=channelRelative N_n M_n, with the same input, reference and output spaces as blockRenyi."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.regularizedRenyi",
+      "mathematics": "R_alpha = sup over positive natural numbers n of B_alpha(n)/n in [0,+infinity]. It is defined as a supremum, not as a limit."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.regularizedRelative",
+      "mathematics": "R = sup over positive natural numbers n of B(n)/n in [0,+infinity]. It is defined as a supremum, not as a limit."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.BlockInput",
+      "mathematics": "A dependent pair (n,psi) with n a positive natural number and psi a unit vector on H_n tensor H_n."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.inputRenyi",
+      "mathematics": "The stateRenyi divergence of the two n-block amplified outputs at the selected pure input, converted to ENNReal and divided by n."
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.inputRelative",
+      "mathematics": "The stateRelative divergence of the two n-block amplified outputs at the selected pure input, converted to ENNReal and divided by n."
+    }
+  ],
+  "conventions": {
+    "state_value_type": "EReal, the extended reals. The explicit definitions at issue return finite real values or +infinity.",
+    "channel_block_regularized_value_type": "ENNReal (Lean notation ℝ≥0∞), the extended nonnegative reals [0,+infinity], with their usual order topology.",
+    "toENNReal": "Preserves +infinity; a finite real x maps to max(x,0), and -infinity maps to zero. Source nonnegativity propositions show clipping is harmless for alpha>=1/2, alpha!=1 and for stateRelative.",
+    "spectral_powers": "CFC.rpow uses the scalar zero-eigenvalue conventions 0^t=0 for t!=0 and 0^0=1, including negative exponents. Thus inverse powers vanish on the kernel.",
+    "spectral_logarithm": "CFC.log uses Real.log; Real.log(0)=0. Infinity is handled by the explicit support/quasi-entropy tests.",
+    "order_one_totalization": "At alpha=1, both strict-order infinity tests are false and 1/(alpha-1)=0 in Lean real division. Consequently stateRenyi 1 and regularizedRenyi 1 are zero. The limit theorem excludes that assigned value. This is a definition-level observation, not a separately checked Lean theorem in this review.",
+    "zero_block": "Regularized suprema explicitly exclude n=0; the sequence expressions have a totalized n=0 term, immaterial to convergence at natural-number atTop.",
+    "infinite_limit": "A limit equal to +infinity means eventual exceedance of every finite bound."
+  },
+  "declarations": [
+    {
+      "formal_name": "QuantumChannelContinuity.theorem_one",
+      "source_file": "QuantumChannelContinuity/Main.lean",
+      "formal_statement": "Tendsto (fun α => regularizedRenyi α N M) (𝓝[≠] (1 : ℝ)) (𝓝 (regularizedRelative N M))",
+      "mathematical_description": "For every pair of CPTP maps N,M on nonzero finite-dimensional complex input and output Hilbert spaces, lim_(alpha->1, alpha!=1) sup_(n>=1) [channelRenyi alpha N^tensor n M^tensor n]/n = sup_(n>=1) [channelRelative N^tensor n M^tensor n]/n in [0,+infinity].",
+      "source_filter": "Punctured two-sided real neighborhood filter at 1 (𝓝[≠] 1).",
+      "target_filter": "Neighborhood filter of regularizedRelative N M in ENNReal.",
+      "order_hypotheses": [],
+      "order_domain_note": "No explicit restriction on real alpha in the source filter; all alpha sufficiently close to 1 are greater than 1/2.",
+      "allows_infinite_target": true,
+      "extra_channel_support_or_finiteness_hypotheses": []
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+      "source_file": "QuantumChannelContinuity/RegularizationLimits.lean",
+      "formal_statement": "Tendsto (fun n : ℕ => blockRenyi p N M n / (n : ℝ≥0∞)) atTop (𝓝 (regularizedRenyi p N M))",
+      "mathematical_description": "For every such pair N,M and every fixed real p>=1/2, p!=1, lim_(n->infinity) [channelRenyi p N^tensor n M^tensor n]/n = sup_(n>=1) [channelRenyi p N^tensor n M^tensor n]/n in [0,+infinity].",
+      "source_filter": "Natural-number atTop.",
+      "target_filter": "Neighborhood filter of regularizedRenyi p N M in ENNReal.",
+      "order_hypotheses": [
+        "1/2 <= p",
+        "p != 1"
+      ],
+      "endpoint_half_included": true,
+      "allows_infinite_target": true,
+      "extra_channel_support_or_finiteness_hypotheses": []
+    },
+    {
+      "formal_name": "QuantumChannelContinuity.blockRelative_tendsto_regularized",
+      "source_file": "QuantumChannelContinuity/RegularizationLimits.lean",
+      "formal_statement": "Tendsto (fun n : ℕ => blockRelative N M n / (n : ℝ≥0∞)) atTop (𝓝 (regularizedRelative N M))",
+      "mathematical_description": "For every such pair N,M, lim_(n->infinity) [channelRelative N^tensor n M^tensor n]/n = sup_(n>=1) [channelRelative N^tensor n M^tensor n]/n in [0,+infinity].",
+      "source_filter": "Natural-number atTop.",
+      "target_filter": "Neighborhood filter of regularizedRelative N M in ENNReal.",
+      "order_hypotheses": [],
+      "allows_infinite_target": true,
+      "extra_channel_support_or_finiteness_hypotheses": []
+    }
+  ],
+  "subtleties_for_later_human_comparison": [
+    "The stabilized input definition literally quantifies over pure vectors with a reference equal to the input space; an arbitrary-ancilla or mixed-state presentation requires a separate equivalence argument.",
+    "Tensor powers carry an explicit terminal one-dimensional factor; compare with standard tensor powers using the usual unit identifications.",
+    "Regularization is a supremum over positive lengths; block convergence is supplied by the latter two theorem statements.",
+    "Order-one convergence is punctured and two-sided, rather than continuity of the assigned value at alpha=1.",
+    "Support failure above order 1 and zero quasi-entropy below order 1 are distinct infinity conventions.",
+    "No finite-value assumptions exclude +infinity targets.",
+    "No declaration asserts a rate, uniformity in channels/order, or a general interchange of the order and block limits."
+  ],
+  "input_files": [
+    {
+      "path": "QuantumChannelContinuity/Main.lean",
+      "sha256": "619798f2c81b54544a537ed863977f1ce593e059ac36eeb741699a7f9d2f1fd8"
+    },
+    {
+      "path": "QuantumChannelContinuity/Foundations.lean",
+      "sha256": "ff8fbe22a95734b2bf62e5041b096b5a29f7c118bf2f043c5d23d19a132c151a"
+    },
+    {
+      "path": "QuantumChannelContinuity/Channels.lean",
+      "sha256": "8e3d9d32a7f3ee4fa2037e872027b83fc9ec3e38e6c9ea065e1b3019890dc977"
+    },
+    {
+      "path": "QuantumChannelContinuity/Regularization.lean",
+      "sha256": "17250832e964b8776cd784946f78ce4537c304514d24026ce39aea6a8800340d"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationLimits.lean",
+      "sha256": "f438e09d0f3dd159520d7a63383e0003ccdb7ea8e2592c20d63b04fd76255802"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationSup.lean",
+      "sha256": "e5bba3db0c8dc9d2923a340f0dd7fce2b5c87c53fc925bfe07eae518f7d7c450"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorChannels.lean",
+      "sha256": "e561e8318f2f13c9c3a7773c21ed84e5bfda4adc6bed966aacd38903c40edfa6"
+    },
+    {
+      "path": "QuantumChannelContinuity/ConcreteMain.lean",
+      "sha256": "69dd780f4bcf6c516bb15ecc5e0fbdf282bf8932dcbd4a8110c44e63ae8d8802"
+    },
+    {
+      "path": "QuantumChannelContinuity/ContinuityAssembly.lean",
+      "sha256": "1ae01633f5a95d0d01490cb5d35a943bf78ac642e6275a22388448362bfc014a"
+    },
+    {
+      "path": "QuantumChannelContinuity/ExtendedFekete.lean",
+      "sha256": "34703fbae6e0b1c6df2b6cdad06cd872b42ad340c171d009775544e85260057e"
+    },
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumMechanics/QuantumState.lean",
+      "sha256": "416fd0b89a768a88c48d2cc129e9815fb2a44e5be0a4fb79a92535b6ba66da0d"
+    },
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumMechanics/QuantumChannel.lean",
+      "sha256": "805838fc3a5563aa619cdf84f791a5b4327b7ad28234b4ee40b0b0bf1efe4a0c"
+    },
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumEntropy/SandwichedRenyiRelativeEntropy.lean",
+      "sha256": "ec5b2912f38b56e4167c05a52af9dcb81d26ff94fd80f9c78b726c32905903a5"
+    },
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumEntropy/SandwichedRenyiNonNeg.lean",
+      "sha256": "f02824cb10b47ec3f9c65528156d978fe2846a6025a2578d384f65886ff18a65"
+    },
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumEntropy/SandwichedRenyiUmegaki.lean",
+      "sha256": "3446d9d3271a07a9526ab7fbb97b86851582bdae7e1c1311dd44dd49c1bb9d20"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Data/EReal/Basic.lean",
+      "sha256": "5c42e0b2c7d63be3596181453bc2135f4c7def1b3b11a539bc0c0f6592e917eb"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "sha256": "76bea352b0371f0764333b4884a902731a7704fe813f8bb05192ec88ffffc742"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean",
+      "sha256": "4bc70fd7fa295428b59e9d5de98650a98eb4e87f6614d42f5d5d55ccc9d33398"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean",
+      "sha256": "4a4fd81fed4a9bbe09aa4b8669669bd5e1d417ff51dc118c38070a45821c625d"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/ExpLog/Basic.lean",
+      "sha256": "a1d9accce4d6668faa215021483acc2e0c328224bca77b42a4a3e1304316dc16"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/CStarAlgebra/CompletelyPositiveMap.lean",
+      "sha256": "9ef8f29caa4683dc746cba72fd7a8685fde4f518ca6a4ad07e8c907985357f23"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "2fd8cfaeec779c7b02d92717eb7c03e444f0fd91598d53a9f85464788e658a8e"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "dc6d65016fad3123d44bf17b5bf0598286284ab16ba75d5c17eb22ed11f47361"
+    }
+  ]
+}

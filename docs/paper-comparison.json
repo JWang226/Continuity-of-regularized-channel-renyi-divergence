@@ -1,0 +1,221 @@
+{
+  "schema": "paper-readback-comparison-v1",
+  "status": "agent-source-comparison-not-human-review",
+  "created_utc": "2026-10-01T03:50:44.707458+00:00",
+  "human_review_completed": false,
+  "lean_checked_semantic_equivalence_claimed": false,
+  "outcome": "Main theorem statement consistent with the paper under the explicit mathematical identifications recorded here; human mathematical review remains required.",
+  "method": {
+    "comparison_role": "Separate agent compared a blind source-only Lean read-back against the natural-language manuscript and published paper.",
+    "blind_readback_basis": "The producer reports using Lean source and dependency source statements and definitions only, without manuscript, README, metadata or paper links.",
+    "comparison_inputs": "Retained manuscript snapshot, blind read-back, paper-to-formal mapping, arXiv v1 abstract and HTML, and selected supporting declaration signatures.",
+    "supporting_signature_review_only": true,
+    "proof_dependency_audit_performed": false,
+    "compilation_performed": false,
+    "new_proof_verification_claimed": false,
+    "hash_algorithm": "SHA-256 over full raw bytes",
+    "path_convention": "Repository-relative portable paths"
+  },
+  "input_sha256": {
+    "docs/LEAN_READBACK.md": "6e77b698d3e0f8460fba17cc1b3a1660ab9b5059aca4317fdc8e475d32c02514",
+    "docs/lean-readback.json": "1c625ec5f2d5590cd4a540781d5effcdd849c78a2e29244a926213335704b56c",
+    "docs/source-manuscript.tex": "76a8d6a961f9e8b70c7ffd0bb40fc351fcb1fa431cdbbbc30e70e25d73725eba",
+    "docs/paper-mapping.json": "5fb8f09be034b4c9569f96b3f7f167dc71155e44d3b6859e183d63230e13496d"
+  },
+  "supporting_signature_source_sha256": {
+    "QuantumChannelContinuity/SlackAttainment.lean": "5e1c26884c96ad68fd2d4f1a321a37171ebc6ec479512398d1ad9484c0c889ab",
+    "QuantumChannelContinuity/TensorWords.lean": "cc12e890776b2dd4e1b0e154b10e471e3563e81b6e3bc4927bc8ad64e7f8b78c",
+    "QuantumChannelContinuity/RegularizedExponential.lean": "a58832e576909908a137b29c0a6d2b2d3f430f469e924269d7342522685aea45",
+    "QuantumChannelContinuity/RegularizationIdentities.lean": "d5fdc880a1134a211dbdf120ded5a0b022c72765eb4ad831062ea5f5d39b25d3",
+    "QuantumChannelContinuity/Regularization.lean": "17250832e964b8776cd784946f78ce4537c304514d24026ce39aea6a8800340d",
+    "QuantumChannelContinuity/Filter.lean": "fb391a13524509379adc5bc8aa80bf846155f2d76cdbaaf028ec6d857f742da2",
+    "QuantumChannelContinuity/HockeyStick.lean": "0c727a6eca851e324dca3886512f2ad35d9c5d1ac6a4315d68beb631114b9903"
+  },
+  "external_sources": [
+    {
+      "url": "https://arxiv.org/abs/2609.28635v1",
+      "purpose": "Versioned bibliographic identity, authors, submission date and main result."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.28635v1",
+      "purpose": "Published theorem, definitions, equation numbers and supporting scope."
+    }
+  ],
+  "paper": {
+    "id": "arXiv:2609.28635v1",
+    "title": "Continuity of Regularized Channel Rényi Divergences",
+    "submitted": "2026-09-23",
+    "authors": [
+      "Jinzhao Wang",
+      "Yuxiang Yang"
+    ],
+    "snapshot_relation": "Retained development source snapshot; not asserted byte-identical to published arXiv source."
+  },
+  "comparisons": [
+    {
+      "id": "main-theorem",
+      "paper_locators": [
+        "Theorem 1",
+        "(1.1)",
+        "thm:main",
+        "eq:main"
+      ],
+      "formal_declarations": [
+        "QuantumChannelContinuity.theorem_one"
+      ],
+      "assessment": "matching-statement-with-explicit-conventions",
+      "details": "For all pairs of CPTP channels on common nonzero finite-dimensional complex input and output spaces, the punctured two-sided order-one limit of regularized sandwiched Renyi divergence equals regularized relative entropy. Input and output dimensions may differ. No support or finiteness premise; infinite target included."
+    },
+    {
+      "id": "state-divergences",
+      "paper_locators": [
+        "(1.2)",
+        "(1.3)",
+        "eq:stateD",
+        "eq:stateRenyi"
+      ],
+      "formal_declarations": [
+        "QuantumChannelContinuity.stateRelative",
+        "QuantumChannelContinuity.stateRenyi"
+      ],
+      "assessment": "matching-formulas-and-infinity-conventions",
+      "details": "Normalized positive density operators, base-two logarithms, inverse powers acting on support, explicit support-mismatch infinity above one and for relative entropy, and zero-quasi-entropy infinity below one."
+    },
+    {
+      "id": "stabilization",
+      "paper_locators": [
+        "(1.4)",
+        "eq:channel"
+      ],
+      "formal_declarations": [
+        "QuantumChannelContinuity.channelRelative",
+        "QuantumChannelContinuity.channelRenyi"
+      ],
+      "assessment": "matching-pure-equal-reference-dimension-scope",
+      "details": "Both explicitly optimize over pure unit-vector inputs with a reference isomorphic to the input space. Lean uses N tensor id; the paper uses id tensor N. Canonical input/output unitary swaps and simultaneous unitary invariance of both state divergences explain the difference. No new Lean equivalence theorem is supplied here."
+    },
+    {
+      "id": "nonnegative-values",
+      "paper_locators": [
+        "(1.2)",
+        "(1.3)",
+        "(1.4)"
+      ],
+      "formal_declarations": [
+        "QuantumChannelContinuity.channelRelative",
+        "QuantumChannelContinuity.channelRenyi"
+      ],
+      "assessment": "harmless-representation-difference-in-admissible-range",
+      "details": "EReal.toENNReal preserves infinity and clips negative values, but source nonnegativity propositions for relative entropy and p>=1/2, p!=1 show clipping changes no relevant state divergence."
+    },
+    {
+      "id": "order-one-domain",
+      "paper_locators": [
+        "(1.1)",
+        "(1.3)"
+      ],
+      "formal_declarations": [
+        "QuantumChannelContinuity.theorem_one"
+      ],
+      "assessment": "harmless-totalization-outside-limit-domain",
+      "details": "Paper excludes p=1. Lean totalizes stateRenyi and regularizedRenyi at p=1 to zero; the punctured limit excludes this value. All orders sufficiently close to one are above one half. This totalization observation was obtained by definition interpretation, not a separately checked Lean theorem."
+    },
+    {
+      "id": "tensor-powers",
+      "paper_locators": [
+        "(1.5)",
+        "eq:regularized"
+      ],
+      "formal_declarations": [
+        "QuantumChannelContinuity.TensorPower",
+        "QuantumChannelContinuity.channelPower"
+      ],
+      "assessment": "matching-under-canonical-unit-and-associativity-identifications",
+      "details": "Lean recursive powers include a terminal one-dimensional factor and a specified association. Each block uses a reference of dimension (dim input)^n; entanglement across all uses is allowed."
+    },
+    {
+      "id": "renyi-block-limit",
+      "paper_locators": [
+        "(1.5)",
+        "eq:regularized"
+      ],
+      "formal_declarations": [
+        "QuantumChannelContinuity.regularizedRenyi",
+        "QuantumChannelContinuity.blockRenyi_tendsto_regularized"
+      ],
+      "assessment": "supremum-and-limit-correspondence-explicit",
+      "details": "Supremum over positive block lengths is the formal definition; the separate block-limit theorem identifies it with the normalized sequence limit for fixed p>=1/2 and p!=1, including p=1/2 and infinity. The zero-block value is immaterial at natural-number atTop."
+    },
+    {
+      "id": "relative-block-limit",
+      "paper_locators": [
+        "(1.5)",
+        "eq:regularized"
+      ],
+      "formal_declarations": [
+        "QuantumChannelContinuity.regularizedRelative",
+        "QuantumChannelContinuity.blockRelative_tendsto_regularized"
+      ],
+      "assessment": "supremum-and-limit-correspondence-explicit",
+      "details": "Separate theorem identifies the positive-block supremum with the normalized relative-entropy block limit, including infinity. No finiteness or support assumption is added."
+    },
+    {
+      "id": "schatten-support",
+      "paper_locators": [
+        "Lemma 3",
+        "(2.6)",
+        "lem:decomposition",
+        "eq:decomposition"
+      ],
+      "formal_declarations": [
+        "QuantumChannelContinuity.regularizedRenyi_dilation_bound",
+        "QuantumChannelContinuity.regularizedRenyi_dilation_exponential_bound",
+        "QuantumChannelContinuity.regularizedRenyi_power_scaling"
+      ],
+      "assessment": "restricted-supporting-version-sufficient-near-one",
+      "paper_order_range": "p>1",
+      "formal_estimate_order_range": "1<p<=2",
+      "details": "The restriction suffices for the order-one theorem but does not formalize all of the paper lemma at p>2. Exact block scaling supplies n-block normalization. Mapping accurately records this restriction."
+    }
+  ],
+  "mapping_review": {
+    "every_mapped_declaration_and_file_locator_found": true,
+    "checked_equation_locators": "Compared with published arXiv v1 and retained TeX labels.",
+    "corrections_required": [],
+    "interpretation_notes": [
+      "Factor-order and canonical tensor identifications are explained in this companion comparison.",
+      "Supporting Schatten correspondence is intentionally restricted; no full p>2 lemma coverage asserted."
+    ]
+  },
+  "outside_scope": [
+    {
+      "latex_label": "cor:discrimination",
+      "title": "Strong converse and Stein's lemma for channel discrimination"
+    },
+    {
+      "latex_label": "cor:subchannel-aep",
+      "title": "Subchannel AEP"
+    },
+    {
+      "latex_label": "cor:subchannel",
+      "title": "Exponential subchannel approximation"
+    },
+    {
+      "latex_label": "cor:sharp-testing",
+      "title": "Sharp parallel testing threshold"
+    }
+  ],
+  "remaining_human_review": [
+    "Confirm the mathematical identifications of tensor factor order and unit/associativity conventions.",
+    "Confirm normalized state formulas, support and zero-overlap conventions, and the harmlessness of ENNReal clipping in the relevant order range.",
+    "Assess the sufficiency of the restricted Schatten estimate for the main theorem, without extending scope to the full all-orders supporting lemma.",
+    "Assess correspondence of the manuscript proof to the formal proof and separately review later application corollaries.",
+    "If an arbitrary-ancilla or mixed-state interpretation is desired, review the paper's purification-and-compression equivalence separately."
+  ],
+  "limitations": [
+    "This is an agent source comparison, not human certification or Lean-checked semantic equivalence.",
+    "No proof dependency audit, compilation, or independent kernel replay was performed by this comparison.",
+    "Existing Comparator and Nanoda records check formal statements/proof terms within their recorded scope and do not by themselves establish correspondence to natural-language mathematics.",
+    "The two fixed-order block-limit statements do not assert a general interchange of order and block limits."
+  ]
+}

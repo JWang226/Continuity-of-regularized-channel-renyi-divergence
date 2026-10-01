@@ -1,0 +1,471 @@
+{
+  "schemaVersion": 1,
+  "license": "Apache-2.0",
+  "copyright": "Copyright (c) 2026 Jinzhao Wang",
+  "provenance": "Curated by AI-assisted inspection of the elaborated statements and source proofs. These descriptions and tags aid search; the exact statements/dependencies are separately extracted from Lean in proof-index.json. No Prove2Me/Formalpedia upload or external human review is asserted.",
+  "declarations": {
+    "QuantumChannelContinuity.theorem_one": {
+      "description": "Theorem 1: for arbitrary CPTP channels between nonzero finite-dimensional complex Hilbert spaces, regularized stabilized sandwiched Rényi channel divergence tends to regularized relative entropy as the order approaches one from either side. Values are in bits and may be infinite. No quantum bridge hypotheses remain.",
+      "tags": [
+        "continuity",
+        "order one",
+        "main theorem",
+        "unconditional",
+        "infinity"
+      ]
+    },
+    "QuantumChannelContinuity.blockRenyi_tendsto_regularized": {
+      "description": "For each fixed admissible Rényi order p≥1/2 with p≠1, the normalized block channel divergences converge to the supremum definition of regularized divergence, including infinite values.",
+      "tags": [
+        "regularization",
+        "block limit",
+        "Fekete",
+        "paper correspondence"
+      ]
+    },
+    "QuantumChannelContinuity.blockRelative_tendsto_regularized": {
+      "description": "The normalized relative-entropy block divergences converge to the supremum definition of regularized relative entropy, including infinite values.",
+      "tags": [
+        "regularization",
+        "block limit",
+        "Fekete",
+        "paper correspondence"
+      ]
+    },
+    "QuantumChannelContinuity.stateRenyi": {
+      "description": "Support-aware sandwiched Rényi divergence of density states, converted from natural logarithms to bits; singular operators and infinity are handled by the underlying concrete definition.",
+      "tags": [
+        "definition",
+        "state divergence",
+        "singular states",
+        "units bits"
+      ]
+    },
+    "QuantumChannelContinuity.stateRelative": {
+      "description": "Support-aware Umegaki relative entropy of density states in bits, allowing an infinite value when support inclusion fails.",
+      "tags": [
+        "definition",
+        "relative entropy",
+        "support",
+        "units bits"
+      ]
+    },
+    "QuantumChannelContinuity.channelRenyi": {
+      "description": "Stabilized sandwiched Rényi channel divergence: supremum over actual pure inputs on the input space together with an equally sized reference.",
+      "tags": [
+        "definition",
+        "channel divergence",
+        "stabilization",
+        "entanglement"
+      ]
+    },
+    "QuantumChannelContinuity.regularizedRenyi": {
+      "description": "Supremum over positive block lengths of stabilized sandwiched Rényi channel divergence per channel use. The separate block-limit theorem identifies this supremum with the paper's limit.",
+      "tags": [
+        "definition",
+        "regularization",
+        "supremum",
+        "channel divergence"
+      ]
+    },
+    "QuantumChannelContinuity.regularizedRelative": {
+      "description": "Supremum over positive block lengths of stabilized relative-entropy channel divergence per channel use. The separate block-limit theorem identifies this supremum with the paper's limit.",
+      "tags": [
+        "definition",
+        "regularization",
+        "supremum",
+        "relative entropy"
+      ]
+    },
+    "QuantumChannelContinuity.stateRenyi_tendsto_one": {
+      "description": "Two-sided order-one limit of the actual state sandwiched Rényi divergence equals state relative entropy for arbitrary density states, including singular states and support-mismatch infinity.",
+      "tags": [
+        "foundations",
+        "state limit",
+        "singular states",
+        "support",
+        "infinity"
+      ]
+    },
+    "QuantumChannelContinuity.stateRenyi_tendsto_one_of_support": {
+      "description": "The two-sided order-one state limit when the first state's support is contained in the second state's support; singular density operators are allowed.",
+      "tags": [
+        "foundations",
+        "state limit",
+        "support inclusion",
+        "singular states"
+      ]
+    },
+    "QuantumChannelContinuity.stateRenyi_tendsto_top_left_of_not_support": {
+      "description": "Below-one state Rényi divergence tends to infinity at order one when support inclusion fails.",
+      "tags": [
+        "foundations",
+        "support mismatch",
+        "infinite case",
+        "left limit"
+      ]
+    },
+    "QuantumChannelContinuity.stateRenyi_le_of_order": {
+      "description": "Order monotonicity of sandwiched Rényi divergence for arbitrary density states: 1/2<α≤β and α,β≠1 imply Dα≤Dβ, including comparisons across one.",
+      "tags": [
+        "foundations",
+        "order monotonicity",
+        "singular states",
+        "interpolation"
+      ]
+    },
+    "QuantumChannelContinuity.stateRenyi_monotoneOn_left": {
+      "description": "State sandwiched Rényi divergence is monotone in its order on the open interval (1/2,1), with singular states allowed.",
+      "tags": [
+        "foundations",
+        "order monotonicity",
+        "left limit"
+      ]
+    },
+    "QuantumChannelContinuity.stateRenyi_monotoneOn_right": {
+      "description": "State sandwiched Rényi divergence is monotone in its order on (1,∞), with singular states allowed.",
+      "tags": [
+        "foundations",
+        "order monotonicity",
+        "right limit"
+      ]
+    },
+    "QuantumChannelContinuity.stateRenyi_dataProcessing": {
+      "description": "Data processing for the concrete support-aware state Rényi divergence at orders α≥1/2 other than one, under a CPTP map.",
+      "tags": [
+        "foundations",
+        "data processing",
+        "CPTP",
+        "singular states"
+      ]
+    },
+    "QuantumChannelContinuity.stateRelative_dataProcessing": {
+      "description": "Data processing for concrete Umegaki relative entropy under a CPTP map, allowing singular states.",
+      "tags": [
+        "foundations",
+        "data processing",
+        "relative entropy"
+      ]
+    },
+    "QuantumChannelContinuity.HockeySlackAttainment": {
+      "description": "Intermediate proposition specifying a completely positive upper slack for N−γM whose trace effect is bounded by the stabilized hockey-stick testing optimum. It is proved for nonnegative γ by hockeySlackAttainment_of_nonneg.",
+      "tags": [
+        "interface",
+        "slack attainment",
+        "SDP",
+        "hockey stick"
+      ]
+    },
+    "QuantumChannelContinuity.hockeySlackAttainment_of_nonneg": {
+      "description": "For every channel pair and γ≥0, construct the exact completely positive slack bounded by the stabilized hockey-stick optimum, using Choi operators and closed-cone separation. Discharges the earlier slack-attainment hypothesis.",
+      "tags": [
+        "slack attainment",
+        "semidefinite programming",
+        "Choi",
+        "closed cone",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.hockeySlackAttainment_of_one_le": {
+      "description": "Specialize exact completely positive slack attainment to γ≥1, the range needed by the threshold argument.",
+      "tags": [
+        "slack attainment",
+        "threshold",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.sdpSlackCone_isClosed": {
+      "description": "The finite-dimensional positive semidefinite slack cone is closed for a positive trace-preserving real linear map on Hermitian operators.",
+      "tags": [
+        "SDP",
+        "closed cone",
+        "separation",
+        "slack attainment"
+      ]
+    },
+    "QuantumChannelContinuity.sdpSlack_separation": {
+      "description": "Closed-cone separation supplies a dual witness when the semidefinite slack feasibility assertion fails; used to prove exact slack attainment.",
+      "tags": [
+        "SDP",
+        "dual witness",
+        "separation",
+        "slack attainment"
+      ]
+    },
+    "QuantumChannelContinuity.fixed_dilation_hockey_filter": {
+      "description": "Given a dilation of N and γ≥0, construct a filter in that same environment whose channel is CP-dominated by γM and whose operator-norm error is at most the square root of the stabilized hockey-stick divergence. Slack attainment is proved internally.",
+      "tags": [
+        "Stinespring",
+        "filter",
+        "hockey stick",
+        "slack attainment",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.fixed_dilation_hockey_filter_of_slack_attainment": {
+      "description": "Intermediate filter construction taking exact CP-slack attainment as a premise; the completed wrapper fixed_dilation_hockey_filter supplies that premise.",
+      "tags": [
+        "interface",
+        "Stinespring",
+        "filter",
+        "slack attainment"
+      ]
+    },
+    "QuantumChannelContinuity.fixed_dilation_filter_of_cp_slack": {
+      "description": "Construct a prescribed-environment filter from a completely positive upper slack and its trace bound, with an operator-norm error controlled by the square root of that bound.",
+      "tags": [
+        "Stinespring",
+        "filter",
+        "CP slack",
+        "environment alignment"
+      ]
+    },
+    "QuantumChannelContinuity.cptp_has_nontrivial_dilation": {
+      "description": "Every CPTP channel with nonzero input space has an actual Stinespring dilation in a finite nonzero environment.",
+      "tags": [
+        "Stinespring",
+        "dilation existence",
+        "finite dimensions"
+      ]
+    },
+    "QuantumChannelContinuity.stabilized_channel_dilation_schatten_bound": {
+      "description": "Lift the supplied dilation-decomposition Schatten bound to arbitrary reference spaces and actual entangled inputs, for 1<p≤2. This is the one-shot stabilized estimate used near order one.",
+      "tags": [
+        "Schatten",
+        "stabilization",
+        "entangled inputs",
+        "near-one restriction"
+      ]
+    },
+    "QuantumChannelContinuity.channelRenyi_dilation_bound": {
+      "description": "For 1<p≤2, bound stabilized channel Rényi divergence using a supplied finite dilation decomposition, component operator norms, and CP domination weights.",
+      "tags": [
+        "Schatten",
+        "dilation decomposition",
+        "channel divergence",
+        "near-one restriction"
+      ]
+    },
+    "QuantumChannelContinuity.regularizedRenyi_dilation_bound": {
+      "description": "For 1<p≤2, extend the dilation-decomposition Rényi bound to regularized channel divergence through actual tensor words and block-supremum regularization. This is a restricted version sufficient for Theorem 1, not a formalization of the paper's full α>1 decomposition lemma.",
+      "tags": [
+        "Schatten",
+        "regularization",
+        "dilation decomposition",
+        "tensor words",
+        "near-one restriction"
+      ]
+    },
+    "QuantumChannelContinuity.regularizedRenyi_dilation_exponential_bound": {
+      "description": "For 1<p≤2, the supplied dilation decomposition yields finiteness and the exponential regularized Schatten estimate with sum of norm/domination weights.",
+      "tags": [
+        "Schatten",
+        "exponential estimate",
+        "regularization",
+        "near-one restriction"
+      ]
+    },
+    "QuantumChannelContinuity.hockey_three_piece_regularized_exponential": {
+      "description": "For 1<p≤2, combine low and high hockey-stick filters into the concrete three-piece exponential bound on regularized Rényi divergence. This intermediate theorem takes a CP cap and two slack-attainment premises, all supplied in the final finite-case assembly.",
+      "tags": [
+        "three-piece",
+        "Schatten",
+        "filter",
+        "interface",
+        "near-one restriction"
+      ]
+    },
+    "QuantumChannelContinuity.wordDilation_sum": {
+      "description": "Summing all finite tensor-word dilations reconstructs the tensor power of the supplied sum dilation, using the canonical concrete tensor-power spaces.",
+      "tags": [
+        "tensor words",
+        "dilation decomposition",
+        "tensor powers"
+      ]
+    },
+    "QuantumChannelContinuity.wordDilation_norm_le": {
+      "description": "The operator norm of a tensor-word dilation is bounded by the product of its component norm bounds, including the empty word.",
+      "tags": [
+        "tensor words",
+        "operator norm",
+        "tensor powers"
+      ]
+    },
+    "QuantumChannelContinuity.wordDilation_cp_le": {
+      "description": "Tensor-word dilation channels inherit product CP-domination weights against the actual channel tensor power.",
+      "tags": [
+        "tensor words",
+        "CP domination",
+        "tensor powers"
+      ]
+    },
+    "QuantumChannelContinuity.regularizedRelative_ne_top_iff_cp_domination": {
+      "description": "Regularized relative entropy is finite exactly when N is completely positively dominated by a finite nonnegative multiple of M. Provides the finite-case CP cap without an extra channel hypothesis.",
+      "tags": [
+        "finite case",
+        "CP domination",
+        "support",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.finite_cap_of_cp_domination": {
+      "description": "From a finite CP-domination constant, construct the cap and uniform block domination needed by the threshold proof.",
+      "tags": [
+        "finite case",
+        "CP cap",
+        "tensor powers",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.regularizedRenyi_power_scaling": {
+      "description": "At orders p>1, applying regularization to the n-fold tensor-power channels multiplies the original regularized Rényi divergence by n, for n>0.",
+      "tags": [
+        "regularization",
+        "power scaling",
+        "tensor powers"
+      ]
+    },
+    "QuantumChannelContinuity.regularizedRenyi_power_scaling_admissible": {
+      "description": "For every p≥1/2 other than one, regularized divergence of n-fold channel powers equals n times the original regularized divergence, for n>0.",
+      "tags": [
+        "regularization",
+        "power scaling",
+        "tensor powers",
+        "admissible orders"
+      ]
+    },
+    "QuantumChannelContinuity.ennreal_superadditive_tendsto_iSup_div": {
+      "description": "Extended Fekete theorem: a superadditive nonnegative extended-real sequence divided by block length converges to the supremum of its positive-length ratios, including infinity.",
+      "tags": [
+        "regularization",
+        "Fekete",
+        "block limit",
+        "infinity"
+      ]
+    },
+    "QuantumChannelContinuity.RemainingFiniteInputs": {
+      "description": "Historical finite-case interface whose fields include a raw three-piece Schatten estimate. The completed path constructs this record through QuantumThresholdInputs.toRemaining; it is not an assumption of theorem_one.",
+      "tags": [
+        "interface",
+        "historical conditional",
+        "raw Schatten",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.QuantumThresholdInputs": {
+      "description": "Intermediate record of finite relative entropy, order monotonicity, CP caps, block slack attainment, and power scaling. The completed assembly constructs these fields from proved ingredients in the finite branch.",
+      "tags": [
+        "interface",
+        "finite case",
+        "threshold",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.quantumThresholdInputs_of_mono": {
+      "description": "Construct every QuantumThresholdInputs field from finite regularized relative entropy and actual right-order monotonicity: CP caps, finiteness, slack attainment, and power scaling are supplied by concrete proved lemmas.",
+      "tags": [
+        "finite case",
+        "hypothesis discharge",
+        "CP cap",
+        "slack attainment",
+        "power scaling"
+      ]
+    },
+    "QuantumChannelContinuity.QuantumThresholdInputs.raw_schatten": {
+      "description": "Derive the precise raw estimate used in the scalar threshold argument from actual block channels, constructed Stinespring dilations, the regularized three-piece bound at 1<p≤2, and proved power scaling.",
+      "tags": [
+        "Schatten",
+        "three-piece",
+        "threshold",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.QuantumThresholdInputs.toRemaining": {
+      "description": "Construct the earlier RemainingFiniteInputs record, supplying its raw Schatten field from the proved three-piece estimate.",
+      "tags": [
+        "interface",
+        "hypothesis discharge",
+        "raw Schatten"
+      ]
+    },
+    "QuantumChannelContinuity.RemainingFiniteInputs.analytic": {
+      "description": "Construct the scalar analytical threshold record from concrete channel quantities, supplying the weak and Rényi testing bounds via proved quantum measurement bounds.",
+      "tags": [
+        "interface",
+        "hypothesis discharge",
+        "testing",
+        "scalar analysis"
+      ]
+    },
+    "ChannelContinuity.FiniteAnalyticInputs.threshold_eq": {
+      "description": "The scalar three-piece amplification and weak-testing argument identifies the right-order infimum threshold with relative entropy, under the explicitly listed analytical record.",
+      "tags": [
+        "scalar analysis",
+        "threshold",
+        "weak testing",
+        "interface"
+      ]
+    },
+    "ChannelContinuity.FiniteAnalyticInputs.right_continuity": {
+      "description": "Conclude right continuity of the scalar Rényi-rate function from the analytical threshold input record. Concrete quantum code constructs that record.",
+      "tags": [
+        "scalar analysis",
+        "right continuity",
+        "interface"
+      ]
+    },
+    "QuantumChannelContinuity.regularized_right_continuity_from_quantum_inputs": {
+      "description": "Conclude finite-case right continuity for actual regularized channel divergences from the constructed threshold record; no filter or Schatten estimate is separately assumed here.",
+      "tags": [
+        "finite case",
+        "right continuity",
+        "interface"
+      ]
+    },
+    "QuantumChannelContinuity.regularizedRenyi_tendsto_one_left_of_mono": {
+      "description": "Left continuity of the block-input supremum follows from actual state limits and pointwise left-order monotonicity, without finite divergence being required.",
+      "tags": [
+        "left continuity",
+        "supremum",
+        "state limit",
+        "infinity"
+      ]
+    },
+    "QuantumChannelContinuity.theorem_one_of_regularizedRelative_top": {
+      "description": "Prove both sides of Theorem 1 in the infinite-relative-entropy branch using an actual support-mismatch witness; no extra state/filter assumptions are needed.",
+      "tags": [
+        "infinite case",
+        "support witness",
+        "continuity"
+      ]
+    },
+    "QuantumChannelContinuity.theorem_one_of_input_order": {
+      "description": "Assemble finite and infinite branches of channel continuity, with only pointwise state-order monotonicity left as input. theorem_one supplies both monotonicity proofs.",
+      "tags": [
+        "assembly",
+        "interface",
+        "finite case",
+        "infinite case",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.inputRenyi_monotoneOn_left": {
+      "description": "Actual normalized block-output Rényi divergence is monotone on (1/2,1), inherited from the proved arbitrary-state order monotonicity.",
+      "tags": [
+        "order monotonicity",
+        "left limit",
+        "block input",
+        "hypothesis discharge"
+      ]
+    },
+    "QuantumChannelContinuity.inputRenyi_monotoneOn_right": {
+      "description": "Actual normalized block-output Rényi divergence is monotone on (1,∞), inherited from the proved arbitrary-state order monotonicity.",
+      "tags": [
+        "order monotonicity",
+        "right limit",
+        "block input",
+        "hypothesis discharge"
+      ]
+    }
+  }
+}

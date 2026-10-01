@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Jinzhao Wang. All rights reserved.
+# Released under Apache 2.0 license as described in the file LICENSE.
+# Authors: Jinzhao Wang (AI-assisted formalization)
+
 """Build, export, and independently check the current proof with pinned Nanoda."""
 import argparse
 from datetime import datetime, timezone

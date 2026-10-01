@@ -14,9 +14,23 @@ statement and an unproved statement using `sorryAx`.
 independent checker's rendering of the three target statements and admitted
 axioms. The [recorded checker output](historical-nanoda-output.txt) reports
 successful replay. [source-identity.json](source-identity.json) maps 82 mathematical
-Lean source files to their unchanged historical SHA-256 hashes. The original
+Lean source files to their unchanged historical SHA-256 hashes at public commit
+`70f9371910f418c02f96f561510daa4260c733ae`. The original
 audit checked 1,327 project declarations, including 1,101 theorems. The proof
 uses only `propext`, `Classical.choice`, and `Quot.sound`.
+
+The current checkout adds copyright/license comment headers to 80 of those 82
+files; the two existing upstream notices are preserved. The
+[current source identity](current-source-identity.json) records both hashes and
+verifies that removing only the exact added header recovers each historical file.
+The historical certificate, hashes, and release assets have not been rewritten.
+Run `python3 scripts/check-artifacts.py` from the repository root to check this
+relationship and the new review/navigation metadata.
+
+[Lean read-back](../docs/LEAN_READBACK.md) was produced by a separate agent that
+did not consult the manuscript. A [subsequent paper comparison](../docs/PAPER_COMPARISON.md)
+records its correspondence and scope. Both are AI-assisted review artifacts;
+independent human mathematical review remains outstanding.
 
 The full replayable record is distributed as a
 [GitHub release asset](https://github.com/JWang226/continuity-of-regularized-channel-renyi-divergence/releases/tag/v1.0.0),

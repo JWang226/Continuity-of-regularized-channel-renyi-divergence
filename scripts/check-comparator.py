@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Jinzhao Wang. All rights reserved.
+# Released under Apache 2.0 license as described in the file LICENSE.
+# Authors: Jinzhao Wang (AI-assisted formalization)
+
 """Reproduce Comparator statement, axiom, and Lean kernel checks locally.
 
 Uses the pinned upstream development launcher, which provides no sandbox.

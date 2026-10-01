@@ -26,3 +26,5 @@ jobs:
           use-mathlib-cache: "true"
       - name: Audit all proof axioms
         run: lake env lean Audit.lean
+      - name: Check publication and review artifacts
+        run: python3 scripts/check-artifacts.py

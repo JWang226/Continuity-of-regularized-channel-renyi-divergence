@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# Copyright (c) 2026 Jinzhao Wang. All rights reserved.
+# Released under Apache 2.0 license as described in the file LICENSE.
+# Authors: Jinzhao Wang (AI-assisted formalization)
+
 # Rebuild the independent checker from its exact, unmodified upstream revision.
 # Uses existing Cargo, or installs Rust 1.98.1 only inside this directory.
 set -euo pipefail

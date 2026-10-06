@@ -139,16 +139,5 @@ theorem regularized_right_continuity_from_quantum_inputs {N M : CPTP H K}
       (𝓝 (regularizedRelative N M)) :=
   regularized_right_continuity_of_remaining h.toRemaining
 
-/-- Concrete finite-case Theorem 1 from the remaining explicitly named
-quantum foundations; the three-piece raw estimate is proved within the chain. -/
-theorem theorem_one_from_quantum_inputs {N M : CPTP H K}
-    (h : QuantumThresholdInputs N M)
-    (hmono : ∀ i : BlockInput H,
-      MonotoneOn (fun α => inputRenyi N M α i) ChannelContinuity.LeftOrders)
-    (hstate : ∀ i : BlockInput H,
-      Tendsto (fun α => inputRenyi N M α i) (𝓝[<] (1 : ℝ)) (𝓝 (inputRelative N M i))) :
-    Tendsto (fun α => regularizedRenyi α N M) (𝓝[≠] (1 : ℝ))
-      (𝓝 (regularizedRelative N M)) :=
-  theorem_one_concrete_finite_conditional h.toRemaining hmono hstate
 
 end QuantumChannelContinuity

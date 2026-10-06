@@ -131,41 +131,6 @@ theorem FiniteAnalyticInputs.right_continuity (h : FiniteAnalyticInputs) :
     Tendsto h.renyi (𝓝[>] (1 : ℝ)) (𝓝 h.d) :=
   tendsto_right_of_threshold_eq h.order_mono h.relative_le_renyi h.threshold_eq
 
-/-- The finite case of Theorem 1 as a two-sided extended-real limit.
 
-`right_identification` and `relative_identification` must be proved from the
-actual stabilized/regularized divergence definitions in a complete quantum
-formalization. The index `ι` packages every block length and pure input.
--/
-theorem theorem_one_finite {ι : Type*}
-    (h : FiniteAnalyticInputs) (f : ℝ → ι → ℝ≥0∞) (D : ι → ℝ≥0∞)
-    (hmono : ∀ i, MonotoneOn (fun a => f a i) LeftOrders)
-    (hstate : ∀ i, Tendsto (fun a => f a i) (𝓝[<] (1 : ℝ)) (𝓝 (D i)))
-    (right_identification : ∀ a, 1 < a → (⨆ i, f a i) = ENNReal.ofReal (h.renyi a))
-    (relative_identification : (⨆ i, D i) = ENNReal.ofReal h.d) :
-    Tendsto (fun a => ⨆ i, f a i) (𝓝[≠] (1 : ℝ)) (𝓝 (⨆ i, D i)) := by
-  apply regularized_continuity_of_right_continuity hmono hstate
-  rw [relative_identification]
-  have hright := ENNReal.continuous_ofReal.continuousAt.tendsto.comp h.right_continuity
-  apply hright.congr'
-  filter_upwards [self_mem_nhdsWithin] with a ha
-  exact (right_identification a ha).symm
-
-/-- Theorem 1's two-sided conclusion, conditional on the explicitly stated
-finite quantum bridge or on a support-mismatch witness. This does not claim
-that either bridge has been constructed for concrete quantum channels. -/
-theorem theorem_one_conditional {ι : Type*}
-    (f : ℝ → ι → ℝ≥0∞) (D : ι → ℝ≥0∞)
-    (hmono : ∀ i, MonotoneOn (fun a => f a i) LeftOrders)
-    (hstate : ∀ i, Tendsto (fun a => f a i) (𝓝[<] (1 : ℝ)) (𝓝 (D i)))
-    (hcases :
-      (∃ h : FiniteAnalyticInputs,
-        (∀ a, 1 < a → (⨆ i, f a i) = ENNReal.ofReal (h.renyi a)) ∧
-          (⨆ i, D i) = ENNReal.ofReal h.d) ∨
-      (∃ i, D i = ⊤ ∧ ∀ a, 1 < a → f a i = ⊤)) :
-    Tendsto (fun a => ⨆ i, f a i) (𝓝[≠] (1 : ℝ)) (𝓝 (⨆ i, D i)) := by
-  rcases hcases with ⟨h, hright, hD⟩ | ⟨i, hD, hf⟩
-  · exact theorem_one_finite h f D hmono hstate hright hD
-  · exact regularized_continuity_of_infinite_witness hmono hstate i hD hf
 
 end ChannelContinuity

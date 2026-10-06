@@ -100,21 +100,6 @@ theorem regularizedRelative_eq_input_sup (N M : CPTP H K) :
   simp only [regularizedRelative, blockRelative, channelRelative, ENNReal.iSup_div,
     inputRelative, iSup_sigma, iSup_subtype]
 
-/-- The two-sided finite-case conclusion for actual channel quantities.
-The only left-side inputs are explicitly pointwise order monotonicity and
-order-one limits of the actual normalized block-output divergences. -/
-theorem theorem_one_concrete_finite_conditional {N M : CPTP H K}
-    (h : RemainingFiniteInputs N M)
-    (hmono : ∀ i : BlockInput H,
-      MonotoneOn (fun α => inputRenyi N M α i) ChannelContinuity.LeftOrders)
-    (hstate : ∀ i : BlockInput H,
-      Tendsto (fun α => inputRenyi N M α i) (𝓝[<] (1 : ℝ)) (𝓝 (inputRelative N M i))) :
-    Tendsto (fun α => regularizedRenyi α N M) (𝓝[≠] (1 : ℝ))
-      (𝓝 (regularizedRelative N M)) := by
-  simp_rw [regularizedRenyi_eq_input_sup, regularizedRelative_eq_input_sup]
-  apply ChannelContinuity.regularized_continuity_of_right_continuity hmono hstate
-  simpa only [← regularizedRenyi_eq_input_sup, ← regularizedRelative_eq_input_sup] using
-    regularized_right_continuity_of_remaining h
 
 /-- A concrete support-mismatched output is the infinite witness required by
 the analytical proof, including its positive block-length normalization. -/
@@ -163,23 +148,5 @@ theorem theorem_one_of_support_mismatch (N M : CPTP H K) (i : BlockInput H)
     exact (ChannelContinuity.regularized_eq_top_of_witness
       (inputRenyi N M α) (hα α hα1)).symm
 
-/-- Theorem 1's exact two-sided extended-real conclusion for actual CPTP
-channels, conditional on precisely exposed finite-case or infinite-witness
-inputs and the remaining pointwise left-order prerequisites. -/
-theorem theorem_one_concrete_conditional {N M : CPTP H K}
-    (hmono : ∀ i : BlockInput H,
-      MonotoneOn (fun α => inputRenyi N M α i) ChannelContinuity.LeftOrders)
-    (hstate : ∀ i : BlockInput H,
-      Tendsto (fun α => inputRenyi N M α i) (𝓝[<] (1 : ℝ)) (𝓝 (inputRelative N M i)))
-    (hcases : Nonempty (RemainingFiniteInputs N M) ∨
-      ∃ i : BlockInput H,
-        ¬ suppLE (amplifiedOutput (channelPower N i.1.val) i.2.density).op
-          (amplifiedOutput (channelPower M i.1.val) i.2.density).op) :
-    Tendsto (fun α => regularizedRenyi α N M) (𝓝[≠] (1 : ℝ))
-      (𝓝 (regularizedRelative N M)) := by
-  rcases hcases with h | ⟨i, hs⟩
-  · obtain ⟨h⟩ := h
-    exact theorem_one_concrete_finite_conditional h hmono hstate
-  · exact theorem_one_of_support_mismatch N M i hs
 
 end QuantumChannelContinuity

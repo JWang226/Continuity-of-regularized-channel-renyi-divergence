@@ -31,11 +31,6 @@ private lemma rpow_continuousOn_nonneg
     h_nhds (ha' := h_nn) (hf := h_f_cont)
 
 
-private lemma rpow_conj_nonneg
-    {ℋ : Type u} [Qudit ℋ] [Nontrivial ℋ] (β : ℝ) {ρ σ : L ℋ}
-    (hρ : 0 ≤ ρ) (_hσ : 0 ≤ σ) :
-    (0 : L ℋ) ≤ CFC.rpow σ β * ρ * CFC.rpow σ β :=
-  conjugate_nonneg_of_nonneg hρ CFC.rpow_nonneg
 
 private lemma rpow_apply_eigenvector
     {ℋ : Type u} [Qudit ℋ] [Nontrivial ℋ]

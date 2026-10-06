@@ -42,11 +42,6 @@ theorem inputRenyi_monotoneOn_right (N M : CPTP H K) (i : BlockInput H) :
       (amplifiedOutput (channelPower N i.1.val) i.2.density)
       (amplifiedOutput (channelPower M i.1.val) i.2.density) hα hβ hαβ)) _
 
-/-- Every field of the earlier finite-case interface is now constructed
-from the sole finite-case condition on the actual relative entropy. -/
-noncomputable def quantumThresholdInputs (N M : CPTP H K)
-    (hfin : regularizedRelative N M ≠ ⊤) : QuantumThresholdInputs N M :=
-  quantumThresholdInputs_of_mono N M hfin (inputRenyi_monotoneOn_right N M)
 
 /-- Theorem 1: unconditional two-sided continuity at order one for actual
 regularized, stabilized sandwiched Rényi channel divergence, in bits.

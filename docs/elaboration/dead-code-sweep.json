@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-10-06",
+  "status": "implemented; static independent review passed; build validation is recorded in the elaboration snapshots and fresh verification record",
+  "baselineCommit": "c1042369444d325216ef75e2c7cf866580e2035b",
+  "scope": "Read-only repository dead-code audit; no Lean builds or artifact mutations performed.",
+  "proofIndex": {
+    "path": "docs/proof-index.json",
+    "sha256": "1016762b8c0e78263a84e8c6d368480ce38e8f0b2dc6dd3d60e19409d993d244",
+    "rootModule": "ChannelRenyiContinuity",
+    "counts": {
+      "declarations": 1288,
+      "theorems": 1067,
+      "withLocations": 748,
+      "withDescriptions": 453,
+      "curatedDescriptions": 52,
+      "targetClosures": {
+        "QuantumChannelContinuity.theorem_one": 869,
+        "QuantumChannelContinuity.blockRenyi_tendsto_regularized": 174,
+        "QuantumChannelContinuity.blockRelative_tendsto_regularized": 258
+      }
+    },
+    "unreachedDeclarations": 405
+  },
+  "method": {
+    "expressionEvidence": "typeDeps/proofDeps and their reverse typeUsers/proofUsers in the committed proof index",
+    "sourceEvidence": "All tracked project Lean files searched for exact declaration names and audit imports.",
+    "manualEvidence": "README.md, VERIFYING.md, docs, scripts, Contributions, Verification and formalization.yaml searched; generated proof index and byte-binding historical metadata distinguished from manual API references.",
+    "closedRemovalSet": true,
+    "scopeLimit": "The proof index covers the ChannelRenyiContinuity import closure, not SourceCorrespondence; external downstream consumers are not observable."
+  },
+  "removals": [
+    {
+      "name": "ChannelContinuity.theorem_one_finite",
+      "file": "ChannelContinuity/Main.lean",
+      "declarationLine": 140,
+      "deleteBlock": {
+        "firstLine": 134,
+        "lastLine": 152
+      },
+      "kind": "theorem",
+      "private": false,
+      "typeUsers": [],
+      "proofUsers": [
+        "ChannelContinuity.theorem_one_conditional"
+      ],
+      "targetReachability": [],
+      "reason": "Superseded scalar finite-case assembly wrapper; its only consumer is also removed."
+    },
+    {
+      "name": "ChannelContinuity.theorem_one_conditional",
+      "file": "ChannelContinuity/Main.lean",
+      "declarationLine": 157,
+      "deleteBlock": {
+        "firstLine": 154,
+        "lastLine": 169
+      },
+      "kind": "theorem",
+      "private": false,
+      "typeUsers": [],
+      "proofUsers": [],
+      "targetReachability": [],
+      "reason": "Historical scalar case-splitting conclusion; no expression consumers."
+    },
+    {
+      "name": "QuantumChannelContinuity.theorem_one_concrete_finite_conditional",
+      "file": "QuantumChannelContinuity/ConcreteMain.lean",
+      "declarationLine": 106,
+      "deleteBlock": {
+        "firstLine": 103,
+        "lastLine": 117
+      },
+      "kind": "theorem",
+      "private": false,
+      "typeUsers": [],
+      "proofUsers": [
+        "QuantumChannelContinuity.theorem_one_concrete_conditional",
+        "QuantumChannelContinuity.theorem_one_from_quantum_inputs"
+      ],
+      "targetReachability": [],
+      "reason": "Historical concrete finite-case assembly; both expression consumers are also removed."
+    },
+    {
+      "name": "QuantumChannelContinuity.theorem_one_concrete_conditional",
+      "file": "QuantumChannelContinuity/ConcreteMain.lean",
+      "declarationLine": 169,
+      "deleteBlock": {
+        "firstLine": 166,
+        "lastLine": 183
+      },
+      "kind": "theorem",
+      "private": false,
+      "typeUsers": [],
+      "proofUsers": [],
+      "targetReachability": [],
+      "reason": "Historical concrete conditional theorem; no expression consumers."
+    },
+    {
+      "name": "QuantumChannelContinuity.theorem_one_from_quantum_inputs",
+      "file": "QuantumChannelContinuity/QuantumMain.lean",
+      "declarationLine": 144,
+      "deleteBlock": {
+        "firstLine": 142,
+        "lastLine": 152
+      },
+      "kind": "theorem",
+      "private": false,
+      "typeUsers": [],
+      "proofUsers": [],
+      "targetReachability": [],
+      "reason": "Historical final finite-case interface wrapper; no expression consumers."
+    },
+    {
+      "name": "QuantumChannelContinuity.quantumThresholdInputs",
+      "file": "QuantumChannelContinuity/Main.lean",
+      "declarationLine": 47,
+      "deleteBlock": {
+        "firstLine": 45,
+        "lastLine": 49
+      },
+      "kind": "definition",
+      "private": false,
+      "typeUsers": [],
+      "proofUsers": [],
+      "targetReachability": [],
+      "reason": "Unused convenience constructor; the proof uses quantumThresholdInputs_of_mono directly."
+    },
+    {
+      "name": "_private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.rpow_conj_nonneg",
+      "file": "QuantumChannelContinuity/StateOrderApprox.lean",
+      "declarationLine": 34,
+      "deleteBlock": {
+        "firstLine": 34,
+        "lastLine": 38
+      },
+      "kind": "theorem",
+      "private": true,
+      "typeUsers": [],
+      "proofUsers": [],
+      "targetReachability": [],
+      "reason": "Private unused positivity helper; no expression consumers or textual uses beyond its declaration."
+    }
+  ],
+  "auditMoves": [
+    {
+      "from": "QuantumChannelContinuity/FoundationsAudit.lean",
+      "to": "scripts/audits/FoundationsAudit.lean",
+      "lines": 33,
+      "axiomPrints": 21,
+      "containsMathematicalDeclarations": false,
+      "trackedImporters": [],
+      "reason": "Diagnostic-only module compiled by the proof library glob; preserve it as an explicitly runnable audit outside that library."
+    },
+    {
+      "from": "QuantumChannelContinuity/StateOrderInterpolationAudit.lean",
+      "to": "scripts/audits/StateOrderInterpolationAudit.lean",
+      "lines": 35,
+      "axiomPrints": 27,
+      "containsMathematicalDeclarations": false,
+      "trackedImporters": [],
+      "reason": "Diagnostic-only module compiled by the proof library glob; preserve it as an explicitly runnable audit outside that library."
+    },
+    {
+      "from": "QuantumChannelContinuity/StateSupportLimitsAudit.lean",
+      "to": "scripts/audits/StateSupportLimitsAudit.lean",
+      "lines": 11,
+      "axiomPrints": 4,
+      "containsMathematicalDeclarations": false,
+      "trackedImporters": [],
+      "reason": "Diagnostic-only module compiled by the proof library glob; preserve it as an explicitly runnable audit outside that library."
+    }
+  ],
+  "retained": [
+    {
+      "item": "FiniteAnalyticInputs, RemainingFiniteInputs, QuantumThresholdInputs and their right-continuity constructors",
+      "reason": "Actual expression dependency paths from theorem_one traverse these records; they are proved construction interfaces, not remaining hypotheses."
+    },
+    {
+      "item": "Public mathematical supporting lemmas with no final-target reachability",
+      "reason": "Target reachability alone does not establish dead code; these may be reusable independent results."
+    },
+    {
+      "item": "theorem_one_of_support_mismatch and input_top_of_support_mismatch",
+      "reason": "Concrete standalone infinite-divergence branch retained as useful supporting mathematics."
+    },
+    {
+      "item": "ChannelContinuity.OperatorAlgebra and standalone scalar testing/threshold lemmas",
+      "reason": "Reusable matrix and scalar mathematical APIs retained despite several terminal lemmas having no consumers."
+    },
+    {
+      "item": "QuantumChannelContinuity.SourceCorrespondence",
+      "reason": "Supplementary paper-to-Lean tensor-order bridge intentionally outside the main solution closure."
+    },
+    {
+      "item": "ComparatorChallenges and their intentional negative controls",
+      "reason": "Specifications and checker failure tests, not unused library proofs."
+    },
+    {
+      "item": "Audit.lean and export/check scripts",
+      "reason": "Explicit verification and proof-navigation tools."
+    }
+  ],
+  "postSweepRequired": [
+    "Build all four project library targets without rebuilding upstream dependencies.",
+    "Regenerate proof index and hash-bound metadata; preserve historical certificates and source snapshots.",
+    "Run the all-declaration axiom audit and Comparator regression check.",
+    "Keep the three certified theorem statements unchanged."
+  ],
+  "optionalImportCleanup": [
+    {
+      "file": "ChannelContinuity/Main.lean",
+      "imports": [
+        "ChannelContinuity.OperatorAlgebra",
+        "ChannelContinuity.Testing"
+      ],
+      "evidence": "No direct expression dependency on either module from declarations in Main. Testing is independently imported by FoundationsTesting. OperatorAlgebra has no references outside its own file.",
+      "recommendation": "If removed from this consumer, preserve the public OperatorAlgebra API by importing it explicitly from ChannelContinuity.lean. Confirm elaboration because expression graphs do not capture every elaboration-time instance dependency."
+    }
+  ],
+  "implementation": {
+    "removedDeclarations": 7,
+    "removedSourceLines": 89,
+    "movedDiagnosticFiles": 3,
+    "preservedDiagnosticCommands": 52,
+    "targetSignatures": "exactly unchanged from baseline",
+    "rootAuditIncludesSupplementarySourceCorrespondence": true
+  }
+}

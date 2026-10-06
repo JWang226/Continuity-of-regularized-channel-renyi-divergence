@@ -5,6 +5,7 @@ Authors: Jinzhao Wang (AI-assisted formalization)
 -/
 
 import QuantumChannelContinuity
+import QuantumChannelContinuity.SourceCorrespondence
 import Lean.Util.CollectAxioms
 
 /-!

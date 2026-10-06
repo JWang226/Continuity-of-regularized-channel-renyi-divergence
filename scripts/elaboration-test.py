@@ -201,7 +201,7 @@ def build(args, output):
     for f in files:
         groups[f["module"].split(".")[0]] += f["seconds"]
     warnings = [line for line in text.splitlines() if line.startswith("warning:")]
-    sorries = [line for line in warnings if "uses 'sorry'" in line]
+    sorries = [line for line in warnings if re.search(r"declaration uses [`']sorry[`']", line)]
     allowed = {"ComparatorChallenges/ChannelRenyiContinuity.lean": 3,
                "ComparatorChallenges/MissingProof.lean": 1}
     sorry_census = Counter(line.split(":", 2)[1].strip() for line in sorries)

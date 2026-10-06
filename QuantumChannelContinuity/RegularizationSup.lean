@@ -5,7 +5,6 @@ Authors: Jinzhao Wang (AI-assisted formalization)
 -/
 
 import Mathlib.Data.ENNReal.Inv
-import Mathlib.Tactic
 
 /-!
 # Block suprema on multiples

@@ -1,105 +1,105 @@
 # Continuity of regularized channel Rényi divergence
 
-Lean formalization of Theorem 1 in **Continuity of Regularized Channel Rényi
-Divergences**, by Jinzhao Wang and Yuxiang Yang
-([arXiv:2609.28635](https://arxiv.org/abs/2609.28635)).
+Lean 4 proof of Theorem 1 in [**Continuity of Regularized Channel Rényi
+Divergences**](https://arxiv.org/abs/2609.28635), by Jinzhao Wang and Yuxiang Yang.
+Developed with assistance from Codex.
 
-The theorem proves that regularized, stabilized sandwiched Rényi channel
-divergence converges to regularized relative entropy as the order tends to one.
-It covers the two-sided limit, including infinite divergence, with no additional
-quantum-information hypotheses.
+[Proof map](docs/PROOF_MAP.md) · [Paper correspondence](docs/PAPER_COMPARISON.md) ·
+[Verification guide](VERIFYING.md)
 
-## Proof
+## The statements
 
-The entry point is [ChannelRenyiContinuity.lean](ChannelRenyiContinuity.lean).
-The main result, [`QuantumChannelContinuity.theorem_one`](QuantumChannelContinuity/Main.lean), is:
+| Result | Checked declaration | Conclusion |
+| --- | --- | --- |
+| Theorem 1: continuity | [`theorem_one`](QuantumChannelContinuity/Main.lean) | Regularized, stabilized sandwiched Rényi channel divergence tends to regularized relative entropy as the order approaches one from both sides. |
+| Rényi regularization | [`blockRenyi_tendsto_regularized`](QuantumChannelContinuity/RegularizationLimits.lean) | For each fixed order α ≥ ½, α ≠ 1, normalized block divergence converges to its positive-block supremum. |
+| Relative-entropy regularization | [`blockRelative_tendsto_regularized`](QuantumChannelContinuity/RegularizationLimits.lean) | Normalized relative entropy of channel tensor powers converges to its positive-block supremum. |
 
-```lean
-variable {H K : Type} [Qudit H] [Qudit K] [Nontrivial H] [Nontrivial K]
+All three statements allow infinite divergence and apply to CPTP channels between
+nonzero finite-dimensional complex Hilbert spaces. The continuity theorem has
+no additional quantum-information hypotheses. The block identities connect
+Lean's supremum definitions to the paper's asymptotic limits.
 
-theorem theorem_one (N M : CPTP H K) :
-    Tendsto (fun α => regularizedRenyi α N M) (𝓝[≠] (1 : ℝ))
-      (𝓝 (regularizedRelative N M))
-```
+The declarations are in the `QuantumChannelContinuity` namespace. The
+[paper-to-Lean mapping](docs/paper-mapping.json) records supporting results and
+their scope; the paper's later operational corollaries are outside this formalization.
 
-The [block-limit identities](QuantumChannelContinuity/RegularizationLimits.lean)
-connect the formal definitions to the paper's regularization limits.
-The paper's later operational corollaries are outside this formalization's scope.
+## How it was verified
 
-## Review and reuse
+- **Lean:** the build and transitive axiom audit passed for 1,327 project
+  declarations, including 1,101 theorems. Only `propext`, `Classical.choice`, and
+  `Quot.sound` are permitted; the proof library has no unresolved placeholders
+  or project-specific axioms.
+- **Comparator:** compared all three statements and referenced definitions
+  against the [separate challenge](ComparatorChallenges/ChannelRenyiContinuity.lean),
+  checked axioms, and replayed the proofs through Lean's kernel. Both the
+  wrong-statement and missing-proof controls were rejected. The challenge's
+  deliberate specification holes are excluded from the proof library.
+- **Nanoda:** the independently implemented Rust kernel accepted 61,851
+  declarations in the historical solution export, including all three theorem targets.
 
-- [Proof map](docs/PROOF_MAP.md): the key lemmas and how the earlier hypotheses are discharged.
-- [Lean read-back](docs/LEAN_READBACK.md) and [paper comparison](docs/PAPER_COMPARISON.md):
-  a separate agent's translation of the formal statements, followed by comparison
-  with the paper. These support human review; they are not human certification.
-- [Paper mappings](docs/paper-mapping.json) and [declaration index](docs/proof-index.json):
-  machine-readable locators and dependencies extracted from Lean.
+The [recorded evidence](Verification/README.md) and
+[v1.0.0 certificate archive](https://github.com/JWang226/continuity-of-regularized-channel-renyi-divergence/releases/tag/v1.0.0)
+describe completed local, unsandboxed runs. The certificate is unsigned, and the
+Comparator reference was recorded after proof development. Independent human
+review of correspondence to the paper remains outstanding. The
+[current source record](Verification/current-source-identity.json) verifies that
+the 82 historical proof files differ only by added copyright comments.
 
-Search lemma descriptions locally with Python 3.9+: `./search-lemmas.sh "slack attainment"`.
-Check headers, mappings, and artifact hashes with `python3 scripts/check-artifacts.py`.
-The proof map explains regeneration. These tools run locally; no Prove2Me account is needed.
+## Check it yourself
 
-## Build and check
+Use macOS or Linux, Git, Python 3.9+, native C/C++ build tools, and
+[elan](https://github.com/leanprover/elan). On macOS, install Xcode Command Line
+Tools. Initial setup needs internet access and several GB of disk space.
+Nanoda reuses Rust/Cargo if available, or installs Rust locally.
 
-Requires Git and native build tools (Xcode Command Line Tools on macOS).
-If Lean is not installed, first install [elan](https://github.com/leanprover/elan):
+If Lean is not installed, first run:
 
 ```sh
 curl -fsSL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none --no-modify-path
 export PATH="$HOME/.elan/bin:$PATH"
 ```
 
-Then clone and check the proof:
+Then clone and reproduce the three verification layers:
 
 ```sh
 git clone https://github.com/JWang226/continuity-of-regularized-channel-renyi-divergence.git
 cd continuity-of-regularized-channel-renyi-divergence
 ./run-lake.sh exe cache get
-./check.sh
+./check.sh             # Build and transitive axiom audit
+./check-comparator.sh  # Statement comparison, Lean replay, and rejection controls
+./check-nanoda.sh      # Independent kernel check of a fresh proof export
 ```
 
-For an existing checkout, run the last two commands. Lean and dependency versions
-are pinned; Lean downloads automatically on first use.
+For an existing checkout, run the last four commands. Success ends with
+`AUDIT PASSED`, `COMPARATOR CHECK PASSED`, and `NANODA CHECK PASSED`, respectively.
+Each checker exits nonzero on failure. Fresh logs are saved to `.lake/check.log`,
+`.lake/comparator-check/`, and `.lake/nanoda-check/`.
 
-Success ends with **`AUDIT PASSED`**: 1,327 declarations checked using only
-`propext`, `Classical.choice`, and `Quot.sound`. The proof contains no `sorry`.
-The log is saved to `.lake/check.log`.
+Lean and dependencies are pinned in [lean-toolchain](lean-toolchain) and
+[lake-manifest.json](lake-manifest.json). Keep those pins when reproducing the
+proof. The [verification guide](VERIFYING.md) gives expected outputs,
+troubleshooting, and instructions for replaying the exact released certificate.
+The Comparator reproducer uses unsandboxed development mode.
 
-## Verification certificate
+## Read the proof
 
-Comparator checked the main theorem and both block-limit identities against a
-separate formal reference and replayed the proofs in Lean's kernel. Independent
-nanoda replay accepted **61,851 declarations**; both rejection controls behaved
-as expected.
-
-Reproduce either check from this checkout (Python 3.9+ required):
+Start with the [proof map](docs/PROOF_MAP.md), then follow the
+[Lean entry point](ChannelRenyiContinuity.lean). The
+[declaration index](docs/proof-index.json) records elaborated types and
+dependencies. Search lemma descriptions and inspect dependencies locally:
 
 ```sh
-./check-comparator.sh  # Statement comparison, Lean replay, and rejection controls
-./check-nanoda.sh      # Independent Nanoda kernel check of a fresh proof export
+./search-lemmas.sh "slack attainment"
+./search-lemmas.sh --deps QuantumChannelContinuity.theorem_one
 ```
 
-Both scripts prepare pinned tools and check all three targets. Each saves fresh
-logs and `result.json` under `.lake/comparator-check/` or `.lake/nanoda-check/`.
-Comparator uses unsandboxed development mode. Nanoda builds its checker from
-source and installs Rust locally if Cargo is unavailable.
+The [blind Lean read-back](docs/LEAN_READBACK.md) and
+[paper comparison](docs/PAPER_COMPARISON.md) explain the definitions and
+representation identifications. These are agent-generated review aids.
+Validate artifact hashes and mappings with `python3 scripts/check-artifacts.py`;
+this checks metadata consistency only. The proof map explains index regeneration.
 
-- [Verification guide](VERIFYING.md): commands, prerequisites, expected outputs,
-  checksums, and troubleshooting for reproducing every check.
-- [v1.0.0 release](https://github.com/JWang226/continuity-of-regularized-channel-renyi-divergence/releases/tag/v1.0.0):
-  certificate, proof exports, logs, and replay scripts.
-- [Verification record](Verification/README.md) and
-  [Comparator reference](ComparatorChallenges/README.md).
-
-The certificate is an unsigned local record from an unsandboxed macOS run.
-The reference was written after proof development; correspondence to the paper
-still requires mathematical review.
-
-Copyright headers were added after the release. The [current source record](Verification/current-source-identity.json)
-verifies that the 82 historical proof files differ only by those added comments.
-
-## Attribution
-
-[Apache-2.0](LICENSE). See [formalization metadata](formalization.yaml) and
-[third-party attribution](THIRD_PARTY.md). Repository layout follows
-[openai/ten-proofs](https://github.com/openai/ten-proofs).
+[Formalization metadata](formalization.yaml) · [Paper mappings](docs/paper-mapping.json) ·
+[Apache-2.0 license](LICENSE) · [Third-party attribution](THIRD_PARTY.md).
+Cite the paper and record the commit checked.

@@ -6,7 +6,8 @@ Authors: Jinzhao Wang (AI-assisted formalization)
 
 import Quantum.QuantumMechanics.QuantumChannel
 import Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.Basic
-import Mathlib.Tactic
+import Mathlib.Tactic.Abel
+import Mathlib.Tactic.Linarith
 
 /-!
 # Concrete dilation algebra used by the fixed-environment filter

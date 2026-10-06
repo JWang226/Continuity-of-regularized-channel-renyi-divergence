@@ -5,6 +5,8 @@ Authors: Jinzhao Wang (AI-assisted formalization)
 -/
 
 import ChannelContinuity.ThreePiece
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.Ring
 
 /-!
 # Parameters and scalar normalization in the three-piece estimate

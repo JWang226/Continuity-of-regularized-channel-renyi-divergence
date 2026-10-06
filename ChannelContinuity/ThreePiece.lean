@@ -6,7 +6,8 @@ Authors: Jinzhao Wang (AI-assisted formalization)
 
 import Mathlib.Analysis.SpecialFunctions.Pow.Continuity
 import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Tactic
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.NormNum
 
 /-!
 # The first limit in the three-piece argument

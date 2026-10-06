@@ -6,7 +6,7 @@ Authors: Jinzhao Wang (AI-assisted formalization)
 
 import Mathlib.Topology.Instances.ENNReal.Lemmas
 import Mathlib.Topology.Order.Monotone
-import Mathlib.Tactic
+import Mathlib.Tactic.NormNum
 
 /-!
 # The left-hand and infinite-value parts of Theorem 1

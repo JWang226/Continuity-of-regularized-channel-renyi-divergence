@@ -5,7 +5,9 @@ Authors: Jinzhao Wang (AI-assisted formalization)
 -/
 
 import Mathlib.Analysis.Convex.Slope
-import Mathlib.Tactic
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.NormNum
 
 /-! # Scalar conversion from interpolation convexity to Rényi order -/
 

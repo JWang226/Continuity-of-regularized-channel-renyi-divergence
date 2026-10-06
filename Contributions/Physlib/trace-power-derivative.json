@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "status": "compiled-reviewed-candidate",
+  "submitted_upstream": false,
+  "human_review_completed": false,
+  "repository": "https://github.com/leanprover-community/physlib",
+  "base_commit": "d9a67555d722e4ff82438d9b67a635873145d9ac",
+  "local_preparation_commit": "fd7dd2be454dfc1cf87c047ca82f869c6b284aa9",
+  "local_commit_available_on_github": false,
+  "resulting_tree": "7857c77291743b572b6df52cbd3d60569c45f936",
+  "lean_toolchain": "leanprover/lean4:v4.34.1",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "patch": {
+    "path": "Contributions/Physlib/trace-power-derivative.patch",
+    "sha256": "0e6b61fb0a393301a11c7c27718f0e6aacdf647effb8fce45381062ada39909b",
+    "bytes": 7151,
+    "added_lines": 49,
+    "removed_lines": 45,
+    "clean_base_apply_check": "passed",
+    "reproduced_tree_equals_preparation_tree": true
+  },
+  "changed_files": [
+    {
+      "path": "QuantumInfo/ForMathlib/HermitianMat/Rpow.lean",
+      "base_sha256": "71a4ccf73a7244912a0e04c7b7c21704a447e42452cca5d32444e0c3f129ecf6",
+      "prepared_sha256": "bcafbd7872f1e850fa453933f542ed283de4e9faa3ed1c57b0662872f1c3b93c"
+    },
+    {
+      "path": "QuantumInfo/Entropy/Relative.lean",
+      "base_sha256": "1b6489f4073514dd76c351c2c2c07fe902e071b7773fab309a3d9d1bd285d608",
+      "prepared_sha256": "e39058c9db28a85cd82ce47f06369c859d542a121d96216dccd64d6633142096"
+    }
+  ],
+  "new_declarations": [
+    "HermitianMat.hasDerivAt_trace_rpow"
+  ],
+  "changed_private_proofs": [
+    "hasDerivAt_trace_rpow_at_one (statement unchanged)"
+  ],
+  "new_imports": 0,
+  "permitted_and_observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "search": {
+    "routes": [
+      "derivative names",
+      "spectral/CFC/trace concepts"
+    ],
+    "reused": [
+      "HermitianMat.trace_rpow_eq_sum",
+      "HermitianMat.trace_cfc_eq",
+      "Real.hasStrictDerivAt_const_rpow",
+      "HasDerivAt.fun_sum"
+    ],
+    "scope": "Pinned Mathlib and relevant Physlib/QuantumInfo sources inspected; no public equivalent found, not an exhaustive search of every Lean library"
+  },
+  "agent_review": {
+    "independent_reviewer": "readme_review",
+    "mathematical_or_api_defects_found": false,
+    "documentation_comment_addressed": true
+  },
+  "checks": [
+    {
+      "id": "build",
+      "command": "lake build Physlib QuantumInfo PhyslibAlpha",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "3058f6e0f230869455cce50dce6b8f862b13d98ecfa2f70449123b6f23014e52",
+      "sanitized_excerpt": [
+        "✔ [5522/5551] Built QuantumInfo.ForMathlib.HermitianMat.Rpow (16s)",
+        "Build completed successfully (5551 jobs)."
+      ]
+    },
+    {
+      "id": "api",
+      "command": "lake env lean --stdin (exact API example, #check, #print axioms)",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "2ac9640e4b1ba6d90bbcd7f34ed064c4f73b94f7ded064985fd37d0cde17cfe0",
+      "sanitized_excerpt": [
+        "@HermitianMat.hasDerivAt_trace_rpow : ∀ {d : Type u_1} [inst : Fintype d] [inst_1 : DecidableEq d]",
+        "  {A : HermitianMat d ℂ},",
+        "  0 ≤ A → ∀ {s : ℝ}, 0 < s → HasDerivAt (fun t => (A ^ t).trace) (A.cfc fun x => x ^ s * Real.log x).trace s",
+        "'HermitianMat.hasDerivAt_trace_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "id": "committed_style",
+      "command": "./scripts/lint/required/lint-style.sh (after local commit)",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "68722691eb736e09c9c4a832aa1a61b7a867bae04bc19baa7f538d6dd78809ac",
+      "sanitized_excerpt": [
+        "+ touch scripts/lint/exemptions/style-exceptions.txt",
+        "+ touch scripts/lint/exemptions/LinterExemption.txt",
+        "+ git ls-files 'Physlib/*.lean' 'QuantumInfo/*.lean'",
+        "+ grep -vxF -f scripts/lint/exemptions/LinterExemption.txt",
+        "+ xargs ./scripts/lint/required/lint-style.py",
+        "++ find . -name '*.lean' -type f '(' -perm -u=x -o -perm -g=x -o -perm -o=x ')'",
+        "+ executable_files=",
+        "+ [[ -n '' ]]",
+        "++ git ls-files",
+        "++ sort --ignore-case",
+        "++ uniq -D --ignore-case",
+        "+ ignore_case_clashes=",
+        "+ '[' -n '' ']'"
+      ]
+    },
+    {
+      "id": "forMathlib",
+      "command": "lake exe forMathlib_lint",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "b9e305395e4c4166ac8237b643b3206b205f2029c0fd469ce65f40bf86c873dc",
+      "sanitized_excerpt": [
+        "All 17 files in `Physlib.Mathematics.ForMathlib` import only from `Physlib.Mathematics.ForMathlib` and are used outside of it."
+      ]
+    },
+    {
+      "id": "module_docs",
+      "command": "lake exe module_doc_lint",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "396d741d3ec33ae0e271ab4e7a1fb2391e2baa7ff1d78bd5a7fe50608efa49c8",
+      "sanitized_excerpt": [
+        "✔ [177/214] Built Batteries.Logic:c.o (1.2s)",
+        "✔ [178/214] Built Mathlib.Basic.Nonempty:c.o (1.1s)",
+        "✔ [179/214] Built Mathlib.Basic.Nontrivial.Defs:c.o (1.2s)",
+        "✔ [180/214] Built Mathlib.Basic.ExistsUnique:c.o (1.9s)",
+        "✔ [181/214] Built Mathlib.Data.String.Defs:c.o (884ms)",
+        "✔ [182/214] Built Batteries.Util.ExtendedBinder:c.o (2.1s)",
+        "✔ [183/214] Built Mathlib.Tactic.Attr.Register:c.o (3.5s)",
+        "✔ [184/214] Built Mathlib.Basic.Logic.Basic:c.o (4.1s)",
+        "✔ [185/214] Built Mathlib.Lean.PrettyPrinter.Delaborator:c.o (3.9s)",
+        "✔ [186/214] Built Mathlib.Lean.Meta.Simp:c.o (5.4s)",
+        "✔ [187/214] Built Mathlib.Tactic.Eqns:c.o (592ms)",
+        "✔ [188/214] Built Mathlib.Tactic.Translate.Attributes:c.o (356ms)",
+        "✔ [189/214] Built Mathlib.Tactic.Push.Attr:c.o (5.7s)",
+        "✔ [190/214] Built Batteries.Lean.NameMapAttribute:c.o (2.3s)",
+        "✔ [191/214] Built Mathlib.Tactic.Translate.GuessName:c.o (3.0s)",
+        "✔ [192/214] Built Mathlib.Tactic.Translate.ToDual:c.o (2.8s)",
+        "✔ [193/214] Built Mathlib.Tactic.ToDual:c.o (466ms)",
+        "✔ [194/214] Built Mathlib.Tactic.SetNotationForOrder:c.o (6.5s)",
+        "✔ [195/214] Built Mathlib.Tactic.Translate.TagUnfoldBoundary:c.o (4.5s)",
+        "✔ [197/214] Built Mathlib.Logic.Function.Defs:c.o (771ms)",
+        "✔ [198/214] Built Mathlib.Order.Defs.Unbundled:c.o (445ms)",
+        "✔ [199/214] Built Mathlib.Logic.Function.Basic:c.o (804ms)",
+        "✔ [200/214] Built Mathlib.Data.Set.Defs:c.o (2.6s)",
+        "✔ [201/214] Built Mathlib.Tactic.ExtendDoc:c.o (1.5s)",
+        "✔ [207/214] Built Mathlib.Util.AddRelatedDecl:c.o (11s)",
+        "✔ [208/214] Built Mathlib.Tactic.Translate.Reorder:c.o (9.6s)",
+        "✔ [209/214] Built Mathlib.Tactic.Translate.UnfoldBoundary:c.o (10s)",
+        "✔ [210/214] Built Batteries.Tactic.Trans:c.o (13s)",
+        "✔ [211/214] Built module_doc_lint (19s)",
+        "✔ [212/214] Built module_doc_lint:c.o (4.3s)",
+        "✔ [213/214] Built Mathlib.Tactic.Translate.Core:c.o (36s)",
+        "✔ [214/214] Built module_doc_lint:exe (4.8s)",
+        "No documentation style issues found."
+      ]
+    },
+    {
+      "id": "changed_module_docs",
+      "command": "lake env lean --stdin (checkHeadings on changed Rpow without exemptions)",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "2c76d42e305bb1a712017334c8607bea0cf6d85b3068aa4e1436cdaa7eb0c372",
+      "sanitized_excerpt": [
+        "Changed Rpow module documentation passed without exemptions."
+      ]
+    },
+    {
+      "id": "auxiliary_scripts",
+      "command": "lake exe auxillary_script_test",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "86f175641575fc3baa9b36b58909efede0db0024facc8af0223f50c63fc5798c",
+      "sanitized_excerpt": [
+        "(1/4) lake exe make_tag",
+        "Passed.",
+        "(2/4) lake exe TODO_to_yml mkFile",
+        "Passed.",
+        "(3/4) lake exe stats mkHTML",
+        "Passed.",
+        "(4/4) lake exe informal mkFile mkDot mkHTML",
+        "Passed.",
+        "All auxiliary scripts passed."
+      ]
+    },
+    {
+      "id": "file_imports",
+      "command": "lake exe check_file_imports",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "7c999aa06a229532f4776ec5bc49e75b25bf59d6a9e03f72de9981df7b8efa93",
+      "sanitized_excerpt": [
+        "All files are imported correctly into Physlib.lean.",
+        "All files are imported correctly into QuantumInfo.lean."
+      ]
+    },
+    {
+      "id": "alpha_imports",
+      "command": "lake exe noAlphaImports",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "eaaa227e947a5011e659717c465358d443442833e31c7de240ea31bea16de214",
+      "sanitized_excerpt": [
+        "No violations found. All files passed the check."
+      ]
+    },
+    {
+      "id": "alpha_root_imports",
+      "command": "lake exe alphaFileImports",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "3249df809aab55e5f40431430ab7d7d059b1c4943233c47803bcf4bf7a189443",
+      "sanitized_excerpt": [
+        "✓ All 304 .lean files in ./PhyslibAlpha are imported in ./PhyslibAlpha.lean"
+      ]
+    },
+    {
+      "id": "duplicate_tags",
+      "command": "lake exe check_dup_tags",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "a199104211a51468d05bcf89db9dfec8c816f067af17cfd43e1c58cc8c892074",
+      "sanitized_excerpt": [
+        "Checking for duplicate tags.",
+        "Linter finished, no duplicaate tags found."
+      ]
+    },
+    {
+      "id": "sorry_attributes",
+      "command": "lake exe sorry_lint",
+      "exit_code": 0,
+      "status": "passed",
+      "raw_log_sha256": "a32092df2a7e29debbc27a41bf6ca1414f9467a4d07b69b8ec7d9a044dd08a87",
+      "sanitized_excerpt": [
+        "Checking sorryful results.",
+        "Sorryful/pseudo results are all correctly attributed test passed."
+      ]
+    },
+    {
+      "id": "declaration_linters",
+      "command": "lake exe runPhyslibLinters",
+      "exit_code": 0,
+      "status": "passed-with-existing-exemptions",
+      "raw_log_sha256": "91c67d3370d21ab9b56d5db3658051707120fabaee0ecc50bba7084a3012870b",
+      "sanitized_excerpt": [
+        "Results been linted with the following linters:",
+        "#[checkType, defsWithUnderscore, deprecatedNoSince, docBlame, impossibleInstance, nonClassInstance, simpComm, simpNF, structureInType, subsetDotNotationLinter, synTaut, tacticAlt, tacticDocs, unusedArguments, unusedHavesSuffices]",
+        "Starting parallel running on linters on all declarations. Results if any are",
+        "      shown below.",
+        "-- Linting passed for Physlib.",
+        "Results been linted with the following linters:",
+        "#[checkType, defsWithUnderscore, deprecatedNoSince, docBlame, impossibleInstance, nonClassInstance, simpComm, simpNF, structureInType, subsetDotNotationLinter, synTaut, tacticAlt, tacticDocs, unusedArguments, unusedHavesSuffices]",
+        "Starting parallel running on linters on all declarations. Results if any are",
+        "      shown below.",
+        "-- Linting passed for QuantumInfo."
+      ]
+    },
+    {
+      "id": "lint_all",
+      "command": "lake exe lint_all",
+      "exit_code": 0,
+      "status": "completed-with-optional-import-findings",
+      "raw_log_sha256": "dbd9b5ae3c8311044d2fdb107747895893fcf886bbd533246e48e2075b4dadfc",
+      "sanitized_excerpt": [
+        "(1/7) Style lint ",
+        "This linter is not checked by GitHub but if you have time please fix these errors.",
+        "",
+        "(2/7) Building ",
+        "Build is successful.",
+        "",
+        "(3/7) File imports ",
+        "All files are imported correctly into Physlib.lean.",
+        "All files are imported correctly into QuantumInfo.lean.",
+        "",
+        "(3/7) Illegal Imports",
+        "No violations found. All files passed the check.",
+        "",
+        "(3/7) Ensuring all PhyslibAlpha modules imported",
+        "✓ All 304 .lean files in ./PhyslibAlpha are imported in ./PhyslibAlpha.lean",
+        "",
+        "(3/7) ForMathlib imports and uses",
+        "All 17 files in `Physlib.Mathematics.ForMathlib` import only from `Physlib.Mathematics.ForMathlib` and are used outside of it.",
+        "",
+        "(4/7) TODO tag duplicates ",
+        "Checking for duplicate tags.",
+        "Linter finished, no duplicaate tags found.",
+        "",
+        "(5/7) Sorry and pseudo attribute linter ",
+        "Checking sorryful results.",
+        "Sorryful/pseudo results are all correctly attributed test passed.",
+        "",
+        "",
+        "(6/7) Lean linter ",
+        "Expect this linter to take a while to run, it can be skipped with",
+        "      lake exe lint_all --fast",
+        "You can manually perform this linter by placing `#lint` at the end of the files you have modified.",
+        "Results been linted with the following linters:",
+        "#[checkType, defsWithUnderscore, deprecatedNoSince, docBlame, impossibleInstance, nonClassInstance, simpComm, simpNF, structureInType, subsetDotNotationLinter, synTaut, tacticAlt, tacticDocs, unusedArguments, unusedHavesSuffices]",
+        "Starting parallel running on linters on all declarations. Results if any are",
+        "      shown below.",
+        "-- Linting passed for Physlib.",
+        "",
+        "(7/7) Transitive imports ",
+        "Expect this linter to take a while to run, it can be skipped with",
+        "        lake exe lint_all --fast",
+        "",
+        "",
+        "Error: Transitive imports in Physlib/ClassicalMechanics/FreeParticle/Basic.lean (please remove them):",
+        "[Mathlib.Analysis.Calculus.MeanValue]",
+        "",
+        ""
+      ],
+      "exit_code_is_authoritative": false,
+      "notes": "Wrapper returns zero without propagating child failures. Required checks were independently rerun; optional redundancy findings are listed below."
+    }
+  ],
+  "optional_import_findings": {
+    "count": 18,
+    "changed_file_findings": 0,
+    "files": [
+      {
+        "path": "Physlib/ClassicalMechanics/FreeParticle/Basic.lean",
+        "sha256": "792e00cca1c72adf6e9f14963f6bd3c52f1ccceac296ebe34b2f34895e421f61",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/Cosmology/FLRW/Basic.lean",
+        "sha256": "919a957b42fec916c5105c3d6124a49a3f91c8f3c86c3d98a0e93ed92063b503",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/Cosmology/FLRW/MatterContent.lean",
+        "sha256": "f905bb31e2c77773f64dad36424dce241e2aa2d365a1610abdc80fd54c2dc7d4",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/Cosmology/FLRW/Solutions.lean",
+        "sha256": "b8e18d190696da56ab92c461994cf3f91d2ed30e8b3b81855ba4a4806b9e54e1",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/Mathematics/Calculus/Divergence.lean",
+        "sha256": "223cafedef0bde215cac4c9a7d03fd4625c5a191b522e46d3bb3bbf7b85a3271",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/Mathematics/Distribution/PowMul.lean",
+        "sha256": "d870a8bf268eb5934bf42b70a75f3fdb77a022c54457ac40d45a14591f144569",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/Mathematics/ForMathlib/List.lean",
+        "sha256": "e17625550b15f361077f28de58fee16555745047ee0d94b69b16ced0403935eb",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/Mathematics/Groups/SpecialUnitary/LieAlgebra/Basic.lean",
+        "sha256": "292533effdede84e99f789946b8ccf027716ff0c786b9d6d3c17de71c45631a7",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/Mathematics/InnerProductSpace/Gaussian.lean",
+        "sha256": "2d53f547192738df30df6965cc6c43911430760197d08c1349a129555f5f46f4",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/QFT/PerturbationTheory/FieldSpecification/NormalOrder.lean",
+        "sha256": "28ad4d5a69c335e5091469f23126a52e40a61fa535f53bf992aed354643f3844",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/QFT/PerturbationTheory/FieldSpecification/TimeOrder.lean",
+        "sha256": "b89feb0e7b496e457755cd8840c59642dc7b284dc2c64146fbf4e104809b8e2d",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/QFT/PerturbationTheory/Koszul/KoszulSign.lean",
+        "sha256": "d8183c6a2cc0cd928c75dab6e1080ae8df8c1a3a67a94075c68cff62ce2f42a3",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/QFT/PerturbationTheory/Koszul/KoszulSignInsert.lean",
+        "sha256": "6624a83951b0063d0711fda53a58de462f450ea019b300ad288d0e165d1f054a",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/QFT/PerturbationTheory/WickContraction/ExtractEquiv.lean",
+        "sha256": "b1fd28a79222bdded1cc9f080e94de0efe609036711458caea6d6573bf4fc62a",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/QuantumMechanics/HilbertSpaces/OneDimension/Basic.lean",
+        "sha256": "9d302d9ba0a42b45f1876914afe620553ebd7f1ea5d1f55578049ceb95a81f1e",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/QuantumMechanics/HilbertSpaces/SpaceD/Basic.lean",
+        "sha256": "8ba43f953aa944e94481493037174d92454c401d597c523cf3bdeff0a3742f19",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/QuantumMechanics/Operators/OneDimension/Parity.lean",
+        "sha256": "f6366a1697077db52fb54333e384362e5a5cd01e17f739e4b68a5dc451a43d1f",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "Physlib/SpaceAndTime/Time/Derivatives.lean",
+        "sha256": "6c24ef2d3942f14d684a6313e4030cb999cca6ee90fbad1989aed2686353c36a",
+        "unchanged_from_base": true
+      }
+    ],
+    "notes": "All reported files are byte-identical to the base; the patch changes no imports. No unrelated source cleanup is included."
+  },
+  "policy": {
+    "ai_policy": "https://github.com/leanprover-community/physlib/blob/d9a67555d722e4ff82438d9b67a635873145d9ac/AI-POLICY.md",
+    "author_instructions": "https://github.com/leanprover-community/physlib/blob/d9a67555d722e4ff82438d9b67a635873145d9ac/AGENTS.md",
+    "human_certification_before_pr_required": true,
+    "human_reviewer_communication_required": true,
+    "assistance": "Codex (OpenAI)",
+    "local_commit_trailer": "AI-assisted-by: Codex (OpenAI)",
+    "claude_specific_trailer_used": false,
+    "attribution_convention_requires_human_resolution": true
+  },
+  "source_adaptation": "QuantumChannelContinuity/StateSupportLimits.lean:120, hasDerivAt_trace_rpow_nonneg",
+  "workflow": {
+    "repository": "https://github.com/scottnarmstrong/LeanAutoformalizationSkills",
+    "commit": "70bb859295edc2abb9ad81f8f6e31ab2adf8ca07",
+    "skills": [
+      "lean-project-architecture",
+      "lean-search-discovery"
+    ]
+  },
+  "evidence_file": "Contributions/Physlib/CHECKS.md",
+  "evidence_sha256": "bce0536b8b143942317659d6c308167e4f0eaf89d98e2b52cd6f33c80bf63c67"
+}

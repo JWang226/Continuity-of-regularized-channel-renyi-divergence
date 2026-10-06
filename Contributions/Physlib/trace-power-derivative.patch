@@ -1,0 +1,155 @@
+diff --git a/QuantumInfo/Entropy/Relative.lean b/QuantumInfo/Entropy/Relative.lean
+index 554cf9b..02079af 100644
+--- a/QuantumInfo/Entropy/Relative.lean
++++ b/QuantumInfo/Entropy/Relative.lean
+@@ -437,42 +437,9 @@ For fixed PSD B, the derivative of α ↦ Tr[B^α] at α = 1 is ⟪B, B.log⟫ =
+ -/
+ private lemma hasDerivAt_trace_rpow_at_one (B : HermitianMat d ℂ) (hB : 0 ≤ B) :
+     HasDerivAt (fun α : ℝ => (B ^ α).trace) ⟪B, B.log⟫ 1 := by
+-  have h_inner : ⟪B, B.log⟫ = ∑ i, (B.H.eigenvalues i) * Real.log (B.H.eigenvalues i) := by
+-    -- By definition of the inner product, we have ⟪B, B.log⟫ = tr(B * B.log).
+-    have h_inner_def : ⟪B, B.log⟫ = Matrix.trace (B.mat * B.log.mat) := by
+-      simp [ Matrix.trace, Inner.inner ];
+-      refine' Finset.sum_congr rfl fun i _ => _;
+-      have h_herm : (B * B.log : Matrix d d ℂ).IsHermitian := by
+-        have h_comm : Commute (B : Matrix d d ℂ) (B.log : Matrix d d ℂ) := by
+-          commutes
+-        simp_all [Matrix.IsHermitian]
+-        rw [h_comm]
+-      have := h_herm.apply i i
+-      simp_all [Complex.ext_iff]
+-      linarith
+-    -- By definition of the trace, we have tr(B * B.log) = ∑ i, B.eigenvalues i * log(B.eigenvalues i).
+-    have h_trace : (B.mat * B.log.mat).trace = ∑ i, B.H.eigenvalues i * Real.log (B.H.eigenvalues i) := by
+-      have h_trace : (B ^ 1 * B.log.mat).trace = (B.cfc (fun x ↦ x * Real.log x)).trace := by
+-        have h_trace : B ^ 1 * B.log.mat = B.cfc (fun x ↦ x * Real.log x) := by
+-          have h_log : B ^ 1 * B.log.mat = B.cfc id * B.cfc Real.log := by
+-            simp [pow_one, HermitianMat.log]
+-          rw [h_log]
+-          exact (B.mat_cfc_mul_apply id Real.log).symm
+-        rw [h_trace, ← HermitianMat.trace_eq_trace_rc]
+-        rfl
+-      simp_all [ HermitianMat.trace_cfc_eq ];
+-    exact_mod_cast h_inner_def.trans h_trace;
+-  have h_deriv : ∀ i, HasDerivAt (fun α : ℝ => (B.H.eigenvalues i) ^ α) (B.H.eigenvalues i * Real.log (B.H.eigenvalues i)) 1 := by
+-    intro i
+-    by_cases h_pos : 0 < B.H.eigenvalues i;
+-    · convert! HasDerivAt.rpow ( hasDerivAt_const _ _ ) ( hasDerivAt_id 1 ) h_pos using 1
+-      simp only [id_eq, mul_one, sub_self, Real.rpow_zero, Real.rpow_one, one_mul, zero_add]
+-    · have h_zero : B.H.eigenvalues i = 0 := by
+-        exact le_antisymm ( le_of_not_gt h_pos ) ( by simpa using hB.eigenvalues_nonneg i )
+-      simp [h_zero]
+-      exact (hasDerivAt_const _ _).congr_of_eventuallyEq (Filter.eventuallyEq_of_mem ( Ioi_mem_nhds zero_lt_one ) fun x hx => Real.zero_rpow hx.out.ne' )
+-  simp only [HermitianMat.trace_rpow_eq_sum, ← Finset.sum_apply]
+-  convert! HasDerivAt.sum fun i _ => h_deriv i using 1
++  convert HermitianMat.hasDerivAt_trace_rpow hB (s := 1) zero_lt_one using 1
++  simp only [Real.rpow_one, HermitianMat.inner_eq_re_trace, HermitianMat.trace_eq_re_trace,
++    HermitianMat.log, HermitianMat.mat_cfc_mul_apply, HermitianMat.cfc_id']
+ 
+ /-
+ PROBLEM
+diff --git a/QuantumInfo/ForMathlib/HermitianMat/Rpow.lean b/QuantumInfo/ForMathlib/HermitianMat/Rpow.lean
+index 3dbfc3c..adc4430 100644
+--- a/QuantumInfo/ForMathlib/HermitianMat/Rpow.lean
++++ b/QuantumInfo/ForMathlib/HermitianMat/Rpow.lean
+@@ -11,13 +11,12 @@ public import QuantumInfo.ForMathlib.HermitianMat.Sqrt
+ public import QuantumInfo.ForMathlib.HermitianMat.Unitary
+ public import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+ 
+-@[expose] public section
++/-!
++# Matrix Powers With Real Exponents
+ 
+-variable {d d₂ 𝕜 : Type*} [Fintype d] [DecidableEq d] [Fintype d₂] [DecidableEq d₂]
+-variable [RCLike 𝕜]
+-variable {A B : HermitianMat d 𝕜} {x q r : ℝ}
++Real powers and trace inequalities for finite-dimensional Hermitian matrices.
+ 
+-/-! # Matrix Powers With Real Exponents
++## i. Overview
+ 
+ This file defines real powers of finite-dimensional Hermitian matrices by continuous
+ functional calculus:
+@@ -29,16 +28,37 @@ For positive semidefinite matrices it has the expected spectral meaning. For neg
+ exponents on singular matrices it follows the `Real.rpow` convention, so zero eigenvalues
+ remain zero; use positive-definiteness hypotheses for inverse laws.
+ 
+-Main results:
++## ii. Key results
++
+ * algebraic and spectral lemmas for real powers;
+ * continuity in the exponent and in the matrix argument;
++* the exponent derivative of `Tr[A ^ s]` for positive semidefinite `A` and `s > 0`;
+ * the Loewner-Heinz monotonicity theorem for `0 < q <= 1`;
+ * Lieb-Thirring and Rotfel'd trace inequalities for `0 < p <= 1`.
++
++## iii. Table of contents
++
++- A. Basic properties and exponent derivative
++- B. Loewner-Heinz Theorem
++- C. Araki-Lieb-Thirring Inequality
++- D. Rotfel'd Trace Subadditivity
++
++## iv. References
++
++None.
+ -/
+ 
++@[expose] public section
++
++variable {d d₂ 𝕜 : Type*} [Fintype d] [DecidableEq d] [Fintype d₂] [DecidableEq d₂]
++variable [RCLike 𝕜]
++variable {A B : HermitianMat d 𝕜} {x q r : ℝ}
++
+ noncomputable section
+ namespace HermitianMat
+ 
++/-! ## A. Basic properties and exponent derivative -/
++
+ /-- Real powers of Hermitian matrices via continuous functional calculus.
+ 
+ This is the total functional-calculus definition `A.cfc (fun x => x ^ r)`. For positive
+@@ -370,7 +390,24 @@ lemma trace_rpow_eq_sum (A : HermitianMat d ℂ) (p : ℝ) :
+     (A ^ p).trace = ∑ i, (A.H.eigenvalues i) ^ p := by
+   exact A.trace_cfc_eq (· ^ p)
+ 
+-/-! ## Loewner-Heinz Theorem
++/-- For a positive semidefinite matrix, the exponent derivative of `Tr[A ^ s]` is
++`Tr[A ^ s log A]` whenever `s > 0`. This includes singular matrices: zero eigenvalues
++contribute zero to the derivative. -/
++lemma hasDerivAt_trace_rpow {A : HermitianMat d ℂ} (hA : 0 ≤ A) {s : ℝ} (hs : 0 < s) :
++    HasDerivAt (fun t : ℝ ↦ (A ^ t).trace)
++      (A.cfc (fun x : ℝ ↦ x ^ s * Real.log x)).trace s := by
++  simp only [trace_rpow_eq_sum, trace_cfc_eq]
++  apply HasDerivAt.fun_sum
++  intro i _
++  by_cases hi : A.H.eigenvalues i = 0
++  · rw [hi, Real.log_zero, mul_zero]
++    apply (hasDerivAt_const s (0 : ℝ)).congr_of_eventuallyEq
++    filter_upwards [eventually_gt_nhds hs] with t ht
++    simp only [Real.zero_rpow ht.ne']
++  · have hx : 0 ≤ A.H.eigenvalues i := by simpa using hA.eigenvalues_nonneg i
++    exact (Real.hasStrictDerivAt_const_rpow (lt_of_le_of_ne hx (Ne.symm hi)) s).hasDerivAt
++
++/-! ## B. Loewner-Heinz Theorem
+ The operator monotonicity of `x ↦ x ^ q` for `0 < q ≤ 1`:
+ if `A ≤ B` (in the Loewner order), then `A ^ q ≤ B ^ q`.
+ This is proved using the resolvent integral representation, following the same
+@@ -666,7 +703,7 @@ theorem rpow_le_rpow_of_le (hA : 0 ≤ A) (hAB : A ≤ B)
+ 
+ end LoewnerHeinz
+ 
+-/-! ## Araki-Lieb-Thirring Inequality
++/-! ## C. Araki-Lieb-Thirring Inequality
+ 
+ The next section proves the trace inequality
+ `Tr[(B ^ r) (A ^ r) (B ^ r)] <= Tr[(B A B) ^ r]` for `0 < r <= 1`.
+@@ -1060,7 +1097,7 @@ lemma lieb_thirring_le_one
+ 
+ end ArakiLiebThirring
+ 
+-/-! ## Rotfel'd Trace Subadditivity
++/-! ## D. Rotfel'd Trace Subadditivity
+ 
+ For positive semidefinite `A`, `B` and `0 < p <= 1`, Rotfel'd's inequality says
+ `Tr[(A + B) ^ p] <= Tr[A ^ p] + Tr[B ^ p]`.

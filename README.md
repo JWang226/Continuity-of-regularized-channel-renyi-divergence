@@ -4,7 +4,7 @@ Lean 4 proof of Theorem 1 in [**Continuity of Regularized Channel Rényi
 Divergences**](https://arxiv.org/abs/2609.28635), by Jinzhao Wang and Yuxiang Yang.
 Developed with assistance from Codex.
 
-[Proof map](docs/PROOF_MAP.md) · [Paper correspondence](docs/PAPER_COMPARISON.md) ·
+[Proof map](docs/PROOF_MAP.md) · [Statement audit](docs/STATEMENT_AUDIT.md) ·
 [Verification guide](VERIFYING.md)
 
 ## The statements
@@ -97,6 +97,10 @@ dependencies. Search lemma descriptions and inspect dependencies locally:
 The [blind Lean read-back](docs/LEAN_READBACK.md) and
 [paper comparison](docs/PAPER_COMPARISON.md) explain the definitions and
 representation identifications. These are agent-generated review aids.
+The [statement audit](docs/STATEMENT_AUDIT.md) adds an explicit Lean proof that
+the two tensor-factor conventions agree. Reproduce its checks with
+`python3 scripts/check-statement-audit.py`. A reusable trace-power derivative
+is prepared as a [Physlib patch](Contributions/Physlib/README.md).
 Validate artifact hashes and mappings with `python3 scripts/check-artifacts.py`;
 this checks metadata consistency only. The proof map explains index regeneration.
 

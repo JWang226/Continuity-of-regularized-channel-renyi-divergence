@@ -1,6 +1,6 @@
 # Copyright (c) 2026 Jinzhao Wang. All rights reserved.
 # Released under Apache 2.0 license as described in the file LICENSE.
-version: "v0.3"
+version: "v0.4"
 
 project:
   name: "continuity-of-regularized-channel-renyi-divergence"
@@ -95,6 +95,12 @@ review:
     subsequent manuscript comparison are recorded in docs/LEAN_READBACK.md
     and docs/PAPER_COMPARISON.md. They are AI-assisted review, not independent
     human certification. See Verification/README.md for scope and source identity.
+    A subsequent source-domain statement audit is recorded in
+    docs/STATEMENT_AUDIT.md. The supplementary SourceCorrespondence module
+    proves equality of the reference-first and channel-first optimization
+    conventions and is checked separately in Lean. The historical certificate
+    does not include that new module. Nonzero spaces and totalized off-domain
+    orders are explicitly documented; no literal unmodified skill pass is claimed.
 
 artifacts:
   paper_mapping: "docs/paper-mapping.json"
@@ -103,6 +109,11 @@ artifacts:
   lemma_descriptions: "docs/lemma-descriptions.json"
   statement_readback: "docs/lean-readback.json"
   statement_comparison: "docs/paper-comparison.json"
+  statement_audit: "docs/statement-audit.json"
+  statement_audit_guide: "docs/STATEMENT_AUDIT.md"
+  statement_audit_check: "python3 scripts/check-statement-audit.py"
+  source_correspondence: "QuantumChannelContinuity/SourceCorrespondence.lean"
+  upstream_candidate: "Contributions/Physlib/trace-power-derivative.json"
   source_identity: "Verification/current-source-identity.json"
   metadata_check: "python3 scripts/check-artifacts.py"
   lemma_search: "./search-lemmas.sh"

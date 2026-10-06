@@ -135,6 +135,26 @@ def main():
     require('id: "arXiv:2609.28635v1"' in metadata, "Stale paper identifier in formalization.yaml")
     for target in TARGETS:
         require('declaration: "' + target + '"' in metadata, "Missing YAML result: " + target)
+    statement_audit = load("docs/statement-audit.json")
+    require(statement_audit["human_review_completed"] is False
+            and statement_audit["status"] == "scope-qualified-agent-audit",
+            "Statement audit review status differs")
+    require({r["declaration"] for r in statement_audit["targets"]} == TARGETS,
+            "Statement audit targets differ")
+    for record in statement_audit["input_files"]:
+        skipped += not check_hash(record["path"], record["sha256"], optional_dependency=True)
+    for target in statement_audit["targets"]:
+        lines = local_path(target["file"]).read_bytes().splitlines(keepends=True)
+        for field in ("signature", "declaration_source"):
+            loc = target[field]
+            data = b"".join(lines[loc["start_line"] - 1:loc["end_line"]])
+            require(hashlib.sha256(data).hexdigest() == loc["sha256"],
+                    "Statement audit declaration range differs: " + target["declaration"])
+    candidate = load("Contributions/Physlib/trace-power-derivative.json")
+    check_hash(candidate["patch"]["path"], candidate["patch"]["sha256"])
+    check_hash(candidate["evidence_file"], candidate["evidence_sha256"])
+    require(candidate["submitted_upstream"] is False and candidate["human_review_completed"] is False,
+            "Upstream review/submission cannot be inferred from local checks")
     print("ARTIFACT CHECK PASSED: " + str(len(lean_files)) + " Lean headers; "
           + str(len(current["files"])) + " historical proof sources; "
           + str(len(mapping["entries"])) + " paper mappings; " + str(len(nodes)) + " indexed declarations.")

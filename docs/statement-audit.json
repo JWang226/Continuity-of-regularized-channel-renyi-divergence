@@ -1,0 +1,3087 @@
+{
+  "schema_version": 1,
+  "status": "scope-qualified-agent-audit",
+  "date": "2026-10-06",
+  "audited_base_commit": "240d8acc8c6c23ec4952a63e11b9e8b65979ab9e",
+  "human_review_completed": false,
+  "independence": {
+    "source_reviewer": "statement_source_audit",
+    "definition_reviewer": "statement_definition_audit",
+    "bridge_reviewer": "statement_source_audit",
+    "source_reconstructed_before_reading_lean": true,
+    "previous_audit_reports_opened_before_verdict": false,
+    "task_context_inherited": true,
+    "blind_isolated_review_claimed": false
+  },
+  "workflow": {
+    "repository": "https://github.com/scottnarmstrong/LeanAutoformalizationSkills",
+    "commit": "70bb859295edc2abb9ad81f8f6e31ab2adf8ca07",
+    "skill": "lean-statement-audit",
+    "skill_sha256": "2c315ad231e93a198ef2960dadc67234c263a0f4a4adf858aeb2d9270007dfab",
+    "applied_to": "existing completed declarations, not an invented frozen draft history",
+    "adaptation": "Correspondence is assessed on the published admissible order domain. Global totalized values are recorded; no literal unmodified skill PASS is claimed.",
+    "installed_globally": false
+  },
+  "paper": {
+    "id": "arXiv:2609.28635v1",
+    "url": "https://arxiv.org/html/2609.28635v1",
+    "locators": [
+      "Theorem 1, Eq. (1.1)",
+      "§1.1, Eqs. (1.2)–(1.5)"
+    ],
+    "html_capture_sha256": "2039dbd98fc095315043a058dd410a6b5e32deaaee91132462d96ad8b5391672",
+    "html_capture_kind": "Downloaded rendered HTML; not asserted to be the arXiv source archive",
+    "retained_manuscript": {
+      "path": "docs/source-manuscript.tex",
+      "sha256": "76a8d6a961f9e8b70c7ffd0bb40fc351fcb1fa431cdbbbc30e70e25d73725eba",
+      "ranges": [
+        [
+          49,
+          55
+        ],
+        [
+          70,
+          95
+        ]
+      ],
+      "byte_identical_to_arxiv_source_asserted": false
+    }
+  },
+  "scope": {
+    "systems": "nonzero finite-dimensional complex Hilbert spaces",
+    "renyi_orders": "p >= 1/2 and p != 1",
+    "infinite_values": true,
+    "logs": "base two",
+    "zero_dimensional_cases_covered": false,
+    "off_domain_semantics_certified_as_paper_definitions": false
+  },
+  "targets": [
+    {
+      "declaration": "QuantumChannelContinuity.theorem_one",
+      "file": "QuantumChannelContinuity/Main.lean",
+      "signature": {
+        "start_line": 54,
+        "end_line": 56,
+        "sha256": "17189da88ffe40c9b2d978970381af904b8d1ef1368731f8db17b952b24414d1"
+      },
+      "declaration_source": {
+        "start_line": 54,
+        "end_line": 58,
+        "sha256": "389c0f41fb0b8628e36a80f2df194a6ab7760e24ebc4389a85483dd35e5891a3"
+      },
+      "elaborated_type": "∀ {H K : Type} [inst : QuantumState.Qudit H] [inst_1 : QuantumState.Qudit K] [inst_2 : Nontrivial H]\n  [inst_3 : Nontrivial K] (N M : QuantumChannel.CPTP H K),\n  Filter.Tendsto (fun α => QuantumChannelContinuity.regularizedRenyi α N M) (nhdsWithin 1 {1}ᶜ)\n    (nhds (QuantumChannelContinuity.regularizedRelative N M))",
+      "elaborated_type_sha256": "7f0ce792c18f23dabe88e8c249cde04cecacdb9e1f3669e5a098c6a3a4800a84",
+      "source_equations": [
+        "1.1"
+      ],
+      "surface_binders": [
+        {
+          "binder": "H",
+          "information": "implicit",
+          "type": "Type",
+          "bin": "TYPING",
+          "source": "§1.1"
+        },
+        {
+          "binder": "K",
+          "information": "implicit",
+          "type": "Type",
+          "bin": "TYPING",
+          "source": "§1.1"
+        },
+        {
+          "binder": "Qudit H",
+          "information": "instance",
+          "type": "Qudit H",
+          "bin": "STANDING",
+          "source": "§1.1, finite-dimensional complex Hilbert space"
+        },
+        {
+          "binder": "Nontrivial H",
+          "information": "instance",
+          "type": "Nontrivial H",
+          "bin": "STANDING",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in paper"
+        },
+        {
+          "binder": "Qudit K",
+          "information": "instance",
+          "type": "Qudit K",
+          "bin": "STANDING",
+          "source": "§1.1, finite-dimensional complex Hilbert space"
+        },
+        {
+          "binder": "Nontrivial K",
+          "information": "instance",
+          "type": "Nontrivial K",
+          "bin": "STANDING",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in paper"
+        },
+        {
+          "binder": "N",
+          "information": "explicit",
+          "type": "CPTP H K",
+          "bin": "SOURCE",
+          "source": "Theorem 1 / Eq. (1.5), quantified channels"
+        },
+        {
+          "binder": "M",
+          "information": "explicit",
+          "type": "CPTP H K",
+          "bin": "SOURCE",
+          "source": "Theorem 1 / Eq. (1.5), quantified channels"
+        }
+      ],
+      "surface_counts": {
+        "SOURCE": 2,
+        "STANDING": 4,
+        "TYPING": 2,
+        "RULED": 0,
+        "EXCESS": 0
+      },
+      "expanded_binders": [
+        {
+          "binder": "H.Qudit.Norm.norm",
+          "bin": "STANDING",
+          "type_and_default": "a → ℝ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.Add.add",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.AddSemigroup.add_assoc",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b c : a), a_1 + b + c = a_1 + (b + c)",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.Zero.zero",
+          "bin": "STANDING",
+          "type_and_default": "a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.AddZeroClass.zero_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), 0 + a_1 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.AddZeroClass.add_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), a_1 + 0 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.AddMonoid.nsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℕ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.AddMonoid.nsmul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), AddMonoid.nsmul 0 x = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.AddMonoid.nsmul_succ",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (x : a), AddMonoid.nsmul (n + 1) x = AddMonoid.nsmul n x + x := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.Neg.neg",
+          "bin": "STANDING",
+          "type_and_default": "a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.Sub.sub",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a :=\n    SubNegMonoid.sub'",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.SubNegMonoid.sub_eq_add_neg",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 - b = a_1 + -b := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.SubNegMonoid.zsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℤ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.SubNegMonoid.zsmul_zero'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), SubNegMonoid.zsmul 0 a_1 = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.SubNegMonoid.zsmul_succ'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (↑n.succ) a_1 = SubNegMonoid.zsmul (↑n) a_1 + a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.SubNegMonoid.zsmul_neg'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (Int.negSucc n) a_1 = -SubNegMonoid.zsmul (↑n.succ) a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.AddGroup.neg_add_cancel",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), -a_1 + a_1 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.AddCommMagma.add_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 + b = b + a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.Dist.dist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ :=\n    fun x y => ‖-x + y‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.PseudoMetricSpace.dist_self",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), dist x x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.PseudoMetricSpace.dist_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = dist y x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.PseudoMetricSpace.dist_triangle",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), dist x z ≤ dist x y + dist y z",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.PseudoMetricSpace.edist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ≥0∞ :=\n    fun x y => ↑⟨dist x y, ⋯⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.PseudoMetricSpace.edist_dist",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), PseudoMetricSpace.edist x y = ENNReal.ofReal (dist x y) := by\n    intro x y; exact ENNReal.coe_nnreal_eq _",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.PseudoMetricSpace.toUniformSpace",
+          "bin": "STANDING",
+          "type_and_default": "UniformSpace a :=\n    UniformSpace.ofDist dist ⋯ ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.PseudoMetricSpace.uniformity_dist",
+          "bin": "STANDING",
+          "type_and_default": "uniformity a = ⨅ ε, ⨅ (_ : ε > 0), 𝓟 {p | dist p.1 p.2 < ε} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.PseudoMetricSpace.toBornology",
+          "bin": "STANDING",
+          "type_and_default": "Bornology a :=\n    Bornology.ofDist dist ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.PseudoMetricSpace.cobounded_sets",
+          "bin": "STANDING",
+          "type_and_default": "(Bornology.cobounded a).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.MetricSpace.eq_of_dist_eq_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ {x y : a}, dist x y = 0 → x = y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.NormedAddCommGroup.dist_eq",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = ‖-x + y‖ := by\n    aesop",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.SMul.smul",
+          "bin": "STANDING",
+          "type_and_default": "ℂ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.SemigroupAction.mul_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : ℂ) (b : a), (x * y) • b = x • y • b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.MulAction.one_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (b : a), 1 • b = b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.DistribMulAction.smul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ), a_1 • 0 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.DistribMulAction.smul_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (x y : a), a_1 • (x + y) = a_1 • x + a_1 • y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.Module.add_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (r s : ℂ) (x : a), (r + s) • x = r • x + s • x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.Module.zero_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), 0 • x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.NormedSpace.norm_smul_le",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (b : a), ‖a_1 • b‖ ≤ ‖a_1‖ * ‖b‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.Inner.inner",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℂ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.InnerProductSpace.norm_sq_eq_re_inner",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), ‖x‖ ^ 2 = RCLike.re ⟨x∣x⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.InnerProductSpace.conj_inner_symm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), (starRingEnd ℂ) ⟨y∣x⟩ = ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.InnerProductSpace.add_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), ⟨x + y∣z⟩ = ⟨x∣z⟩ + ⟨y∣z⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.InnerProductSpace.smul_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a) (r : ℂ), ⟨r • x∣y⟩ = (starRingEnd ℂ) r * ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.CompleteSpace.complete",
+          "bin": "STANDING",
+          "type_and_default": "∀ {f : Filter a}, Cauchy f → ∃ x, f ≤ 𝓝 x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Qudit.Module.Finite.fg_top",
+          "bin": "STANDING",
+          "type_and_default": "⊤.FG",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "H.Nontrivial.exists_pair_ne",
+          "bin": "STANDING",
+          "type_and_default": "∃ x y : H, x ≠ y",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in source text"
+        },
+        {
+          "binder": "K.Qudit.Norm.norm",
+          "bin": "STANDING",
+          "type_and_default": "a → ℝ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.Add.add",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.AddSemigroup.add_assoc",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b c : a), a_1 + b + c = a_1 + (b + c)",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.Zero.zero",
+          "bin": "STANDING",
+          "type_and_default": "a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.AddZeroClass.zero_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), 0 + a_1 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.AddZeroClass.add_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), a_1 + 0 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.AddMonoid.nsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℕ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.AddMonoid.nsmul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), AddMonoid.nsmul 0 x = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.AddMonoid.nsmul_succ",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (x : a), AddMonoid.nsmul (n + 1) x = AddMonoid.nsmul n x + x := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.Neg.neg",
+          "bin": "STANDING",
+          "type_and_default": "a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.Sub.sub",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a :=\n    SubNegMonoid.sub'",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.SubNegMonoid.sub_eq_add_neg",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 - b = a_1 + -b := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.SubNegMonoid.zsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℤ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.SubNegMonoid.zsmul_zero'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), SubNegMonoid.zsmul 0 a_1 = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.SubNegMonoid.zsmul_succ'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (↑n.succ) a_1 = SubNegMonoid.zsmul (↑n) a_1 + a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.SubNegMonoid.zsmul_neg'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (Int.negSucc n) a_1 = -SubNegMonoid.zsmul (↑n.succ) a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.AddGroup.neg_add_cancel",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), -a_1 + a_1 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.AddCommMagma.add_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 + b = b + a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.Dist.dist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ :=\n    fun x y => ‖-x + y‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.PseudoMetricSpace.dist_self",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), dist x x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.PseudoMetricSpace.dist_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = dist y x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.PseudoMetricSpace.dist_triangle",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), dist x z ≤ dist x y + dist y z",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.PseudoMetricSpace.edist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ≥0∞ :=\n    fun x y => ↑⟨dist x y, ⋯⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.PseudoMetricSpace.edist_dist",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), PseudoMetricSpace.edist x y = ENNReal.ofReal (dist x y) := by\n    intro x y; exact ENNReal.coe_nnreal_eq _",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.PseudoMetricSpace.toUniformSpace",
+          "bin": "STANDING",
+          "type_and_default": "UniformSpace a :=\n    UniformSpace.ofDist dist ⋯ ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.PseudoMetricSpace.uniformity_dist",
+          "bin": "STANDING",
+          "type_and_default": "uniformity a = ⨅ ε, ⨅ (_ : ε > 0), 𝓟 {p | dist p.1 p.2 < ε} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.PseudoMetricSpace.toBornology",
+          "bin": "STANDING",
+          "type_and_default": "Bornology a :=\n    Bornology.ofDist dist ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.PseudoMetricSpace.cobounded_sets",
+          "bin": "STANDING",
+          "type_and_default": "(Bornology.cobounded a).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.MetricSpace.eq_of_dist_eq_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ {x y : a}, dist x y = 0 → x = y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.NormedAddCommGroup.dist_eq",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = ‖-x + y‖ := by\n    aesop",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.SMul.smul",
+          "bin": "STANDING",
+          "type_and_default": "ℂ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.SemigroupAction.mul_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : ℂ) (b : a), (x * y) • b = x • y • b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.MulAction.one_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (b : a), 1 • b = b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.DistribMulAction.smul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ), a_1 • 0 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.DistribMulAction.smul_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (x y : a), a_1 • (x + y) = a_1 • x + a_1 • y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.Module.add_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (r s : ℂ) (x : a), (r + s) • x = r • x + s • x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.Module.zero_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), 0 • x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.NormedSpace.norm_smul_le",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (b : a), ‖a_1 • b‖ ≤ ‖a_1‖ * ‖b‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.Inner.inner",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℂ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.InnerProductSpace.norm_sq_eq_re_inner",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), ‖x‖ ^ 2 = RCLike.re ⟨x∣x⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.InnerProductSpace.conj_inner_symm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), (starRingEnd ℂ) ⟨y∣x⟩ = ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.InnerProductSpace.add_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), ⟨x + y∣z⟩ = ⟨x∣z⟩ + ⟨y∣z⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.InnerProductSpace.smul_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a) (r : ℂ), ⟨r • x∣y⟩ = (starRingEnd ℂ) r * ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.CompleteSpace.complete",
+          "bin": "STANDING",
+          "type_and_default": "∀ {f : Filter a}, Cauchy f → ∃ x, f ≤ 𝓝 x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Qudit.Module.Finite.fg_top",
+          "bin": "STANDING",
+          "type_and_default": "⊤.FG",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "K.Nontrivial.exists_pair_ne",
+          "bin": "STANDING",
+          "type_and_default": "∃ x y : K, x ≠ y",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in source text"
+        },
+        {
+          "binder": "N.AddHom.toFun",
+          "bin": "SOURCE",
+          "type_and_default": "L ℋ₁ → L ℋ₂",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.AddHom.map_add'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (x y : L ℋ₁), self.toFun (x + y) = self.toFun x + self.toFun y",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.MulActionHom.map_smul'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (m : ℂ) (x : L ℋ₁), self.toFun (m • x) = (RingHom.id ℂ) m • self.toFun x",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.CompletelyPositiveMap.map_cstarMatrix_nonneg'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) (L ℋ₁)),\n      0 ≤ M → 0 ≤ M.map ⇑self.toLinearMap",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.QuantumChannel.CPTP.trace_map",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (ρ : L ℋ₁), Tr ρ = Tr (self.toFun ρ)",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.AddHom.toFun",
+          "bin": "SOURCE",
+          "type_and_default": "L ℋ₁ → L ℋ₂",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.AddHom.map_add'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (x y : L ℋ₁), self.toFun (x + y) = self.toFun x + self.toFun y",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.MulActionHom.map_smul'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (m : ℂ) (x : L ℋ₁), self.toFun (m • x) = (RingHom.id ℂ) m • self.toFun x",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.CompletelyPositiveMap.map_cstarMatrix_nonneg'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) (L ℋ₁)),\n      0 ≤ M → 0 ≤ M.map ⇑self.toLinearMap",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.QuantumChannel.CPTP.trace_map",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (ρ : L ℋ₁), Tr ρ = Tr (self.toFun ρ)",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "H",
+          "bin": "TYPING",
+          "type_and_default": "Type",
+          "source": "§1.1, Hilbert-space carrier"
+        },
+        {
+          "binder": "K",
+          "bin": "TYPING",
+          "type_and_default": "Type",
+          "source": "§1.1, Hilbert-space carrier"
+        }
+      ],
+      "expanded_counts": {
+        "SOURCE": 10,
+        "STANDING": 92,
+        "TYPING": 2,
+        "RULED": 0,
+        "EXCESS": 0
+      },
+      "binder_verdict": "No excess proof-step assumptions under the recorded nonzero-system interpretation"
+    },
+    {
+      "declaration": "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+      "file": "QuantumChannelContinuity/RegularizationLimits.lean",
+      "signature": {
+        "start_line": 118,
+        "end_line": 121,
+        "sha256": "3405116e1707db2f689fa9502d55874c696caa8f576708f65aa07ec37d43a3db"
+      },
+      "declaration_source": {
+        "start_line": 118,
+        "end_line": 123,
+        "sha256": "3f07b4f3afb940d78dc3237fa3aa6b39b95ef6842250e7ed49c3c179c8cf9ea6"
+      },
+      "elaborated_type": "∀ {A B : Type} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B] [inst_2 : Nontrivial A]\n  [inst_3 : Nontrivial B] {p : ℝ},\n  1 / 2 ≤ p →\n    p ≠ 1 →\n      ∀ (N M : QuantumChannel.CPTP A B),\n        Filter.Tendsto (fun n => QuantumChannelContinuity.blockRenyi p N M n / ↑n) Filter.atTop\n          (nhds (QuantumChannelContinuity.regularizedRenyi p N M))",
+      "elaborated_type_sha256": "e08e35aa71a531c99e52b964994ed6b70d937c687a1a79931b8f785f8af4b774",
+      "source_equations": [
+        "1.5"
+      ],
+      "surface_binders": [
+        {
+          "binder": "A",
+          "information": "implicit",
+          "type": "Type",
+          "bin": "TYPING",
+          "source": "§1.1"
+        },
+        {
+          "binder": "B",
+          "information": "implicit",
+          "type": "Type",
+          "bin": "TYPING",
+          "source": "§1.1"
+        },
+        {
+          "binder": "Qudit A",
+          "information": "instance",
+          "type": "Qudit A",
+          "bin": "STANDING",
+          "source": "§1.1, finite-dimensional complex Hilbert space"
+        },
+        {
+          "binder": "Nontrivial A",
+          "information": "instance",
+          "type": "Nontrivial A",
+          "bin": "STANDING",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in paper"
+        },
+        {
+          "binder": "Qudit B",
+          "information": "instance",
+          "type": "Qudit B",
+          "bin": "STANDING",
+          "source": "§1.1, finite-dimensional complex Hilbert space"
+        },
+        {
+          "binder": "Nontrivial B",
+          "information": "instance",
+          "type": "Nontrivial B",
+          "bin": "STANDING",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in paper"
+        },
+        {
+          "binder": "p",
+          "information": "implicit",
+          "type": "ℝ",
+          "bin": "SOURCE",
+          "source": "Eq. (1.3), Rényi order"
+        },
+        {
+          "binder": "hp",
+          "information": "explicit",
+          "type": "1 / 2 ≤ p",
+          "bin": "SOURCE",
+          "source": "Eq. (1.3), order domain"
+        },
+        {
+          "binder": "hp1",
+          "information": "explicit",
+          "type": "p ≠ 1",
+          "bin": "SOURCE",
+          "source": "Eq. (1.3), excluded order"
+        },
+        {
+          "binder": "N",
+          "information": "explicit",
+          "type": "CPTP A B",
+          "bin": "SOURCE",
+          "source": "Theorem 1 / Eq. (1.5), quantified channels"
+        },
+        {
+          "binder": "M",
+          "information": "explicit",
+          "type": "CPTP A B",
+          "bin": "SOURCE",
+          "source": "Theorem 1 / Eq. (1.5), quantified channels"
+        }
+      ],
+      "surface_counts": {
+        "SOURCE": 5,
+        "STANDING": 4,
+        "TYPING": 2,
+        "RULED": 0,
+        "EXCESS": 0
+      },
+      "expanded_binders": [
+        {
+          "binder": "A.Qudit.Norm.norm",
+          "bin": "STANDING",
+          "type_and_default": "a → ℝ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Add.add",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddSemigroup.add_assoc",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b c : a), a_1 + b + c = a_1 + (b + c)",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Zero.zero",
+          "bin": "STANDING",
+          "type_and_default": "a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddZeroClass.zero_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), 0 + a_1 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddZeroClass.add_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), a_1 + 0 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddMonoid.nsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℕ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddMonoid.nsmul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), AddMonoid.nsmul 0 x = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddMonoid.nsmul_succ",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (x : a), AddMonoid.nsmul (n + 1) x = AddMonoid.nsmul n x + x := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Neg.neg",
+          "bin": "STANDING",
+          "type_and_default": "a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Sub.sub",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a :=\n    SubNegMonoid.sub'",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.sub_eq_add_neg",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 - b = a_1 + -b := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.zsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℤ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.zsmul_zero'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), SubNegMonoid.zsmul 0 a_1 = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.zsmul_succ'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (↑n.succ) a_1 = SubNegMonoid.zsmul (↑n) a_1 + a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.zsmul_neg'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (Int.negSucc n) a_1 = -SubNegMonoid.zsmul (↑n.succ) a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddGroup.neg_add_cancel",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), -a_1 + a_1 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddCommMagma.add_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 + b = b + a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Dist.dist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ :=\n    fun x y => ‖-x + y‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.dist_self",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), dist x x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.dist_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = dist y x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.dist_triangle",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), dist x z ≤ dist x y + dist y z",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.edist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ≥0∞ :=\n    fun x y => ↑⟨dist x y, ⋯⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.edist_dist",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), PseudoMetricSpace.edist x y = ENNReal.ofReal (dist x y) := by\n    intro x y; exact ENNReal.coe_nnreal_eq _",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.toUniformSpace",
+          "bin": "STANDING",
+          "type_and_default": "UniformSpace a :=\n    UniformSpace.ofDist dist ⋯ ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.uniformity_dist",
+          "bin": "STANDING",
+          "type_and_default": "uniformity a = ⨅ ε, ⨅ (_ : ε > 0), 𝓟 {p | dist p.1 p.2 < ε} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.toBornology",
+          "bin": "STANDING",
+          "type_and_default": "Bornology a :=\n    Bornology.ofDist dist ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.cobounded_sets",
+          "bin": "STANDING",
+          "type_and_default": "(Bornology.cobounded a).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.MetricSpace.eq_of_dist_eq_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ {x y : a}, dist x y = 0 → x = y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.NormedAddCommGroup.dist_eq",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = ‖-x + y‖ := by\n    aesop",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SMul.smul",
+          "bin": "STANDING",
+          "type_and_default": "ℂ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SemigroupAction.mul_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : ℂ) (b : a), (x * y) • b = x • y • b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.MulAction.one_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (b : a), 1 • b = b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.DistribMulAction.smul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ), a_1 • 0 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.DistribMulAction.smul_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (x y : a), a_1 • (x + y) = a_1 • x + a_1 • y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Module.add_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (r s : ℂ) (x : a), (r + s) • x = r • x + s • x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Module.zero_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), 0 • x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.NormedSpace.norm_smul_le",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (b : a), ‖a_1 • b‖ ≤ ‖a_1‖ * ‖b‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Inner.inner",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℂ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.InnerProductSpace.norm_sq_eq_re_inner",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), ‖x‖ ^ 2 = RCLike.re ⟨x∣x⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.InnerProductSpace.conj_inner_symm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), (starRingEnd ℂ) ⟨y∣x⟩ = ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.InnerProductSpace.add_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), ⟨x + y∣z⟩ = ⟨x∣z⟩ + ⟨y∣z⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.InnerProductSpace.smul_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a) (r : ℂ), ⟨r • x∣y⟩ = (starRingEnd ℂ) r * ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.CompleteSpace.complete",
+          "bin": "STANDING",
+          "type_and_default": "∀ {f : Filter a}, Cauchy f → ∃ x, f ≤ 𝓝 x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Module.Finite.fg_top",
+          "bin": "STANDING",
+          "type_and_default": "⊤.FG",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Nontrivial.exists_pair_ne",
+          "bin": "STANDING",
+          "type_and_default": "∃ x y : A, x ≠ y",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in source text"
+        },
+        {
+          "binder": "B.Qudit.Norm.norm",
+          "bin": "STANDING",
+          "type_and_default": "a → ℝ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Add.add",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddSemigroup.add_assoc",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b c : a), a_1 + b + c = a_1 + (b + c)",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Zero.zero",
+          "bin": "STANDING",
+          "type_and_default": "a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddZeroClass.zero_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), 0 + a_1 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddZeroClass.add_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), a_1 + 0 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddMonoid.nsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℕ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddMonoid.nsmul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), AddMonoid.nsmul 0 x = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddMonoid.nsmul_succ",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (x : a), AddMonoid.nsmul (n + 1) x = AddMonoid.nsmul n x + x := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Neg.neg",
+          "bin": "STANDING",
+          "type_and_default": "a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Sub.sub",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a :=\n    SubNegMonoid.sub'",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.sub_eq_add_neg",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 - b = a_1 + -b := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.zsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℤ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.zsmul_zero'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), SubNegMonoid.zsmul 0 a_1 = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.zsmul_succ'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (↑n.succ) a_1 = SubNegMonoid.zsmul (↑n) a_1 + a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.zsmul_neg'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (Int.negSucc n) a_1 = -SubNegMonoid.zsmul (↑n.succ) a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddGroup.neg_add_cancel",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), -a_1 + a_1 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddCommMagma.add_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 + b = b + a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Dist.dist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ :=\n    fun x y => ‖-x + y‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.dist_self",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), dist x x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.dist_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = dist y x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.dist_triangle",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), dist x z ≤ dist x y + dist y z",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.edist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ≥0∞ :=\n    fun x y => ↑⟨dist x y, ⋯⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.edist_dist",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), PseudoMetricSpace.edist x y = ENNReal.ofReal (dist x y) := by\n    intro x y; exact ENNReal.coe_nnreal_eq _",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.toUniformSpace",
+          "bin": "STANDING",
+          "type_and_default": "UniformSpace a :=\n    UniformSpace.ofDist dist ⋯ ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.uniformity_dist",
+          "bin": "STANDING",
+          "type_and_default": "uniformity a = ⨅ ε, ⨅ (_ : ε > 0), 𝓟 {p | dist p.1 p.2 < ε} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.toBornology",
+          "bin": "STANDING",
+          "type_and_default": "Bornology a :=\n    Bornology.ofDist dist ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.cobounded_sets",
+          "bin": "STANDING",
+          "type_and_default": "(Bornology.cobounded a).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.MetricSpace.eq_of_dist_eq_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ {x y : a}, dist x y = 0 → x = y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.NormedAddCommGroup.dist_eq",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = ‖-x + y‖ := by\n    aesop",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SMul.smul",
+          "bin": "STANDING",
+          "type_and_default": "ℂ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SemigroupAction.mul_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : ℂ) (b : a), (x * y) • b = x • y • b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.MulAction.one_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (b : a), 1 • b = b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.DistribMulAction.smul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ), a_1 • 0 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.DistribMulAction.smul_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (x y : a), a_1 • (x + y) = a_1 • x + a_1 • y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Module.add_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (r s : ℂ) (x : a), (r + s) • x = r • x + s • x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Module.zero_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), 0 • x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.NormedSpace.norm_smul_le",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (b : a), ‖a_1 • b‖ ≤ ‖a_1‖ * ‖b‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Inner.inner",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℂ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.InnerProductSpace.norm_sq_eq_re_inner",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), ‖x‖ ^ 2 = RCLike.re ⟨x∣x⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.InnerProductSpace.conj_inner_symm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), (starRingEnd ℂ) ⟨y∣x⟩ = ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.InnerProductSpace.add_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), ⟨x + y∣z⟩ = ⟨x∣z⟩ + ⟨y∣z⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.InnerProductSpace.smul_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a) (r : ℂ), ⟨r • x∣y⟩ = (starRingEnd ℂ) r * ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.CompleteSpace.complete",
+          "bin": "STANDING",
+          "type_and_default": "∀ {f : Filter a}, Cauchy f → ∃ x, f ≤ 𝓝 x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Module.Finite.fg_top",
+          "bin": "STANDING",
+          "type_and_default": "⊤.FG",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Nontrivial.exists_pair_ne",
+          "bin": "STANDING",
+          "type_and_default": "∃ x y : B, x ≠ y",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in source text"
+        },
+        {
+          "binder": "N.AddHom.toFun",
+          "bin": "SOURCE",
+          "type_and_default": "L ℋ₁ → L ℋ₂",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.AddHom.map_add'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (x y : L ℋ₁), self.toFun (x + y) = self.toFun x + self.toFun y",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.MulActionHom.map_smul'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (m : ℂ) (x : L ℋ₁), self.toFun (m • x) = (RingHom.id ℂ) m • self.toFun x",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.CompletelyPositiveMap.map_cstarMatrix_nonneg'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) (L ℋ₁)),\n      0 ≤ M → 0 ≤ M.map ⇑self.toLinearMap",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.QuantumChannel.CPTP.trace_map",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (ρ : L ℋ₁), Tr ρ = Tr (self.toFun ρ)",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.AddHom.toFun",
+          "bin": "SOURCE",
+          "type_and_default": "L ℋ₁ → L ℋ₂",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.AddHom.map_add'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (x y : L ℋ₁), self.toFun (x + y) = self.toFun x + self.toFun y",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.MulActionHom.map_smul'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (m : ℂ) (x : L ℋ₁), self.toFun (m • x) = (RingHom.id ℂ) m • self.toFun x",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.CompletelyPositiveMap.map_cstarMatrix_nonneg'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) (L ℋ₁)),\n      0 ≤ M → 0 ≤ M.map ⇑self.toLinearMap",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.QuantumChannel.CPTP.trace_map",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (ρ : L ℋ₁), Tr ρ = Tr (self.toFun ρ)",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "A",
+          "bin": "TYPING",
+          "type_and_default": "Type",
+          "source": "§1.1, Hilbert-space carrier"
+        },
+        {
+          "binder": "B",
+          "bin": "TYPING",
+          "type_and_default": "Type",
+          "source": "§1.1, Hilbert-space carrier"
+        },
+        {
+          "binder": "p",
+          "information": "implicit",
+          "type": "ℝ",
+          "bin": "SOURCE",
+          "source": "Eq. (1.3), Rényi order"
+        },
+        {
+          "binder": "hp",
+          "information": "explicit",
+          "type": "1 / 2 ≤ p",
+          "bin": "SOURCE",
+          "source": "Eq. (1.3), order domain"
+        },
+        {
+          "binder": "hp1",
+          "information": "explicit",
+          "type": "p ≠ 1",
+          "bin": "SOURCE",
+          "source": "Eq. (1.3), excluded order"
+        }
+      ],
+      "expanded_counts": {
+        "SOURCE": 13,
+        "STANDING": 92,
+        "TYPING": 2,
+        "RULED": 0,
+        "EXCESS": 0
+      },
+      "binder_verdict": "No excess proof-step assumptions under the recorded nonzero-system interpretation"
+    },
+    {
+      "declaration": "QuantumChannelContinuity.blockRelative_tendsto_regularized",
+      "file": "QuantumChannelContinuity/RegularizationLimits.lean",
+      "signature": {
+        "start_line": 127,
+        "end_line": 129,
+        "sha256": "2ebbc990c034d455880b8db793ffdc9f85dff76717baba657dec484656038b64"
+      },
+      "declaration_source": {
+        "start_line": 127,
+        "end_line": 130,
+        "sha256": "ec89c04fe13303e9447ca87de9967f43fb9b91126f7269f1e808ae6c0e0cd103"
+      },
+      "elaborated_type": "∀ {A B : Type} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B] [inst_2 : Nontrivial A]\n  [inst_3 : Nontrivial B] (N M : QuantumChannel.CPTP A B),\n  Filter.Tendsto (fun n => QuantumChannelContinuity.blockRelative N M n / ↑n) Filter.atTop\n    (nhds (QuantumChannelContinuity.regularizedRelative N M))",
+      "elaborated_type_sha256": "9935913469a7234de6f099662429569d7d0ea26c0d87e584ad5a31f5c7ad28ec",
+      "source_equations": [
+        "1.5"
+      ],
+      "surface_binders": [
+        {
+          "binder": "A",
+          "information": "implicit",
+          "type": "Type",
+          "bin": "TYPING",
+          "source": "§1.1"
+        },
+        {
+          "binder": "B",
+          "information": "implicit",
+          "type": "Type",
+          "bin": "TYPING",
+          "source": "§1.1"
+        },
+        {
+          "binder": "Qudit A",
+          "information": "instance",
+          "type": "Qudit A",
+          "bin": "STANDING",
+          "source": "§1.1, finite-dimensional complex Hilbert space"
+        },
+        {
+          "binder": "Nontrivial A",
+          "information": "instance",
+          "type": "Nontrivial A",
+          "bin": "STANDING",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in paper"
+        },
+        {
+          "binder": "Qudit B",
+          "information": "instance",
+          "type": "Qudit B",
+          "bin": "STANDING",
+          "source": "§1.1, finite-dimensional complex Hilbert space"
+        },
+        {
+          "binder": "Nontrivial B",
+          "information": "instance",
+          "type": "Nontrivial B",
+          "bin": "STANDING",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in paper"
+        },
+        {
+          "binder": "N",
+          "information": "explicit",
+          "type": "CPTP A B",
+          "bin": "SOURCE",
+          "source": "Theorem 1 / Eq. (1.5), quantified channels"
+        },
+        {
+          "binder": "M",
+          "information": "explicit",
+          "type": "CPTP A B",
+          "bin": "SOURCE",
+          "source": "Theorem 1 / Eq. (1.5), quantified channels"
+        }
+      ],
+      "surface_counts": {
+        "SOURCE": 2,
+        "STANDING": 4,
+        "TYPING": 2,
+        "RULED": 0,
+        "EXCESS": 0
+      },
+      "expanded_binders": [
+        {
+          "binder": "A.Qudit.Norm.norm",
+          "bin": "STANDING",
+          "type_and_default": "a → ℝ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Add.add",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddSemigroup.add_assoc",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b c : a), a_1 + b + c = a_1 + (b + c)",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Zero.zero",
+          "bin": "STANDING",
+          "type_and_default": "a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddZeroClass.zero_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), 0 + a_1 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddZeroClass.add_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), a_1 + 0 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddMonoid.nsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℕ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddMonoid.nsmul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), AddMonoid.nsmul 0 x = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddMonoid.nsmul_succ",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (x : a), AddMonoid.nsmul (n + 1) x = AddMonoid.nsmul n x + x := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Neg.neg",
+          "bin": "STANDING",
+          "type_and_default": "a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Sub.sub",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a :=\n    SubNegMonoid.sub'",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.sub_eq_add_neg",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 - b = a_1 + -b := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.zsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℤ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.zsmul_zero'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), SubNegMonoid.zsmul 0 a_1 = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.zsmul_succ'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (↑n.succ) a_1 = SubNegMonoid.zsmul (↑n) a_1 + a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SubNegMonoid.zsmul_neg'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (Int.negSucc n) a_1 = -SubNegMonoid.zsmul (↑n.succ) a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddGroup.neg_add_cancel",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), -a_1 + a_1 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.AddCommMagma.add_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 + b = b + a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Dist.dist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ :=\n    fun x y => ‖-x + y‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.dist_self",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), dist x x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.dist_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = dist y x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.dist_triangle",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), dist x z ≤ dist x y + dist y z",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.edist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ≥0∞ :=\n    fun x y => ↑⟨dist x y, ⋯⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.edist_dist",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), PseudoMetricSpace.edist x y = ENNReal.ofReal (dist x y) := by\n    intro x y; exact ENNReal.coe_nnreal_eq _",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.toUniformSpace",
+          "bin": "STANDING",
+          "type_and_default": "UniformSpace a :=\n    UniformSpace.ofDist dist ⋯ ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.uniformity_dist",
+          "bin": "STANDING",
+          "type_and_default": "uniformity a = ⨅ ε, ⨅ (_ : ε > 0), 𝓟 {p | dist p.1 p.2 < ε} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.toBornology",
+          "bin": "STANDING",
+          "type_and_default": "Bornology a :=\n    Bornology.ofDist dist ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.PseudoMetricSpace.cobounded_sets",
+          "bin": "STANDING",
+          "type_and_default": "(Bornology.cobounded a).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.MetricSpace.eq_of_dist_eq_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ {x y : a}, dist x y = 0 → x = y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.NormedAddCommGroup.dist_eq",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = ‖-x + y‖ := by\n    aesop",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SMul.smul",
+          "bin": "STANDING",
+          "type_and_default": "ℂ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.SemigroupAction.mul_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : ℂ) (b : a), (x * y) • b = x • y • b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.MulAction.one_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (b : a), 1 • b = b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.DistribMulAction.smul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ), a_1 • 0 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.DistribMulAction.smul_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (x y : a), a_1 • (x + y) = a_1 • x + a_1 • y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Module.add_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (r s : ℂ) (x : a), (r + s) • x = r • x + s • x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Module.zero_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), 0 • x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.NormedSpace.norm_smul_le",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (b : a), ‖a_1 • b‖ ≤ ‖a_1‖ * ‖b‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Inner.inner",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℂ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.InnerProductSpace.norm_sq_eq_re_inner",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), ‖x‖ ^ 2 = RCLike.re ⟨x∣x⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.InnerProductSpace.conj_inner_symm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), (starRingEnd ℂ) ⟨y∣x⟩ = ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.InnerProductSpace.add_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), ⟨x + y∣z⟩ = ⟨x∣z⟩ + ⟨y∣z⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.InnerProductSpace.smul_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a) (r : ℂ), ⟨r • x∣y⟩ = (starRingEnd ℂ) r * ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.CompleteSpace.complete",
+          "bin": "STANDING",
+          "type_and_default": "∀ {f : Filter a}, Cauchy f → ∃ x, f ≤ 𝓝 x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Qudit.Module.Finite.fg_top",
+          "bin": "STANDING",
+          "type_and_default": "⊤.FG",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "A.Nontrivial.exists_pair_ne",
+          "bin": "STANDING",
+          "type_and_default": "∃ x y : A, x ≠ y",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in source text"
+        },
+        {
+          "binder": "B.Qudit.Norm.norm",
+          "bin": "STANDING",
+          "type_and_default": "a → ℝ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Add.add",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddSemigroup.add_assoc",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b c : a), a_1 + b + c = a_1 + (b + c)",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Zero.zero",
+          "bin": "STANDING",
+          "type_and_default": "a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddZeroClass.zero_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), 0 + a_1 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddZeroClass.add_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), a_1 + 0 = a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddMonoid.nsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℕ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddMonoid.nsmul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), AddMonoid.nsmul 0 x = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddMonoid.nsmul_succ",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (x : a), AddMonoid.nsmul (n + 1) x = AddMonoid.nsmul n x + x := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Neg.neg",
+          "bin": "STANDING",
+          "type_and_default": "a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Sub.sub",
+          "bin": "STANDING",
+          "type_and_default": "a → a → a :=\n    SubNegMonoid.sub'",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.sub_eq_add_neg",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 - b = a_1 + -b := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.zsmul",
+          "bin": "STANDING",
+          "type_and_default": "ℤ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.zsmul_zero'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), SubNegMonoid.zsmul 0 a_1 = 0 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.zsmul_succ'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (↑n.succ) a_1 = SubNegMonoid.zsmul (↑n) a_1 + a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SubNegMonoid.zsmul_neg'",
+          "bin": "STANDING",
+          "type_and_default": "∀ (n : ℕ) (a_1 : a),\n      SubNegMonoid.zsmul (Int.negSucc n) a_1 = -SubNegMonoid.zsmul (↑n.succ) a_1 := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddGroup.neg_add_cancel",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : a), -a_1 + a_1 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.AddCommMagma.add_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 b : a), a_1 + b = b + a_1",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Dist.dist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ :=\n    fun x y => ‖-x + y‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.dist_self",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), dist x x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.dist_comm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = dist y x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.dist_triangle",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), dist x z ≤ dist x y + dist y z",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.edist",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℝ≥0∞ :=\n    fun x y => ↑⟨dist x y, ⋯⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.edist_dist",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), PseudoMetricSpace.edist x y = ENNReal.ofReal (dist x y) := by\n    intro x y; exact ENNReal.coe_nnreal_eq _",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.toUniformSpace",
+          "bin": "STANDING",
+          "type_and_default": "UniformSpace a :=\n    UniformSpace.ofDist dist ⋯ ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.uniformity_dist",
+          "bin": "STANDING",
+          "type_and_default": "uniformity a = ⨅ ε, ⨅ (_ : ε > 0), 𝓟 {p | dist p.1 p.2 < ε} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.toBornology",
+          "bin": "STANDING",
+          "type_and_default": "Bornology a :=\n    Bornology.ofDist dist ⋯ ⋯",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.PseudoMetricSpace.cobounded_sets",
+          "bin": "STANDING",
+          "type_and_default": "(Bornology.cobounded a).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by\n    intros; rfl",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.MetricSpace.eq_of_dist_eq_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ {x y : a}, dist x y = 0 → x = y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.NormedAddCommGroup.dist_eq",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), dist x y = ‖-x + y‖ := by\n    aesop",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SMul.smul",
+          "bin": "STANDING",
+          "type_and_default": "ℂ → a → a",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.SemigroupAction.mul_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : ℂ) (b : a), (x * y) • b = x • y • b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.MulAction.one_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (b : a), 1 • b = b",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.DistribMulAction.smul_zero",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ), a_1 • 0 = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.DistribMulAction.smul_add",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (x y : a), a_1 • (x + y) = a_1 • x + a_1 • y",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Module.add_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (r s : ℂ) (x : a), (r + s) • x = r • x + s • x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Module.zero_smul",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), 0 • x = 0",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.NormedSpace.norm_smul_le",
+          "bin": "STANDING",
+          "type_and_default": "∀ (a_1 : ℂ) (b : a), ‖a_1 • b‖ ≤ ‖a_1‖ * ‖b‖",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Inner.inner",
+          "bin": "STANDING",
+          "type_and_default": "a → a → ℂ",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.InnerProductSpace.norm_sq_eq_re_inner",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x : a), ‖x‖ ^ 2 = RCLike.re ⟨x∣x⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.InnerProductSpace.conj_inner_symm",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a), (starRingEnd ℂ) ⟨y∣x⟩ = ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.InnerProductSpace.add_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y z : a), ⟨x + y∣z⟩ = ⟨x∣z⟩ + ⟨y∣z⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.InnerProductSpace.smul_left",
+          "bin": "STANDING",
+          "type_and_default": "∀ (x y : a) (r : ℂ), ⟨r • x∣y⟩ = (starRingEnd ℂ) r * ⟨x∣y⟩",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.CompleteSpace.complete",
+          "bin": "STANDING",
+          "type_and_default": "∀ {f : Filter a}, Cauchy f → ∃ x, f ≤ 𝓝 x",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Qudit.Module.Finite.fg_top",
+          "bin": "STANDING",
+          "type_and_default": "⊤.FG",
+          "source": "arXiv:2609.28635v1 §1.1, finite complex Hilbert-space conventions"
+        },
+        {
+          "binder": "B.Nontrivial.exists_pair_ne",
+          "bin": "STANDING",
+          "type_and_default": "∃ x y : B, x ≠ y",
+          "source": "Conventional nonzero quantum-system interpretation; not explicit in source text"
+        },
+        {
+          "binder": "N.AddHom.toFun",
+          "bin": "SOURCE",
+          "type_and_default": "L ℋ₁ → L ℋ₂",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.AddHom.map_add'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (x y : L ℋ₁), self.toFun (x + y) = self.toFun x + self.toFun y",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.MulActionHom.map_smul'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (m : ℂ) (x : L ℋ₁), self.toFun (m • x) = (RingHom.id ℂ) m • self.toFun x",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.CompletelyPositiveMap.map_cstarMatrix_nonneg'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) (L ℋ₁)),\n      0 ≤ M → 0 ≤ M.map ⇑self.toLinearMap",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "N.QuantumChannel.CPTP.trace_map",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (ρ : L ℋ₁), Tr ρ = Tr (self.toFun ρ)",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.AddHom.toFun",
+          "bin": "SOURCE",
+          "type_and_default": "L ℋ₁ → L ℋ₂",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.AddHom.map_add'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (x y : L ℋ₁), self.toFun (x + y) = self.toFun x + self.toFun y",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.MulActionHom.map_smul'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (m : ℂ) (x : L ℋ₁), self.toFun (m • x) = (RingHom.id ℂ) m • self.toFun x",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.CompletelyPositiveMap.map_cstarMatrix_nonneg'",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) (L ℋ₁)),\n      0 ≤ M → 0 ≤ M.map ⇑self.toLinearMap",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "M.QuantumChannel.CPTP.trace_map",
+          "bin": "SOURCE",
+          "type_and_default": "∀ (ρ : L ℋ₁), Tr ρ = Tr (self.toFun ρ)",
+          "source": "arXiv:2609.28635v1 Theorem 1 / Eq. (1.5), quantum-channel definition"
+        },
+        {
+          "binder": "A",
+          "bin": "TYPING",
+          "type_and_default": "Type",
+          "source": "§1.1, Hilbert-space carrier"
+        },
+        {
+          "binder": "B",
+          "bin": "TYPING",
+          "type_and_default": "Type",
+          "source": "§1.1, Hilbert-space carrier"
+        }
+      ],
+      "expanded_counts": {
+        "SOURCE": 10,
+        "STANDING": 92,
+        "TYPING": 2,
+        "RULED": 0,
+        "EXCESS": 0
+      },
+      "binder_verdict": "No excess proof-step assumptions under the recorded nonzero-system interpretation"
+    }
+  ],
+  "definition_records": [
+    {
+      "name": "QuantumState.Qudit",
+      "path": ".lake/packages/Quantum/Quantum/QuantumMechanics/QuantumState.lean",
+      "lines": [
+        17,
+        21
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Finite-dimensional complete complex inner-product-space structure; compatible norm. No quantum estimate."
+    },
+    {
+      "name": "QuantumChannel.CPTP",
+      "path": ".lake/packages/Quantum/Quantum/QuantumMechanics/QuantumChannel.lean",
+      "lines": [
+        108,
+        110
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Complex linear map; inherited matrix-amplification positivity at every finite k; trace preservation on all operators. Complete positivity fields are at mathlib CompletelyPositiveMap.lean:50-55."
+    },
+    {
+      "name": "QuantumChannelContinuity.DensityState",
+      "path": "QuantumChannelContinuity/Foundations.lean",
+      "lines": [
+        31,
+        34
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Actual positive endomorphism of trace1; singular states admitted."
+    },
+    {
+      "name": "QuantumChannelContinuity.PureInput",
+      "path": "QuantumChannelContinuity/Channels.lean",
+      "lines": [
+        27,
+        42
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "All norm-one vectors; actual rank-one outer-product density. Standard basis used only to prove Nonempty, never to restrict optimization."
+    },
+    {
+      "name": "QuantumChannelContinuity.toBits",
+      "path": "QuantumChannelContinuity/Foundations.lean",
+      "lines": [
+        77,
+        95
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Positive multiplication by inverse natural log2, with +infinity preserved by checked theorem."
+    },
+    {
+      "name": "SandwichedRenyiRelativeEntropy.suppLE",
+      "path": ".lake/packages/Quantum/Quantum/QuantumEntropy/SandwichedRenyiNonNeg.lean",
+      "lines": [
+        53,
+        54
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "ker sigma <= ker rho, the positive-operator support inclusion convention."
+    },
+    {
+      "name": "QuantumChannelContinuity.stateRenyi",
+      "path": "QuantumChannelContinuity/Foundations.lean",
+      "lines": [
+        98,
+        99
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "paper admissible orders p>=1/2, p!=1",
+      "strict_unmodified_skill_public_carrier": "FAIL",
+      "reason": "Actual trace sandwich powers scaled to bits. Above1, support mismatch gives infinity. Below1, zero trace gives infinity. Imported normalization denominator equals1. Finite formulas and infinity branches have separate checked Lean lemmas."
+    },
+    {
+      "name": "QuantumChannelContinuity.stateRelative",
+      "path": "QuantumChannelContinuity/Foundations.lean",
+      "lines": [
+        102,
+        103
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Actual Umegaki trace logarithm formula divided by log2 on support inclusion and infinity on support mismatch."
+    },
+    {
+      "name": "QuantumChannelContinuity.amplifiedOutput",
+      "path": "QuantumChannelContinuity/Channels.lean",
+      "lines": [
+        45,
+        69
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Literal N tensor id action on arbitrary, possibly entangled operators; complete positivity and normalization proved. Manuscript id tensor N comparison closed by SourceCorrespondence."
+    },
+    {
+      "name": "QuantumChannelContinuity.channelRenyi",
+      "path": "QuantumChannelContinuity/Channels.lean",
+      "lines": [
+        81,
+        83
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "paper admissible orders p>=1/2, p!=1",
+      "strict_unmodified_skill_public_carrier": "FAIL",
+      "reason": "Full pure-input supremum with reference a copy of input space. ENNReal conversion is exact by state nonnegativity on admissible orders. Tensor-factor convention closed by separate source correspondence."
+    },
+    {
+      "name": "QuantumChannelContinuity.channelRelative",
+      "path": "QuantumChannelContinuity/Channels.lean",
+      "lines": [
+        86,
+        88
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Full pure-input supremum with same reference dimension. ENNReal conversion exact by proved relative-entropy nonnegativity, including infinity."
+    },
+    {
+      "name": "QuantumChannelContinuity.tensorChannel",
+      "path": "QuantumChannelContinuity/TensorChannels.lean",
+      "lines": [
+        93,
+        104
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Literal tensor product via canonical operator tensor equivalence. All-amplification positivity and trace preservation constructed."
+    },
+    {
+      "name": "QuantumChannelContinuity.tensorPowerSpace/channelPower",
+      "path": "QuantumChannelContinuity/Regularization.lean",
+      "lines": [
+        25,
+        54
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Actual recursive tensor powers with one-dimensional zero-copy identity. One-copy and regrouping isometries are independently proved. Reference dimension multiplication is mathematical review, not standalone compiled finrank evidence."
+    },
+    {
+      "name": "QuantumChannelContinuity.blockRenyi",
+      "path": "QuantumChannelContinuity/Regularization.lean",
+      "lines": [
+        57,
+        58
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "paper admissible orders p>=1/2, p!=1",
+      "strict_unmodified_skill_public_carrier": "FAIL",
+      "reason": "Actual stabilized divergence of the supplied n-copy channels."
+    },
+    {
+      "name": "QuantumChannelContinuity.blockRelative",
+      "path": "QuantumChannelContinuity/Regularization.lean",
+      "lines": [
+        61,
+        62
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Actual stabilized relative entropy of the supplied n-copy channels."
+    },
+    {
+      "name": "QuantumChannelContinuity.regularizedRenyi",
+      "path": "QuantumChannelContinuity/Regularization.lean",
+      "lines": [
+        65,
+        66
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "paper admissible orders p>=1/2, p!=1",
+      "strict_unmodified_skill_public_carrier": "FAIL",
+      "reason": "Supremum of normalized positive blocks; n0 excluded by index. Separate checked Fekete identity supplies limit definition."
+    },
+    {
+      "name": "QuantumChannelContinuity.regularizedRelative",
+      "path": "QuantumChannelContinuity/Regularization.lean",
+      "lines": [
+        69,
+        70
+      ],
+      "BODY_MATCH": "OK",
+      "PUBLIC_CARRIER": "OK",
+      "WELL_DEFINEDNESS": "N/A_LITERAL",
+      "CHARACTERIZATION": "N/A_LITERAL",
+      "CHOICE_INDEPENDENCE": "N/A",
+      "DEFINITION_VERDICT": "PASS",
+      "scope": "finite nonzero complex Hilbert spaces with normalized states",
+      "strict_unmodified_skill_public_carrier": "OK",
+      "reason": "Supremum of normalized positive blocks; no optimizer witness or extra additivity assumption. Separate checked identity supplies limit definition."
+    }
+  ],
+  "representation_bridge": {
+    "module": "QuantumChannelContinuity/SourceCorrespondence.lean",
+    "output": "QuantumChannelContinuity.referenceFirstOutput",
+    "output_swap": "QuantumChannelContinuity.referenceFirstOutput_swap",
+    "renyi_equality": "QuantumChannelContinuity.channelRenyi_eq_referenceFirst",
+    "relative_equality": "QuantumChannelContinuity.channelRelative_eq_referenceFirst",
+    "semantic_review": "Passed independent agent review; actual id tensor N action on arbitrary operators plus a bijection of full pure-input suprema",
+    "historical_certificate_includes_new_module": false,
+    "source_equation": "1.4"
+  },
+  "mechanical_checks": {
+    "reproducer": "python3 scripts/check-statement-audit.py",
+    "probe_sha256": "628305751f26d3a5f7819420e34077003855bf49ac03867b899c45b93fb7d05d",
+    "status": "passed",
+    "automates_informal_semantic_review": false,
+    "supplementary_definition_probe": {
+      "command": "./run-lake.sh env lean .lake/audit-work/definitions/DefinitionsAudit.lean",
+      "exit_code": 0,
+      "probe_sha256": "e94bfb5c11eacb4c122140e67ca93628b6ede47dc4119bb7eab682609e54919d",
+      "examples": 12,
+      "axiom_prints": 9,
+      "log": ".lake/audit-work/definitions/probe-output.txt",
+      "log_sha256": "4ab209c9caa07b9e28db971fd19d7b1ff47fd7ad7c101820dfcac2846335f6c3",
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "temporary_source_deleted": true,
+      "omitted_optional_probe": "standalone finrank identity after instance-synthesis timeouts; never counted as passed"
+    },
+    "recorded_result": {
+      "status": "passed",
+      "probe_sha256": "628305751f26d3a5f7819420e34077003855bf49ac03867b899c45b93fb7d05d",
+      "probe_output_sha256": "9be3ae25dab16002e8268be082fe1d2e957ee6a8438385302c1bdc4f591d28eb",
+      "target_axioms": {
+        "QuantumChannelContinuity.theorem_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantumChannelContinuity.blockRenyi_tendsto_regularized": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantumChannelContinuity.blockRelative_tendsto_regularized": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "bridge_axioms": {
+        "QuantumChannelContinuity.referenceFirstOutput_swap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantumChannelContinuity.channelRenyi_eq_referenceFirst": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "QuantumChannelContinuity.channelRelative_eq_referenceFirst": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "scope": "exact-type, defining-equation, normalization, domain and axiom probes",
+      "semantic_correspondence_automated": false,
+      "temporary_lean_source_removed": true
+    },
+    "supplementary_bridge_probe": {
+      "command": "./run-lake.sh env lean .lake/audit-work/definitions/SourceCorrespondence.lean",
+      "exit_code": 0,
+      "compiled_scratch_sha256": "f0fbb6ee89513f887b7b96225fbfa64c95ab2a5bdeb0361cd7ae53856486414b",
+      "landed_module": "QuantumChannelContinuity/SourceCorrespondence.lean",
+      "module_sha256": "1319b701c9fc33fd4ab8b36720b0bbf7909a7e4f61888c29752b8b93810ee2ef",
+      "log": ".lake/audit-work/definitions/bridge-output.txt",
+      "log_sha256": "3e2c396fce3949d01c86913a8a2eaa37d8680f1d151cd120a63f232fc079de20",
+      "axiom_targets": [
+        "QuantumChannelContinuity.referenceFirstOutput_swap",
+        "QuantumChannelContinuity.channelRenyi_eq_referenceFirst",
+        "QuantumChannelContinuity.channelRelative_eq_referenceFirst"
+      ],
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "temporary_source_deleted": true,
+      "historic_files_modified": false
+    },
+    "stale_pass_negative_control": {
+      "status": "passed",
+      "induced_failure": "Temporarily replace one recorded audit input SHA-256 with zeroes; no Lean sources changed",
+      "exit_code": 1,
+      "failure_result_status": "failed",
+      "previous_pass_retained": false,
+      "original_audit_report_restored": true,
+      "full_successful_rerun_after_restoration": true
+    }
+  },
+  "limitations": [
+    "Nonzero spaces are the conventional quantum-system interpretation, but the paper does not explicitly exclude zero-dimensional algebraic carriers.",
+    "Real-order definitions are totalized at order one and outside the source domain; the punctured limit excludes one and eventually lies in the source domain.",
+    "Tensor-power dimension follows the audited recursion and standard dimension multiplication; a separate optional finrank proof was omitted after instance-synthesis timeouts and is not claimed as checked evidence.",
+    "This is agent semantic review plus kernel checks, not a machine certificate of the English-to-Lean translation or independent human certification."
+  ],
+  "input_files": [
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumEntropy/SandwichedRenyiNonNeg.lean",
+      "sha256": "f02824cb10b47ec3f9c65528156d978fe2846a6025a2578d384f65886ff18a65"
+    },
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumEntropy/SandwichedRenyiRelativeEntropy.lean",
+      "sha256": "ec5b2912f38b56e4167c05a52af9dcb81d26ff94fd80f9c78b726c32905903a5"
+    },
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumEntropy/SandwichedRenyiUmegaki.lean",
+      "sha256": "3446d9d3271a07a9526ab7fbb97b86851582bdae7e1c1311dd44dd49c1bb9d20"
+    },
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumMechanics/QuantumChannel.lean",
+      "sha256": "805838fc3a5563aa619cdf84f791a5b4327b7ad28234b4ee40b0b0bf1efe4a0c"
+    },
+    {
+      "path": ".lake/packages/Quantum/Quantum/QuantumMechanics/QuantumState.lean",
+      "sha256": "416fd0b89a768a88c48d2cc129e9815fb2a44e5be0a4fb79a92535b6ba66da0d"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/CStarAlgebra/CompletelyPositiveMap.lean",
+      "sha256": "9ef8f29caa4683dc746cba72fd7a8685fde4f518ca6a4ad07e8c907985357f23"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/InnerProductSpace/Defs.lean",
+      "sha256": "a023749056eb8415f074b7b0a66bc21dc3f1491db27c78b64997be21d48c3013"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Defs.lean",
+      "sha256": "743a3cee2f7973645bb98d8ab03e8257a4adc671ada33b8bcd6f9774e6917777"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/ExpLog/Basic.lean",
+      "sha256": "a1d9accce4d6668faa215021483acc2e0c328224bca77b42a4a3e1304316dc16"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean",
+      "sha256": "4a4fd81fed4a9bbe09aa4b8669669bd5e1d417ff51dc118c38070a45821c625d"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "sha256": "76bea352b0371f0764333b4884a902731a7704fe813f8bb05192ec88ffffc742"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean",
+      "sha256": "4bc70fd7fa295428b59e9d5de98650a98eb4e87f6614d42f5d5d55ccc9d33398"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Data/EReal/Basic.lean",
+      "sha256": "5c42e0b2c7d63be3596181453bc2135f4c7def1b3b11a539bc0c0f6592e917eb"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/LinearAlgebra/FiniteDimensional/Defs.lean",
+      "sha256": "46939ba300636cfec7de817549459764453e8ebaed44426753d751149c8e5430"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/RingTheory/Finiteness/Defs.lean",
+      "sha256": "4a50813ca2905fd051cbcdb33c74c03fe05d76dc3c2dad15cede6b09fd64bb55"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Topology/UniformSpace/Cauchy.lean",
+      "sha256": "7b3cb75355a4029eca92989cd0c12e7823a86e89e11fa3185f83f8d02b0c427e"
+    },
+    {
+      "path": "Audit.lean",
+      "sha256": "a9c923ab33361a789d83043807e815b329ef0f713827b1472be146042c2df1d4"
+    },
+    {
+      "path": "ChannelContinuity.lean",
+      "sha256": "eafc4a456db8a52551fd13302bbdb220160b9c78734fdfcc460a9eae34f3ae65"
+    },
+    {
+      "path": "ChannelContinuity/LeftContinuity.lean",
+      "sha256": "5455416ecccc5f5545ce7eaf9abefb31f00b8767c5a0965203ff7d619efcfce9"
+    },
+    {
+      "path": "ChannelContinuity/Limsup.lean",
+      "sha256": "ddddd0a5409956d0f2894390b261ebffdc2bcc2edb669e043941c07dc139d9aa"
+    },
+    {
+      "path": "ChannelContinuity/Main.lean",
+      "sha256": "cc4303631748636b357ac66d4b906c8b3cf7e32edd9c2aade9c8a0f3f48cae38"
+    },
+    {
+      "path": "ChannelContinuity/OperatorAlgebra.lean",
+      "sha256": "6845c2806adffa842a9771ff9fbf129254a26906a8668aa5a9cc7532a36f5fb6"
+    },
+    {
+      "path": "ChannelContinuity/Parameters.lean",
+      "sha256": "64c1d699bb306d042b1d639932813aa0ffd41531663cfeb30c9a17da59d0ceca"
+    },
+    {
+      "path": "ChannelContinuity/Testing.lean",
+      "sha256": "fb6613ba402999802b2f6046648237575cd96f6eb0a9437af48334a2828574f9"
+    },
+    {
+      "path": "ChannelContinuity/ThreePiece.lean",
+      "sha256": "efe31b5a7a48261890f7a12835662d8b508e7216676fa62857795181eaef6680"
+    },
+    {
+      "path": "ChannelContinuity/Threshold.lean",
+      "sha256": "b931b8ddf3ec65c6c2223beaaf868dd795a43aa156da6ec44c0660a327a60a3c"
+    },
+    {
+      "path": "ComparatorChallenges/ChannelRenyiContinuity.json",
+      "sha256": "e454bc96de78a37ef6853e10d9a7ec34d24c920de11f128722ff5bfd0ea41c5d"
+    },
+    {
+      "path": "ComparatorChallenges/ChannelRenyiContinuity.lean",
+      "sha256": "3f3a3a4578b6dff5c1f34f66650a0d4c702ca86b7295c901347ce9fd77838be1"
+    },
+    {
+      "path": "QuantumChannelContinuity.lean",
+      "sha256": "077668924b32a2a3d1035b3d10be28e33699360e0a6dcc81bfcc313739d8896a"
+    },
+    {
+      "path": "QuantumChannelContinuity/ChannelDominationBounds.lean",
+      "sha256": "42931cc42d112cdf7b96521ea69b180f41699b6c604fe31c4ea57bd49eb8838d"
+    },
+    {
+      "path": "QuantumChannelContinuity/ChannelProducts.lean",
+      "sha256": "803601278f60516e05bd3e347d5e8cb6a6b0c7fe9354c16e55701741d9eafabf"
+    },
+    {
+      "path": "QuantumChannelContinuity/ChannelTesting.lean",
+      "sha256": "3a5e37522f29ca35cd3dd0548a28ca3b2bfffd4bee5020181de887bf5bc48373"
+    },
+    {
+      "path": "QuantumChannelContinuity/Channels.lean",
+      "sha256": "8e3d9d32a7f3ee4fa2037e872027b83fc9ec3e38e6c9ea065e1b3019890dc977"
+    },
+    {
+      "path": "QuantumChannelContinuity/ChoiSupport.lean",
+      "sha256": "070c3a54ad0a6dedf956cfa7264771bed67568b821a4b198340104569428d46d"
+    },
+    {
+      "path": "QuantumChannelContinuity/ComplexTraceHolder.lean",
+      "sha256": "67a4d411744df9acb50ea6d236e0e4dec62527607ce30da66dfd862e95912421"
+    },
+    {
+      "path": "QuantumChannelContinuity/ConcreteMain.lean",
+      "sha256": "69dd780f4bcf6c516bb15ecc5e0fbdf282bf8932dcbd4a8110c44e63ae8d8802"
+    },
+    {
+      "path": "QuantumChannelContinuity/ContinuityAssembly.lean",
+      "sha256": "1ae01633f5a95d0d01490cb5d35a943bf78ac642e6275a22388448362bfc014a"
+    },
+    {
+      "path": "QuantumChannelContinuity/DilationExistence.lean",
+      "sha256": "a75d0dd139ac25642eefbc9c7cbb79d9e7989f716f14cd313bdda94868f489f8"
+    },
+    {
+      "path": "QuantumChannelContinuity/DivergenceSchatten.lean",
+      "sha256": "ed347e167359b7fbf48351bbf70f242535e1bab863f3b20d2bc2ebc512f7f5bc"
+    },
+    {
+      "path": "QuantumChannelContinuity/ExtendedFekete.lean",
+      "sha256": "34703fbae6e0b1c6df2b6cdad06cd872b42ad340c171d009775544e85260057e"
+    },
+    {
+      "path": "QuantumChannelContinuity/Filter.lean",
+      "sha256": "fb391a13524509379adc5bc8aa80bf846155f2d76cdbaaf028ec6d857f742da2"
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterAlignment.lean",
+      "sha256": "eab78d995aec86038f213000a12ebef7bf58effa8a86e757acd27c2a5db787c4"
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterHockey.lean",
+      "sha256": "80176ce3cf51f1f60183e63783fdd939a65b7a55500ff2598130d49c71890290"
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterSlack.lean",
+      "sha256": "7647607ac03d538c1b8296a7a0a229a456bd7e0939ce68581749ad6fb049d359"
+    },
+    {
+      "path": "QuantumChannelContinuity/FilterTensor.lean",
+      "sha256": "239468c292d765070cdd157c41ef1b291635dab49f061afa7551e75f28729cb3"
+    },
+    {
+      "path": "QuantumChannelContinuity/FiniteInfinite.lean",
+      "sha256": "c3d6f7f0964cfaf2f8dd7182bb8fa3764f78a3ff95fea054fb2362aae60f9a2a"
+    },
+    {
+      "path": "QuantumChannelContinuity/Foundations.lean",
+      "sha256": "ff8fbe22a95734b2bf62e5041b096b5a29f7c118bf2f043c5d23d19a132c151a"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsAudit.lean",
+      "sha256": "4ae1af288320fbd89bd8335d3ba83780b6d4eceea8309e31a1eb6c77b5b58a68"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsDiagonal.lean",
+      "sha256": "d9a79bf0c1718e7989703d5550dbd60a32dff350e43f0d1b00d0eb542d3b68b4"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsInfiniteLimit.lean",
+      "sha256": "167f3707ad86f56b8fdd33ce7361c5074f169c172ed75abe9261085c7052137e"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsMeasurement.lean",
+      "sha256": "4b34a146357a799db31715ad2c2ce7418a8f15705df2925bbbe8385cbf18a744"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsSingularLimits.lean",
+      "sha256": "2a723297b98c57be5c1843889fabbcc704bfefc20f01d7e229d42e52587f8eee"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsTesting.lean",
+      "sha256": "f7698fcca5f34eb08ed001b4f599fafc8307204726b098af1e539f6bd35af0cc"
+    },
+    {
+      "path": "QuantumChannelContinuity/FoundationsWeakTesting.lean",
+      "sha256": "0481b13815052b6478210225c69aca1893e05e0990eb57a82516397e7f68fb04"
+    },
+    {
+      "path": "QuantumChannelContinuity/HockeyStick.lean",
+      "sha256": "0c727a6eca851e324dca3886512f2ad35d9c5d1ac6a4315d68beb631114b9903"
+    },
+    {
+      "path": "QuantumChannelContinuity/Main.lean",
+      "sha256": "619798f2c81b54544a537ed863977f1ce593e059ac36eeb741699a7f9d2f1fd8"
+    },
+    {
+      "path": "QuantumChannelContinuity/Minimax.lean",
+      "sha256": "d8c5dd2ae20fd0956d0292b7b80a2a772316feb34bede35b52ed4acbfb43a727"
+    },
+    {
+      "path": "QuantumChannelContinuity/OrderConvexity.lean",
+      "sha256": "fb94c303540e604639a0e0ac2c0f3c627c0d1ff072d91567be059828be197afb"
+    },
+    {
+      "path": "QuantumChannelContinuity/PowerRegrouping.lean",
+      "sha256": "85d3f2d0fbd7137a58a5e09a3f3baefcab5b31343c2680ef611fa52a4c54096f"
+    },
+    {
+      "path": "QuantumChannelContinuity/QuantumMain.lean",
+      "sha256": "2ed45d9b9a59f16589e383e00470d09849b9143d64efdba89fa78e5a3f68bc31"
+    },
+    {
+      "path": "QuantumChannelContinuity/Regularization.lean",
+      "sha256": "17250832e964b8776cd784946f78ce4537c304514d24026ce39aea6a8800340d"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationIdentities.lean",
+      "sha256": "d5fdc880a1134a211dbdf120ded5a0b022c72765eb4ad831062ea5f5d39b25d3"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationLimits.lean",
+      "sha256": "f438e09d0f3dd159520d7a63383e0003ccdb7ea8e2592c20d63b04fd76255802"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizationSup.lean",
+      "sha256": "e5bba3db0c8dc9d2923a340f0dd7fce2b5c87c53fc925bfe07eae518f7d7c450"
+    },
+    {
+      "path": "QuantumChannelContinuity/RegularizedExponential.lean",
+      "sha256": "a58832e576909908a137b29c0a6d2b2d3f430f469e924269d7342522685aea45"
+    },
+    {
+      "path": "QuantumChannelContinuity/SDPCone.lean",
+      "sha256": "ab2cca84a5d65809d5cffd93eac986dcb3ddab7e357b37295725d22ded440413"
+    },
+    {
+      "path": "QuantumChannelContinuity/SDPPartialTrace.lean",
+      "sha256": "ef65df7cd374248a73ba7dcd87cb502af7731d9b0979df45bce17a38e04f94cb"
+    },
+    {
+      "path": "QuantumChannelContinuity/SDPTrace.lean",
+      "sha256": "42376ffe8705eb9591d75e599c87060502b2763c824dcb6c84020346579e48bb"
+    },
+    {
+      "path": "QuantumChannelContinuity/Schatten.lean",
+      "sha256": "15b6bfdfbfea1da59b25aeb2915780a6955a1907175231ab0611d379cce48675"
+    },
+    {
+      "path": "QuantumChannelContinuity/SlackAttainment.lean",
+      "sha256": "5e1c26884c96ad68fd2d4f1a321a37171ebc6ec479512398d1ad9484c0c889ab"
+    },
+    {
+      "path": "QuantumChannelContinuity/SlackTester.lean",
+      "sha256": "934fe660c5c10e15227e8591cc4c077d2af9d03d50f78594ac3fe18bfdbbc38f"
+    },
+    {
+      "path": "QuantumChannelContinuity/SlackTraceBound.lean",
+      "sha256": "227d7be9cf6f95f347c1aa28aeff1bedcb10b58be285c00edf3def3424c01870"
+    },
+    {
+      "path": "QuantumChannelContinuity/SourceCorrespondence.lean",
+      "sha256": "1319b701c9fc33fd4ab8b36720b0bbf7909a7e4f61888c29752b8b93810ee2ef"
+    },
+    {
+      "path": "QuantumChannelContinuity/StabilizedSchatten.lean",
+      "sha256": "6b15d380e8d6cc26b64095ffc868828581b38b24a33a9dce3eefdf155ed03419"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateDominationBounds.lean",
+      "sha256": "4dd603739efddf84072486bf5fb5170d54dc450186017c3e0605b30bf857836b"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateLimits.lean",
+      "sha256": "a7d11ec7ba16477a28f437ea085091c6423fb11d2d2ab95fbea2a3ec1abf21b7"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrder.lean",
+      "sha256": "007ea6c06c12731b09c4e49daf7deff3312452c88fb757ba2d10043e8072c3c6"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderApprox.lean",
+      "sha256": "b09a0d4ba8a5634ab60e4875be0f36cb4e363d74a4e28cf3b2f2634911c75ee6"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderBoundary.lean",
+      "sha256": "6e2001bfaab08f9fd073008ba9e69f01faa0fa53616c0c5eff49bfe056317127"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderBoundaryNorms.lean",
+      "sha256": "de12a7565ec52317acd26ae77cc90b430e0098d5e40fdfedbb11b896df8a8158"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderDuality.lean",
+      "sha256": "e53ab5b0b14de3bed5b91f4d6a94a74658efaf5ead524dbebf5693ba9b16159b"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderFaithful.lean",
+      "sha256": "73eae42e892a0d79131aa1cf170423fae8eafad8bf18485133beee302fd133b8"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderInterpolation.lean",
+      "sha256": "83f37efce94f2f313c2c2cc9690f542d839f4f6bb1cab4fbde6bfd3abd7cf04a"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderInterpolationAudit.lean",
+      "sha256": "7c87ee3b42ff24c95999676e1550e29f270475072257a3415f549948ace744f1"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderPowers.lean",
+      "sha256": "263f7e2edf1921105a6f86e673c4d2d9a285da75d326b3526817a9816d78c9ed"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateOrderRenyi.lean",
+      "sha256": "e40047f9d97659f8f8fdc527ca8c7f07cb67000d5ff87996d9325aa41f6339af"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateSupportLimits.lean",
+      "sha256": "673c72b18b79cbf32ba023f9f34aebd2a185f7ff84ffaa57eb22c027c0532dad"
+    },
+    {
+      "path": "QuantumChannelContinuity/StateSupportLimitsAudit.lean",
+      "sha256": "c1a50ce493d9b25f1768be4c4470ca17ca1887900b5df5ae6b7377108fd4e652"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorChannels.lean",
+      "sha256": "e561e8318f2f13c9c3a7773c21ed84e5bfda4adc6bed966aacd38903c40edfa6"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorDilation.lean",
+      "sha256": "0ffd275813f1ce07cec3aaec1b4f32454d57a20f6b46baef7530b64093c757df"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorNaturality.lean",
+      "sha256": "1e83a5fb1583f11906018650b38ee76bb0de539ea002c54c2cab9cd13033284e"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorOrder.lean",
+      "sha256": "418454e459db964d2cdfc2acd0bd2cb5645c179ac3b81dd69fc53327bf8d7a05"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorPowers.lean",
+      "sha256": "326a1d56f988b297d670b8172a37dbc93e0a91e29085f30f5299724254b602ca"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorRegrouping.lean",
+      "sha256": "7cbdac35a825828e4bf953e72935d86e15267a6810412f77d51ce0c9547287e8"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorRelative.lean",
+      "sha256": "2a0d02a7df0acd8696155a293e6a571ff18a1ba86bc7b53dcbb550dd6acc3685"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorStates.lean",
+      "sha256": "db2ea01e452b3eaf77305cf6e53e4f183a8a2670b93b87e8697946b268b5e961"
+    },
+    {
+      "path": "QuantumChannelContinuity/TensorWords.lean",
+      "sha256": "cc12e890776b2dd4e1b0e154b10e471e3563e81b6e3bc4927bc8ad64e7f8b78c"
+    },
+    {
+      "path": "QuantumChannelContinuity/ThreePieceExponential.lean",
+      "sha256": "2b719474a40194efbd5e6e478bafca12ccb1a74e5f3f356dbd06b77c0e19a8e4"
+    },
+    {
+      "path": "QuantumChannelContinuity/ThreePieceFilter.lean",
+      "sha256": "ccdc7a5621cd52499cd6a1e9f8523c8a73b61a7e61de2ef045168e29d4d46ae9"
+    },
+    {
+      "path": "QuantumChannelContinuity/ThreePieceSchatten.lean",
+      "sha256": "bb122b074ba95659828a34a54e1d09e1fc4f83e832ff5b15840d92b8442e5530"
+    },
+    {
+      "path": "QuantumChannelContinuity/TracePowerBounds.lean",
+      "sha256": "f212130ebdd97ac8f52be7c0a4435fee2a80437a646b8d5fe694d7e3e309cc9b"
+    },
+    {
+      "path": "docs/proof-index.json",
+      "sha256": "1016762b8c0e78263a84e8c6d368480ce38e8f0b2dc6dd3d60e19409d993d244"
+    },
+    {
+      "path": "docs/source-manuscript.tex",
+      "sha256": "76a8d6a961f9e8b70c7ffd0bb40fc351fcb1fa431cdbbbc30e70e25d73725eba"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "7bb6c8612d3594878ead13bbbaeb03d84551951201cbf7f1c2f5dd6f0e47dd7f"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "2fd8cfaeec779c7b02d92717eb7c03e444f0fd91598d53a9f85464788e658a8e"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "dc6d65016fad3123d44bf17b5bf0598286284ab16ba75d5c17eb22ed11f47361"
+    },
+    {
+      "path": "scripts/check-statement-audit.py",
+      "sha256": "9bb684c9a5e9ec6539d7c1a845ac8617b387ed6da6b6ca73f23a93e0e758fa8b"
+    }
+  ]
+}

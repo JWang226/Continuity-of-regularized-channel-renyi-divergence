@@ -23,12 +23,17 @@ open scoped ComplexOrder TensorProduct
 namespace QuantumChannelContinuity
 
 universe u
-variable {H : Type u} [Qudit H] [Nontrivial H]
 set_option maxHeartbeats 800000
 set_option synthInstance.maxHeartbeats 100000
 set_option backward.isDefEq.respectTransparency false
 
 noncomputable abbrev Hermitian (H : Type u) [Qudit H] := selfAdjoint (L H)
+
+/-- Cache the canonical real module structure for the trace-duality declarations. -/
+private noncomputable instance hermitianRealModule {H : Type u} [Qudit H] :
+    Module ℝ (Hermitian H) := inferInstance
+
+variable {H : Type u} [Qudit H] [Nontrivial H]
 
 noncomputable instance hermitianFiniteDimensional : FiniteDimensional ℝ (Hermitian H) :=
   FiniteDimensional.of_injective (selfAdjoint.submodule ℝ (L H)).subtype Subtype.val_injective

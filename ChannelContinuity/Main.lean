@@ -14,19 +14,16 @@ import ChannelContinuity.Limsup
 import Mathlib.Tactic.Positivity
 
 /-!
-# Conditional formalization of Theorem 1
+# Scalar limit argument for Theorem 1
 
 The successive limit passages, testing-threshold argument, and left/right
-assembly are proved. `FiniteAnalyticInputs` explicitly records the
-quantum-information facts still to be connected to concrete channels.
-In particular, its `raw_schatten` field is the exponentiated consequence of the
-manuscript's filtering and Schatten arguments, not an operator theorem proved
-in this project. Its subsequent scalar normalization is proved here.
-
-These are scalar data and explicit proof obligations. The concrete extension
-in `QuantumChannelContinuity/ConcreteMain.lean` now constructs all testing
-fields from actual channel tensor powers. Full construction of the remaining
-order and regularized-decomposition fields is still open. See README.md.
+assembly are proved. `FiniteAnalyticInputs` records the scalar estimates needed
+for the finite right-limit argument; its raw Schatten estimate is normalized
+here. `QuantumChannelContinuity.QuantumMain` derives that estimate from the
+proved operator bounds, and `QuantumChannelContinuity.ContinuityAssembly`
+constructs the input record for concrete channels in the finite branch.
+`QuantumChannelContinuity.Main` combines the finite and infinite cases with
+the proved state-order facts to export the unconditional channel theorem.
 -/
 
 open Filter Set
@@ -34,7 +31,7 @@ open scoped Topology ENNReal
 
 namespace ChannelContinuity
 
-/-- The finite-case scalar quantities and the unformalized quantum bridge.
+/-- The finite-case scalar quantities and estimates.
 
 Intended interpretations:
 * `d` = regularized channel relative entropy;
@@ -42,7 +39,8 @@ Intended interpretations:
 * `cap` = finite channel max-relative entropy;
 * `testing n r` = hockey-stick divergence at threshold `2^(n*r)`.
 
-The input hypotheses are deliberately visible rather than global axioms.
+The scalar hypotheses are explicit fields; the concrete channel assembly
+constructs them from proved results.
 -/
 structure FiniteAnalyticInputs where
   d : ℝ

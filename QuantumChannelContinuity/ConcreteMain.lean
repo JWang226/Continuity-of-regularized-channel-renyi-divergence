@@ -9,13 +9,14 @@ import QuantumChannelContinuity.FoundationsInfiniteLimit
 import ChannelContinuity.Main
 
 /-!
-# Continuity for concrete channel divergences, with residual inputs exposed
+# Concrete channel divergences and the scalar continuity interface
 
-Unlike the original scalar-only theorem, all states, channels, tensor powers,
-regularized quantities and testing functions here are defined quantum objects.
-The testing assumptions are discharged by proved quantum measurement bounds.
-This module retains a raw-estimate interface. `QuantumMain.lean` constructs
-that estimate from the remaining explicitly named quantum premises.
+States, channels, tensor powers, regularized quantities and testing functions
+are concrete quantum objects. The testing bounds are proved here.
+`RemainingFiniteInputs` isolates the finite scalar estimates;
+`QuantumMain.lean` derives the raw estimate, and `ContinuityAssembly.lean`
+constructs the record from the proved state-order and operator results.
+`Main.lean` exports the unconditional theorem, including the infinite case.
 -/
 
 open QuantumState QuantumChannel SandwichedRenyiRelativeEntropy Filter Set
@@ -25,10 +26,9 @@ namespace QuantumChannelContinuity
 
 variable {H K : Type} [Qudit H] [Qudit K] [Nontrivial H] [Nontrivial K]
 
-/-- Exact residual inputs for the finite right-limit argument. This is a
-conditional interface, not an assertion that its fields have been constructed
-for every channel pair. The regularized three-piece estimate is an input here;
-`QuantumThresholdInputs.toRemaining` constructs it in `QuantumMain.lean`. -/
+/-- Scalar inputs for the finite right-limit argument. The raw estimate is
+assembled by `QuantumThresholdInputs.toRemaining` in `QuantumMain.lean`;
+`ContinuityAssembly.lean` constructs the record in the finite branch. -/
 structure RemainingFiniteInputs (N M : CPTP H K) where
   relative_finite : regularizedRelative N M ≠ ⊤
   renyi_finite : ∀ α, 1 < α → regularizedRenyi α N M ≠ ⊤

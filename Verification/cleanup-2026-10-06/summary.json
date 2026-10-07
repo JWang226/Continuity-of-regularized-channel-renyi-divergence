@@ -153,5 +153,14 @@
       "sanitized": false
     }
   ],
-  "note": "Published log paths are sanitized; original and published hashes are distinguished. This unsigned record reports checks; rerun the public checkers to replay the proof."
+  "note": "All log payloads are retained byte-for-byte. Only the Nanoda configuration has the documented two-field path transformation, with original and published hashes distinguished. Original Comparator log names map to the published filenames above. This unsigned record reports checks; rerun the public checkers to replay the proof.",
+  "publication": {
+    "log_payloads_unchanged": true,
+    "comparator_log_filename_map": {
+      "positive.log": "comparator-positive.log",
+      "wrong-statement.log": "comparator-wrong-statement.log",
+      "missing-proof.log": "comparator-missing-proof.log"
+    },
+    "only_payload_path_transformation": "nanoda-config.json: export_file_path and pp_output_path"
+  }
 }

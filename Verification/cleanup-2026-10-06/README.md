@@ -2,7 +2,15 @@
 
 This unsigned local record binds the completed cleanup checks to the current source identity and proof index. It retains the all-declaration Lean axiom audit, Comparator comparison and Lean kernel replay, both intended rejection controls, Nanoda independent replay, and current statement/definition probes with live dependency hashes.
 
-See [summary.json](summary.json) for exact counts, hashes and scope. Original local log hashes and sanitized publication hashes are separate. The full Nanoda export is hashed but not included here; regenerate and independently check it with the public reproducer. This does not rewrite the historical certificate or repeat the dated informal assessment. No signature or human review is claimed.
+See [summary.json](summary.json) for exact counts, hashes and scope. All log payloads are retained byte-for-byte. Only the Nanoda configuration has the two documented path changes; its original and published hashes are separate. The full Nanoda export is hashed but not included here; regenerate and independently check it with the public reproducer. This does not rewrite the historical certificate or repeat the dated informal assessment. No signature or human review is claimed.
+
+The original Comparator result keeps its local log filenames. Their published counterparts are:
+
+| Original name | Published file |
+| --- | --- |
+| `positive.log` | [comparator-positive.log](comparator-positive.log) |
+| `wrong-statement.log` | [comparator-wrong-statement.log](comparator-wrong-statement.log) |
+| `missing-proof.log` | [comparator-missing-proof.log](comparator-missing-proof.log) |
 
 Reproduce from the repository root with `./check.sh`, `./check-comparator.sh --skip-cache`, `./check-nanoda.sh --skip-cache`, and `python3 scripts/check-statement-audit.py`. See [VERIFYING.md](../../VERIFYING.md) for setup and interpretation.
 

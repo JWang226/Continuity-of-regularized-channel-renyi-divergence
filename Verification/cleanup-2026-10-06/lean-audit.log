@@ -1,0 +1,1284 @@
+⚠ [3512/3605] Replayed QuantumChannelContinuity.StateDominationBounds
+warning: QuantumChannelContinuity/StateDominationBounds.lean:52:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3513/3605] Replayed QuantumChannelContinuity.ChoiSupport
+warning: QuantumChannelContinuity/ChoiSupport.lean:106:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.amplifiedOutput_choiInput`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3534/3605] Replayed QuantumChannelContinuity.FilterHockey
+warning: QuantumChannelContinuity/FilterHockey.lean:60:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.fixed_dilation_hockey_filter_of_slack_attainment`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3538/3605] Replayed QuantumChannelContinuity.ThreePieceSchatten
+warning: QuantumChannelContinuity/ThreePieceSchatten.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: QuantumChannelContinuity/ThreePieceSchatten.lean:145:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3543/3605] Replayed QuantumChannelContinuity.ChannelDominationBounds
+warning: QuantumChannelContinuity/ChannelDominationBounds.lean:30:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.cp_domination_constant_ge_one`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/ChannelDominationBounds.lean:42:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.cp_domination_amplifiedOutput`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3546/3605] Replayed QuantumChannelContinuity.StateSupportLimits
+warning: QuantumChannelContinuity/StateSupportLimits.lean:334:10: This simp argument is unused:
+  Complex.real_smul
+
+Hint: Omit it from the simp argument list.
+  simp [̵C̵o̵m̵p̵l̵e̵x̵.̵r̵e̵a̵l̵_̵s̵m̵u̵l̵,̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵a̵d̵d̵_̵r̵e̵]̵[̲C̲o̲m̲p̲l̲e̲x̲.̲a̲d̲d̲_̲r̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/StateSupportLimits.lean:307:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateSupportLimits.lean:307:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateSupportLimits.lean:335:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3554/3605] Replayed QuantumChannelContinuity.RegularizationSup
+warning: QuantumChannelContinuity/RegularizationSup.lean:56:6: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+⚠ [3563/3605] Replayed QuantumChannelContinuity.SDPTrace
+warning: QuantumChannelContinuity/SDPTrace.lean:46:36: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵m̵u̵l̵_̵s̵m̵u̵l̵_̵c̵o̵m̵m̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/SDPTrace.lean:48:37: This simp argument is unused:
+  smul_mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵s̵m̵u̵l̵_̵m̵u̵l̵_̵a̵s̵s̵o̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/SDPTrace.lean:50:8: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTracePair_apply`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:75:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitian_nonneg_iff_trace`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:90:36: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  simp [outer_product,̵ ̵s̵m̵u̵l̵_̵s̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/SDPTrace.lean:100:8: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTrace_apply`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:103:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitian_smul_nonneg`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:115:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTrace_nonneg`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3564/3605] Replayed QuantumChannelContinuity.SlackTester
+warning: QuantumChannelContinuity/SlackTester.lean:111:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.normalized_choi_test_le_hockey`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SlackTester.lean:149:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.reference_choiVector_surjective`:
+  [Nontrivial A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3565/3605] Replayed QuantumChannelContinuity.SDPCone
+warning: QuantumChannelContinuity/SDPCone.lean:71:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTracePair_symm`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3566/3605] Replayed QuantumChannelContinuity.SDPPartialTrace
+warning: QuantumChannelContinuity/SDPPartialTrace.lean:101:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianLeftTrace_trace`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPPartialTrace.lean:106:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianLeftTrace_adjoint`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3568/3605] Replayed QuantumChannelContinuity.SlackAttainment
+warning: QuantumChannelContinuity/SlackAttainment.lean:69:4: 'change leftPartialTrace (Q : L (B ⊗[ℂ] A)) ≤ (ε : ℂ) • (1 : L A)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3581/3605] Replayed QuantumChannelContinuity.StateOrderPowers
+warning: QuantumChannelContinuity/StateOrderPowers.lean:52:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateOrderPowers.lean:58:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3586/3605] Replayed QuantumChannelContinuity.StateOrderFaithful
+warning: QuantumChannelContinuity/StateOrderFaithful.lean:88:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateOrderFaithful.lean:90:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3601/3605] Replayed ComparatorChallenges.ChannelRenyiContinuity
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:24:8: declaration uses `sorry`
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:31:8: declaration uses `sorry`
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:37:8: declaration uses `sorry`
+⚠ [3602/3605] Replayed ComparatorChallenges.WrongStatement
+warning: ComparatorChallenges/WrongStatement.lean:18:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.theorem_one`:
+  [Nontrivial H]
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] [Nontrivial K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComparatorChallenges/WrongStatement.lean:18:21: unused variable `N`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ComparatorChallenges/WrongStatement.lean:18:23: unused variable `M`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3603/3605] Replayed ComparatorChallenges.MissingProof
+warning: ComparatorChallenges/MissingProof.lean:17:8: declaration uses `sorry`
+✔ [3605/3605] Built QuantumChannelContinuity.SourceCorrespondence (53s)
+Build completed successfully (3605 jobs).
+QuantumChannelContinuity.theorem_one {H K : Type} [QuantumState.Qudit H] [QuantumState.Qudit K] [Nontrivial H]
+  [Nontrivial K] (N M : QuantumChannel.CPTP H K) :
+  Filter.Tendsto (fun α => QuantumChannelContinuity.regularizedRenyi α N M) (nhdsWithin 1 {1}ᶜ)
+    (nhds (QuantumChannelContinuity.regularizedRelative N M))
+'QuantumChannelContinuity.theorem_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuantumChannelContinuity.blockRenyi_tendsto_regularized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuantumChannelContinuity.blockRelative_tendsto_regularized' depends on axioms: [propext, Classical.choice, Quot.sound]
+Checked theorem: QuantumChannelContinuity.stateRenyi.eq_1
+Checked theorem: _private.QuantumChannelContinuity.TensorWords.0.QuantumChannelContinuity.dilationPower.match_1.eq_1
+Checked theorem: QuantumChannelContinuity.finite_cap_of_cp_domination
+Checked theorem: QuantumChannelContinuity.unitDilation_apply
+Checked theorem: QuantumChannelContinuity.isoConj.eq_1
+Checked theorem: ChannelContinuity.weak_testing_sup_bound_of_positive_payoff
+Checked theorem: QuantumChannelContinuity.inputRenyi.eq_1
+Checked theorem: QuantumChannelContinuity.amplifiedOutput._proof_6
+Checked theorem: ChannelContinuity.normalized_low_weight
+Checked theorem: QuantumChannelContinuity.dilationChannel_outer_product
+Checked theorem: ChannelContinuity.block_rate_weight
+Checked theorem: _private.QuantumChannelContinuity.FilterAlignment.0.QuantumChannelContinuity.outer_product_add_right'
+Checked theorem: QuantumChannelContinuity.CPLe.tensor_identity_scaled
+Checked theorem: _private.QuantumChannelContinuity.FoundationsTesting.0.QuantumChannelContinuity.scalar_sandwiched_log._simp_1_6
+Checked theorem: QuantumChannelContinuity.supportIntegrand.eq_1
+Checked theorem: QuantumChannelContinuity.stateRenyi_dataProcessing
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_quasi_root._simp_1_6
+Checked theorem: QuantumChannelContinuity.stateRelative_isometry
+Checked theorem: _private.QuantumChannelContinuity.FoundationsTesting.0.QuantumChannelContinuity.scalar_sandwiched_log
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator_apply
+Checked theorem: QuantumChannelContinuity.suppLE_tensor_iff
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.renyi_testing
+Checked theorem: ChannelContinuity.renyi_order_le_two
+Checked theorem: QuantumChannelContinuity.referenceFirstOutput_swap
+Checked theorem: QuantumChannelContinuity.rpow_sub_one_mul_self
+Checked theorem: QuantumChannelContinuity.tensorPowerSpace._proof_2
+Checked theorem: QuantumChannelContinuity.sqrt_weighted_schattenWeight._simp_1_7
+Checked theorem: QuantumChannelContinuity.leftPartialTrace_pair
+Checked theorem: Sion.sublevelLeft_subset_union
+Checked theorem: QuantumChannelContinuity.tensor_kraus_apply
+Checked theorem: QuantumChannelContinuity.directSumDilation.eq_1
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_9
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_10
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_4
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_faithful_lt
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_quasi_root._simp_1_7
+Checked theorem: QuantumChannelContinuity.rightThreshold.congr_simp
+Checked theorem: ChannelContinuity.weak_testing_bound._simp_1_3
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.mk.sizeOf_spec
+Checked theorem: QuantumChannelContinuity.environmentInr_isometry
+Checked theorem: QuantumChannelContinuity.regularizedRenyi_eq_input_sup
+Checked theorem: QuantumChannelContinuity.tensorDilation_sum_left
+Checked theorem: QuantumChannelContinuity.DensityState.ext_iff
+Checked theorem: QuantumChannelContinuity.sandwichedRenyiDiv_le_log_of_le._simp_1_5
+Checked theorem: QuantumChannelContinuity.hermitianTrace_nonneg
+Checked theorem: Sion.minimax._simp_1_12
+Checked theorem: QuantumChannelContinuity.stabilized_channel_dilation_schatten_bound
+Checked theorem: QuantumChannelContinuity.coefficientVector_norm_sq
+Checked theorem: QuantumChannelContinuity.trace_rpow_re_nonneg
+Checked theorem: QuantumChannelContinuity.measurementTerm._proof_1
+Checked theorem: QuantumChannelContinuity.blockRenyi_dilation_rate_bound
+Checked theorem: ChannelContinuity.renyi_order_gt_one
+Checked theorem: QuantumChannelContinuity.DensityState.map_isometry_symm
+Checked theorem: QuantumChannelContinuity.toMatrixOrthonormal_rpow_all
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_15
+Checked theorem: QuantumChannelContinuity.tensorChannel._proof_5
+Checked theorem: ChannelContinuity.weak_testing_bound._simp_1_7
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_one_left
+Checked theorem: QuantumChannelContinuity.POVM.channel._proof_3
+Checked theorem: QuantumChannelContinuity.environmentMap_norm_le._simp_1_1
+Checked theorem: QuantumChannelContinuity.stateRenyi_nonneg
+Checked theorem: QuantumChannelContinuity.POVM.probability.eq_1
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog_eq_log_quasi
+Checked theorem: QuantumChannelContinuity.coefficientDensity_eq_sum_outer
+Checked theorem: QuantumChannelContinuity.theorem_one_of_input_order
+Checked theorem: QuantumChannelContinuity.star_mul_self_strictlyPositive
+Checked theorem: QuantumChannelContinuity.POVM.mk.congr_simp
+Checked theorem: ChannelContinuity.eventual_sqrt_bound_of_weak_testing
+Checked theorem: QuantumChannelContinuity.powerOneIso._proof_1
+Checked theorem: QuantumChannelContinuity.suppLE_of_nonneg_le_smul
+Checked theorem: QuantumChannelContinuity.outputSlice._proof_2
+Checked theorem: QuantumChannelContinuity.Effect.nonneg
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_weighted_secant._simp_1_4
+Checked theorem: QuantumChannelContinuity.tensorChannel._proof_1
+Checked theorem: QuantumChannelContinuity.measured_relative_lower._simp_1_4
+Checked theorem: QuantumChannelContinuity.stabilizedDilation_slice
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_top_of_not_support
+Checked theorem: QuantumChannelContinuity.reciprocal_order_ne_half
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_weighted_secant
+Checked theorem: QuantumChannelContinuity.coefficient_trace_weight
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_one
+Checked theorem: QuantumChannelContinuity.umegaki_common_eigenbasis
+Checked theorem: _private.QuantumChannelContinuity.FoundationsMeasurement.0.QuantumChannelContinuity.outer_apply
+Checked theorem: QuantumChannelContinuity.word_weight_sum
+Checked theorem: QuantumChannelContinuity.amplified_trace_le_of_choi_marginal
+Checked theorem: QuantumChannelContinuity.hermitianLeftTrace._proof_2
+Checked theorem: QuantumChannelContinuity.trace_leftPartialTrace
+Checked theorem: QuantumChannelContinuity.stabilizedDilation_sum
+Checked theorem: Sion.disjoint_sublevelLeft
+Checked theorem: QuantumChannelContinuity.channelRelative_top_of_support_mismatch
+Checked theorem: QuantumChannelContinuity.DensityState.trace_one
+Checked theorem: QuantumChannelContinuity.inputRenyi._proof_1
+Checked theorem: QuantumChannelContinuity.Effect.mk.injEq
+Checked theorem: QuantumChannelContinuity.sdpSlackCone._proof_2
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.renyi_finite
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_6
+Checked theorem: QuantumChannelContinuity.dilationRegroup._proof_2
+Checked theorem: QuantumChannelContinuity.choiLinear._proof_3
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.analytic._proof_3
+Checked theorem: QuantumChannelContinuity.rpow_apply_eigenvector
+Checked theorem: Sion.minimax._simp_1_4
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.weak_testing
+Checked theorem: ChannelContinuity.le_infimum_of_order_bounds
+Checked theorem: QuantumChannelContinuity.powerMulIso._proof_1
+Checked theorem: QuantumChannelContinuity.star_operatorCpow
+Checked theorem: QuantumChannelContinuity.stateRelative.eq_1
+Checked theorem: Sion.minimax._simp_1_5
+Checked theorem: QuantumChannelContinuity.pureInputEquiv._proof_1
+Checked theorem: ChannelContinuity.sandwich_difference_domination
+Checked theorem: QuantumChannelContinuity.stateRenyi_tensor_admissible
+Checked theorem: Sion.isClosed_setOf_sublevelLeft_subset
+Checked theorem: QuantumChannelContinuity.stabilizedDilation._proof_1
+Checked theorem: QuantumChannelContinuity.cp_smul
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_le_power_trace
+Checked theorem: QuantumChannelContinuity.binary_renyi_testing_log._simp_1_9
+Checked theorem: QuantumChannelContinuity.supportFilledPower_zero
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.relative_le_renyi
+Checked theorem: QuantumChannelContinuity.OrderBoundary.approx_tendsto
+Checked theorem: QuantumChannelContinuity.schattenNorm.eq_1
+Checked theorem: QuantumChannelContinuity.spectrum_real_finite_state
+Checked theorem: QuantumChannelContinuity.sqrt_weighted_schattenWeight._simp_1_5
+Checked theorem: QuantumChannelContinuity.referenceSwap_tmul
+Checked theorem: ChannelContinuity.threePieceRhs._proof_1
+Checked theorem: QuantumChannelContinuity.instInhabitedEffect._proof_2
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_channel_le
+Checked theorem: QuantumChannelContinuity.exists_dilation_alignment
+Checked theorem: _private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.outerL._proof_2
+Checked theorem: QuantumChannelContinuity.dilationCoefficients.eq_1
+Checked theorem: QuantumChannelContinuity.vec_vectorCoefficient
+Checked theorem: QuantumChannelContinuity.choiVector.eq_1
+Checked theorem: QuantumChannelContinuity.hermitianTracePair.eq_1
+Checked theorem: QuantumChannelContinuity.regularizedRelative.eq_1
+Checked theorem: ChannelContinuity.tendsto_two_rpow_neg_gap
+Checked theorem: QuantumChannelContinuity.channelPower_cp_domination
+Checked theorem: QuantumChannelContinuity.POVM.mk.inj
+Checked theorem: QuantumChannelContinuity.dilationChannel_tensorDilation
+Checked theorem: QuantumChannelContinuity.DensityState.tensor._proof_2
+Checked theorem: QuantumChannelContinuity.identityChannel._proof_3
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_pos_of_support
+Checked theorem: QuantumChannelContinuity.channelPower_one_intertwine
+Checked theorem: Sion.minimax._simp_1_7
+Checked theorem: QuantumChannelContinuity.dilationChannel_wordDilation_sum
+Checked theorem: ChannelContinuity.threePieceRhs.eq_1
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog._proof_5
+Checked theorem: QuantumChannelContinuity.stateRenyi_self_faithful
+Checked theorem: QuantumChannelContinuity.stateHockey_renyi_bound
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_one_faithful
+Checked theorem: QuantumChannelContinuity.dilationCoefficients_basis
+Checked theorem: QuantumChannelContinuity.POVM.sum_probability
+Checked theorem: QuantumChannelContinuity.DensityState.mk.congr_simp
+Checked theorem: QuantumChannelContinuity.PureInput.mk.sizeOf_spec
+Checked theorem: QuantumChannelContinuity.OrderBoundary.approxFilter_neBot._simp_1
+Checked theorem: QuantumChannelContinuity.unitDilation_norm_le_one
+Checked theorem: QuantumChannelContinuity.mul_operatorCpow_density_eq_re
+Checked theorem: QuantumChannelContinuity.OrderBoundary.approxChannel._proof_2
+Checked theorem: QuantumChannelContinuity.OrderBoundary.sandwichedRenyiDiv_tendsto_faithful._simp_1_6
+Checked theorem: QuantumChannelContinuity.POVM.channel._proof_5
+Checked theorem: QuantumChannelContinuity.trace_holder
+Checked theorem: QuantumChannelContinuity.supportFilledPower_mul_of_support
+Checked theorem: QuantumChannelContinuity.zero_of_support_common_eigenvector
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.block_cap
+Checked theorem: QuantumChannelContinuity.wordDilation.eq_1
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.three_piece
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator._proof_4
+Checked theorem: QuantumChannelContinuity.inputRelative.eq_1
+Checked theorem: ChannelContinuity.block_rate_weight._simp_1_2
+Checked theorem: QuantumChannelContinuity.trace_weighted_choi
+Checked theorem: QuantumChannelContinuity.Effect.probability_le_one
+Checked theorem: QuantumChannelContinuity.channelRenyi_dilation_exponential_bound._simp_1_1
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.threshold_eq
+Checked theorem: ChannelContinuity.four_weight
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.raw_schatten
+Checked theorem: QuantumChannelContinuity.DensityState.map_depolarizing
+Checked theorem: QuantumChannelContinuity.operatorCpow_star_mul
+Checked theorem: QuantumChannelContinuity.environment_gram._simp_1_1
+Checked theorem: QuantumChannelContinuity.binary_scalar_tendsto_top._simp_1_4
+Checked theorem: QuantumChannelContinuity.choiVector_ne_zero
+Checked theorem: QuantumChannelContinuity.trace_mul_re_mono
+Checked theorem: QuantumChannelContinuity.operatorCpow._proof_4
+Checked theorem: QuantumChannelContinuity.dilationRegroup._proof_3
+Checked theorem: QuantumChannelContinuity.choiLinear.congr_simp
+Checked theorem: QuantumChannelContinuity.normalized_dual_power_trace
+Checked theorem: QuantumChannelContinuity.rpow_stateRenyi_eq_quasi_root._simp_1_6
+Checked theorem: QuantumChannelContinuity.hermitianIdentityTensor_coe
+Checked theorem: QuantumChannelContinuity.sqrt_weighted_schattenWeight._simp_1_3
+Checked theorem: QuantumChannelContinuity.tensor_unitLeft_intertwine
+Checked theorem: QuantumChannelContinuity.blockTesting._proof_1
+Checked theorem: ChannelContinuity.regularized_eq_top_of_witness
+Checked theorem: QuantumChannelContinuity.schattenWeight._proof_1
+Checked theorem: ChannelContinuity.normalized_four_weight
+Checked theorem: QuantumChannelContinuity.choiLinear._proof_6
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_coefficient_triangle
+Checked theorem: QuantumChannelContinuity.OrderBoundary.sandwichedRenyiDiv_tendsto_faithful._simp_1_5
+Checked theorem: Sion.DMCompletion.exists_isSaddlePointOn._simp_1_1
+Checked theorem: QuantumChannelContinuity.channelRelative_le_regularized
+Checked theorem: QuantumChannelContinuity.wordDilation_sum
+Checked theorem: QuantumChannelContinuity.rpow_stateRenyi_eq_quasi_root._simp_1_1
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.relative_finite
+Checked theorem: QuantumChannelContinuity.fixed_dilation_hockey_filter
+Checked theorem: QuantumChannelContinuity.operator_rpow_mul_neg_le_one
+Checked theorem: QuantumChannelContinuity.amplifiedOutput._proof_1
+Checked theorem: QuantumChannelContinuity.rpow_le_of_renyi_log_bound._simp_1_2
+Checked theorem: QuantumChannelContinuity.unitDilation._proof_3
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_14
+Checked theorem: ChannelContinuity.block_rate_weight._simp_1_1
+Checked theorem: QuantumChannelContinuity.unitLeftIso_symm_apply
+Checked theorem: QuantumChannelContinuity.isometryChannel._proof_6
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_one_common_eigenbasis
+Checked theorem: QuantumChannelContinuity.amplifiedOutput.eq_1
+Checked theorem: QuantumChannelContinuity.sqrt_weighted_schattenWeight
+Checked theorem: QuantumChannelContinuity.DensityState.map._proof_2
+Checked theorem: QuantumChannelContinuity.exists_test_of_not_support
+Checked theorem: QuantumChannelContinuity.blockRenyi.congr_simp
+Checked theorem: QuantumChannelContinuity.CPLe.eq_1
+Checked theorem: QuantumChannelContinuity.OrderBoundary.sandwichedRenyiDiv_tendsto_faithful._simp_1_7
+Checked theorem: QuantumChannelContinuity.wordDilation_cp_le
+Checked theorem: QuantumChannelContinuity.PureInput.tensor._proof_1
+Checked theorem: QuantumChannelContinuity.environmentMap_norm_le_one
+Checked theorem: QuantumChannelContinuity.ennreal_monotone_of_superadditive
+Checked theorem: QuantumChannelContinuity.filter_of_slack_dilation
+Checked theorem: QuantumChannelContinuity.channelRelative_isometry
+Checked theorem: _private.QuantumChannelContinuity.Minimax.0.lowerSemicontinuousOn_of_forall_isMaxOn_and_mem
+Checked theorem: ChannelContinuity.rawSchattenRhs._proof_1
+Checked theorem: _private.QuantumChannelContinuity.Minimax.0.clusterPt_principal_subtype_iff_frequently
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_stateRelative
+Checked theorem: ChannelContinuity.tendsto_right_to_infimum
+Checked theorem: QuantumChannelContinuity.hermitianLeftTrace._proof_4
+Checked theorem: QuantumChannelContinuity.sqrt_weighted_schattenWeight._simp_1_2
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_10
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_17
+Checked theorem: QuantumChannelContinuity.instInhabitedEffect._proof_1
+Checked theorem: Sion.minimax._simp_1_14
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_8
+Checked theorem: QuantumChannelContinuity.blockRelative_one
+Checked theorem: QuantumChannelContinuity.referenceSwap._proof_2
+Checked theorem: QuantumChannelContinuity.DensityState.map._proof_1
+Checked theorem: QuantumChannelContinuity.dilation_difference_four_bound
+Checked theorem: QuantumChannelContinuity.measurementTerm._proof_4
+Checked theorem: _private.QuantumChannelContinuity.FoundationsTesting.0.QuantumChannelContinuity.scalar_sandwiched_log._simp_1_7
+Checked theorem: QuantumChannelContinuity.unitLeftIso._proof_1
+Checked theorem: QuantumChannelContinuity.blockRenyi_power
+Checked theorem: QuantumChannelContinuity.hockeySlackAttainment_of_one_le
+Checked theorem: QuantumChannelContinuity.schattenWeight._proof_4
+Checked theorem: QuantumChannelContinuity.HockeySlackAttainment._proof_2
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_5
+Checked theorem: Sion.sublevelLeft_subset_union._simp_1_1
+Checked theorem: QuantumChannelContinuity.cfc_eq_sum_spectral
+Checked theorem: ChannelContinuity.three_piece_bound_of_raw_schatten
+Checked theorem: QuantumChannelContinuity.reciprocal_order_mem
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_quasi_root._simp_1_1
+Checked theorem: QuantumChannelContinuity.norm_reference_choiVector_sq
+Checked theorem: QuantumChannelContinuity.amplifiedOutput_choiInput
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.mk.sizeOf_spec
+Checked theorem: QuantumChannelContinuity.umegakiNorm_le_log_of_le_pd
+Checked theorem: QuantumChannelContinuity.choiInput._proof_1
+Checked theorem: QuantumChannelContinuity.leftPartialTrace._proof_3
+Checked theorem: QuantumChannelContinuity.tensorQuditNontrivial
+Checked theorem: QuantumChannelContinuity.schattenWeight._proof_3
+Checked theorem: ChannelContinuity.high_rate_vanishing._proof_1_1
+Checked theorem: QuantumChannelContinuity.PureInput.stabilizedProduct.eq_1
+Checked theorem: QuantumChannelContinuity.dilationChannel._proof_1
+Checked theorem: QuantumChannelContinuity.dilationPower.eq_2
+Checked theorem: QuantumChannelContinuity.hermitianTrace._proof_2
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_one_of_support
+Checked theorem: QuantumChannelContinuity.ennreal_superadditive_tendsto_iSup_div
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.right_continuity
+Checked theorem: QuantumChannelContinuity.isoConj_refl
+Checked theorem: QuantumChannelContinuity.measured_relative_lower._simp_1_1
+Checked theorem: QuantumChannelContinuity.OrderBoundary.stateRenyi_approx_tendsto_lt
+Checked theorem: QuantumChannelContinuity.channelRenyi_tensor_superadditive
+Checked theorem: QuantumChannelContinuity.CPLe.apply_nonneg
+Checked theorem: QuantumChannelContinuity.block_channelHockey_renyi_bound
+Checked theorem: QuantumChannelContinuity.operatorTraceFamily_three_lines
+Checked theorem: QuantumChannelContinuity.binary_renyi_testing_log._simp_1_5
+Checked theorem: QuantumChannelContinuity.cp_smul_nonneg
+Checked theorem: QuantumChannelContinuity.CPLe._proof_1
+Checked theorem: ChannelContinuity.regularized_continuity_of_right_continuity
+Checked theorem: QuantumChannelContinuity.DensityState.tensor._proof_3
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.raw_schatten._simp_1_5
+Checked theorem: ChannelContinuity.block_rate_weight._simp_1_6
+Checked theorem: QuantumChannelContinuity.powerOneIso.eq_1
+Checked theorem: QuantumChannelContinuity.trace_rpow_re_mono
+Checked theorem: _private.QuantumChannelContinuity.FoundationsMeasurement.0.QuantumChannelContinuity.outer_adjoint
+Checked theorem: QuantumChannelContinuity.inputRenyi_monotoneOn_right
+Checked theorem: QuantumChannelContinuity.operatorCpow_ofReal
+Checked theorem: QuantumChannelContinuity.exists_ordered_dilation_factor
+Checked theorem: QuantumChannelContinuity.schattenWeight._proof_2
+Checked theorem: QuantumChannelContinuity.blockRenyi_dilation_exponential_bound
+Checked theorem: _private.QuantumChannelContinuity.Minimax.0.realToERealOrderEmbedding._proof_1
+Checked theorem: QuantumChannelContinuity.toBits_mono
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_one_faithful_twoSided
+Checked theorem: ChannelContinuity.sum_word_products
+Checked theorem: QuantumChannelContinuity.vectorCoefficient_apply_basis
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_2
+Checked theorem: QuantumChannelContinuity.channelRenyi_le_regularized
+Checked theorem: QuantumChannelContinuity.rpow_mul_log_eq_cfc
+Checked theorem: QuantumChannelContinuity.DensityState.map_op
+Checked theorem: ChannelContinuity.sandwich_posSemidef
+Checked theorem: QuantumChannelContinuity.outer_tensor
+Checked theorem: QuantumChannelContinuity.dilationRegroup._proof_1
+Checked theorem: QuantumChannelContinuity.dilationChannel_unitDilation
+Checked theorem: QuantumChannelContinuity.sumEnvironmentQudit._proof_2
+Checked theorem: ChannelContinuity.weak_testing_bound._simp_1_4
+Checked theorem: Sion.monotone_sublevelLeft
+Checked theorem: QuantumChannelContinuity.OrderBoundary.approx.congr_simp
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_faithful_gt
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_faithful
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator_cp
+Checked theorem: QuantumChannelContinuity.operator_rpow_mul
+Checked theorem: QuantumChannelContinuity.channelRenyi.congr_simp
+Checked theorem: QuantumChannelContinuity.stateRelative_nonneg
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_2
+Checked theorem: QuantumChannelContinuity.toBits_coe
+Checked theorem: QuantumChannelContinuity.toBits._proof_1
+Checked theorem: QuantumChannelContinuity.operatorCpow_add
+Checked theorem: QuantumChannelContinuity.hasDerivAt_quasi_one_common_eigenbasis
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog_half
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_im_zero
+Checked theorem: QuantumChannelContinuity.OrderBoundary.quasi_approx_tendsto_lt
+Checked theorem: _private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.sandwichedQuasi_re_ne_zero_of_suppLE
+Checked theorem: QuantumChannelContinuity.tensorPowerSpace.eq_1
+Checked theorem: QuantumChannelContinuity.coefficientDensity._proof_1
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.testing_nonneg
+Checked theorem: QuantumChannelContinuity.wordDilation._proof_1
+Checked theorem: QuantumChannelContinuity.PureInput.norm_one
+Checked theorem: _private.QuantumChannelContinuity.Minimax.0.upperSemicontinuousOn_of_forall_isMinOn_and_mem
+Checked theorem: _private.QuantumChannelContinuity.FilterAlignment.0.QuantumChannelContinuity.outer_product_add_left'
+Checked theorem: QuantumChannelContinuity.isoConj_unitLeft_tensor
+Checked theorem: QuantumChannelContinuity.cp_identity
+Checked theorem: QuantumChannelContinuity.dilationChannel._proof_2
+Checked theorem: QuantumChannelContinuity.operatorCpow._proof_1
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator_assoc_intertwine
+Checked theorem: ChannelContinuity.tendsto_right_of_two_term_bounds
+Checked theorem: Sion.minimax
+Checked theorem: QuantumChannelContinuity.measured_relative_lower
+Checked theorem: Sion.exists_lt_iInf_of_lt_iInf_of_finite._simp_1_1
+Checked theorem: QuantumChannelContinuity.complex_trace_holder_adjoint
+Checked theorem: QuantumChannelContinuity.channelHockey_nonneg
+Checked theorem: QuantumChannelContinuity.amplifiedOutput._proof_4
+Checked theorem: QuantumChannelContinuity.tensorPowerSpace._proof_3
+Checked theorem: QuantumChannelContinuity.blockRenyi._proof_1
+Checked theorem: QuantumChannelContinuity.OrderBoundary.identity._proof_1
+Checked theorem: QuantumChannelContinuity.regularizedRenyi_dilation_bound
+Checked theorem: QuantumChannelContinuity.stateHockey_nonneg
+Checked theorem: QuantumChannelContinuity.DensityState.mk.inj
+Checked theorem: _private.QuantumChannelContinuity.FoundationsTesting.0.QuantumChannelContinuity.scalar_sandwiched_log._simp_1_4
+Checked theorem: Sion.exists_lt_iInf_of_lt_iInf_of_sup
+Checked theorem: QuantumChannelContinuity.cptp_dilation_norm_le_one._simp_1_1
+Checked theorem: Sion.nonempty_sublevelLeft
+Checked theorem: _private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.rpow_conj_tendsto_faithful
+Checked theorem: QuantumChannelContinuity.trRight_map
+Checked theorem: QuantumChannelContinuity.regularized_renyi_testing
+Checked theorem: QuantumChannelContinuity.leftPartialTrace._proof_1
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_8
+Checked theorem: QuantumChannelContinuity.rpow_stateRenyi_eq_quasi_root._simp_1_5
+Checked theorem: ChannelContinuity.regularized_right_continuity_of_infinite_witness
+Checked theorem: Sion.sublevelLeft_subset_union._simp_1_2
+Checked theorem: ChannelContinuity.regularized_right_continuity_of_top
+Checked theorem: ChannelContinuity.normalized_high_weight
+Checked theorem: QuantumChannelContinuity.CPLe.smul_nonneg
+Checked theorem: QuantumChannelContinuity.PureInput.mk.congr_simp
+Checked theorem: QuantumChannelContinuity.cpLe_iff_choi_le
+Checked theorem: QuantumChannelContinuity.operatorCpow._proof_2
+Checked theorem: QuantumChannelContinuity.OrderBoundary.stateRenyi_eq_coe_pd
+Checked theorem: QuantumChannelContinuity.supportFilledPower._proof_2
+Checked theorem: QuantumChannelContinuity.hermitianTracePair_surjective
+Checked theorem: QuantumChannelContinuity.stateRenyi.congr_simp
+Checked theorem: QuantumChannelContinuity.choiLinear._proof_1
+Checked theorem: QuantumChannelContinuity.channelRelative_le_of_cp_domination
+Checked theorem: QuantumChannelContinuity.tensorChannel._proof_6
+Checked theorem: QuantumChannelContinuity.environmentInl_isometry
+Checked theorem: QuantumChannelContinuity.regularized_finite_of_cp_domination
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator._proof_6
+Checked theorem: ChannelContinuity.weak_testing_bound._simp_1_6
+Checked theorem: QuantumChannelContinuity.environmentInr.eq_1
+Checked theorem: QuantumChannelContinuity.outputSlice_ext
+Checked theorem: QuantumChannelContinuity.HilbertBlock.mk.congr_simp
+Checked theorem: QuantumChannelContinuity.POVM.channel._proof_7
+Checked theorem: QuantumChannelContinuity.Effect.default_op
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_formula_lt
+Checked theorem: QuantumChannelContinuity.toBits_top
+Checked theorem: QuantumChannelContinuity.channelRenyi_dilation_exponential_bound._simp_1_2
+Checked theorem: QuantumChannelContinuity.binary_renyi_testing_bound
+Checked theorem: QuantumChannelContinuity.inputRenyi_tendsto_one_right
+Checked theorem: QuantumChannelContinuity.DensityState.maximallyMixed._proof_2
+Checked theorem: QuantumChannelContinuity.cptp_has_nontrivial_dilation
+Checked theorem: QuantumChannelContinuity.hermitianIdentityTensor._proof_2
+Checked theorem: QuantumChannelContinuity.amplifiedOutput._proof_5
+Checked theorem: QuantumChannelContinuity.hermitianTrace._proof_1
+Checked theorem: QuantumChannelContinuity.DensityState.tensor._proof_1
+Checked theorem: QuantumChannelContinuity.theorem_one_of_support_mismatch._simp_1_2
+Checked theorem: QuantumChannelContinuity.rpow_le_of_renyi_log_bound._simp_1_4
+Checked theorem: QuantumChannelContinuity.amplifiedOutput_product
+Checked theorem: QuantumChannelContinuity.directSumDilation_channel
+Checked theorem: ChannelContinuity.block_rate_weight._simp_1_5
+Checked theorem: QuantumChannelContinuity.stateHockey.eq_1
+Checked theorem: QuantumChannelContinuity.hermitianFiniteDimensional
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_weighted_secant._simp_1_2
+Checked theorem: QuantumChannelContinuity.binaryPOVM._proof_1
+Checked theorem: QuantumChannelContinuity.fixed_dilation_filter_of_decomposition
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator_trace
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.mk.injEq
+Checked theorem: QuantumChannelContinuity.OrderBoundary.approxFilter_neBot
+Checked theorem: QuantumChannelContinuity.hermitianIdentityTensor._proof_3
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_word_bound
+Checked theorem: QuantumChannelContinuity.channelRelative_eq_referenceFirst
+Checked theorem: QuantumChannelContinuity.dilation_coefficient_gram_add
+Checked theorem: QuantumChannelContinuity.faithful_renyi_punctured_limit
+Checked theorem: QuantumChannelContinuity.hermitianLeftTrace._proof_5
+Checked theorem: QuantumChannelContinuity.binary_scalar_tendsto_top._simp_1_5
+Checked theorem: QuantumChannelContinuity.channelRelative.congr_simp
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_formula
+Checked theorem: Sion.DMCompletion.exists_isSaddlePointOn
+Checked theorem: QuantumChannelContinuity.coefficientDensity_vector
+Checked theorem: QuantumChannelContinuity.powerOneIso_symm_apply
+Checked theorem: ChannelContinuity.block_rate_weight._simp_1_7
+Checked theorem: QuantumChannelContinuity.POVM.linearMap_trace
+Checked theorem: QuantumChannelContinuity.hermitianTracePair_apply
+Checked theorem: QuantumChannelContinuity.regularized_right_continuity_from_quantum_inputs
+Checked theorem: QuantumChannelContinuity.coefficientVector._proof_1
+Checked theorem: QuantumChannelContinuity.sdpSlack_separation
+Checked theorem: QuantumChannelContinuity.regularizedRelative_le_of_cp_domination
+Checked theorem: QuantumChannelContinuity.stripExponent_re_mem
+Checked theorem: QuantumChannelContinuity.exists_faithful_schatten_dual
+Checked theorem: QuantumChannelContinuity.trRight_outer_product_tmul
+Checked theorem: QuantumChannelContinuity.cptp_dilation_norm_le_one
+Checked theorem: QuantumChannelContinuity.exists_right_polar_unitary
+Checked theorem: QuantumChannelContinuity.blockRenyi_superadditive
+Checked theorem: QuantumChannelContinuity.cp_add
+Checked theorem: QuantumChannelContinuity.operatorCpow._proof_3
+Checked theorem: ChannelContinuity.state_le_left_limit
+Checked theorem: QuantumChannelContinuity.trace_choi_effect
+Checked theorem: QuantumChannelContinuity.sandwichedRenyiDiv_le_log_of_le._simp_1_2
+Checked theorem: QuantumChannelContinuity.blockRelative_tendsto_regularized
+Checked theorem: QuantumChannelContinuity.operatorCpow.eq_1
+Checked theorem: QuantumChannelContinuity.sandwichedRenyiDiv_le_log_of_le._simp_1_6
+Checked theorem: ChannelContinuity.tendsto_right_of_threshold_eq
+Checked theorem: QuantumChannelContinuity.hasDerivAt_trace_rpow_nonneg
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator._proof_3
+Checked theorem: QuantumChannelContinuity.isoConj_apply_symm
+Checked theorem: QuantumChannelContinuity.regularizedRenyi.congr_simp
+Checked theorem: QuantumChannelContinuity.hermitianIdentityTensor._proof_4
+Checked theorem: QuantumChannelContinuity.rpow_le_of_renyi_log_bound._simp_1_1
+Checked theorem: QuantumChannelContinuity.TensorPower.congr_simp
+Checked theorem: QuantumChannelContinuity.operatorCpow_zero
+Checked theorem: QuantumChannelContinuity.isometryChannel._proof_5
+Checked theorem: QuantumChannelContinuity.channelHockey_renyi_bound
+Checked theorem: QuantumChannelContinuity.stabilized_channel_dilation_support
+Checked theorem: QuantumChannelContinuity.trace_product_nonneg
+Checked theorem: QuantumChannelContinuity.rpow_stateRenyi_eq_quasi_root._simp_1_7
+Checked theorem: QuantumChannelContinuity.OrderBoundary.identity._proof_2
+Checked theorem: QuantumChannelContinuity.sandwichedRenyiDiv_le_log_of_le._simp_1_3
+Checked theorem: QuantumChannelContinuity.continuous_supportIntegrand
+Checked theorem: QuantumChannelContinuity.wordDilation.eq_def
+Checked theorem: QuantumChannelContinuity.dilationChannel_environment_isometry
+Checked theorem: QuantumChannelContinuity.channelRenyi_dilation_exponential_bound
+Checked theorem: QuantumChannelContinuity.channelRenyi_le_of_cp_domination
+Checked theorem: QuantumChannelContinuity.POVM.channel._proof_2
+Checked theorem: Sion.sublevelLeft_subset_or
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_weighted_secant._simp_1_3
+Checked theorem: QuantumChannelContinuity.binaryPOVM._proof_2
+Checked theorem: QuantumChannelContinuity.tensorChannel._proof_3
+Checked theorem: QuantumChannelContinuity.cp_domination_amplifiedOutput
+Checked theorem: QuantumChannelContinuity.tensorDilation.eq_1
+Checked theorem: QuantumChannelContinuity.environment_gram
+Checked theorem: _private.QuantumChannelContinuity.FoundationsTesting.0.QuantumChannelContinuity.scalar_sandwiched_log._simp_1_3
+Checked theorem: QuantumChannelContinuity.measured_relative_lower._simp_1_3
+Checked theorem: QuantumChannelContinuity.stateRelative_eq_formula
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator._proof_2
+Checked theorem: QuantumChannelContinuity.stateRelative_self
+Checked theorem: QuantumChannelContinuity.sqrt_weighted_schattenWeight._simp_1_6
+Checked theorem: QuantumChannelContinuity.leftPartialTrace._proof_4
+Checked theorem: QuantumChannelContinuity.dilation_norm_le_sqrt_of_trace_bound
+Checked theorem: QuantumChannelContinuity.rpow_stateRenyi_eq_quasi_root
+Checked theorem: QuantumChannelContinuity.cp_smul_mono
+Checked theorem: Sion.isClosed_setOf_sublevelLeft_subset._simp_1_2
+Checked theorem: QuantumChannelContinuity.operator_rpow_smul
+Checked theorem: QuantumChannelContinuity.blockRenyi_one
+Checked theorem: QuantumChannelContinuity.channel_support_mismatch_of_regularizedRelative_top
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_3
+Checked theorem: QuantumChannelContinuity.stateRenyi_tensor
+Checked theorem: ChannelContinuity.block_rate_weight._simp_1_3
+Checked theorem: QuantumChannelContinuity.tensor_operator_mono
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_13
+Checked theorem: QuantumChannelContinuity.weighted_holder_finset._simp_1_1
+Checked theorem: QuantumChannelContinuity.channelPower.eq_1
+Checked theorem: QuantumChannelContinuity.operatorTraceFamily_bounded
+Checked theorem: QuantumChannelContinuity.tensorMap_norm_le
+Checked theorem: QuantumChannelContinuity.POVM.channel_apply_basis_probability
+Checked theorem: QuantumChannelContinuity.tensorChannel._proof_2
+Checked theorem: QuantumChannelContinuity.environmentInl._proof_1
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.mk.injEq
+Checked theorem: QuantumChannelContinuity.POVM.nonneg
+Checked theorem: QuantumChannelContinuity.coefficientDensity.eq_1
+Checked theorem: QuantumChannelContinuity.binary_renyi_testing_log._simp_1_8
+Checked theorem: QuantumChannelContinuity.POVM.linearMap_apply
+Checked theorem: _private.QuantumChannelContinuity.FoundationsTesting.0.QuantumChannelContinuity.scalar_sandwiched_log._simp_1_1
+Checked theorem: QuantumChannelContinuity.operator_rpow_apply_eigenvector
+Checked theorem: QuantumChannelContinuity.outputSlice._proof_5
+Checked theorem: ChannelContinuity.threshold_eq_of_bounds
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_top_left_of_not_support
+Checked theorem: QuantumChannelContinuity.ennreal_iSup_div_multiples
+Checked theorem: QuantumChannelContinuity.fixed_environment_filter
+Checked theorem: QuantumChannelContinuity.blockTesting.eq_1
+Checked theorem: QuantumChannelContinuity.DensityState.map._proof_3
+Checked theorem: QuantumChannelContinuity.supportFilledPower.eq_1
+Checked theorem: QuantumChannelContinuity.environmentMap_norm_le_one._simp_1_2
+Checked theorem: QuantumChannelContinuity.operatorCpow_imaginary_mem_unitary
+Checked theorem: QuantumChannelContinuity.powerOneIso._proof_2
+Checked theorem: QuantumChannelContinuity.stateRelative_le_channel
+Checked theorem: QuantumChannelContinuity.dilationChannel_kraus_sum
+Checked theorem: QuantumChannelContinuity.isometryChannel._proof_1
+Checked theorem: QuantumChannelContinuity.sandwichedRenyiDiv_le_log_of_le._simp_1_4
+Checked theorem: QuantumChannelContinuity.regularizedRelative_ne_top_iff_cp_domination
+Checked theorem: Sion.minimax._simp_1_1
+Checked theorem: QuantumChannelContinuity.stripExponent_re
+Checked theorem: _private.QuantumChannelContinuity.TensorWords.0.QuantumChannelContinuity.wordDilation.match_1.eq_1
+Checked theorem: QuantumChannelContinuity.ennreal_superadditive_tendsto_iSup_div._simp_1_1
+Checked theorem: ChannelContinuity.renyi_fraction_mem_Ioo
+Checked theorem: QuantumChannelContinuity.POVM.linearMap._proof_1
+Checked theorem: QuantumChannelContinuity.trace_rpow_star_mul_swap
+Checked theorem: QuantumChannelContinuity.CPLe.apply_nonneg._simp_1_1
+Checked theorem: QuantumChannelContinuity.OrderBoundary.approxChannel._proof_1
+Checked theorem: QuantumChannelContinuity.exists_contraction_factor_of_gram_le
+Checked theorem: QuantumChannelContinuity.block_channelHockey_relative_bound._simp_1_2
+Checked theorem: QuantumChannelContinuity.dilationRegroup_symm_tmul
+Checked theorem: QuantumChannelContinuity.rpow_le_of_renyi_log_bound._simp_1_3
+Checked theorem: QuantumChannelContinuity.suppLE_smul_iff
+Checked theorem: QuantumChannelContinuity.dilationChannel_cp
+Checked theorem: QuantumChannelContinuity.POVM.probability_nonneg
+Checked theorem: Sion.mem_sublevelLeft_iff
+Checked theorem: QuantumChannelContinuity.regularizedRelative_top_of_channel_support_mismatch
+Checked theorem: QuantumChannelContinuity.schattenNorm_pos
+Checked theorem: QuantumChannelContinuity.ennreal_nat_mul_le_apply_mul
+Checked theorem: QuantumChannelContinuity.POVM.probability_le_one
+Checked theorem: QuantumChannelContinuity.wordDilation_norm_le
+Checked theorem: QuantumChannelContinuity.nontrivial_environment_of_cptp_dilation
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.relative_le_renyi
+Checked theorem: QuantumChannelContinuity.channelRelative.eq_1
+Checked theorem: QuantumChannelContinuity.rpow_le_of_renyi_log_bound._simp_1_5
+Checked theorem: QuantumChannelContinuity.slice_dilationRegroup
+Checked theorem: QuantumChannelContinuity.binaryRelative_dataProcessing
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_common_eigenbasis
+Checked theorem: _private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.outer_product_apply
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_quasi_root._simp_1_5
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_weighted_secant._simp_1_5
+Checked theorem: QuantumChannelContinuity.POVM.channel._proof_6
+Checked theorem: QuantumChannelContinuity.stateRelative_le_log_of_le
+Checked theorem: QuantumChannelContinuity.tensorDilation_sum_right
+Checked theorem: QuantumChannelContinuity.tensor_kraus_apply._simp_1_1
+Checked theorem: QuantumChannelContinuity.channelRelative_le_of_intertwine
+Checked theorem: QuantumChannelContinuity.channelHockey_relative_bound
+Checked theorem: QuantumChannelContinuity.cp_domination_constant_ge_one
+Checked theorem: QuantumChannelContinuity.tensorDilation_tmul
+Checked theorem: QuantumChannelContinuity.trace_le_of_choi_marginal
+Checked theorem: Sion.isClosed_sublevelLeft
+Checked theorem: QuantumChannelContinuity.POVM.channel._proof_4
+Checked theorem: ChannelContinuity.tendsto_two_rpow_inv_two_mul
+Checked theorem: QuantumChannelContinuity.POVM.mk.injEq
+Checked theorem: QuantumChannelContinuity.choiInput_density
+Checked theorem: QuantumChannelContinuity.log_two_pos
+Checked theorem: QuantumChannelContinuity.isometryChannel._proof_3
+Checked theorem: QuantumChannelContinuity.Effect.probability.eq_1
+Checked theorem: QuantumChannelContinuity.blockRenyi_tendsto_regularized
+Checked theorem: QuantumChannelContinuity.rpow_stateRenyi_eq_quasi_root._simp_1_4
+Checked theorem: QuantumChannelContinuity.stateHockey_le_one
+Checked theorem: QuantumChannelContinuity.trace_trRight
+Checked theorem: QuantumChannelContinuity.identityChannel._proof_2
+Checked theorem: QuantumChannelContinuity.dilationPower.eq_1
+Checked theorem: QuantumChannelContinuity.unitDilation._proof_4
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator._proof_5
+Checked theorem: QuantumChannelContinuity.environmentInl.eq_1
+Checked theorem: QuantumChannelContinuity.hermitianLeftTrace_adjoint
+Checked theorem: QuantumChannelContinuity.norm_operatorCpow_eq_re
+Checked theorem: ChannelContinuity.high_testing_bound_of_nonneg
+Checked theorem: QuantumChannelContinuity.measured_relative_lower._simp_1_7
+Checked theorem: QuantumChannelContinuity.regularizedRenyi_tendsto_one_left_of_mono
+Checked theorem: QuantumChannelContinuity.binary_scalar_tendsto_top._simp_1_1
+Checked theorem: QuantumChannelContinuity.stateRelative_tensor
+Checked theorem: QuantumChannelContinuity.directSumDilation_channel._simp_1_1
+Checked theorem: QuantumChannelContinuity.sqrt_weighted_density
+Checked theorem: QuantumChannelContinuity.dilationRegroup_tmul
+Checked theorem: QuantumChannelContinuity.regularized_weak_testing
+Checked theorem: QuantumChannelContinuity.isoConj_comm_tensor
+Checked theorem: QuantumChannelContinuity.sandwichedRenyiDiv_le_log_of_le._simp_1_7
+Checked theorem: QuantumChannelContinuity.binaryPOVM.eq_1
+Checked theorem: QuantumChannelContinuity.powerMul_intertwine
+Checked theorem: QuantumChannelContinuity.dilation_coefficient_gram
+Checked theorem: QuantumChannelContinuity.HilbertBlock.mk.inj
+Checked theorem: QuantumChannelContinuity.hermitian_smul_mono
+Checked theorem: _private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule._proof_1
+Checked theorem: QuantumChannelContinuity.regularizedRelative_le_regularizedRenyi_of_mono
+Checked theorem: QuantumChannelContinuity.leftPartialTrace_map
+Checked theorem: QuantumChannelContinuity.measured_relative_lower._simp_1_5
+Checked theorem: QuantumChannelContinuity.leftPartialTrace._proof_2
+Checked theorem: QuantumChannelContinuity.channelHockey_le_one
+Checked theorem: QuantumChannelContinuity.Effect.mk.sizeOf_spec
+Checked theorem: QuantumChannelContinuity.sqrt_weighted_schattenWeight._simp_1_4
+Checked theorem: QuantumChannelContinuity.binary_renyi_testing_log
+Checked theorem: QuantumChannelContinuity.tensorUnitIso._proof_1
+Checked theorem: QuantumChannelContinuity.regularizedRenyi_dilation_exponential_bound
+Checked theorem: QuantumChannelContinuity.hermitianTracePair_symm
+Checked theorem: ChannelContinuity.sandwich.eq_1
+Checked theorem: QuantumChannelContinuity.tensorChannel._proof_7
+Checked theorem: QuantumChannelContinuity.identityChannel._proof_1
+Checked theorem: ChannelContinuity.high_testing_bound
+Checked theorem: QuantumChannelContinuity.PureInput.density._proof_3
+Checked theorem: QuantumChannelContinuity.supportIntegrand._proof_1
+Checked theorem: _private.QuantumChannelContinuity.FoundationsTesting.0.QuantumChannelContinuity.scalar_sandwiched_log._simp_1_2
+Checked theorem: QuantumChannelContinuity.outputSlice.eq_1
+Checked theorem: _private.QuantumChannelContinuity.TensorWords.0.QuantumChannelContinuity.dilationPower.match_1.eq_2
+Checked theorem: QuantumChannelContinuity.outputSlice_environmentMap
+Checked theorem: _private.QuantumChannelContinuity.TensorPowers.0.QuantumChannelContinuity.tensorPowerSpace.match_1.eq_2
+Checked theorem: QuantumChannelContinuity.blockRenyi_superadditive_admissible
+Checked theorem: QuantumChannelContinuity.supportFilledPower_conj_of_support
+Checked theorem: QuantumChannelContinuity.continuousAt_supportIntegrand_cfc
+Checked theorem: QuantumChannelContinuity.tensorPowerSpace.congr_simp
+Checked theorem: QuantumChannelContinuity.coefficient_trace_triangle
+Checked theorem: ChannelContinuity.eventual_sqrt_bound_of_limsup_lt_one
+Checked theorem: QuantumChannelContinuity.DensityState.maximallyMixed.eq_1
+Checked theorem: QuantumChannelContinuity.tensorPowerSpace.eq_def
+Checked theorem: QuantumChannelContinuity.HilbertBlock.mk.sizeOf_spec
+Checked theorem: QuantumChannelContinuity.input_top_of_support_mismatch
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator_reference_kraus
+Checked theorem: QuantumChannelContinuity.hasDerivAt_supportFilledPower_zero
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_order
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_le_of_le
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_quasi_root._simp_1_3
+Checked theorem: QuantumChannelContinuity.PureInput.mk.inj
+Checked theorem: QuantumChannelContinuity.real_trace_smul
+Checked theorem: QuantumChannelContinuity.dilationChannel.eq_1
+Checked theorem: QuantumChannelContinuity.choiLinear._proof_2
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.order_mono
+Checked theorem: ChannelContinuity.two_term_bound_of_three_piece
+Checked theorem: Sion.exists_isSaddlePointOn'
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_channel
+Checked theorem: QuantumChannelContinuity.hermitianLeftTrace._proof_6
+Checked theorem: _private.QuantumChannelContinuity.TensorWords.0.QuantumChannelContinuity.wordDilation.match_1.eq_2
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_quasi_root
+Checked theorem: QuantumChannelContinuity.POVM.probability_pos_of_support
+Checked theorem: ChannelContinuity.weak_testing_bound._simp_1_2
+Checked theorem: QuantumChannelContinuity.environment_dilation_norm_le
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog.eq_1
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_quasi_root._simp_1_2
+Checked theorem: ChannelContinuity.weak_testing_bound
+Checked theorem: QuantumChannelContinuity.tensorDilation_norm_le
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.analytic._proof_1
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.raw_schatten._simp_1_4
+Checked theorem: QuantumChannelContinuity.CPLe.add
+Checked theorem: QuantumChannelContinuity.exists_cp_domination_of_choi_support
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_one_faithful_left
+Checked theorem: QuantumChannelContinuity.stripExponent.eq_1
+Checked theorem: QuantumChannelContinuity.OrderBoundary.stateRenyi_approx_tendsto_gt
+Checked theorem: QuantumChannelContinuity.theorem_one
+Checked theorem: QuantumChannelContinuity.stabilizedDilation.eq_1
+Checked theorem: QuantumChannelContinuity.differentiable_operatorCpow
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_5
+Checked theorem: QuantumChannelContinuity.ennreal_rpow_le_of_renyi_log_bound
+Checked theorem: Sion.minimax._simp_1_9
+Checked theorem: QuantumChannelContinuity.trace_coefficientDensity_vector
+Checked theorem: QuantumChannelContinuity.complex_trace_holder_majorant
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.relative_le_renyi
+Checked theorem: QuantumChannelContinuity.leftPartialTrace._proof_5
+Checked theorem: QuantumChannelContinuity.DensityState.mk.injEq
+Checked theorem: ChannelContinuity.tendsto_two_rpow_neg_nat_mul
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator._proof_1
+Checked theorem: QuantumChannelContinuity.isoConj_symm
+Checked theorem: QuantumChannelContinuity.tensorMap_left_norm_le
+Checked theorem: QuantumChannelContinuity.stateRelative_ne_top_iff
+Checked theorem: QuantumChannelContinuity.outputSlice_tmul
+Checked theorem: QuantumChannelContinuity.amplify_tensor_regroup
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.order_mono
+Checked theorem: QuantumChannelContinuity.coefficientVector_inner
+Checked theorem: _private.QuantumChannelContinuity.FoundationsMeasurement.0.QuantumChannelContinuity.kraus_outer
+Checked theorem: QuantumChannelContinuity.DensityState.mk.sizeOf_spec
+Checked theorem: QuantumChannelContinuity.schattenWeight_pos
+Checked theorem: QuantumChannelContinuity.sqrt_weighted_schattenWeight._simp_1_1
+Checked theorem: Sion.exists_lt_iInf_of_lt_iInf_of_finite
+Checked theorem: QuantumChannelContinuity.environmentMap_norm_le
+Checked theorem: QuantumChannelContinuity.hasDerivAt_outerPower_nonneg
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.raw_schatten
+Checked theorem: QuantumChannelContinuity.amplify_channel_dilation_schatten_bound
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog_convex
+Checked theorem: QuantumChannelContinuity.binary_entropy_lower
+Checked theorem: ChannelContinuity.left_iSup_interchange
+Checked theorem: _private.QuantumChannelContinuity.ChannelDominationBounds.0.QuantumChannelContinuity.tensorPowerSpace.match_1.eq_2
+Checked theorem: QuantumChannelContinuity.complex_trace_holder
+Checked theorem: QuantumChannelContinuity.blockRelative_power
+Checked theorem: _private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.outerL._proof_3
+Checked theorem: _private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.rpow_continuousOn_nonneg
+Checked theorem: QuantumChannelContinuity.channel_dilation_schatten_bound
+Checked theorem: QuantumChannelContinuity.binary_scalar_tendsto_top._simp_1_2
+Checked theorem: QuantumChannelContinuity.hermitian_smul_nonneg
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.threshold_le_of_eventual_sqrt_bound
+Checked theorem: QuantumChannelContinuity.complex_trace_hilbertSchmidt
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.raw_schatten._simp_1_3
+Checked theorem: QuantumChannelContinuity.isoConj_assoc
+Checked theorem: QuantumChannelContinuity.choi_test_le_hockey
+Checked theorem: QuantumChannelContinuity.PureInput.density_tensor
+Checked theorem: QuantumChannelContinuity.channelRenyi_dilation_exponential_bound._simp_1_6
+Checked theorem: QuantumChannelContinuity.schatten_coefficient_triangle
+Checked theorem: QuantumChannelContinuity.stabilizedDilation_norm_le
+Checked theorem: QuantumChannelContinuity.hermitianLeftTrace._proof_3
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_1
+Checked theorem: QuantumChannelContinuity.CPLe.tensor
+Checked theorem: QuantumChannelContinuity.binary_relative_testing_log
+Checked theorem: QuantumChannelContinuity.coefficientDensity._proof_3
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_weighted_secant._simp_1_6
+Checked theorem: ChannelContinuity.regularized_continuity_of_infinite_witness
+Checked theorem: QuantumChannelContinuity.environment_sqrt_gram
+Checked theorem: ChannelContinuity.high_rate_vanishing
+Checked theorem: QuantumChannelContinuity.HockeySlackAttainment._proof_3
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_top_left_of_test
+Checked theorem: QuantumChannelContinuity.blockRenyi.eq_1
+Checked theorem: QuantumChannelContinuity.hockey_three_piece_regularizedRenyi
+Checked theorem: QuantumChannelContinuity.identityChannel._proof_4
+Checked theorem: QuantumChannelContinuity.PureInput.density._proof_1
+Checked theorem: Sion.sublevelLeft.eq_1
+Checked theorem: QuantumChannelContinuity.measurementTerm.eq_1
+Checked theorem: QuantumChannelContinuity.fixed_dilation_filter_of_cp_slack
+Checked theorem: QuantumChannelContinuity.continuous_trace_supportIntegrand
+Checked theorem: QuantumChannelContinuity.measured_renyi_orthogonal
+Checked theorem: QuantumChannelContinuity.DensityState.op_ne_zero
+Checked theorem: QuantumChannelContinuity.POVM.mk.sizeOf_spec
+Checked theorem: QuantumChannelContinuity.sandwichedRenyiDiv_le_log_of_le
+Checked theorem: QuantumChannelContinuity.regularizedRenyi.eq_1
+Checked theorem: QuantumChannelContinuity.reference_choiVector_surjective
+Checked theorem: Sion.minimax._simp_1_8
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.raw_schatten._simp_1_7
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog._proof_3
+Checked theorem: QuantumChannelContinuity.sdpSlackCone._proof_1
+Checked theorem: QuantumChannelContinuity.measured_renyi_zero_outcome
+Checked theorem: QuantumChannelContinuity.suppLE_tensor
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.threshold_le
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.mk.inj
+Checked theorem: QuantumChannelContinuity.hermitianLeftTrace_trace
+Checked theorem: QuantumChannelContinuity.amplifiedOutput_mapIso
+Checked theorem: QuantumChannelContinuity.schattenWeight.eq_1
+Checked theorem: QuantumChannelContinuity.channelRenyi_isometry
+Checked theorem: QuantumChannelContinuity.unitLeftIso._proof_3
+Checked theorem: QuantumChannelContinuity.measured_relative_lower._simp_1_6
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.raw_schatten._simp_1_6
+Checked theorem: QuantumChannelContinuity.hermitianLeftTrace_coe
+Checked theorem: QuantumChannelContinuity.intertwine_symm
+Checked theorem: QuantumChannelContinuity.environment_partialTrace_cp
+Checked theorem: QuantumChannelContinuity.coefficientVector.eq_1
+Checked theorem: QuantumChannelContinuity.hermitian_nonneg_iff_trace
+Checked theorem: QuantumChannelContinuity.unitDilation._proof_2
+Checked theorem: QuantumChannelContinuity.pureInputEquiv._proof_2
+Checked theorem: QuantumChannelContinuity.binary_scalar_tendsto_top
+Checked theorem: QuantumChannelContinuity.isoConj_powerOne_tensor
+Checked theorem: QuantumChannelContinuity.trace_amplifyWithId
+Checked theorem: QuantumChannelContinuity.channelRenyi_dilation_exponential_bound._simp_1_5
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.threshold_criterion
+Checked theorem: QuantumChannelContinuity.referenceSwap.eq_1
+Checked theorem: QuantumChannelContinuity.dilationPower.eq_def
+Checked theorem: QuantumChannelContinuity.instNonemptyPureInputOfNontrivial
+Checked theorem: QuantumChannelContinuity.hermitianTrace_mono
+Checked theorem: QuantumChannelContinuity.isoConj_tensor
+Checked theorem: QuantumChannelContinuity.binary_renyi_testing_log._simp_1_4
+Checked theorem: Sion.exists_lt_iInf_of_lt_iInf_of_sup._simp_1_5
+Checked theorem: QuantumChannelContinuity.regularizedRelative_power_scaling
+Checked theorem: QuantumChannelContinuity.supportIntegrand._proof_3
+Checked theorem: QuantumChannelContinuity.binary_renyi_testing_log._simp_1_6
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_12
+Checked theorem: QuantumChannelContinuity.operatorTraceFamily.eq_1
+Checked theorem: QuantumChannelContinuity.rpow_le_of_renyi_log_bound._simp_1_7
+Checked theorem: QuantumChannelContinuity.amplifyWithId_tensor
+Checked theorem: QuantumChannelContinuity.trace_dilationChannel_outer_self
+Checked theorem: QuantumChannelContinuity.inputRenyi_monotoneOn_left
+Checked theorem: QuantumChannelContinuity.hockey_three_piece_decomposition
+Checked theorem: Sion.minimax._simp_1_6
+Checked theorem: _private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.outerL._proof_1
+Checked theorem: QuantumChannelContinuity.isoConj_apply
+Checked theorem: QuantumChannelContinuity.HockeySlackAttainment._proof_1
+Checked theorem: ChannelContinuity.rawSchattenRhs._proof_2
+Checked theorem: QuantumChannelContinuity.sumEnvironmentQudit._proof_1
+Checked theorem: QuantumChannelContinuity.renyi_order_of_convex_log_norm
+Checked theorem: QuantumChannelContinuity.blockRelative_le_regularized
+Checked theorem: QuantumChannelContinuity.measured_relative_lower._simp_1_2
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.threshold_le_cap
+Checked theorem: QuantumChannelContinuity.POVM.linearMap.eq_1
+Checked theorem: QuantumChannelContinuity.DensityState.tensor.eq_1
+Checked theorem: QuantumChannelContinuity.PureInput.density._proof_2
+Checked theorem: ChannelContinuity.high_testing_sup_bound_of_positive_payoff
+Checked theorem: QuantumChannelContinuity.PureInput.mapIso.eq_1
+Checked theorem: QuantumChannelContinuity.DensityState.ext
+Checked theorem: QuantumChannelContinuity.HilbertBlock.mk.injEq
+Checked theorem: QuantumChannelContinuity.POVM.trace_effect_nonneg
+Checked theorem: QuantumChannelContinuity.OrderBoundary.sandwichedRenyiDiv_tendsto_faithful._simp_1_8
+Checked theorem: ChannelContinuity.weak_testing_bound._simp_1_1
+Checked theorem: Sion.minimax._simp_1_3
+Checked theorem: _private.QuantumChannelContinuity.ChannelDominationBounds.0.QuantumChannelContinuity.tensorPowerSpace.match_1.eq_1
+Checked theorem: ChannelContinuity.sandwich_parallelogram
+Checked theorem: Sion.exists_isSaddlePointOn
+Checked theorem: QuantumChannelContinuity.choiSlack_separation
+Checked theorem: QuantumChannelContinuity.measured_sandwichedQuasi
+Checked theorem: QuantumChannelContinuity.stateRelative_le_of_channel_le
+Checked theorem: QuantumChannelContinuity.channelPower.eq_def
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_16
+Checked theorem: QuantumChannelContinuity.referenceSwap._proof_1
+Checked theorem: QuantumChannelContinuity.hermitianTrace_apply
+Checked theorem: QuantumChannelContinuity.sdpSlackCone._proof_3
+Checked theorem: QuantumChannelContinuity.outputSlice._proof_3
+Checked theorem: QuantumChannelContinuity.faithful_weighted_schatten_interpolation
+Checked theorem: QuantumChannelContinuity.POVM.channel_apply_basis
+Checked theorem: QuantumChannelContinuity.POVM.channel.congr_simp
+Checked theorem: QuantumChannelContinuity.binary_renyi_testing_log._simp_1_10
+Checked theorem: QuantumChannelContinuity.cp_map_selfAdjoint
+Checked theorem: QuantumChannelContinuity.OrderBoundary.sandwichedRenyiDiv_tendsto_faithful
+Checked theorem: QuantumChannelContinuity.fixed_dilation_hockey_filter_of_slack_attainment
+Checked theorem: QuantumChannelContinuity.environmentMap.eq_1
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.power_scaling
+Checked theorem: QuantumChannelContinuity.dilationChannel_parallelogram
+Checked theorem: QuantumChannelContinuity.trace_mul_re_mono._simp_1_1
+Checked theorem: QuantumChannelContinuity.cptp_dilation_norm_sq
+Checked theorem: QuantumChannelContinuity.unitLeftIso.eq_1
+Checked theorem: QuantumChannelContinuity.inputRelative_le_inputRenyi_of_mono
+Checked theorem: Sion.isClosed_setOf_sublevelLeft_subset._simp_1_1
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_dilation_bound
+Checked theorem: QuantumChannelContinuity.finite_real_operator_spectrum
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog._proof_4
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_6
+Checked theorem: QuantumChannelContinuity.tensorPowerSpace.eq_2
+Checked theorem: QuantumChannelContinuity.slice_referenceSwap
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.relative_finite
+Checked theorem: QuantumChannelContinuity.binaryRenyi_dataProcessing
+Checked theorem: QuantumChannelContinuity.OrderBoundary.stateRenyi_approx_eq
+Checked theorem: ChannelContinuity.renyi_order_fraction
+Checked theorem: Sion.exists_saddlePointOn'
+Checked theorem: QuantumChannelContinuity.regularizedRenyi_le_of_cp_domination
+Checked theorem: QuantumChannelContinuity.tensorDilation._proof_1
+Checked theorem: Sion.setOf_sublevelLeft_subset.eq_1
+Checked theorem: QuantumChannelContinuity.block_channelHockey_relative_bound
+Checked theorem: QuantumChannelContinuity.hockey_three_piece_regularized_exponential
+Checked theorem: QuantumChannelContinuity.channelPower.eq_2
+Checked theorem: QuantumChannelContinuity.block_channelHockey_relative_bound._simp_1_1
+Checked theorem: QuantumChannelContinuity.Effect.le_one
+Checked theorem: QuantumChannelContinuity.inputRelative.congr_simp
+Checked theorem: QuantumChannelContinuity.adjoint_comp_le_one_of_norm_le_one
+Checked theorem: QuantumChannelContinuity.outputSlice._proof_6
+Checked theorem: QuantumChannelContinuity.theorem_one_of_regularizedRelative_top
+Checked theorem: QuantumChannelContinuity.coefficientDensity_sum
+Checked theorem: ChannelContinuity.weak_testing_sup_bound
+Checked theorem: QuantumChannelContinuity.sdpSlackCone_isClosed
+Checked theorem: QuantumChannelContinuity.amplifiedOutput._proof_7
+Checked theorem: QuantumChannelContinuity.measurementTerm._proof_2
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_7
+Checked theorem: _private.QuantumChannelContinuity.FoundationsTesting.0.QuantumChannelContinuity.scalar_sandwiched_log._simp_1_5
+Checked theorem: QuantumChannelContinuity.environment_sqrt_gram._simp_1_1
+Checked theorem: QuantumChannelContinuity.isoConj_regroup
+Checked theorem: QuantumChannelContinuity.ennreal_iSup_div_multiples_of_repeat
+Checked theorem: QuantumChannelContinuity.sandwichedRenyiDiv_le_log_of_le._simp_1_1
+Checked theorem: QuantumChannelContinuity.isometryChannel._proof_2
+Checked theorem: QuantumChannelContinuity.trace_rpow_le_weighted_trace
+Checked theorem: QuantumChannelContinuity.operatorTraceFamily._proof_1
+Checked theorem: QuantumChannelContinuity.channelRenyi_dilation_bound
+Checked theorem: QuantumChannelContinuity.hermitianTracePair_injective
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.mk.inj
+Checked theorem: ChannelContinuity.regularized_left_continuity
+Checked theorem: QuantumChannelContinuity.dilationCoefficients._proof_1
+Checked theorem: QuantumChannelContinuity.unitDilation._proof_1
+Checked theorem: QuantumChannelContinuity.channelRenyi_dilation_exponential_bound._simp_1_4
+Checked theorem: QuantumChannelContinuity.block_channelHockey_relative_bound._simp_1_5
+Checked theorem: QuantumChannelContinuity.hockey_objective_le_one
+Checked theorem: QuantumChannelContinuity.block_channelHockey_relative_bound._simp_1_4
+Checked theorem: ChannelContinuity.threshold_eq_of_forall_gt
+Checked theorem: QuantumChannelContinuity.tensorDilation_slice
+Checked theorem: QuantumChannelContinuity.dilationRegroup.eq_1
+Checked theorem: QuantumChannelContinuity.HilbertBlock.nontrivial
+Checked theorem: QuantumChannelContinuity.hasDerivAt_sandwichedQuasi_one_of_support
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.mk.inj
+Checked theorem: QuantumChannelContinuity.vectorCoefficient._proof_1
+Checked theorem: QuantumChannelContinuity.blockTesting_le_one
+Checked theorem: QuantumChannelContinuity.measured_quasi_zero_outcome
+Checked theorem: QuantumChannelContinuity.environmentMap_norm_le_one._simp_1_3
+Checked theorem: QuantumChannelContinuity.stateRenyi_monotoneOn_left
+Checked theorem: ChannelContinuity.high_testing_bound_of_positive_payoff
+Checked theorem: QuantumChannelContinuity.sumEnvironmentQudit._proof_3
+Checked theorem: _private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.rpow_apply_eigenvector
+Checked theorem: _private.QuantumChannelContinuity.ComplexTraceHolder.0.QuantumChannelContinuity.holder_weight_sqrt
+Checked theorem: QuantumChannelContinuity.trace_outer_mul
+Checked theorem: QuantumChannelContinuity.channelRenyi_dilation_exponential_bound._simp_1_3
+Checked theorem: QuantumChannelContinuity.measured_renyi_lower
+Checked theorem: QuantumChannelContinuity.stateRenyi_monotoneOn_right
+Checked theorem: QuantumChannelContinuity.blockRenyi_le_regularized
+Checked theorem: QuantumChannelContinuity.binary_scalar_tendsto_top._simp_1_7
+Checked theorem: Sion.minimax._simp_1_2
+Checked theorem: QuantumChannelContinuity.stateRenyi_tendsto_one_common_eigenbasis_left
+Checked theorem: QuantumChannelContinuity.regularizedRenyi_power_scaling
+Checked theorem: QuantumChannelContinuity.outputSlice._proof_1
+Checked theorem: QuantumChannelContinuity.measurementTerm_kraus
+Checked theorem: QuantumChannelContinuity.hermitianIdentityTensor._proof_1
+Checked theorem: QuantumChannelContinuity.umegakiNorm_le_log_of_le
+Checked theorem: QuantumChannelContinuity.regularizedRenyi_power_scaling_admissible
+Checked theorem: QuantumChannelContinuity.fixed_environment_error
+Checked theorem: QuantumChannelContinuity.stateRelative_dataProcessing
+Checked theorem: QuantumChannelContinuity.theorem_one_of_support_mismatch
+Checked theorem: QuantumChannelContinuity.coefficientDensity_sum_support
+Checked theorem: QuantumChannelContinuity.operatorCpow_norm_bounded
+Checked theorem: QuantumChannelContinuity.OrderBoundary.approx_pd
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.renyi_finite
+Checked theorem: QuantumChannelContinuity.channelRelative_tensor_superadditive
+Checked theorem: QuantumChannelContinuity.stateRenyi_isometry
+Checked theorem: QuantumChannelContinuity.binaryPOVM._proof_3
+Checked theorem: _private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.continuous_outerL
+Checked theorem: QuantumChannelContinuity.stateRelative_eq_top_of_not_support
+Checked theorem: QuantumChannelContinuity.POVM.linearMap_completelyPositive
+Checked theorem: QuantumChannelContinuity.hermitianIdentityTensor._proof_5
+Checked theorem: ChannelContinuity.block_rate_weight._simp_1_4
+Checked theorem: QuantumChannelContinuity.tensorChannel._proof_4
+Checked theorem: QuantumChannelContinuity.hockey_three_piece_channelRenyi
+Checked theorem: QuantumChannelContinuity.coefficientDensity._proof_2
+Checked theorem: QuantumChannelContinuity.rpow_le_of_renyi_log_bound._simp_1_6
+Checked theorem: QuantumChannelContinuity.outputSlice._proof_4
+Checked theorem: QuantumChannelContinuity.tensor_intertwine
+Checked theorem: ChannelContinuity.weak_testing_bound_of_positive_payoff
+Checked theorem: QuantumChannelContinuity.DensityState.maximallyMixed._proof_1
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator._proof_7
+Checked theorem: QuantumChannelContinuity.dilationCoefficients_inner
+Checked theorem: QuantumChannelContinuity.supportIntegrand._proof_2
+Checked theorem: QuantumChannelContinuity.OrderBoundary.identity._proof_3
+Checked theorem: QuantumChannelContinuity.hermitianTrace.eq_1
+Checked theorem: QuantumChannelContinuity.inner_outputSlice
+Checked theorem: QuantumChannelContinuity.channelRenyi_dilation_exponential_bound._simp_1_7
+Checked theorem: QuantumChannelContinuity.operatorCpow_mul_star
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_4
+Checked theorem: QuantumChannelContinuity.choiLinear_surjective
+Checked theorem: QuantumChannelContinuity.environment_kraus_map
+Checked theorem: QuantumChannelContinuity.leftPartialTrace.eq_1
+Checked theorem: QuantumChannelContinuity.toBits.eq_1
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_weighted_secant._simp_1_7
+Checked theorem: QuantumChannelContinuity.stateRelative_le_stateRenyi
+Checked theorem: QuantumChannelContinuity.rpow_le_of_renyi_log_bound
+Checked theorem: QuantumChannelContinuity.regularized_right_continuity_of_remaining
+Checked theorem: QuantumChannelContinuity.toBits_zero
+Checked theorem: QuantumChannelContinuity.Effect.probability._proof_1
+Checked theorem: QuantumChannelContinuity.weighted_coefficient_triangle
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_of_quasi_root._simp_1_4
+Checked theorem: QuantumChannelContinuity.channelRenyi_top_of_support_mismatch
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.mk.injEq
+Checked theorem: QuantumChannelContinuity.cp_domination_or_support_mismatch
+Checked theorem: QuantumChannelContinuity.weighted_trace_boundary
+Checked theorem: _private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule._proof_3
+Checked theorem: QuantumChannelContinuity.normalized_choi_test_le_hockey
+Checked theorem: QuantumChannelContinuity.coefficientDensity_pos
+Checked theorem: QuantumChannelContinuity.stateRenyi_le_coarse_log_of_le
+Checked theorem: QuantumChannelContinuity.OrderBoundary.identity._proof_4
+Checked theorem: QuantumChannelContinuity.inputRenyi.congr_simp
+Checked theorem: ChannelContinuity.LeftOrders._proof_1
+Checked theorem: QuantumChannelContinuity.OrderBoundary.sandwichedRenyiDiv_tendsto_faithful._simp_1_4
+Checked theorem: QuantumChannelContinuity.isometryChannel._proof_4
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog._proof_2
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog._proof_1
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.raw_schatten
+Checked theorem: QuantumChannelContinuity.powerOneIso_tmul
+Checked theorem: QuantumChannelContinuity.POVM.sum_one
+Checked theorem: QuantumChannelContinuity.hermitian_norm_le_trace
+Checked theorem: QuantumChannelContinuity.sdpSlackCone_isClosed._simp_1_1
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator_smul
+Checked theorem: QuantumChannelContinuity.OrderBoundary.sandwichedRenyiDiv_tendsto_faithful._simp_1_2
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.mk.sizeOf_spec
+Checked theorem: QuantumChannelContinuity.stateRelative.congr_simp
+Checked theorem: QuantumChannelContinuity.CPLe.tensor_scaled
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.block_slack
+Checked theorem: QuantumChannelContinuity.complex_trace_holder_lt_two
+Checked theorem: QuantumChannelContinuity.tensorPowerSpace._proof_1
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.analytic._proof_2
+Checked theorem: ChannelContinuity.high_testing_sup_bound
+Checked theorem: QuantumChannelContinuity.binary_relative_testing_bound
+Checked theorem: QuantumChannelContinuity.trace_cfc_real_eq_sum_eigenvalues
+Checked theorem: QuantumChannelContinuity.Effect.mk.inj
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.order_mono
+Checked theorem: QuantumChannelContinuity.supportFilledPower._proof_1
+Checked theorem: QuantumChannelContinuity.powerConcat_intertwine
+Checked theorem: _private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule._proof_2
+Checked theorem: QuantumChannelContinuity.channelRenyi_le_of_intertwine
+Checked theorem: _private.QuantumChannelContinuity.FoundationsSingularLimits.0.QuantumChannelContinuity.scalar_sandwiched_exp
+Checked theorem: QuantumChannelContinuity.cfc_supportIntegrand_eq
+Checked theorem: QuantumChannelContinuity.trace_mul_re_nonneg
+Checked theorem: QuantumChannelContinuity.exists_environment_defect
+Checked theorem: _private.QuantumChannelContinuity.TensorPowers.0.QuantumChannelContinuity.tensorPowerSpace.match_1.eq_1
+Checked theorem: QuantumChannelContinuity.weightedSchattenLog._proof_6
+Checked theorem: Sion.minimax'
+Checked theorem: Sion.isPreconnected_sublevelLeft
+Checked theorem: QuantumChannelContinuity.intertwine_refl
+Checked theorem: QuantumChannelContinuity.leftPartialTrace_cp
+Checked theorem: QuantumChannelContinuity.PureInput.density_mapIso
+Checked theorem: QuantumChannelContinuity.Effect.probability_nonneg
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_weighted_secant._simp_1_1
+Checked theorem: QuantumChannelContinuity.choiLinear._proof_4
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_1
+Checked theorem: QuantumChannelContinuity.blockRelative.congr_simp
+Checked theorem: QuantumChannelContinuity.measurementTerm_completelyPositive
+Checked theorem: QuantumChannelContinuity.OrderBoundary.sandwichedRenyiDiv_tendsto_faithful._simp_1_3
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator.eq_1
+Checked theorem: QuantumChannelContinuity.supportIntegrand_eq
+Checked theorem: QuantumChannelContinuity.hermitianTracePair._proof_3
+Checked theorem: QuantumChannelContinuity.hermitianTrace_mono._simp_1_1
+Checked theorem: ChannelContinuity.threshold_le_of_two_term_bound
+Checked theorem: QuantumChannelContinuity.eigenvalue_nonneg
+Checked theorem: QuantumChannelContinuity.choiLinear_apply
+Checked theorem: Sion.sublevelLeft_subset_union._simp_1_3
+Checked theorem: QuantumChannelContinuity.PureInput.density.eq_1
+Checked theorem: QuantumChannelContinuity.rpow_stateRenyi_eq_quasi_root._simp_1_2
+Checked theorem: QuantumChannelContinuity.tensor_operator_nonneg
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_vector_bound
+Checked theorem: QuantumChannelContinuity.dilationCoefficients_inner_add
+Checked theorem: QuantumChannelContinuity.dilationChannel_kraus_basis
+Checked theorem: QuantumChannelContinuity.DensityState.nonneg
+Checked theorem: QuantumChannelContinuity.DensityState.maximallyMixed.congr_simp
+Checked theorem: QuantumChannelContinuity.hockey_three_piece_schatten
+Checked theorem: QuantumChannelContinuity.krausTerm_comp
+Checked theorem: QuantumChannelContinuity.dilationChannel_stabilized
+Checked theorem: QuantumChannelContinuity.stateRenyi_eq_top_of_zero_quasi
+Checked theorem: QuantumChannelContinuity.stateRenyi_ne_top_iff
+Checked theorem: QuantumChannelContinuity.hermitianLeftTrace._proof_1
+Checked theorem: QuantumChannelContinuity.stateHockey_relative_bound
+Checked theorem: QuantumChannelContinuity.tensorChannel.eq_1
+Checked theorem: Sion.minimax._simp_1_10
+Checked theorem: QuantumChannelContinuity.block_channelHockey_relative_bound._simp_1_7
+Checked theorem: QuantumChannelContinuity.schattenWeight._proof_5
+Checked theorem: QuantumChannelContinuity.binary_scalar_tendsto_top._simp_1_6
+Checked theorem: QuantumChannelContinuity.stateRenyi_tensor_lt
+Checked theorem: QuantumChannelContinuity.unitLeftIso._proof_2
+Checked theorem: QuantumChannelContinuity.choiLinear._proof_5
+Checked theorem: QuantumChannelContinuity.blockRelative.eq_1
+Checked theorem: QuantumChannelContinuity.regularizedRelative_eq_input_sup
+Checked theorem: Sion.minimax._simp_1_11
+Checked theorem: QuantumChannelContinuity.wordDilation.eq_2
+Checked theorem: QuantumChannelContinuity.dilationChannel_environment_le
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_18
+Checked theorem: QuantumChannelContinuity.binary_scalar_tendsto_top._simp_1_3
+Checked theorem: ChannelContinuity.raw_schatten_normalization
+Checked theorem: QuantumChannelContinuity.CPLe.trans
+Checked theorem: QuantumChannelContinuity.rpow_stateRenyi_eq_quasi_root._simp_1_3
+Checked theorem: ChannelContinuity.weak_testing_bound._simp_1_5
+Checked theorem: QuantumChannelContinuity.binary_renyi_testing_log._simp_1_7
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.raw_schatten._simp_1_1
+Checked theorem: QuantumChannelContinuity.tensorMap_norm_le._simp_1_1
+Checked theorem: QuantumChannelContinuity.operator_rpow_continuousOn_nonneg
+Checked theorem: QuantumChannelContinuity.sandwichedQuasi_decomposition_bound
+Checked theorem: QuantumChannelContinuity.block_channelHockey_relative_bound._simp_1_3
+Checked theorem: QuantumChannelContinuity.RemainingFiniteInputs.analytic._proof_4
+Checked theorem: QuantumChannelContinuity.unitLeftIso_tmul
+Checked theorem: QuantumChannelContinuity.isoConj_outer
+Checked theorem: QuantumChannelContinuity.outputSlice_expand
+Checked theorem: QuantumChannelContinuity.amplify_intertwine
+Checked theorem: ChannelContinuity.FiniteAnalyticInputs.d_nonneg
+Checked theorem: QuantumChannelContinuity.outer_product_real_smul
+Checked theorem: QuantumChannelContinuity.dilationChannel_dilationPower
+Checked theorem: QuantumChannelContinuity.blockTesting_nonneg
+Checked theorem: QuantumChannelContinuity.OrderBoundary.sandwichedRenyiDiv_tendsto_faithful._simp_1_1
+Checked theorem: QuantumChannelContinuity.operatorCpow_unitary_density
+Checked theorem: QuantumChannelContinuity.channelRenyi_eq_referenceFirst
+Checked theorem: QuantumChannelContinuity.channelRenyi.eq_1
+Checked theorem: QuantumChannelContinuity.weighted_holder_finset
+Checked theorem: QuantumChannelContinuity.choiLinear._proof_7
+Checked theorem: QuantumChannelContinuity.POVM.channel._proof_1
+Checked theorem: QuantumChannelContinuity.environment_defect_identity
+Checked theorem: QuantumChannelContinuity.exists_choi_effect
+Checked theorem: QuantumChannelContinuity.amplifiedOutput._proof_2
+Checked theorem: QuantumChannelContinuity.PureInput.mapIso._proof_1
+Checked theorem: ChannelContinuity.rawSchattenRhs.eq_1
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_9
+Checked theorem: QuantumChannelContinuity.amplify_weighted_choi
+Checked theorem: QuantumChannelContinuity.inputRenyi_tendsto_one_left
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator_difference
+Checked theorem: QuantumChannelContinuity.regularizedRelative.congr_simp
+Checked theorem: QuantumChannelContinuity.measurementTerm._proof_3
+Checked theorem: QuantumChannelContinuity.hockeySlackAttainment_of_nonneg
+Checked theorem: QuantumChannelContinuity.isoConj_trans
+Checked theorem: QuantumChannelContinuity.exists_contraction_factor
+Checked theorem: ChannelContinuity.state_left_iSup_eq
+Checked theorem: QuantumChannelContinuity.tensorSuperoperator_id_swap
+Checked theorem: QuantumChannelContinuity.blockRelative_superadditive
+Checked theorem: QuantumChannelContinuity.differentiable_operatorTraceFamily
+Checked theorem: QuantumChannelContinuity.amplifiedOutput._proof_3
+Checked theorem: QuantumChannelContinuity.PureInput.mk.injEq
+Checked theorem: QuantumChannelContinuity.referenceSwap._proof_3
+Checked theorem: QuantumChannelContinuity.mul_operatorCpow_density
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_7
+Checked theorem: QuantumChannelContinuity.block_channelHockey_relative_bound._simp_1_6
+Checked theorem: ChannelContinuity.eventual_sqrt_bound_of_limsup_lt_one_of_le_one
+Checked theorem: QuantumChannelContinuity.channelRenyi_tensor_superadditive_admissible
+Checked theorem: QuantumChannelContinuity.dilationChannel_sub_le
+Checked theorem: QuantumChannelContinuity.quantumThresholdInputs_of_mono._proof_11
+Checked theorem: QuantumChannelContinuity.QuantumThresholdInputs.raw_schatten._simp_1_2
+Checked theorem: QuantumChannelContinuity.choiInput_support_iff
+Checked theorem: QuantumChannelContinuity.intertwine_trans
+AUDIT PASSED: 1318 project declarations, 1090 theorems; transitive axioms [propext, Quot.sound, Classical.choice].

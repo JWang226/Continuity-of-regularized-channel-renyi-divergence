@@ -1,0 +1,64 @@
+{
+  "schema": "elaboration-evidence-publication-v1",
+  "measured_commit": "03dde86daf40a3752c273a3017399539e5c7def9",
+  "original_inputs_sha256": {
+    "metrics.json": "a184b1b29ff1ec58b143aaccd4f5c98fa93b501f41f8c9e754cf786e8ffaaf1c",
+    "profiles.json": "e8ddcde8c40881664006c9ac7d50a22ffbf2e265179834c0e6456d30462bcf5f",
+    "setup.json": "e1396c9619ef4672dae39da28ee22483f46a6f533b099e33804726f3f03f40f8",
+    "build.txt": "7c481d65acbfb42acc4aa96ebc1c69e41c44a89d209241621a86b09a7d2bd4c0",
+    "metrics-original-parser.json": "df1c1bc5765b1aea89a48b190a06842dbbf9a3f20c65e8644f0cff4325c93160",
+    "parser-correction.json": "0a44a36483f23a52bd1a286bb636bee4745189540852dc7476c22c7a23b71a6f"
+  },
+  "privacy_transform": "External process commands omitted; absolute checkout paths replaced by <checkout>, other home paths by <external-path>. Numeric metrics and source hashes retained.",
+  "published_sha256": {
+    "metrics.json": "e5fe0e50397bc78b1a921737ae20c8672708e5460dc21f761112558aaacc2c27",
+    "profiles.json": "e8ddcde8c40881664006c9ac7d50a22ffbf2e265179834c0e6456d30462bcf5f",
+    "committed-analysis.json": "687af6b7b73f58af98254b7a86b5bfb8639813d7dc13778b0b8202a2cf18ce03",
+    "setup.json": "cba192417107110220db45de7b05c6dfac2ec2f80218903c26559097f8c3412f",
+    "build.txt": "7c481d65acbfb42acc4aa96ebc1c69e41c44a89d209241621a86b09a7d2bd4c0",
+    "metrics-original-parser.json": "35a0cf4e823c93f73459dccf5b6a1e04d9393a006adf28d9edf8634ab56ffbf4",
+    "parser-correction.json": "0a44a36483f23a52bd1a286bb636bee4745189540852dc7476c22c7a23b71a6f",
+    "execution-measurement-script.py": "b6576b49f90c4c00e52d046953d188a23f50e11c3e1082e9bad9d5a4a40d08c7",
+    "corrected-warning-parser-script.py": "6392a3bf352831155a5e6e4878075615dafe416b806eba0b45738fe5505b7ae8",
+    "size.txt": "f32d76980e660c912ce5e24f625c9788d0c5bbf8ce5767de13b75f61744081f1"
+  },
+  "profile_selection": {
+    "expected_files": [
+      "QuantumChannelContinuity/SDPCone.lean",
+      "QuantumChannelContinuity/Schatten.lean",
+      "QuantumChannelContinuity/TensorChannels.lean",
+      "QuantumChannelContinuity/FilterAlignment.lean",
+      "QuantumChannelContinuity/SDPTrace.lean",
+      "QuantumChannelContinuity/SourceCorrespondence.lean",
+      "QuantumChannelContinuity/Filter.lean",
+      "QuantumChannelContinuity/OrderConvexity.lean",
+      "QuantumChannelContinuity/RegularizationSup.lean"
+    ],
+    "completed_files": [
+      "QuantumChannelContinuity/SDPCone.lean",
+      "QuantumChannelContinuity/Schatten.lean",
+      "QuantumChannelContinuity/TensorChannels.lean",
+      "QuantumChannelContinuity/FilterAlignment.lean",
+      "QuantumChannelContinuity/SDPTrace.lean",
+      "QuantumChannelContinuity/SourceCorrespondence.lean",
+      "QuantumChannelContinuity/Filter.lean",
+      "QuantumChannelContinuity/OrderConvexity.lean",
+      "QuantumChannelContinuity/RegularizationSup.lean"
+    ],
+    "missing_files": [],
+    "unexpected_files": [],
+    "duplicate_files": [],
+    "complete": true
+  },
+  "execution_script_origin": "measured Git commit's scripts/elaboration-test.py",
+  "parser_correction_verification": {
+    "verified": true,
+    "kind": "intentional-sorry-warning-quote-parser",
+    "execution_script_sha256": "b6576b49f90c4c00e52d046953d188a23f50e11c3e1082e9bad9d5a4a40d08c7",
+    "analysis_script_sha256": "6392a3bf352831155a5e6e4878075615dafe416b806eba0b45738fe5505b7ae8",
+    "raw_build_log_sha256": "7c481d65acbfb42acc4aa96ebc1c69e41c44a89d209241621a86b09a7d2bd4c0",
+    "original_metrics_sha256": "df1c1bc5765b1aea89a48b190a06842dbbf9a3f20c65e8644f0cff4325c93160",
+    "timing_reexecuted": false,
+    "only_execution_source_difference": "one warning-parser line"
+  }
+}

@@ -1,0 +1,274 @@
+✔ [3502/3556] Built ChannelContinuity.OperatorAlgebra (71s)
+✔ [3503/3564] Built ChannelContinuity.Testing (72s)
+✔ [3506/3600] Built ChannelContinuity.Limsup (72s)
+✔ [3521/3604] Built ChannelContinuity.LeftContinuity (73s)
+✔ [3522/3604] Built ChannelContinuity.Threshold (72s)
+✔ [3523/3604] Built ChannelContinuity.ThreePiece (74s)
+✔ [3524/3604] Built QuantumChannelContinuity.Foundations (75s)
+✔ [3525/3604] Built QuantumChannelContinuity.Minimax (46s)
+✔ [3526/3604] Built QuantumChannelContinuity.Filter (132s)
+✔ [3527/3604] Built QuantumChannelContinuity.OrderConvexity (98s)
+✔ [3528/3604] Built ChannelContinuity.Parameters (96s)
+⚠ [3529/3604] Built QuantumChannelContinuity.RegularizationSup (99s)
+warning: QuantumChannelContinuity/RegularizationSup.lean:57:6: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+✔ [3530/3604] Built QuantumChannelContinuity.StateLimits (108s)
+✔ [3531/3604] Built QuantumChannelContinuity.Channels (111s)
+✔ [3532/3604] Built QuantumChannelContinuity.FoundationsMeasurement (128s)
+✔ [3533/3604] Built ChannelContinuity.Main (96s)
+✔ [3534/3604] Built QuantumChannelContinuity.ExtendedFekete (96s)
+✔ [3535/3604] Built QuantumChannelContinuity.HockeyStick (104s)
+✔ [3536/3604] Built QuantumChannelContinuity.FilterAlignment (160s)
+✔ [3537/3604] Built QuantumChannelContinuity.FilterTensor (146s)
+✔ [3538/3604] Built QuantumChannelContinuity.Schatten (194s)
+✔ [3539/3604] Built QuantumChannelContinuity.FoundationsDiagonal (124s)
+✔ [3540/3604] Built QuantumChannelContinuity.TensorChannels (161s)
+✔ [3541/3604] Built ChannelContinuity (100s)
+✔ [3543/3604] Built QuantumChannelContinuity.FoundationsSingularLimits (43s)
+✔ [3544/3604] Built QuantumChannelContinuity.FoundationsTesting (73s)
+✔ [3545/3604] Built QuantumChannelContinuity.FilterSlack (109s)
+✔ [3546/3604] Built QuantumChannelContinuity.TensorOrder (107s)
+✔ [3547/3604] Built QuantumChannelContinuity.FoundationsWeakTesting (78s)
+✔ [3548/3604] Built QuantumChannelContinuity.DilationExistence (78s)
+⚠ [3549/3604] Built QuantumChannelContinuity.FilterHockey (78s)
+warning: QuantumChannelContinuity/FilterHockey.lean:60:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.fixed_dilation_hockey_filter_of_slack_attainment`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3550/3604] Built QuantumChannelContinuity.TensorDilation (133s)
+✔ [3551/3604] Built QuantumChannelContinuity.ChannelTesting (64s)
+✔ [3552/3604] Built QuantumChannelContinuity.FoundationsInfiniteLimit (65s)
+⚠ [3553/3604] Built QuantumChannelContinuity.ChoiSupport (96s)
+warning: QuantumChannelContinuity/ChoiSupport.lean:106:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.amplifiedOutput_choiInput`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3554/3604] Built QuantumChannelContinuity.SDPTrace (160s)
+warning: QuantumChannelContinuity/SDPTrace.lean:41:36: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵m̵u̵l̵_̵s̵m̵u̵l̵_̵c̵o̵m̵m̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/SDPTrace.lean:43:37: This simp argument is unused:
+  smul_mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵s̵m̵u̵l̵_̵m̵u̵l̵_̵a̵s̵s̵o̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/SDPTrace.lean:45:8: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTracePair_apply`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:70:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitian_nonneg_iff_trace`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:85:36: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  simp [outer_product,̵ ̵s̵m̵u̵l̵_̵s̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/SDPTrace.lean:95:8: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTrace_apply`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:98:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitian_smul_nonneg`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:110:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTrace_nonneg`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3555/3604] Built QuantumChannelContinuity.StabilizedSchatten (106s)
+✔ [3556/3604] Built QuantumChannelContinuity.ThreePieceFilter (88s)
+✔ [3557/3604] Built QuantumChannelContinuity.Regularization (70s)
+⚠ [3558/3604] Built QuantumChannelContinuity.StateSupportLimits (107s)
+warning: QuantumChannelContinuity/StateSupportLimits.lean:334:10: This simp argument is unused:
+  Complex.real_smul
+
+Hint: Omit it from the simp argument list.
+  simp [̵C̵o̵m̵p̵l̵e̵x̵.̵r̵e̵a̵l̵_̵s̵m̵u̵l̵,̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵a̵d̵d̵_̵r̵e̵]̵[̲C̲o̲m̲p̲l̲e̲x̲.̲a̲d̲d̲_̲r̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/StateSupportLimits.lean:307:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateSupportLimits.lean:307:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateSupportLimits.lean:335:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3559/3604] Built QuantumChannelContinuity.DivergenceSchatten (108s)
+⚠ [3560/3604] Built ComparatorChallenges.ChannelRenyiContinuity (71s)
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:24:8: declaration uses `sorry`
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:31:8: declaration uses `sorry`
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:37:8: declaration uses `sorry`
+⚠ [3561/3604] Built ComparatorChallenges.WrongStatement (71s)
+warning: ComparatorChallenges/WrongStatement.lean:18:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.theorem_one`:
+  [Nontrivial H]
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] [Nontrivial K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComparatorChallenges/WrongStatement.lean:18:21: unused variable `N`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ComparatorChallenges/WrongStatement.lean:18:23: unused variable `M`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3562/3604] Built ComparatorChallenges.MissingProof (71s)
+warning: ComparatorChallenges/MissingProof.lean:17:8: declaration uses `sorry`
+✔ [3564/3604] Built QuantumChannelContinuity.ConcreteMain (72s)
+⚠ [3565/3604] Built QuantumChannelContinuity.SlackTester (139s)
+warning: QuantumChannelContinuity/SlackTester.lean:111:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.normalized_choi_test_le_hockey`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SlackTester.lean:149:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.reference_choiVector_surjective`:
+  [Nontrivial A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3566/3604] Built QuantumChannelContinuity.StateOrderPowers (56s)
+warning: QuantumChannelContinuity/StateOrderPowers.lean:52:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateOrderPowers.lean:58:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3567/3604] Built QuantumChannelContinuity.TracePowerBounds (86s)
+✔ [3568/3604] Built QuantumChannelContinuity.TensorWords (87s)
+✔ [3569/3604] Built QuantumChannelContinuity.StateOrderApprox (107s)
+✔ [3570/3604] Built QuantumChannelContinuity.StateOrderInterpolation (69s)
+✔ [3571/3604] Built QuantumChannelContinuity.StateOrderBoundaryNorms (71s)
+✔ [3572/3604] Built QuantumChannelContinuity.ComplexTraceHolder (95s)
+✔ [3573/3604] Built QuantumChannelContinuity.StateOrderDuality (89s)
+⚠ [3574/3604] Built QuantumChannelContinuity.SDPCone (236s)
+warning: QuantumChannelContinuity/SDPCone.lean:71:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTracePair_symm`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3575/3604] Built QuantumChannelContinuity.RegularizedExponential (63s)
+✔ [3576/3604] Built QuantumChannelContinuity.StateOrderBoundary (61s)
+⚠ [3577/3604] Built QuantumChannelContinuity.StateDominationBounds (72s)
+warning: QuantumChannelContinuity/StateDominationBounds.lean:52:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3578/3604] Built QuantumChannelContinuity.TensorRegrouping (67s)
+⚠ [3579/3604] Built QuantumChannelContinuity.ThreePieceSchatten (73s)
+warning: QuantumChannelContinuity/ThreePieceSchatten.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: QuantumChannelContinuity/ThreePieceSchatten.lean:145:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3580/3604] Built QuantumChannelContinuity.StateOrderFaithful (98s)
+warning: QuantumChannelContinuity/StateOrderFaithful.lean:88:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateOrderFaithful.lean:90:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3581/3604] Built QuantumChannelContinuity.SDPPartialTrace (146s)
+warning: QuantumChannelContinuity/SDPPartialTrace.lean:101:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianLeftTrace_trace`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPPartialTrace.lean:106:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianLeftTrace_adjoint`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3582/3604] Built QuantumChannelContinuity.ThreePieceExponential (106s)
+✔ [3583/3604] Built QuantumChannelContinuity.TensorPowers (107s)
+✔ [3584/3604] Built QuantumChannelContinuity.TensorStates (112s)
+✔ [3585/3604] Built QuantumChannelContinuity.TensorNaturality (120s)
+✔ [3586/3604] Built QuantumChannelContinuity.SlackTraceBound (46s)
+✔ [3587/3604] Built QuantumChannelContinuity.StateOrderRenyi (95s)
+✔ [3588/3604] Built QuantumChannelContinuity.QuantumMain (52s)
+✔ [3589/3604] Built QuantumChannelContinuity.ChannelProducts (125s)
+✔ [3590/3604] Built QuantumChannelContinuity.PowerRegrouping (134s)
+✔ [3591/3604] Built QuantumChannelContinuity.StateOrder (120s)
+⚠ [3592/3604] Built QuantumChannelContinuity.SlackAttainment (128s)
+warning: QuantumChannelContinuity/SlackAttainment.lean:69:4: 'change leftPartialTrace (Q : L (B ⊗[ℂ] A)) ≤ (ε : ℂ) • (1 : L A)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3593/3604] Built QuantumChannelContinuity.ChannelDominationBounds (125s)
+warning: QuantumChannelContinuity/ChannelDominationBounds.lean:30:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.cp_domination_constant_ge_one`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/ChannelDominationBounds.lean:42:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.cp_domination_amplifiedOutput`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3594/3604] Built QuantumChannelContinuity.TensorRelative (82s)
+✔ [3595/3604] Built QuantumChannelContinuity.RegularizationIdentities (73s)
+✔ [3596/3604] Built QuantumChannelContinuity.FiniteInfinite (71s)
+✔ [3597/3604] Built QuantumChannelContinuity.RegularizationLimits (71s)
+✔ [3598/3604] Built QuantumChannelContinuity.ContinuityAssembly (70s)
+✔ [3599/3604] Built QuantumChannelContinuity.Main (69s)
+✔ [3600/3604] Built ChannelRenyiContinuity (46s)
+✔ [3601/3604] Built QuantumChannelContinuity (46s)
+✔ [3603/3604] Built All (63s)
+Build completed successfully (3604 jobs).
+	Command being timed: "./run-lake.sh --no-ansi --no-cache build All ChannelContinuity QuantumChannelContinuity ComparatorChallenges"
+	User time (seconds): 1033.04
+	System time (seconds): 1024.18
+	Percent of CPU this job got: 129%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 26:26.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2615936
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 12046634
+	Minor (reclaiming a frame) page faults: 54698755
+	Voluntary context switches: 313614
+	Involuntary context switches: 51575700
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

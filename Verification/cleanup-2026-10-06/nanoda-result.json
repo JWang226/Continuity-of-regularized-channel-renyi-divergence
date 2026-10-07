@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-07T01:33:04.268843+00:00",
+  "checker_commit": "3a2407216ee84a75f9e1aead6803d0578be06ae7",
+  "exporter_commit": "048394e1afeeb52b0fa27bcf3f1ade2ff0f0ab6d",
+  "theorems": [
+    "QuantumChannelContinuity.theorem_one",
+    "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+    "QuantumChannelContinuity.blockRelative_tendsto_regularized"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "input": "fresh export of ChannelRenyiContinuity from this checkout",
+  "checker_binary_sha256": "8ebb7efbd019413154a1205903e17d9de3484ccd47463be9b0ebcfdebf05e6c4",
+  "export_sha256": "a0fb7773bc75e57a2586015a7ea6e4311944b7ecd453ecc2b9f55eca78d3c61b",
+  "export_bytes": 494967425,
+  "configuration_sha256": "5b6beb6944daefc8aaf43dfe056d04452bb1b0da35d0fadbef4544655acab6ce",
+  "checked_declarations": 61840,
+  "log_sha256": "97b973e63a6a04ce2ac02b8423ad6eeca35244c57e509b7ed7ce989df957eb8c",
+  "export_unchanged": true,
+  "proof_sources_unchanged": true
+}

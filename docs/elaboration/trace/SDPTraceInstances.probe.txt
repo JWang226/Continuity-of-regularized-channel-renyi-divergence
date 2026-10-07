@@ -1,0 +1,48 @@
+/-
+Copyright (c) 2026 Jinzhao Wang. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Jinzhao Wang (AI-assisted formalization)
+-/
+
+import QuantumChannelContinuity.FilterSlack
+import QuantumChannelContinuity.HockeyStick
+import Mathlib.Analysis.Convex.Cone.Dual
+import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
+
+/-!
+# Real trace duality for Hermitian operators
+
+These finite-dimensional duality lemmas are used to separate the closed
+semidefinite slack cone. They do not assume a semidefinite-programming duality
+theorem or an optimizer.
+-/
+
+open QuantumState QuantumChannel SandwichedRenyiRelativeEntropy
+open scoped ComplexOrder TensorProduct
+
+namespace QuantumChannelContinuity
+
+universe u
+variable {H : Type u} [Qudit H] [Nontrivial H]
+set_option maxHeartbeats 800000
+set_option synthInstance.maxHeartbeats 100000
+set_option backward.isDefEq.respectTransparency false
+
+noncomputable abbrev Hermitian (H : Type u) [Qudit H] := selfAdjoint (L H)
+
+set_option trace.Meta.synthInstance true
+
+noncomputable instance hermitianFiniteDimensional : FiniteDimensional ℝ (Hermitian H) :=
+  FiniteDimensional.of_injective (selfAdjoint.submodule ℝ (L H)).subtype Subtype.val_injective
+
+/-- Real trace pairing on the real vector space of Hermitian operators. -/
+noncomputable def hermitianTracePair : Hermitian H →ₗ[ℝ] Module.Dual ℝ (Hermitian H) where
+  toFun X :=
+    { toFun := fun Y => (Tr ((X : L H) * (Y : L H))).re
+      map_add' := by intros; simp [mul_add]
+      map_smul' := by intros; simp [mul_smul_comm] }
+  map_add' := by intros; ext; simp [add_mul]
+  map_smul' := by intros; ext; simp [smul_mul_assoc]
+
+
+end QuantumChannelContinuity

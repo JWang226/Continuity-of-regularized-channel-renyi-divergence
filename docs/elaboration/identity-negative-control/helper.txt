@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+"""Run the full statement checker with one intentionally wrong input hash."""
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[2]
+identity = ROOT / 'Verification/current-source-identity.json'
+original = identity.read_bytes()
+digest = lambda data: hashlib.sha256(data).hexdigest()
+record = {
+    'started_utc': datetime.now(timezone.utc).isoformat(),
+    'control': 'One source SHA-256 replaced by 64 zeros in current identity; full statement checker must reject before compilation.',
+    'command': ['python3', 'scripts/check-statement-audit.py'],
+    'original_identity_sha256': digest(original),
+    'helper_sha256': digest(Path(__file__).read_bytes()),
+}
+output = ROOT / '.lake/elaboration/identity-negative-control'
+output.mkdir(parents=True, exist_ok=False)
+try:
+    changed = json.loads(original)
+    record['changed_source_path'] = changed['files'][0]['path']
+    changed['files'][0]['sha256'] = '0' * 64
+    altered = (json.dumps(changed, indent=2) + '\n').encode()
+    record['altered_identity_sha256'] = digest(altered)
+    identity.write_bytes(altered)
+    env = os.environ.copy()
+    env['PYTHONDONTWRITEBYTECODE'] = '1'
+    result = subprocess.run(record['command'], cwd=ROOT, env=env,
+                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    (output / 'console.log').write_bytes(result.stdout)
+    failure_bytes = (ROOT / '.lake/statement-audit/result.json').read_bytes()
+    failure = json.loads(failure_bytes)
+    (output / 'failure-result.json').write_bytes(failure_bytes)
+    record['exit_status'] = result.returncode
+    record['failure_result_sha256'] = digest(failure_bytes)
+    record['console_sha256'] = digest(result.stdout)
+    record['expected_error'] = 'Current source hash differs: ' + record['changed_source_path']
+    if result.returncode == 0 or failure.get('status') != 'failed' or failure.get('error') != record['expected_error']:
+        raise RuntimeError('The full checker did not reject the intentional wrong source hash as expected.')
+    record['rejected_for_expected_reason'] = True
+finally:
+    identity.write_bytes(original)
+    record['restored_identity_sha256'] = digest(identity.read_bytes())
+    record['identity_restored_exactly'] = identity.read_bytes() == original
+    (output / 'result.json').write_text(json.dumps(record, indent=2) + '\n')
+if not record['identity_restored_exactly']:
+    raise RuntimeError('Original current-source identity was not restored byte-for-byte.')
+print('IDENTITY NEGATIVE CONTROL PASSED: full checker rejected wrong hash; original identity restored exactly.')

@@ -1,0 +1,50 @@
+theorem QuantumChannelContinuity.theorem_one :
+  forall {H K : Type 0}
+    [inst._@.QuantumChannelContinuity.Main.4107172725._hygCtx._hyg.4 : QuantumState.Qudit H]
+    [inst._@.QuantumChannelContinuity.Main.4107172725._hygCtx._hyg.7 : QuantumState.Qudit K]
+    [inst._@.QuantumChannelContinuity.Main.4107172725._hygCtx._hyg.10 : Nontrivial H]
+    [inst._@.QuantumChannelContinuity.Main.4107172725._hygCtx._hyg.13 : Nontrivial K]
+    (N M : QuantumChannel.CPTP H K),
+  Filter.Tendsto (fun (α : Real) => QuantumChannelContinuity.regularizedRenyi α N M)
+    (nhdsWithin (OfNat.ofNat 1) (Compl.compl (Singleton.singleton (OfNat.ofNat 1))))
+    (nhds (QuantumChannelContinuity.regularizedRelative N M)) :=
+  _
+
+theorem QuantumChannelContinuity.blockRenyi_tendsto_regularized :
+  forall {A B : Type 0}
+    [inst._@.QuantumChannelContinuity.RegularizationLimits.892625945._hygCtx._hyg.20 :
+      QuantumState.Qudit A]
+    [inst._@.QuantumChannelContinuity.RegularizationLimits.892625945._hygCtx._hyg.23 :
+      QuantumState.Qudit B]
+    [inst._@.QuantumChannelContinuity.RegularizationLimits.892625945._hygCtx._hyg.32 : Nontrivial A]
+    [inst._@.QuantumChannelContinuity.RegularizationLimits.892625945._hygCtx._hyg.35 : Nontrivial B]
+    {p : Real},
+  LE.le (HDiv.hDiv (OfNat.ofNat 1) (OfNat.ofNat 2)) p → Ne p (OfNat.ofNat 1) → (forall (N M :
+      QuantumChannel.CPTP A B),
+  Filter.Tendsto
+    (fun (n : Nat) => HDiv.hDiv (QuantumChannelContinuity.blockRenyi p N M n) (Nat.cast n))
+    Filter.atTop (nhds (QuantumChannelContinuity.regularizedRenyi p N M))) :=
+  _
+
+theorem QuantumChannelContinuity.blockRelative_tendsto_regularized :
+  forall {A B : Type 0}
+    [inst._@.QuantumChannelContinuity.RegularizationLimits.4108407173._hygCtx._hyg.20 :
+      QuantumState.Qudit A]
+    [inst._@.QuantumChannelContinuity.RegularizationLimits.4108407173._hygCtx._hyg.23 :
+      QuantumState.Qudit B]
+    [inst._@.QuantumChannelContinuity.RegularizationLimits.4108407173._hygCtx._hyg.32 :
+      Nontrivial A]
+    [inst._@.QuantumChannelContinuity.RegularizationLimits.4108407173._hygCtx._hyg.35 :
+      Nontrivial B] (N M : QuantumChannel.CPTP A B),
+  Filter.Tendsto
+    (fun (n : Nat) => HDiv.hDiv (QuantumChannelContinuity.blockRelative N M n) (Nat.cast n))
+    Filter.atTop (nhds (QuantumChannelContinuity.regularizedRelative N M)) :=
+  _
+
+axiom propext {a b : Sort 0} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Sort 0} {a b : α} :
+  r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+

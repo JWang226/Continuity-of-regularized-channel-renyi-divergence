@@ -1,0 +1,27 @@
+{
+  "schema": "elaboration-supplemental-publication-v1",
+  "scope": "Unpaired current top-five diagnostics; not a cold build or paired comparison member.",
+  "measured_commit": "8765c21753175381a57b29fa9469b35675515b2c",
+  "main_metrics_input_sha256": "9b6866759285d10ed4900fbccb13860c970985b83fa926c903ccbc92a8eb3d3d",
+  "original_profiles_input_sha256": "4f10d8b13a0f40ddfecec2a3477793a832524a126660cc57af42a5935b4ea6ee",
+  "published_profiles_sha256": "4f10d8b13a0f40ddfecec2a3477793a832524a126660cc57af42a5935b4ea6ee",
+  "profile_selection": {
+    "expected_files": [
+      "QuantumChannelContinuity/ContinuityAssembly.lean",
+      "QuantumChannelContinuity/StabilizedSchatten.lean",
+      "QuantumChannelContinuity/ComplexTraceHolder.lean",
+      "QuantumChannelContinuity/TracePowerBounds.lean"
+    ],
+    "completed_files": [
+      "QuantumChannelContinuity/ContinuityAssembly.lean",
+      "QuantumChannelContinuity/StabilizedSchatten.lean",
+      "QuantumChannelContinuity/ComplexTraceHolder.lean",
+      "QuantumChannelContinuity/TracePowerBounds.lean"
+    ],
+    "missing_files": [],
+    "unexpected_files": [],
+    "duplicate_files": [],
+    "complete": true
+  },
+  "privacy_transform": "Absolute checkout paths replaced by <checkout>; external home paths omitted. Numeric metrics and source hashes retained."
+}

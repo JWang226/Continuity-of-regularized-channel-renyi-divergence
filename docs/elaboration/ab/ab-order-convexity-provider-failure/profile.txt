@@ -1,0 +1,248 @@
+import took 7.97s
+QuantumChannelContinuity/OrderConvexity.lean:16:43: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LT ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:17:23: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:17:30: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:17:18: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Preorder ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:16:43: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv ℕ ℕ ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:17:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℕ ℝ ?m.30
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:18:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LT ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:18:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:18:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℕ ℝ ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:18:29: error: linarith failed to find a contradiction
+ℝ : Type u_1
+α : ℝ
+hα : sorry
+⊢ False
+failed
+QuantumChannelContinuity/OrderConvexity.lean:21:47: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LT ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:21:69: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:21:47: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv ℕ ℕ ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:22:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℕ ℝ ?m.32
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:22:19: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv ℕ ℕ ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:23:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LT ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:23:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:23:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℕ ℝ ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:23:29: error: linarith failed to find a contradiction
+ℝ : Type u_1
+α : ℝ
+hα : sorry
+hα1 : α ≠ 1
+⊢ False
+failed
+QuantumChannelContinuity/OrderConvexity.lean:33:10: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:33:57: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:34:20: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LT ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:34:42: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:34:56: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:35:11: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:36:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Neg ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:33:26: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:33:28: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:33:22: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Preorder ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:33:48: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv ℕ ℕ ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:34:20: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv ℕ ℕ ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:36:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℕ ℝ ?m.55
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:37:15: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℕ ℝ ?m.75
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:38:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LT ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:38:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv ℕ ℕ ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:39:21: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℕ ℝ ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:39:35: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℕ ℝ ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+QuantumChannelContinuity/OrderConvexity.lean:40:33: error: linarith failed to find a contradiction
+ℝ : Type u_1
+g : ℝ → ℝ
+hg : sorry
+hcenter : g (1 / 2) = 0
+α β : ℝ
+hα : sorry
+hα1 : α ≠ 1
+hβ1 : β ≠ 1
+hαβ : sorry
+hβ : sorry
+⊢ False
+failed
+QuantumChannelContinuity/OrderConvexity.lean:40:47: error: linarith failed to find a contradiction
+ℝ : Type u_1
+g : ℝ → ℝ
+hg : sorry
+hcenter : g (1 / 2) = 0
+α β : ℝ
+hα : sorry
+hα1 : α ≠ 1
+hβ1 : β ≠ 1
+hαβ : sorry
+hβ : sorry
+⊢ False
+failed
+cumulative profiling times:
+	attribute application 0.168ms
+	elaboration 64.8ms
+	fix level params 0.109ms
+	import 7.97s
+	initialization 42ms
+	instantiate metavars 0.326ms
+	interpretation 1.7s
+	linting 4.67ms
+	parsing 4.39ms
+	process pre-definitions 0.65ms
+	share common exprs 0.548ms
+	tactic execution 122ms
+	typeclass inference 695ms
+Command exited with non-zero status 1
+	Command being timed: "./run-lake.sh env lean --profile QuantumChannelContinuity/OrderConvexity.lean"
+	User time (seconds): 3.09
+	System time (seconds): 4.09
+	Percent of CPU this job got: 45%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:15.92
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1644560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 25760
+	Minor (reclaiming a frame) page faults: 209203
+	Voluntary context switches: 8339
+	Involuntary context switches: 116024
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 1

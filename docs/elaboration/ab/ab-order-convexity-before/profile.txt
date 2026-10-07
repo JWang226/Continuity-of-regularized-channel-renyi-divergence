@@ -1,0 +1,48 @@
+import took 58.8s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 183ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 145ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 124ms
+cumulative profiling times:
+	attribute application 0.774ms
+	blocked (unaccounted) 1.19ms
+	congr simp thm 1.02ms
+	elaboration 84.2ms
+	fix level params 1.15ms
+	import 58.8s
+	initialization 67ms
+	instantiate metavars 4.76ms
+	interpretation 4.2s
+	let-to-have transformation 0.139ms
+	linting 31.1ms
+	norm_num 457ms
+	parsing 4.57ms
+	process pre-definitions 11.2ms
+	ring 96.5ms
+	share common exprs 12.7ms
+	simp 15.3ms
+	tactic execution 139ms
+	type checking 97.1ms
+	typeclass inference 515ms
+	Command being timed: "./run-lake.sh env lean --profile QuantumChannelContinuity/OrderConvexity.lean"
+	User time (seconds): 4.83
+	System time (seconds): 12.26
+	Percent of CPU this job got: 24%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:08.48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1528720
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 294300
+	Minor (reclaiming a frame) page faults: 335613
+	Voluntary context switches: 20634
+	Involuntary context switches: 454864
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

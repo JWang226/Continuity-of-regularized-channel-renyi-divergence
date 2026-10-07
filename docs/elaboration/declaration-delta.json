@@ -1,0 +1,650 @@
+{
+  "schema": "elaboration-declaration-delta-v1",
+  "copyright": "Copyright (c) 2026 Jinzhao Wang. Released under Apache 2.0; see LICENSE.",
+  "campaign_label": "2026-10-06",
+  "generated_utc": "2026-10-07T01:19:49.558896+00:00",
+  "method": "Read-only comparison of exact archive member and regenerated index JSON; no compilation or proof/artifact mutation in this audit.",
+  "mathematical_source_commit": "8765c21753175381a57b29fa9469b35675515b2c",
+  "before": {
+    "label": "Archived pre-cleanup index",
+    "path": "Verification/source-snapshots/pre-cleanup-2026-10-06.zip::docs/proof-index.json",
+    "sha256": "1016762b8c0e78263a84e8c6d368480ce38e8f0b2dc6dd3d60e19409d993d244",
+    "bytes": 5387193,
+    "root_module": "ChannelRenyiContinuity",
+    "counts": {
+      "declarations": 1288,
+      "theorems": 1067,
+      "withLocations": 748,
+      "withDescriptions": 453,
+      "curatedDescriptions": 52,
+      "targetClosures": {
+        "QuantumChannelContinuity.theorem_one": 869,
+        "QuantumChannelContinuity.blockRenyi_tendsto_regularized": 174,
+        "QuantumChannelContinuity.blockRelative_tendsto_regularized": 258
+      }
+    },
+    "indexed_defining_modules": 75,
+    "source_hash_inventory_entries": 83
+  },
+  "archive": {
+    "path": "Verification/source-snapshots/pre-cleanup-2026-10-06.zip",
+    "sha256": "7e50fd557d5992c00311db0855de653b06810d6b994f58623f40900d4513ead2",
+    "bytes": 862852
+  },
+  "after": {
+    "label": "Regenerated index for cleaned source",
+    "path": "docs/proof-index.json",
+    "sha256": "c7f581fcc6c2bb79959ec0cb3fd2d8396d6382f54e18eef50b5b6e0626797850",
+    "bytes": 5236219,
+    "root_module": "ChannelRenyiContinuity",
+    "counts": {
+      "declarations": 1268,
+      "theorems": 1047,
+      "withLocations": 742,
+      "withDescriptions": 448,
+      "curatedDescriptions": 52,
+      "targetClosures": {
+        "QuantumChannelContinuity.theorem_one": 858,
+        "QuantumChannelContinuity.blockRenyi_tendsto_regularized": 174,
+        "QuantumChannelContinuity.blockRelative_tendsto_regularized": 258
+      }
+    },
+    "indexed_defining_modules": 75,
+    "source_hash_inventory_entries": 81
+  },
+  "reconciliation": {
+    "equation": "1288 - 7 - 2 - 15 + 1 + 3 = 1268",
+    "removed_total": 24,
+    "added_total": 4,
+    "net": -20,
+    "named_source_removals": 7,
+    "deleted_wrapper_generated_auxiliaries": 2,
+    "cache_related_generated_auxiliaries_removed": 15,
+    "private_cache_added": 1,
+    "cache_generated_auxiliaries_added": 3
+  },
+  "removed": {
+    "named_source_removals": [
+      {
+        "name": "ChannelContinuity.theorem_one_finite",
+        "displayName": "ChannelContinuity.theorem_one_finite",
+        "kind": "theorem",
+        "module": "ChannelContinuity.Main",
+        "private": false,
+        "internal": false,
+        "targetReachability": []
+      },
+      {
+        "name": "ChannelContinuity.theorem_one_conditional",
+        "displayName": "ChannelContinuity.theorem_one_conditional",
+        "kind": "theorem",
+        "module": "ChannelContinuity.Main",
+        "private": false,
+        "internal": false,
+        "targetReachability": []
+      },
+      {
+        "name": "QuantumChannelContinuity.theorem_one_concrete_finite_conditional",
+        "displayName": "QuantumChannelContinuity.theorem_one_concrete_finite_conditional",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.ConcreteMain",
+        "private": false,
+        "internal": false,
+        "targetReachability": []
+      },
+      {
+        "name": "QuantumChannelContinuity.theorem_one_concrete_conditional",
+        "displayName": "QuantumChannelContinuity.theorem_one_concrete_conditional",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.ConcreteMain",
+        "private": false,
+        "internal": false,
+        "targetReachability": []
+      },
+      {
+        "name": "QuantumChannelContinuity.theorem_one_from_quantum_inputs",
+        "displayName": "QuantumChannelContinuity.theorem_one_from_quantum_inputs",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.QuantumMain",
+        "private": false,
+        "internal": false,
+        "targetReachability": []
+      },
+      {
+        "name": "QuantumChannelContinuity.quantumThresholdInputs",
+        "displayName": "QuantumChannelContinuity.quantumThresholdInputs",
+        "kind": "definition",
+        "module": "QuantumChannelContinuity.Main",
+        "private": false,
+        "internal": false,
+        "targetReachability": []
+      },
+      {
+        "name": "_private.QuantumChannelContinuity.StateOrderApprox.0.QuantumChannelContinuity.OrderBoundary.rpow_conj_nonneg",
+        "displayName": "QuantumChannelContinuity.OrderBoundary.rpow_conj_nonneg",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.StateOrderApprox",
+        "private": true,
+        "internal": true,
+        "targetReachability": []
+      }
+    ],
+    "deleted_wrapper_generated_auxiliaries": [
+      {
+        "name": "QuantumChannelContinuity.theorem_one_concrete_finite_conditional._simp_1_3",
+        "displayName": "QuantumChannelContinuity.theorem_one_concrete_finite_conditional._simp_1_3",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.ConcreteMain",
+        "private": false,
+        "internal": true,
+        "targetReachability": []
+      },
+      {
+        "name": "QuantumChannelContinuity.theorem_one_concrete_finite_conditional._simp_1_4",
+        "displayName": "QuantumChannelContinuity.theorem_one_concrete_finite_conditional._simp_1_4",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.ConcreteMain",
+        "private": false,
+        "internal": true,
+        "targetReachability": []
+      }
+    ],
+    "cache_related_generated_auxiliaries": [
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_10",
+        "displayName": "QuantumChannelContinuity.hermitianLeftTrace._proof_10",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPPartialTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_11",
+        "displayName": "QuantumChannelContinuity.hermitianLeftTrace._proof_11",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPPartialTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_12",
+        "displayName": "QuantumChannelContinuity.hermitianLeftTrace._proof_12",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPPartialTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_13",
+        "displayName": "QuantumChannelContinuity.hermitianLeftTrace._proof_13",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPPartialTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_14",
+        "displayName": "QuantumChannelContinuity.hermitianLeftTrace._proof_14",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPPartialTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_15",
+        "displayName": "QuantumChannelContinuity.hermitianLeftTrace._proof_15",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPPartialTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_7",
+        "displayName": "QuantumChannelContinuity.hermitianLeftTrace._proof_7",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPPartialTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_8",
+        "displayName": "QuantumChannelContinuity.hermitianLeftTrace._proof_8",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPPartialTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_9",
+        "displayName": "QuantumChannelContinuity.hermitianLeftTrace._proof_9",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPPartialTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_11",
+        "displayName": "QuantumChannelContinuity.hermitianTracePair._proof_11",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_12",
+        "displayName": "QuantumChannelContinuity.hermitianTracePair._proof_12",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_13",
+        "displayName": "QuantumChannelContinuity.hermitianTracePair._proof_13",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPTrace",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.sdpSlackCone._proof_4",
+        "displayName": "QuantumChannelContinuity.sdpSlackCone._proof_4",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPCone",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.sdpSlackCone._proof_5",
+        "displayName": "QuantumChannelContinuity.sdpSlackCone._proof_5",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPCone",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.sdpSlackCone._proof_6",
+        "displayName": "QuantumChannelContinuity.sdpSlackCone._proof_6",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPCone",
+        "private": false,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      }
+    ]
+  },
+  "added": {
+    "private_cache": {
+      "name": "_private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule",
+      "displayName": "QuantumChannelContinuity.hermitianRealModule",
+      "kind": "definition",
+      "module": "QuantumChannelContinuity.SDPTrace",
+      "private": true,
+      "internal": true,
+      "targetReachability": [
+        "QuantumChannelContinuity.theorem_one"
+      ]
+    },
+    "cache_generated_auxiliaries": [
+      {
+        "name": "_private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule._proof_1",
+        "displayName": "QuantumChannelContinuity.hermitianRealModule._proof_1",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPTrace",
+        "private": true,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "_private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule._proof_2",
+        "displayName": "QuantumChannelContinuity.hermitianRealModule._proof_2",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPTrace",
+        "private": true,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      },
+      {
+        "name": "_private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule._proof_3",
+        "displayName": "QuantumChannelContinuity.hermitianRealModule._proof_3",
+        "kind": "theorem",
+        "module": "QuantumChannelContinuity.SDPTrace",
+        "private": true,
+        "internal": true,
+        "targetReachability": [
+          "QuantumChannelContinuity.theorem_one"
+        ]
+      }
+    ]
+  },
+  "generated_auxiliary_interpretation": {
+    "statement": "The cache-related removals are elaborator-generated proof auxiliaries, not fifteen deleted source theorems. They disappear during downstream regeneration after the closed-head cache; generated numbering also compacts.",
+    "unchanged_downstream_source_hashes": {
+      "QuantumChannelContinuity/SDPCone.lean": "ab2cca84a5d65809d5cffd93eac986dcb3ddab7e357b37295725d22ded440413",
+      "QuantumChannelContinuity/SDPPartialTrace.lean": "ef65df7cd374248a73ba7dcd87cb502af7731d9b0979df45bce17a38e04f94cb"
+    },
+    "unchanged_downstream_sources_verified": true,
+    "shared_internal_names_with_changed_printed_types_count": 18,
+    "shared_internal_names_with_changed_printed_types": [
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_1",
+        "before_printed_type": "∀ {A B : Type u_1} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B], Module.Finite ℂ (TensorProduct ℂ B A)",
+        "after_printed_type": "∀ {A B : Type u_1} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B],\n  SMulCommClass ℂ ℂ (TensorProduct ℂ B A)"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_2",
+        "before_printed_type": "∀ {B : Type u_1} [inst : QuantumState.Qudit B], SMulCommClass ℂ ℝ B",
+        "after_printed_type": "∀ {A B : Type u_1} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B]\n  (X : ↥(QuantumChannelContinuity.Hermitian (TensorProduct ℂ B A))),\n  IsSelfAdjoint (QuantumChannelContinuity.leftPartialTrace ↑X)"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_3",
+        "before_printed_type": "∀ {B : Type u_1} [inst : QuantumState.Qudit B], SMulCommClass ℂ ℂ B",
+        "after_printed_type": "∀ {A B : Type u_1} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B]\n  (x y : ↥(QuantumChannelContinuity.Hermitian (TensorProduct ℂ B A))),\n  IsSelfAdjoint (QuantumChannelContinuity.leftPartialTrace ↑(x + y))"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_4",
+        "before_printed_type": "∀ {A B : Type u_1} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B],\n  SMulCommClass ℂ ℝ (TensorProduct ℂ B A)",
+        "after_printed_type": "∀ {A B : Type u_1} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B]\n  (x y : ↥(QuantumChannelContinuity.Hermitian (TensorProduct ℂ B A))),\n  ⟨QuantumChannelContinuity.leftPartialTrace ↑(x + y), ⋯⟩ =\n    ⟨QuantumChannelContinuity.leftPartialTrace ↑x, ⋯⟩ + ⟨QuantumChannelContinuity.leftPartialTrace ↑y, ⋯⟩"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_5",
+        "before_printed_type": "∀ {B : Type u_1} [inst : QuantumState.Qudit B], SMulCommClass ℂ ℂ B",
+        "after_printed_type": "∀ {A B : Type u_1} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B] (m : ℝ)\n  (x : ↥(QuantumChannelContinuity.Hermitian (TensorProduct ℂ B A))),\n  IsSelfAdjoint (QuantumChannelContinuity.leftPartialTrace ↑(m • x))"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianLeftTrace._proof_6",
+        "before_printed_type": "∀ {A B : Type u_1} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B],\n  SMulCommClass ℂ ℂ (TensorProduct ℂ B A)",
+        "after_printed_type": "∀ {A B : Type u_1} [inst : QuantumState.Qudit A] [inst_1 : QuantumState.Qudit B] (m : ℝ)\n  (x : ↥(QuantumChannelContinuity.Hermitian (TensorProduct ℂ B A))),\n  ⟨QuantumChannelContinuity.leftPartialTrace ↑(m • x), ⋯⟩ =\n    (RingHom.id ℝ) m • ⟨QuantumChannelContinuity.leftPartialTrace ↑x, ⋯⟩"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_1",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H], SMulCommClass ℂ ℝ H",
+        "after_printed_type": "SMulCommClass ℝ ℝ ℝ"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_10",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (x y : ↥(QuantumChannelContinuity.Hermitian H)),\n  { toFun := fun Y => (QuantumState.Tr (↑(x + y) * ↑Y)).re, map_add' := ⋯, map_smul' := ⋯ } =\n    { toFun := fun Y => (QuantumState.Tr (↑x * ↑Y)).re, map_add' := ⋯, map_smul' := ⋯ } +\n      { toFun := fun Y => (QuantumState.Tr (↑y * ↑Y)).re, map_add' := ⋯, map_smul' := ⋯ }",
+        "after_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (m : ℝ) (x : ↥(QuantumChannelContinuity.Hermitian H)),\n  { toFun := fun Y => (QuantumState.Tr (↑(m • x) * ↑Y)).re, map_add' := ⋯, map_smul' := ⋯ } =\n    (RingHom.id ℝ) m • { toFun := fun Y => (QuantumState.Tr (↑x * ↑Y)).re, map_add' := ⋯, map_smul' := ⋯ }"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_3",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H], StarModule ℝ (QuantumState.L H)",
+        "after_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (X x y : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑X * ↑(x + y))).re = (QuantumState.Tr (↑X * ↑x)).re + (QuantumState.Tr (↑X * ↑y)).re"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_4",
+        "before_printed_type": "SMulCommClass ℝ ℝ ℝ",
+        "after_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (X : ↥(QuantumChannelContinuity.Hermitian H)) (m : ℝ)\n  (x : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑X * ↑(m • x))).re = m * (QuantumState.Tr (↑X * ↑x)).re"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_5",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H], SMulCommClass ℂ ℂ H",
+        "after_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (x y x_1 y_1 : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑(x + y) * ↑(x_1 + y_1))).re =\n    (QuantumState.Tr (↑(x + y) * ↑x_1)).re + (QuantumState.Tr (↑(x + y) * ↑y_1)).re"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_6",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (X x y : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑X * ↑(x + y))).re = (QuantumState.Tr (↑X * ↑x)).re + (QuantumState.Tr (↑X * ↑y)).re",
+        "after_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (x y : ↥(QuantumChannelContinuity.Hermitian H)) (m : ℝ)\n  (x_1 : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑(x + y) * ↑(m • x_1))).re = m * (QuantumState.Tr (↑(x + y) * ↑x_1)).re"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_7",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (X : ↥(QuantumChannelContinuity.Hermitian H)) (m : ℝ)\n  (x : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑X * ↑(m • x))).re = m * (QuantumState.Tr (↑X * ↑x)).re",
+        "after_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (x y : ↥(QuantumChannelContinuity.Hermitian H)),\n  { toFun := fun Y => (QuantumState.Tr (↑(x + y) * ↑Y)).re, map_add' := ⋯, map_smul' := ⋯ } =\n    { toFun := fun Y => (QuantumState.Tr (↑x * ↑Y)).re, map_add' := ⋯, map_smul' := ⋯ } +\n      { toFun := fun Y => (QuantumState.Tr (↑y * ↑Y)).re, map_add' := ⋯, map_smul' := ⋯ }"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_8",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (x y x_1 y_1 : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑(x + y) * ↑(x_1 + y_1))).re =\n    (QuantumState.Tr (↑(x + y) * ↑x_1)).re + (QuantumState.Tr (↑(x + y) * ↑y_1)).re",
+        "after_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (m : ℝ) (x x_1 y : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑(m • x) * ↑(x_1 + y))).re =\n    (QuantumState.Tr (↑(m • x) * ↑x_1)).re + (QuantumState.Tr (↑(m • x) * ↑y)).re"
+      },
+      {
+        "name": "QuantumChannelContinuity.hermitianTracePair._proof_9",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (x y : ↥(QuantumChannelContinuity.Hermitian H)) (m : ℝ)\n  (x_1 : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑(x + y) * ↑(m • x_1))).re = m * (QuantumState.Tr (↑(x + y) * ↑x_1)).re",
+        "after_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H] (m : ℝ) (x : ↥(QuantumChannelContinuity.Hermitian H)) (m_1 : ℝ)\n  (x_1 : ↥(QuantumChannelContinuity.Hermitian H)),\n  (QuantumState.Tr (↑(m • x) * ↑(m_1 • x_1))).re = m_1 * (QuantumState.Tr (↑(m • x) * ↑x_1)).re"
+      },
+      {
+        "name": "QuantumChannelContinuity.sdpSlackCone._proof_1",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H], SMulCommClass ℂ ℝ H",
+        "after_printed_type": "∀ {H K : Type u_1} [inst : QuantumState.Qudit H] [inst_1 : QuantumState.Qudit K]\n  (τ : ↥(QuantumChannelContinuity.Hermitian H) →ₗ[ℝ] ↥(QuantumChannelContinuity.Hermitian K))\n  {x y : ↥(QuantumChannelContinuity.Hermitian H) × ↥(QuantumChannelContinuity.Hermitian K)},\n  x ∈ {p | ∃ Q, 0 ≤ Q ∧ p.1 ≤ Q ∧ τ Q ≤ p.2} →\n    y ∈ {p | ∃ Q, 0 ≤ Q ∧ p.1 ≤ Q ∧ τ Q ≤ p.2} → x + y ∈ {p | ∃ Q, 0 ≤ Q ∧ p.1 ≤ Q ∧ τ Q ≤ p.2}"
+      },
+      {
+        "name": "QuantumChannelContinuity.sdpSlackCone._proof_2",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H], SMulCommClass ℂ ℂ H",
+        "after_printed_type": "∀ {H K : Type u_1} [inst : QuantumState.Qudit H] [inst_1 : QuantumState.Qudit K]\n  (τ : ↥(QuantumChannelContinuity.Hermitian H) →ₗ[ℝ] ↥(QuantumChannelContinuity.Hermitian K)),\n  ∃ Q, 0 ≤ Q ∧ 0.1 ≤ Q ∧ τ Q ≤ 0.2"
+      },
+      {
+        "name": "QuantumChannelContinuity.sdpSlackCone._proof_3",
+        "before_printed_type": "∀ {H : Type u_1} [inst : QuantumState.Qudit H], StarModule ℝ (QuantumState.L H)",
+        "after_printed_type": "∀ {H K : Type u_1} [inst : QuantumState.Qudit H] [inst_1 : QuantumState.Qudit K] [Nontrivial H] [Nontrivial K]\n  (τ : ↥(QuantumChannelContinuity.Hermitian H) →ₗ[ℝ] ↥(QuantumChannelContinuity.Hermitian K)) (r : { c // 0 ≤ c })\n  {p : ↥(QuantumChannelContinuity.Hermitian H) × ↥(QuantumChannelContinuity.Hermitian K)},\n  p ∈ {p | ∃ Q, 0 ≤ Q ∧ p.1 ≤ Q ∧ τ Q ≤ p.2} → r • p ∈ {p | ∃ Q, 0 ≤ Q ∧ p.1 ≤ Q ∧ τ Q ≤ p.2}"
+      }
+    ]
+  },
+  "retained_declaration_checks": {
+    "shared_total": 1264,
+    "shared_noninternal_count": 794,
+    "all_shared_noninternal_printed_types_unchanged": true,
+    "named_signature_comparison_limit": "Printed-type equality is a metadata comparison, not a replacement for kernel verification or Comparator checking.",
+    "all_three_target_printed_types_and_direct_dependencies_unchanged": true,
+    "targets": [
+      {
+        "name": "QuantumChannelContinuity.theorem_one",
+        "printed_type_unchanged": true,
+        "direct_type_deps_unchanged": true,
+        "direct_proof_deps_unchanged": true,
+        "closure_before": 869,
+        "closure_after": 858,
+        "removed_closure_names": [
+          "QuantumChannelContinuity.hermitianLeftTrace._proof_10",
+          "QuantumChannelContinuity.hermitianLeftTrace._proof_11",
+          "QuantumChannelContinuity.hermitianLeftTrace._proof_12",
+          "QuantumChannelContinuity.hermitianLeftTrace._proof_13",
+          "QuantumChannelContinuity.hermitianLeftTrace._proof_14",
+          "QuantumChannelContinuity.hermitianLeftTrace._proof_15",
+          "QuantumChannelContinuity.hermitianLeftTrace._proof_7",
+          "QuantumChannelContinuity.hermitianLeftTrace._proof_8",
+          "QuantumChannelContinuity.hermitianLeftTrace._proof_9",
+          "QuantumChannelContinuity.hermitianTracePair._proof_11",
+          "QuantumChannelContinuity.hermitianTracePair._proof_12",
+          "QuantumChannelContinuity.hermitianTracePair._proof_13",
+          "QuantumChannelContinuity.sdpSlackCone._proof_4",
+          "QuantumChannelContinuity.sdpSlackCone._proof_5",
+          "QuantumChannelContinuity.sdpSlackCone._proof_6"
+        ],
+        "added_closure_names": [
+          "_private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule",
+          "_private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule._proof_1",
+          "_private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule._proof_2",
+          "_private.QuantumChannelContinuity.SDPTrace.0.QuantumChannelContinuity.hermitianRealModule._proof_3"
+        ]
+      },
+      {
+        "name": "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+        "printed_type_unchanged": true,
+        "direct_type_deps_unchanged": true,
+        "direct_proof_deps_unchanged": true,
+        "closure_before": 174,
+        "closure_after": 174,
+        "removed_closure_names": [],
+        "added_closure_names": []
+      },
+      {
+        "name": "QuantumChannelContinuity.blockRelative_tendsto_regularized",
+        "printed_type_unchanged": true,
+        "direct_type_deps_unchanged": true,
+        "direct_proof_deps_unchanged": true,
+        "closure_before": 258,
+        "closure_after": 258,
+        "removed_closure_names": [],
+        "added_closure_names": []
+      }
+    ],
+    "module_attribution_changes": [
+      {
+        "name": "QuantumChannelContinuity.inputRelative.congr_simp",
+        "before_module": "QuantumChannelContinuity.ConcreteMain",
+        "after_module": "QuantumChannelContinuity.ContinuityAssembly",
+        "printed_type_unchanged": true
+      },
+      {
+        "name": "QuantumChannelContinuity.inputRenyi.congr_simp",
+        "before_module": "QuantumChannelContinuity.ConcreteMain",
+        "after_module": "QuantumChannelContinuity.ContinuityAssembly",
+        "printed_type_unchanged": true
+      }
+    ]
+  },
+  "scope": {
+    "unchanged_index_root_module": "ChannelRenyiContinuity",
+    "unchanged_indexed_defining_modules": [
+      "ChannelContinuity.LeftContinuity",
+      "ChannelContinuity.Limsup",
+      "ChannelContinuity.Main",
+      "ChannelContinuity.OperatorAlgebra",
+      "ChannelContinuity.Parameters",
+      "ChannelContinuity.Testing",
+      "ChannelContinuity.ThreePiece",
+      "ChannelContinuity.Threshold",
+      "QuantumChannelContinuity.ChannelDominationBounds",
+      "QuantumChannelContinuity.ChannelProducts",
+      "QuantumChannelContinuity.ChannelTesting",
+      "QuantumChannelContinuity.Channels",
+      "QuantumChannelContinuity.ChoiSupport",
+      "QuantumChannelContinuity.ComplexTraceHolder",
+      "QuantumChannelContinuity.ConcreteMain",
+      "QuantumChannelContinuity.ContinuityAssembly",
+      "QuantumChannelContinuity.DilationExistence",
+      "QuantumChannelContinuity.DivergenceSchatten",
+      "QuantumChannelContinuity.ExtendedFekete",
+      "QuantumChannelContinuity.Filter",
+      "QuantumChannelContinuity.FilterAlignment",
+      "QuantumChannelContinuity.FilterHockey",
+      "QuantumChannelContinuity.FilterSlack",
+      "QuantumChannelContinuity.FilterTensor",
+      "QuantumChannelContinuity.FiniteInfinite",
+      "QuantumChannelContinuity.Foundations",
+      "QuantumChannelContinuity.FoundationsDiagonal",
+      "QuantumChannelContinuity.FoundationsInfiniteLimit",
+      "QuantumChannelContinuity.FoundationsMeasurement",
+      "QuantumChannelContinuity.FoundationsSingularLimits",
+      "QuantumChannelContinuity.FoundationsTesting",
+      "QuantumChannelContinuity.FoundationsWeakTesting",
+      "QuantumChannelContinuity.HockeyStick",
+      "QuantumChannelContinuity.Main",
+      "QuantumChannelContinuity.OrderConvexity",
+      "QuantumChannelContinuity.PowerRegrouping",
+      "QuantumChannelContinuity.QuantumMain",
+      "QuantumChannelContinuity.Regularization",
+      "QuantumChannelContinuity.RegularizationIdentities",
+      "QuantumChannelContinuity.RegularizationLimits",
+      "QuantumChannelContinuity.RegularizationSup",
+      "QuantumChannelContinuity.RegularizedExponential",
+      "QuantumChannelContinuity.SDPCone",
+      "QuantumChannelContinuity.SDPPartialTrace",
+      "QuantumChannelContinuity.SDPTrace",
+      "QuantumChannelContinuity.Schatten",
+      "QuantumChannelContinuity.SlackAttainment",
+      "QuantumChannelContinuity.SlackTester",
+      "QuantumChannelContinuity.SlackTraceBound",
+      "QuantumChannelContinuity.StabilizedSchatten",
+      "QuantumChannelContinuity.StateDominationBounds",
+      "QuantumChannelContinuity.StateLimits",
+      "QuantumChannelContinuity.StateOrder",
+      "QuantumChannelContinuity.StateOrderApprox",
+      "QuantumChannelContinuity.StateOrderBoundary",
+      "QuantumChannelContinuity.StateOrderBoundaryNorms",
+      "QuantumChannelContinuity.StateOrderDuality",
+      "QuantumChannelContinuity.StateOrderFaithful",
+      "QuantumChannelContinuity.StateOrderInterpolation",
+      "QuantumChannelContinuity.StateOrderPowers",
+      "QuantumChannelContinuity.StateOrderRenyi",
+      "QuantumChannelContinuity.StateSupportLimits",
+      "QuantumChannelContinuity.TensorChannels",
+      "QuantumChannelContinuity.TensorDilation",
+      "QuantumChannelContinuity.TensorNaturality",
+      "QuantumChannelContinuity.TensorOrder",
+      "QuantumChannelContinuity.TensorPowers",
+      "QuantumChannelContinuity.TensorRegrouping",
+      "QuantumChannelContinuity.TensorRelative",
+      "QuantumChannelContinuity.TensorStates",
+      "QuantumChannelContinuity.TensorWords",
+      "QuantumChannelContinuity.ThreePieceExponential",
+      "QuantumChannelContinuity.ThreePieceFilter",
+      "QuantumChannelContinuity.ThreePieceSchatten",
+      "QuantumChannelContinuity.TracePowerBounds"
+    ],
+    "unchanged_provenance_fields": [
+      "dependencies",
+      "proofDepsMeaning",
+      "scope",
+      "externalDependencies",
+      "reachability",
+      "locations",
+      "descriptions",
+      "leanToolchain",
+      "dependencyPins",
+      "extractorSha256",
+      "generatorSha256",
+      "curatedDescriptionsSha256",
+      "regenerationCommand"
+    ],
+    "source_inventory_removed_paths": [
+      "QuantumChannelContinuity/FoundationsAudit.lean",
+      "QuantumChannelContinuity/StateOrderInterpolationAudit.lean",
+      "QuantumChannelContinuity/StateSupportLimitsAudit.lean"
+    ],
+    "source_inventory_added_paths": [
+      "QuantumChannelContinuity/SourceCorrespondence.lean"
+    ],
+    "source_correspondence_indexed_before": false,
+    "source_correspondence_indexed_after": false,
+    "explanation": "The extractor imports ChannelRenyiContinuity and selects declarations in ChannelContinuity./QuantumChannelContinuity. defining modules loaded through that root. Both indexes exclude SourceCorrespondence and diagnostic-only audit modules. Current sourceSha256 records 81 file/config paths, including the off-root SourceCorrespondence file; those hash entries are not declaration/import coverage. The inventory changes from 83 to 81 because three audit files moved outside scanned directories and the existing supplemental file is now hashed. Full root-axiom verification covers the supplement separately.",
+    "certification_claim": "This reconciliation itself is not a proof-verification PASS."
+  }
+}

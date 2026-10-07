@@ -1,0 +1,49 @@
+{
+  "schema": "elaboration-evidence-publication-v1",
+  "measured_commit": "8765c21753175381a57b29fa9469b35675515b2c",
+  "original_inputs_sha256": {
+    "metrics.json": "9b6866759285d10ed4900fbccb13860c970985b83fa926c903ccbc92a8eb3d3d",
+    "profiles.json": "e752721095dca90fe629e72bd40dfd0c93301d7436a85d3f17f79ce4ad8cbde4",
+    "setup.json": "7291c1752a0f10890dbe372d3e96f51a2413f4876171ee6c06d96cc8befe76e2",
+    "build.txt": "b0390f3af82dd498665ed07867bf651f9e949150640f5f781f8c7cfaefa92e0f"
+  },
+  "privacy_transform": "External process commands omitted; absolute checkout paths replaced by <checkout>, other home paths by <external-path>. Numeric metrics and source hashes retained.",
+  "published_sha256": {
+    "metrics.json": "3591c6f62bd0044626009d0c0e17e74584561f90892714197ddb133e36cbf9eb",
+    "profiles.json": "e752721095dca90fe629e72bd40dfd0c93301d7436a85d3f17f79ce4ad8cbde4",
+    "committed-analysis.json": "1539a9690b457e7a2826a140c97b61585720b47248acbfef177a8fbb2bd04cc9",
+    "setup.json": "36667301477a867386377f517a5aadcafa88b775f31f4efc853e78a3ad0899dd",
+    "build.txt": "b0390f3af82dd498665ed07867bf651f9e949150640f5f781f8c7cfaefa92e0f",
+    "execution-measurement-script.py": "6392a3bf352831155a5e6e4878075615dafe416b806eba0b45738fe5505b7ae8",
+    "size.txt": "99dd65cb79345bd0247638e309e32dafe0c9d01c19ca3bc1ef4fa960410bd09c"
+  },
+  "profile_selection": {
+    "expected_files": [
+      "QuantumChannelContinuity/SDPCone.lean",
+      "QuantumChannelContinuity/Schatten.lean",
+      "QuantumChannelContinuity/TensorChannels.lean",
+      "QuantumChannelContinuity/FilterAlignment.lean",
+      "QuantumChannelContinuity/SDPTrace.lean",
+      "QuantumChannelContinuity/SourceCorrespondence.lean",
+      "QuantumChannelContinuity/Filter.lean",
+      "QuantumChannelContinuity/OrderConvexity.lean",
+      "QuantumChannelContinuity/RegularizationSup.lean"
+    ],
+    "completed_files": [
+      "QuantumChannelContinuity/SDPCone.lean",
+      "QuantumChannelContinuity/Schatten.lean",
+      "QuantumChannelContinuity/TensorChannels.lean",
+      "QuantumChannelContinuity/FilterAlignment.lean",
+      "QuantumChannelContinuity/SDPTrace.lean",
+      "QuantumChannelContinuity/SourceCorrespondence.lean",
+      "QuantumChannelContinuity/Filter.lean",
+      "QuantumChannelContinuity/OrderConvexity.lean",
+      "QuantumChannelContinuity/RegularizationSup.lean"
+    ],
+    "missing_files": [],
+    "unexpected_files": [],
+    "duplicate_files": [],
+    "complete": true
+  },
+  "execution_script_origin": "measured Git commit's scripts/elaboration-test.py"
+}

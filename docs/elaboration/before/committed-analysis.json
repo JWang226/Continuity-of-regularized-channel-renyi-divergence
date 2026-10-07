@@ -1,0 +1,593 @@
+{
+  "critical_path_seconds": 1533.0,
+  "critical_path": [
+    "QuantumChannelContinuity.Foundations",
+    "QuantumChannelContinuity.Channels",
+    "QuantumChannelContinuity.TensorChannels",
+    "QuantumChannelContinuity.TensorOrder",
+    "QuantumChannelContinuity.StabilizedSchatten",
+    "QuantumChannelContinuity.DivergenceSchatten",
+    "QuantumChannelContinuity.TensorWords",
+    "QuantumChannelContinuity.TensorRegrouping",
+    "QuantumChannelContinuity.TensorStates",
+    "QuantumChannelContinuity.ChannelProducts",
+    "QuantumChannelContinuity.TensorRelative",
+    "QuantumChannelContinuity.RegularizationIdentities",
+    "QuantumChannelContinuity.FiniteInfinite",
+    "QuantumChannelContinuity.ContinuityAssembly",
+    "QuantumChannelContinuity.Main",
+    "ChannelRenyiContinuity",
+    "All"
+  ],
+  "module_files": {
+    "All": "All.lean",
+    "Audit": "Audit.lean",
+    "ChannelContinuity": "ChannelContinuity.lean",
+    "ChannelContinuity.LeftContinuity": "ChannelContinuity/LeftContinuity.lean",
+    "ChannelContinuity.Limsup": "ChannelContinuity/Limsup.lean",
+    "ChannelContinuity.Main": "ChannelContinuity/Main.lean",
+    "ChannelContinuity.OperatorAlgebra": "ChannelContinuity/OperatorAlgebra.lean",
+    "ChannelContinuity.Parameters": "ChannelContinuity/Parameters.lean",
+    "ChannelContinuity.Testing": "ChannelContinuity/Testing.lean",
+    "ChannelContinuity.ThreePiece": "ChannelContinuity/ThreePiece.lean",
+    "ChannelContinuity.Threshold": "ChannelContinuity/Threshold.lean",
+    "ChannelRenyiContinuity": "ChannelRenyiContinuity.lean",
+    "ComparatorChallenges.ChannelRenyiContinuity": "ComparatorChallenges/ChannelRenyiContinuity.lean",
+    "ComparatorChallenges.MissingProof": "ComparatorChallenges/MissingProof.lean",
+    "ComparatorChallenges.WrongStatement": "ComparatorChallenges/WrongStatement.lean",
+    "QuantumChannelContinuity": "QuantumChannelContinuity.lean",
+    "QuantumChannelContinuity.ChannelDominationBounds": "QuantumChannelContinuity/ChannelDominationBounds.lean",
+    "QuantumChannelContinuity.ChannelProducts": "QuantumChannelContinuity/ChannelProducts.lean",
+    "QuantumChannelContinuity.ChannelTesting": "QuantumChannelContinuity/ChannelTesting.lean",
+    "QuantumChannelContinuity.Channels": "QuantumChannelContinuity/Channels.lean",
+    "QuantumChannelContinuity.ChoiSupport": "QuantumChannelContinuity/ChoiSupport.lean",
+    "QuantumChannelContinuity.ComplexTraceHolder": "QuantumChannelContinuity/ComplexTraceHolder.lean",
+    "QuantumChannelContinuity.ConcreteMain": "QuantumChannelContinuity/ConcreteMain.lean",
+    "QuantumChannelContinuity.ContinuityAssembly": "QuantumChannelContinuity/ContinuityAssembly.lean",
+    "QuantumChannelContinuity.DilationExistence": "QuantumChannelContinuity/DilationExistence.lean",
+    "QuantumChannelContinuity.DivergenceSchatten": "QuantumChannelContinuity/DivergenceSchatten.lean",
+    "QuantumChannelContinuity.ExtendedFekete": "QuantumChannelContinuity/ExtendedFekete.lean",
+    "QuantumChannelContinuity.Filter": "QuantumChannelContinuity/Filter.lean",
+    "QuantumChannelContinuity.FilterAlignment": "QuantumChannelContinuity/FilterAlignment.lean",
+    "QuantumChannelContinuity.FilterHockey": "QuantumChannelContinuity/FilterHockey.lean",
+    "QuantumChannelContinuity.FilterSlack": "QuantumChannelContinuity/FilterSlack.lean",
+    "QuantumChannelContinuity.FilterTensor": "QuantumChannelContinuity/FilterTensor.lean",
+    "QuantumChannelContinuity.FiniteInfinite": "QuantumChannelContinuity/FiniteInfinite.lean",
+    "QuantumChannelContinuity.Foundations": "QuantumChannelContinuity/Foundations.lean",
+    "QuantumChannelContinuity.FoundationsDiagonal": "QuantumChannelContinuity/FoundationsDiagonal.lean",
+    "QuantumChannelContinuity.FoundationsInfiniteLimit": "QuantumChannelContinuity/FoundationsInfiniteLimit.lean",
+    "QuantumChannelContinuity.FoundationsMeasurement": "QuantumChannelContinuity/FoundationsMeasurement.lean",
+    "QuantumChannelContinuity.FoundationsSingularLimits": "QuantumChannelContinuity/FoundationsSingularLimits.lean",
+    "QuantumChannelContinuity.FoundationsTesting": "QuantumChannelContinuity/FoundationsTesting.lean",
+    "QuantumChannelContinuity.FoundationsWeakTesting": "QuantumChannelContinuity/FoundationsWeakTesting.lean",
+    "QuantumChannelContinuity.HockeyStick": "QuantumChannelContinuity/HockeyStick.lean",
+    "QuantumChannelContinuity.Main": "QuantumChannelContinuity/Main.lean",
+    "QuantumChannelContinuity.Minimax": "QuantumChannelContinuity/Minimax.lean",
+    "QuantumChannelContinuity.OrderConvexity": "QuantumChannelContinuity/OrderConvexity.lean",
+    "QuantumChannelContinuity.PowerRegrouping": "QuantumChannelContinuity/PowerRegrouping.lean",
+    "QuantumChannelContinuity.QuantumMain": "QuantumChannelContinuity/QuantumMain.lean",
+    "QuantumChannelContinuity.Regularization": "QuantumChannelContinuity/Regularization.lean",
+    "QuantumChannelContinuity.RegularizationIdentities": "QuantumChannelContinuity/RegularizationIdentities.lean",
+    "QuantumChannelContinuity.RegularizationLimits": "QuantumChannelContinuity/RegularizationLimits.lean",
+    "QuantumChannelContinuity.RegularizationSup": "QuantumChannelContinuity/RegularizationSup.lean",
+    "QuantumChannelContinuity.RegularizedExponential": "QuantumChannelContinuity/RegularizedExponential.lean",
+    "QuantumChannelContinuity.SDPCone": "QuantumChannelContinuity/SDPCone.lean",
+    "QuantumChannelContinuity.SDPPartialTrace": "QuantumChannelContinuity/SDPPartialTrace.lean",
+    "QuantumChannelContinuity.SDPTrace": "QuantumChannelContinuity/SDPTrace.lean",
+    "QuantumChannelContinuity.Schatten": "QuantumChannelContinuity/Schatten.lean",
+    "QuantumChannelContinuity.SlackAttainment": "QuantumChannelContinuity/SlackAttainment.lean",
+    "QuantumChannelContinuity.SlackTester": "QuantumChannelContinuity/SlackTester.lean",
+    "QuantumChannelContinuity.SlackTraceBound": "QuantumChannelContinuity/SlackTraceBound.lean",
+    "QuantumChannelContinuity.SourceCorrespondence": "QuantumChannelContinuity/SourceCorrespondence.lean",
+    "QuantumChannelContinuity.StabilizedSchatten": "QuantumChannelContinuity/StabilizedSchatten.lean",
+    "QuantumChannelContinuity.StateDominationBounds": "QuantumChannelContinuity/StateDominationBounds.lean",
+    "QuantumChannelContinuity.StateLimits": "QuantumChannelContinuity/StateLimits.lean",
+    "QuantumChannelContinuity.StateOrder": "QuantumChannelContinuity/StateOrder.lean",
+    "QuantumChannelContinuity.StateOrderApprox": "QuantumChannelContinuity/StateOrderApprox.lean",
+    "QuantumChannelContinuity.StateOrderBoundary": "QuantumChannelContinuity/StateOrderBoundary.lean",
+    "QuantumChannelContinuity.StateOrderBoundaryNorms": "QuantumChannelContinuity/StateOrderBoundaryNorms.lean",
+    "QuantumChannelContinuity.StateOrderDuality": "QuantumChannelContinuity/StateOrderDuality.lean",
+    "QuantumChannelContinuity.StateOrderFaithful": "QuantumChannelContinuity/StateOrderFaithful.lean",
+    "QuantumChannelContinuity.StateOrderInterpolation": "QuantumChannelContinuity/StateOrderInterpolation.lean",
+    "QuantumChannelContinuity.StateOrderPowers": "QuantumChannelContinuity/StateOrderPowers.lean",
+    "QuantumChannelContinuity.StateOrderRenyi": "QuantumChannelContinuity/StateOrderRenyi.lean",
+    "QuantumChannelContinuity.StateSupportLimits": "QuantumChannelContinuity/StateSupportLimits.lean",
+    "QuantumChannelContinuity.TensorChannels": "QuantumChannelContinuity/TensorChannels.lean",
+    "QuantumChannelContinuity.TensorDilation": "QuantumChannelContinuity/TensorDilation.lean",
+    "QuantumChannelContinuity.TensorNaturality": "QuantumChannelContinuity/TensorNaturality.lean",
+    "QuantumChannelContinuity.TensorOrder": "QuantumChannelContinuity/TensorOrder.lean",
+    "QuantumChannelContinuity.TensorPowers": "QuantumChannelContinuity/TensorPowers.lean",
+    "QuantumChannelContinuity.TensorRegrouping": "QuantumChannelContinuity/TensorRegrouping.lean",
+    "QuantumChannelContinuity.TensorRelative": "QuantumChannelContinuity/TensorRelative.lean",
+    "QuantumChannelContinuity.TensorStates": "QuantumChannelContinuity/TensorStates.lean",
+    "QuantumChannelContinuity.TensorWords": "QuantumChannelContinuity/TensorWords.lean",
+    "QuantumChannelContinuity.ThreePieceExponential": "QuantumChannelContinuity/ThreePieceExponential.lean",
+    "QuantumChannelContinuity.ThreePieceFilter": "QuantumChannelContinuity/ThreePieceFilter.lean",
+    "QuantumChannelContinuity.ThreePieceSchatten": "QuantumChannelContinuity/ThreePieceSchatten.lean",
+    "QuantumChannelContinuity.TracePowerBounds": "QuantumChannelContinuity/TracePowerBounds.lean",
+    "scripts.ExportProofIndex": "scripts/ExportProofIndex.lean",
+    "scripts.audits.FoundationsAudit": "scripts/audits/FoundationsAudit.lean",
+    "scripts.audits.StateOrderInterpolationAudit": "scripts/audits/StateOrderInterpolationAudit.lean",
+    "scripts.audits.StateSupportLimitsAudit": "scripts/audits/StateSupportLimitsAudit.lean"
+  },
+  "timing_modules_found_in_git": 83,
+  "override_counts": {
+    "maxHeartbeats=1000000": 34,
+    "synthInstance.maxHeartbeats=100000": 21,
+    "maxHeartbeats=1500000": 3,
+    "maxRecDepth=8192": 4,
+    "maxHeartbeats=800000": 7,
+    "maxHeartbeats=500000": 1,
+    "maxHeartbeats=400000": 1,
+    "maxHeartbeats=1200000": 2,
+    "maxHeartbeats=300000": 1
+  },
+  "overrides": [
+    {
+      "file": "QuantumChannelContinuity/ChannelDominationBounds.lean",
+      "line": 23,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/ChannelDominationBounds.lean",
+      "line": 24,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/ChannelProducts.lean",
+      "line": 16,
+      "option": "maxHeartbeats",
+      "value": "1500000"
+    },
+    {
+      "file": "QuantumChannelContinuity/ChannelProducts.lean",
+      "line": 17,
+      "option": "maxRecDepth",
+      "value": "8192"
+    },
+    {
+      "file": "QuantumChannelContinuity/ChannelProducts.lean",
+      "line": 18,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/ChoiSupport.lean",
+      "line": 24,
+      "option": "maxHeartbeats",
+      "value": "800000"
+    },
+    {
+      "file": "QuantumChannelContinuity/ChoiSupport.lean",
+      "line": 25,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/ComplexTraceHolder.lean",
+      "line": 22,
+      "option": "maxHeartbeats",
+      "value": "1500000"
+    },
+    {
+      "file": "QuantumChannelContinuity/ComplexTraceHolder.lean",
+      "line": 23,
+      "option": "maxRecDepth",
+      "value": "8192"
+    },
+    {
+      "file": "QuantumChannelContinuity/ComplexTraceHolder.lean",
+      "line": 24,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/DilationExistence.lean",
+      "line": 23,
+      "option": "maxHeartbeats",
+      "value": "500000"
+    },
+    {
+      "file": "QuantumChannelContinuity/DivergenceSchatten.lean",
+      "line": 22,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/DivergenceSchatten.lean",
+      "line": 23,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/Filter.lean",
+      "line": 28,
+      "option": "maxHeartbeats",
+      "value": "800000"
+    },
+    {
+      "file": "QuantumChannelContinuity/FilterAlignment.lean",
+      "line": 25,
+      "option": "maxHeartbeats",
+      "value": "800000"
+    },
+    {
+      "file": "QuantumChannelContinuity/FilterSlack.lean",
+      "line": 27,
+      "option": "maxHeartbeats",
+      "value": "800000"
+    },
+    {
+      "file": "QuantumChannelContinuity/FilterTensor.lean",
+      "line": 18,
+      "option": "maxHeartbeats",
+      "value": "800000"
+    },
+    {
+      "file": "QuantumChannelContinuity/Foundations.lean",
+      "line": 23,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/FoundationsInfiniteLimit.lean",
+      "line": 21,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/FoundationsMeasurement.lean",
+      "line": 21,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/FoundationsSingularLimits.lean",
+      "line": 22,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/FoundationsTesting.lean",
+      "line": 18,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/FoundationsWeakTesting.lean",
+      "line": 17,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/PowerRegrouping.lean",
+      "line": 17,
+      "option": "maxHeartbeats",
+      "value": "1500000"
+    },
+    {
+      "file": "QuantumChannelContinuity/PowerRegrouping.lean",
+      "line": 18,
+      "option": "maxRecDepth",
+      "value": "8192"
+    },
+    {
+      "file": "QuantumChannelContinuity/PowerRegrouping.lean",
+      "line": 20,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/RegularizationLimits.lean",
+      "line": 23,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/RegularizedExponential.lean",
+      "line": 22,
+      "option": "maxHeartbeats",
+      "value": "400000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SDPCone.lean",
+      "line": 25,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SDPCone.lean",
+      "line": 26,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SDPPartialTrace.lean",
+      "line": 19,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SDPPartialTrace.lean",
+      "line": 20,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SDPTrace.lean",
+      "line": 27,
+      "option": "maxHeartbeats",
+      "value": "800000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SDPTrace.lean",
+      "line": 28,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SlackAttainment.lean",
+      "line": 28,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SlackAttainment.lean",
+      "line": 29,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SlackTester.lean",
+      "line": 20,
+      "option": "maxHeartbeats",
+      "value": "1200000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SlackTester.lean",
+      "line": 21,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SlackTraceBound.lean",
+      "line": 19,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SlackTraceBound.lean",
+      "line": 20,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/SourceCorrespondence.lean",
+      "line": 23,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StabilizedSchatten.lean",
+      "line": 22,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StabilizedSchatten.lean",
+      "line": 23,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateDominationBounds.lean",
+      "line": 21,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateDominationBounds.lean",
+      "line": 22,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrder.lean",
+      "line": 22,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderApprox.lean",
+      "line": 18,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderBoundary.lean",
+      "line": 16,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderBoundary.lean",
+      "line": 151,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderBoundaryNorms.lean",
+      "line": 17,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderDuality.lean",
+      "line": 19,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderFaithful.lean",
+      "line": 20,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderInterpolation.lean",
+      "line": 19,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderPowers.lean",
+      "line": 19,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderRenyi.lean",
+      "line": 23,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/StateSupportLimits.lean",
+      "line": 19,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorChannels.lean",
+      "line": 21,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorDilation.lean",
+      "line": 26,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorDilation.lean",
+      "line": 27,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorNaturality.lean",
+      "line": 16,
+      "option": "maxHeartbeats",
+      "value": "1200000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorNaturality.lean",
+      "line": 17,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorOrder.lean",
+      "line": 20,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorOrder.lean",
+      "line": 21,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorPowers.lean",
+      "line": 16,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorPowers.lean",
+      "line": 17,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorRegrouping.lean",
+      "line": 14,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorRegrouping.lean",
+      "line": 15,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorRelative.lean",
+      "line": 17,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorRelative.lean",
+      "line": 18,
+      "option": "maxRecDepth",
+      "value": "8192"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorStates.lean",
+      "line": 16,
+      "option": "maxHeartbeats",
+      "value": "1000000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorStates.lean",
+      "line": 18,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorWords.lean",
+      "line": 25,
+      "option": "maxHeartbeats",
+      "value": "300000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TensorWords.lean",
+      "line": 26,
+      "option": "synthInstance.maxHeartbeats",
+      "value": "100000"
+    },
+    {
+      "file": "QuantumChannelContinuity/TracePowerBounds.lean",
+      "line": 21,
+      "option": "maxHeartbeats",
+      "value": "800000"
+    }
+  ],
+  "largest_files": [
+    {
+      "file": "QuantumChannelContinuity/Schatten.lean",
+      "lines": 676
+    },
+    {
+      "file": "QuantumChannelContinuity/Minimax.lean",
+      "lines": 603
+    },
+    {
+      "file": "QuantumChannelContinuity/StateOrderApprox.lean",
+      "lines": 446
+    },
+    {
+      "file": "QuantumChannelContinuity/StateSupportLimits.lean",
+      "lines": 403
+    },
+    {
+      "file": "QuantumChannelContinuity/Filter.lean",
+      "lines": 304
+    }
+  ]
+}

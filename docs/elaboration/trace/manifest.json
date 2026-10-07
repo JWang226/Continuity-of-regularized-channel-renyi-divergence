@@ -1,0 +1,25 @@
+{
+  "schema": "elaboration-closed-instance-trace-v1",
+  "scope": "Pre-cache diagnostic prefix; not a timed comparison, theorem check, or proof-library module. Tracing adds overhead.",
+  "baseline_source_commit": "7378ca17124344ff52630bbeb7083ab5f7256301",
+  "files": [
+    {
+      "path": "SDPTraceInstances.probe.txt",
+      "original_sha256": "959c2943055c01ca5c95a31febc4bac1a271512bc630270176be223bdd2aec1d",
+      "published_sha256": "959c2943055c01ca5c95a31febc4bac1a271512bc630270176be223bdd2aec1d",
+      "sanitized": false
+    },
+    {
+      "path": "SDPTraceInstances.trace.txt",
+      "original_sha256": "a045703c0b58d5ce3068d54e853cd8062553807488bf97b9cd1d5689d12ea9d4",
+      "published_sha256": "a045703c0b58d5ce3068d54e853cd8062553807488bf97b9cd1d5689d12ea9d4",
+      "sanitized": false
+    },
+    {
+      "path": "result.json",
+      "original_sha256": "5e2c9061019805f0258febc8b4097bd41632771c1e136b2cbda60efc06b13be0",
+      "published_sha256": "5e2c9061019805f0258febc8b4097bd41632771c1e136b2cbda60efc06b13be0",
+      "sanitized": false
+    }
+  ]
+}

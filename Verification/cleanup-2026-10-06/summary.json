@@ -1,0 +1,157 @@
+{
+  "schema": "unsigned-cleanup-verification-v1",
+  "status": "PASS",
+  "assembled_utc": "2026-10-07T01:41:21.830420+00:00",
+  "fresh_check_window_start_utc": "2026-10-07T01:16:46.064099+00:00",
+  "signed": false,
+  "human_review_completed": false,
+  "scope": "Fresh formal proof checks of source cleanup, not a renewed informal assessment or replacement historical certificate",
+  "targets": [
+    "QuantumChannelContinuity.blockRelative_tendsto_regularized",
+    "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+    "QuantumChannelContinuity.theorem_one"
+  ],
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_identity_sha256": "d31b47bf8b63554fcfdb2c6584ad61779fca494b7531752124bc2c1ed56d72c7",
+  "proof_index_sha256": "c7f581fcc6c2bb79959ec0cb3fd2d8396d6382f54e18eef50b5b6e0626797850",
+  "audit": {
+    "project_declarations": 1318,
+    "theorems": 1090,
+    "status": "passed"
+  },
+  "comparator": {
+    "status": "passed",
+    "lean_kernel_replay": true,
+    "negative_controls": [
+      "wrong-statement",
+      "missing-proof"
+    ],
+    "sandbox": "none: upstream development launcher"
+  },
+  "nanoda": {
+    "status": "passed",
+    "checked_declarations": 61840,
+    "export_sha256": "a0fb7773bc75e57a2586015a7ea6e4311944b7ecd453ecc2b9f55eca78d3c61b",
+    "export_bytes": 494967425,
+    "export_included": false,
+    "reproducer": "./check-nanoda.sh --skip-cache",
+    "original_configuration_sha256": "5b6beb6944daefc8aaf43dfe056d04452bb1b0da35d0fadbef4544655acab6ce",
+    "published_configuration_sha256": "a5f1ba7d268342a6bccfba9b7c9345d59f7b220701b9d249e186006ffd9f8a32"
+  },
+  "statement_probes": {
+    "status": "passed",
+    "live_dependency_sources_bound": true,
+    "historical_informal_assessment_repeated": false
+  },
+  "files": [
+    {
+      "path": "lean-audit.log",
+      "original_sha256": "2d5b0a8af309bcdd2b4e7919e6a9465dd366963c3f8cfc90affa3fd1f988adb0",
+      "published_sha256": "2d5b0a8af309bcdd2b4e7919e6a9465dd366963c3f8cfc90affa3fd1f988adb0",
+      "sanitized": false
+    },
+    {
+      "path": "current-source-identity.json",
+      "original_sha256": "d31b47bf8b63554fcfdb2c6584ad61779fca494b7531752124bc2c1ed56d72c7",
+      "published_sha256": "d31b47bf8b63554fcfdb2c6584ad61779fca494b7531752124bc2c1ed56d72c7",
+      "sanitized": false
+    },
+    {
+      "path": "proof-index.json",
+      "original_sha256": "c7f581fcc6c2bb79959ec0cb3fd2d8396d6382f54e18eef50b5b6e0626797850",
+      "published_sha256": "c7f581fcc6c2bb79959ec0cb3fd2d8396d6382f54e18eef50b5b6e0626797850",
+      "sanitized": false
+    },
+    {
+      "path": "comparator-result.json",
+      "original_sha256": "a9c7b58ea41554d8cbfb8f49ea55ff31b4edd54550a5f4edd1b8f834359eb242",
+      "published_sha256": "a9c7b58ea41554d8cbfb8f49ea55ff31b4edd54550a5f4edd1b8f834359eb242",
+      "sanitized": false
+    },
+    {
+      "path": "comparator-sources.json",
+      "original_sha256": "e7c36bd0dd9b8c334bef6af8bb665d5e22f549caa98d56d1857963ace9ab6b8d",
+      "published_sha256": "e7c36bd0dd9b8c334bef6af8bb665d5e22f549caa98d56d1857963ace9ab6b8d",
+      "sanitized": false
+    },
+    {
+      "path": "nanoda-result.json",
+      "original_sha256": "c57fb0f370ecd6188e518b141562b2f91cb6f177ee75bf34930bf2236fd2fa53",
+      "published_sha256": "c57fb0f370ecd6188e518b141562b2f91cb6f177ee75bf34930bf2236fd2fa53",
+      "sanitized": false
+    },
+    {
+      "path": "nanoda-config.json",
+      "original_sha256": "5b6beb6944daefc8aaf43dfe056d04452bb1b0da35d0fadbef4544655acab6ce",
+      "published_sha256": "a5f1ba7d268342a6bccfba9b7c9345d59f7b220701b9d249e186006ffd9f8a32",
+      "sanitized": true,
+      "transformation": {
+        "changed_fields": [
+          "export_file_path",
+          "pp_output_path"
+        ],
+        "export_file_path": {
+          "published": "Solution.ndjson"
+        },
+        "pp_output_path": {
+          "published": "replayed-theorems.txt"
+        },
+        "policy_unchanged": true,
+        "reason": "Portable replay paths; preserve the retained nanoda-theorems.txt output"
+      }
+    },
+    {
+      "path": "nanoda-sources.json",
+      "original_sha256": "e7c36bd0dd9b8c334bef6af8bb665d5e22f549caa98d56d1857963ace9ab6b8d",
+      "published_sha256": "e7c36bd0dd9b8c334bef6af8bb665d5e22f549caa98d56d1857963ace9ab6b8d",
+      "sanitized": false
+    },
+    {
+      "path": "nanoda.log",
+      "original_sha256": "97b973e63a6a04ce2ac02b8423ad6eeca35244c57e509b7ed7ce989df957eb8c",
+      "published_sha256": "97b973e63a6a04ce2ac02b8423ad6eeca35244c57e509b7ed7ce989df957eb8c",
+      "sanitized": false
+    },
+    {
+      "path": "nanoda-theorems.txt",
+      "original_sha256": "10e0feca5785e29c2e34899c14473333558f83c6936ba99adad00e775000083f",
+      "published_sha256": "10e0feca5785e29c2e34899c14473333558f83c6936ba99adad00e775000083f",
+      "sanitized": false
+    },
+    {
+      "path": "statement-probes-result.json",
+      "original_sha256": "0f4c5a4803a5496fede0bd6892c21f5cf361e824cc1d14ff654ff407b0340648",
+      "published_sha256": "0f4c5a4803a5496fede0bd6892c21f5cf361e824cc1d14ff654ff407b0340648",
+      "sanitized": false
+    },
+    {
+      "path": "statement-probes.log",
+      "original_sha256": "9be3ae25dab16002e8268be082fe1d2e957ee6a8438385302c1bdc4f591d28eb",
+      "published_sha256": "9be3ae25dab16002e8268be082fe1d2e957ee6a8438385302c1bdc4f591d28eb",
+      "sanitized": false
+    },
+    {
+      "path": "comparator-positive.log",
+      "original_sha256": "4950fc8310451c5be8ed8631320e19ea16e92186d0598672669a2f2949c9e1d5",
+      "published_sha256": "4950fc8310451c5be8ed8631320e19ea16e92186d0598672669a2f2949c9e1d5",
+      "sanitized": false
+    },
+    {
+      "path": "comparator-wrong-statement.log",
+      "original_sha256": "35e8b856da3c06a92f362ed2f8f6337dc12ec4770919da784ded50fd6ff06667",
+      "published_sha256": "35e8b856da3c06a92f362ed2f8f6337dc12ec4770919da784ded50fd6ff06667",
+      "sanitized": false
+    },
+    {
+      "path": "comparator-missing-proof.log",
+      "original_sha256": "a8f12ff0e2f874b746ad342b4b9145107718d421794894318880336690ce8c4b",
+      "published_sha256": "a8f12ff0e2f874b746ad342b4b9145107718d421794894318880336690ce8c4b",
+      "sanitized": false
+    }
+  ],
+  "note": "Published log paths are sanitized; original and published hashes are distinguished. This unsigned record reports checks; rerun the public checkers to replay the proof."
+}

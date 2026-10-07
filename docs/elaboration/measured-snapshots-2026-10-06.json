@@ -1,0 +1,24 @@
+{
+  "schema": "measured-git-snapshots-bundle-v1",
+  "path": "docs/elaboration/measured-snapshots-2026-10-06.bundle",
+  "sha256": "3af08e0c93e4ff08533e1738cdeef278d7139a30b03b30b0e2ad587dd014e53c",
+  "bytes": 19819,
+  "prerequisite_commit": "c1042369444d325216ef75e2c7cf866580e2035b",
+  "refs": {
+    "refs/elaboration/2026-10-06/before": "03dde86daf40a3752c273a3017399539e5c7def9",
+    "refs/elaboration/2026-10-06/after": "8765c21753175381a57b29fa9469b35675515b2c"
+  },
+  "git_version": "git version 2.54.0 (Apple Git-157)",
+  "pack_settings": [
+    "-c",
+    "pack.threads=1",
+    "-c",
+    "pack.window=10",
+    "-c",
+    "pack.depth=50",
+    "-c",
+    "pack.compression=9"
+  ],
+  "two_independent_generations_identical": true,
+  "purpose": "Preserve the exact measured local source commits even if publication uses a different Git commit identity. Fetch both refs before rendering or replaying the measured snapshots. This is a source bundle, not a proof certificate."
+}

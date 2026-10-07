@@ -26,25 +26,31 @@ their scope; the paper's later operational corollaries are outside this formaliz
 
 ## How it was verified
 
-- **Lean:** the build and transitive axiom audit passed for 1,327 project
-  declarations, including 1,101 theorems. Only `propext`, `Classical.choice`, and
+- **Lean:** the cleanup build and transitive axiom audit passed for 1,318 project
+  declarations, including 1,090 theorems. Only `propext`, `Classical.choice`, and
   `Quot.sound` are permitted; the proof library has no unresolved placeholders
   or project-specific axioms.
-- **Comparator:** compared all three statements and referenced definitions
+- **Comparator:** a fresh run compared all three statements and referenced definitions
   against the [separate challenge](ComparatorChallenges/ChannelRenyiContinuity.lean),
   checked axioms, and replayed the proofs through Lean's kernel. Both the
   wrong-statement and missing-proof controls were rejected. The challenge's
   deliberate specification holes are excluded from the proof library.
-- **Nanoda:** the independently implemented Rust kernel accepted 61,851
-  declarations in the historical solution export, including all three theorem targets.
+- **Nanoda:** the independently implemented Rust kernel accepted 61,840
+  declarations in a fresh solution export, including all three theorem targets.
 
-The [recorded evidence](Verification/README.md) and
-[v1.0.0 certificate archive](https://github.com/JWang226/continuity-of-regularized-channel-renyi-divergence/releases/tag/v1.0.0)
-describe completed local, unsandboxed runs. The certificate is unsigned, and the
+The [fresh cleanup record](Verification/cleanup-2026-10-06/README.md) includes
+source hashes, checker results, logs, and current statement probes. These are
+completed local, unsandboxed checks. The record is unsigned, and the
 Comparator reference was recorded after proof development. Independent human
 review of correspondence to the paper remains outstanding. The
-[current source record](Verification/current-source-identity.json) verifies that
-the 82 historical proof files differ only by added copyright comments.
+[historical verification record](Verification/README.md) and
+[v1.0.0 certificate archive](https://github.com/JWang226/continuity-of-regularized-channel-renyi-divergence/releases/tag/v1.0.0)
+remain unchanged. The
+[retained source snapshot](Verification/source-snapshots/pre-cleanup-2026-10-06.json)
+preserves the inputs of the dated assessments and their original header-only
+relationship to the certificate. The
+[current source record](Verification/current-source-identity.json) tracks later
+cleanup separately.
 
 ## Check it yourself
 
@@ -81,6 +87,19 @@ Lean and dependencies are pinned in [lean-toolchain](lean-toolchain) and
 proof. The [verification guide](VERIFYING.md) gives expected outputs,
 troubleshooting, and instructions for replaying the exact released certificate.
 The Comparator reproducer uses unsandboxed development mode.
+
+## Elaboration cleanup
+
+The cleanup completed a [dead-code sweep](docs/DEAD_CODE_SWEEP_2026-10-06.md),
+a [before test](ELABORATION_REPORT_2026-10-06_BEFORE.md), measured changes and an
+[after test](ELABORATION_REPORT_2026-10-06_AFTER.md). The
+[comparison](docs/elaboration/COMPARISON_2026-10-06.md) reports mixed results:
+CPU time fell 4.19%, wall time rose 1.87%, and peak accounted memory rose 19.12%.
+The measurements do not establish an overall project speedup.
+[Reproduction instructions](docs/elaboration/README.md) explain the timing and
+profiling scope. These project-only measurements use cached dependencies and
+the existing Lean module convention; the skill's zero-non-module criterion is
+not met. Profiling is separate from proof certification.
 
 ## Read the proof
 

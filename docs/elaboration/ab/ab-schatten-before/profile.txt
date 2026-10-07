@@ -1,0 +1,378 @@
+interpretation of Mathlib.Tactic.ToAdditive.to_additive took 103ms
+import took 93.1s
+simp took 124ms
+typeclass inference of Algebra took 453ms
+typeclass inference of ContinuousFunctionalCalculus took 182ms
+elaboration took 149ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 144ms
+tactic execution of Lean.Parser.Tactic.change took 170ms
+type checking took 506ms
+typeclass inference of CoeFun took 238ms
+typeclass inference of CoeFun took 168ms
+elaboration took 147ms
+typeclass inference of CoeFun took 349ms
+typeclass inference of CoeFun took 287ms
+simp took 201ms
+type checking took 106ms
+typeclass inference of CoeFun took 453ms
+typeclass inference of CoeFun took 185ms
+typeclass inference of Nonempty took 181ms
+typeclass inference of AddMonoidHomClass took 698ms
+typeclass inference of AddMonoidHomClass took 177ms
+simp took 1.41s
+typeclass inference of Nonempty took 121ms
+simp took 421ms
+tactic execution of Lean.Parser.Tactic.exact took 318ms
+typeclass inference of CoeFun took 344ms
+typeclass inference of CoeFun took 330ms
+elaboration took 173ms
+typeclass inference of CoeFun took 344ms
+typeclass inference of CoeFun took 376ms
+typeclass inference of AddCommMonoid took 135ms
+typeclass inference of CoeFun took 291ms
+typeclass inference of CoeFun took 184ms
+elaboration took 185ms
+typeclass inference of Module took 299ms
+typeclass inference of Module took 138ms
+typeclass inference of Module took 199ms
+typeclass inference of Algebra took 446ms
+typeclass inference of Algebra took 214ms
+typeclass inference of NonUnitalContinuousFunctionalCalculus took 351ms
+typeclass inference of CoeFun took 232ms
+typeclass inference of CoeFun took 156ms
+typeclass inference of Module took 209ms
+typeclass inference of Module took 121ms
+typeclass inference of Module took 153ms
+typeclass inference of Algebra took 162ms
+typeclass inference of Algebra took 507ms
+typeclass inference of Algebra took 535ms
+typeclass inference of CommMonoid took 136ms
+typeclass inference of MulAction took 235ms
+typeclass inference of Module took 136ms
+typeclass inference of NonUnitalContinuousFunctionalCalculus took 406ms
+typeclass inference of DivisionRing took 130ms
+tactic execution of Lean.Parser.Tactic.exact took 118ms
+tactic execution of Lean.Parser.Tactic.tacticHave__ took 106ms
+typeclass inference of Nonempty took 224ms
+simp took 455ms
+process pre-definitions took 113ms
+type checking took 151ms
+typeclass inference of Module took 109ms
+typeclass inference of Algebra took 403ms
+typeclass inference of ContinuousFunctionalCalculus took 236ms
+typeclass inference of NonnegSpectrumClass took 264ms
+elaboration took 331ms
+typeclass inference of Algebra took 332ms
+typeclass inference of ContinuousFunctionalCalculus took 161ms
+typeclass inference of Algebra took 194ms
+typeclass inference of ContinuousFunctionalCalculus took 150ms
+tactic execution of Lean.Parser.Tactic.refine took 166ms
+type checking took 186ms
+typeclass inference of Algebra took 241ms
+typeclass inference of ContinuousFunctionalCalculus took 131ms
+elaboration took 169ms
+typeclass inference of IsOrderedRing took 114ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 279ms
+typeclass inference of IsOrderedRing took 176ms
+typeclass inference of IsOrderedRing took 126ms
+typeclass inference of Algebra took 197ms
+typeclass inference of ContinuousFunctionalCalculus took 119ms
+tactic execution of Lean.Parser.Tactic.change took 109ms
+typeclass inference of Module took 255ms
+typeclass inference of Module took 152ms
+typeclass inference of Module took 162ms
+typeclass inference of Module took 238ms
+typeclass inference of Module took 314ms
+typeclass inference of Module took 110ms
+typeclass inference of Algebra took 834ms
+typeclass inference of Algebra took 362ms
+typeclass inference of MulAction took 170ms
+typeclass inference of HPow took 820ms
+typeclass inference of ZeroLEOneClass took 154ms
+typeclass inference of NeZero took 184ms
+typeclass inference of Module took 167ms
+typeclass inference of Module took 123ms
+typeclass inference of Algebra took 366ms
+typeclass inference of Algebra took 209ms
+typeclass inference of ContinuousFunctionalCalculus took 226ms
+typeclass inference of NonnegSpectrumClass took 186ms
+typeclass inference of IsTopologicalRing took 150ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 370ms
+typeclass inference of Algebra took 145ms
+typeclass inference of ContinuousFunctionalCalculus took 136ms
+tactic execution of Lean.Parser.Tactic.exact took 143ms
+typeclass inference of StarRing took 111ms
+typeclass inference of TopologicalSpace took 286ms
+typeclass inference of Algebra took 232ms
+typeclass inference of ContinuousFunctionalCalculus took 138ms
+typeclass inference of NonnegSpectrumClass took 108ms
+typeclass inference of IsTopologicalRing took 117ms
+typeclass inference of Algebra took 183ms
+typeclass inference of Algebra took 130ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 769ms
+type checking took 376ms
+typeclass inference of Algebra took 242ms
+elaboration took 132ms
+typeclass inference of Algebra took 280ms
+typeclass inference of ContinuousFunctionalCalculus took 175ms
+typeclass inference of Algebra took 207ms
+typeclass inference of ContinuousFunctionalCalculus took 229ms
+typeclass inference of NonnegSpectrumClass took 128ms
+tactic execution of Lean.Parser.Tactic.refine took 131ms
+typeclass inference of Semifield took 142ms
+typeclass inference of Algebra took 338ms
+typeclass inference of ContinuousFunctionalCalculus took 477ms
+typeclass inference of NonnegSpectrumClass took 359ms
+tactic execution of Lean.Parser.Tactic.refine took 208ms
+simp took 304ms
+typeclass inference of Algebra took 187ms
+typeclass inference of ContinuousFunctionalCalculus took 275ms
+typeclass inference of IsTopologicalRing took 157ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 526ms
+interpretation of Mathlib.Tactic.FieldSimp._aux_Mathlib_Tactic_FieldSimp___elabRules_Mathlib_Tactic_FieldSimp_fieldSimp_1._boxed took 254ms
+typeclass inference of Algebra took 193ms
+typeclass inference of ContinuousFunctionalCalculus took 110ms
+tactic execution of Lean.Parser.Tactic.refine took 156ms
+type checking took 222ms
+typeclass inference of Algebra took 304ms
+typeclass inference of ContinuousFunctionalCalculus took 199ms
+typeclass inference of Algebra took 139ms
+tactic execution of Lean.Parser.Tactic.refine took 112ms
+tactic execution of Lean.Parser.Tactic.refine took 119ms
+tactic execution of Lean.Parser.Tactic.eqRefl took 226ms
+typeclass inference of Nonempty took 320ms
+typeclass inference of AddMonoidHomClass took 249ms
+simp took 730ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 360ms
+tactic execution of Lean.Parser.Tactic.exact took 197ms
+type checking took 230ms
+typeclass inference of Algebra took 229ms
+typeclass inference of Algebra took 198ms
+typeclass inference of IsScalarTower took 115ms
+typeclass inference of Algebra took 233ms
+typeclass inference of ContinuousFunctionalCalculus took 119ms
+elaboration took 189ms
+typeclass inference of Algebra took 536ms
+typeclass inference of ContinuousFunctionalCalculus took 238ms
+typeclass inference of NonnegSpectrumClass took 121ms
+typeclass inference of IsTopologicalRing took 193ms
+simp took 280ms
+tactic execution of Lean.Parser.Tactic.simp took 132ms
+typeclass inference of IsTopologicalSemiring took 186ms
+typeclass inference of StarRing took 109ms
+typeclass inference of Algebra took 400ms
+typeclass inference of ContinuousFunctionalCalculus took 239ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 253ms
+typeclass inference of ContinuousFunctionalCalculus took 225ms
+typeclass inference of NonnegSpectrumClass took 116ms
+type checking took 230ms
+typeclass inference of HSMul took 280ms
+typeclass inference of StarRing took 112ms
+typeclass inference of Algebra took 304ms
+typeclass inference of ContinuousFunctionalCalculus took 308ms
+typeclass inference of NonnegSpectrumClass took 104ms
+elaboration took 378ms
+typeclass inference of HSMul took 423ms
+typeclass inference of Module took 140ms
+typeclass inference of Module took 130ms
+typeclass inference of Module took 161ms
+typeclass inference of Module took 115ms
+typeclass inference of Module took 129ms
+typeclass inference of SMulZeroClass took 505ms
+typeclass inference of SMulZeroClass took 262ms
+typeclass inference of Module took 424ms
+typeclass inference of Algebra took 277ms
+typeclass inference of Algebra took 311ms
+typeclass inference of PosSMulMono took 450ms
+typeclass inference of Algebra took 154ms
+typeclass inference of ContinuousFunctionalCalculus took 191ms
+typeclass inference of IsTopologicalRing took 106ms
+typeclass inference of Algebra took 257ms
+typeclass inference of ContinuousFunctionalCalculus took 145ms
+typeclass inference of IsTopologicalRing took 172ms
+simp took 466ms
+tactic execution of Lean.Parser.Tactic.simp took 239ms
+typeclass inference of Algebra took 244ms
+typeclass inference of ContinuousFunctionalCalculus took 173ms
+typeclass inference of ContinuousMap.UniqueHom took 219ms
+typeclass inference of SMulZeroClass took 123ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 160ms
+typeclass inference of ContinuousFunctionalCalculus took 110ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 101ms
+typeclass inference of ContinuousFunctionalCalculus took 110ms
+type checking took 239ms
+typeclass inference of Ring took 123ms
+typeclass inference of StarRing took 140ms
+typeclass inference of SeminormedRing took 112ms
+typeclass inference of Algebra took 402ms
+typeclass inference of ContinuousFunctionalCalculus took 224ms
+elaboration took 220ms
+typeclass inference of Algebra took 294ms
+typeclass inference of ContinuousFunctionalCalculus took 261ms
+typeclass inference of NonnegSpectrumClass took 122ms
+typeclass inference of IsTopologicalRing took 199ms
+simp took 242ms
+tactic execution of Lean.Parser.Tactic.simp took 114ms
+typeclass inference of Algebra took 228ms
+typeclass inference of ContinuousFunctionalCalculus took 134ms
+typeclass inference of CanonicallyOrderedAdd took 130ms
+aesop took 389ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 156ms
+typeclass inference of Algebra took 159ms
+typeclass inference of ContinuousFunctionalCalculus took 198ms
+type checking took 218ms
+typeclass inference of CoeFun took 121ms
+typeclass inference of AddMonoidHomClass took 148ms
+typeclass inference of HSMul took 323ms
+typeclass inference of Algebra took 321ms
+typeclass inference of ContinuousFunctionalCalculus took 184ms
+elaboration took 117ms
+typeclass inference of ContinuousFunctionalCalculus took 117ms
+typeclass inference of IsOrderedRing took 115ms
+typeclass inference of IsOrderedRing took 161ms
+tactic execution of Lean.Parser.Tactic.refine took 279ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 130ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 140ms
+typeclass inference of Module took 130ms
+typeclass inference of Module took 156ms
+typeclass inference of Module took 108ms
+typeclass inference of Module took 106ms
+typeclass inference of Algebra took 256ms
+typeclass inference of IsScalarTower took 494ms
+typeclass inference of LinearMap.CompatibleSMul took 137ms
+type checking took 349ms
+typeclass inference of HSMul took 107ms
+typeclass inference of Algebra took 137ms
+typeclass inference of ContinuousFunctionalCalculus took 127ms
+typeclass inference of IsOrderedRing took 102ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 123ms
+typeclass inference of Algebra took 197ms
+typeclass inference of ContinuousFunctionalCalculus took 224ms
+typeclass inference of NonnegSpectrumClass took 143ms
+tactic execution of Lean.Parser.Tactic.refine took 138ms
+typeclass inference of AddCommMonoid took 366ms
+typeclass inference of Algebra took 288ms
+typeclass inference of ContinuousFunctionalCalculus took 110ms
+typeclass inference of NonnegSpectrumClass took 191ms
+typeclass inference of Algebra took 157ms
+typeclass inference of ContinuousFunctionalCalculus took 100ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 114ms
+tactic execution of Mathlib.Tactic.linarith took 107ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 118ms
+interpretation of Lean.Elab.Tactic._aux_Mathlib_Tactic_Widget_Calc___elabRules_Lean_calcTactic_1._boxed took 232ms
+typeclass inference of Algebra took 181ms
+typeclass inference of Algebra took 291ms
+typeclass inference of Algebra took 190ms
+typeclass inference of ContinuousFunctionalCalculus took 105ms
+typeclass inference of Algebra took 142ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 197ms
+typeclass inference of Algebra took 123ms
+interpretation of Mathlib.Meta.Positivity.evalDiv._lam_0._boxed took 128ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 342ms
+typeclass inference of Algebra took 130ms
+typeclass inference of ContinuousFunctionalCalculus took 104ms
+interpretation of Lean.Elab.Tactic._aux_Mathlib_Tactic_Widget_Calc___elabRules_Lean_calcTactic_1._boxed took 163ms
+typeclass inference of Algebra took 148ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 107ms
+type checking took 338ms
+typeclass inference of HSMul took 145ms
+type checking took 130ms
+typeclass inference of HSMul took 128ms
+typeclass inference of Nonempty took 531ms
+typeclass inference of AddMonoidHomClass took 157ms
+simp took 394ms
+type checking took 130ms
+typeclass inference of CoeFun took 112ms
+typeclass inference of CoeFun took 536ms
+typeclass inference of CoeFun took 242ms
+typeclass inference of CoeFun took 206ms
+typeclass inference of CoeFun took 130ms
+typeclass inference of Nonempty took 118ms
+simp took 288ms
+type checking took 201ms
+typeclass inference of CoeFun took 114ms
+typeclass inference of QuantumState.Qudit took 158ms
+typeclass inference of QuantumState.Qudit took 157ms
+elaboration took 208ms
+typeclass inference of CoeFun took 135ms
+typeclass inference of HSMul took 209ms
+elaboration took 195ms
+typeclass inference of AddMonoidHomClass took 216ms
+typeclass inference of HSMul took 113ms
+elaboration took 137ms
+tactic execution of Lean.Parser.Tactic.simpa took 234ms
+typeclass inference of CoeFun took 105ms
+interpretation of Lean.Elab.Tactic._aux_Mathlib_Tactic_Widget_Calc___elabRules_Lean_calcTactic_1._boxed took 116ms
+tactic execution of Lean.Parser.Tactic.simpa took 128ms
+type checking took 147ms
+typeclass inference of CoeFun took 128ms
+typeclass inference of CoeFun took 122ms
+typeclass inference of CoeFun took 213ms
+typeclass inference of CoeFun took 135ms
+typeclass inference of CoeFun took 124ms
+typeclass inference of CoeFun took 175ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 433ms
+typeclass inference of CoeFun took 101ms
+typeclass inference of CoeFun took 113ms
+typeclass inference of AddMonoidHomClass took 205ms
+typeclass inference of CoeFun took 120ms
+typeclass inference of CoeFun took 273ms
+tactic execution of Lean.Parser.Tactic.change took 124ms
+type checking took 133ms
+typeclass inference of HSMul took 143ms
+typeclass inference of CoeFun took 148ms
+elaboration took 182ms
+typeclass inference of ZeroHomClass took 133ms
+tactic execution of Lean.Parser.Tactic.simpa took 102ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 114ms
+tactic execution of Lean.Parser.Tactic.refine took 131ms
+type checking took 601ms
+cumulative profiling times:
+	aesop 389ms
+	attribute application 1.24ms
+	compilation (IR) 1.02ms
+	compilation (LCNF base) 9.42ms
+	compilation (LCNF impure) 3.6ms
+	compilation (LCNF mono) 9.81ms
+	congr simp thm 116ms
+	dsimp 131ms
+	elaboration 4.23s
+	fix level params 38.6ms
+	import 93.1s
+	initialization 37.1ms
+	instantiate metavars 176ms
+	interpretation 8.08s
+	let-to-have transformation 6.95ms
+	linting 339ms
+	norm_num 191ms
+	parsing 176ms
+	process pre-definitions 570ms
+	ring 442ms
+	share common exprs 212ms
+	simp 7.01s
+	tactic execution 14.5s
+	type checking 5.2s
+	typeclass inference 89s
+	Command being timed: "./run-lake.sh env lean --profile QuantumChannelContinuity/Schatten.lean"
+	User time (seconds): 53.39
+	System time (seconds): 21.85
+	Percent of CPU this job got: 57%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:11.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1461216
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 394033
+	Minor (reclaiming a frame) page faults: 493483
+	Voluntary context switches: 16616
+	Involuntary context switches: 1220613
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

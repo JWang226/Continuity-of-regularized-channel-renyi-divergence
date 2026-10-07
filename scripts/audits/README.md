@@ -11,5 +11,7 @@ diagnostics outside ordinary library builds:
 ```
 
 They contain imports and `#print axioms` commands, with no mathematical
-declarations. Moving them avoids repeating their 52 diagnostics in library
-rebuilds.
+declarations. Lake's default library globs select root modules (`Glob.one`),
+and none of these files was imported by the facade. They were already outside
+ordinary library builds. The move organizes their 52 focused diagnostics for
+explicit execution; no ordinary-build performance saving is claimed.

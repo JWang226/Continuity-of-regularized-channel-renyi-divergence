@@ -1,0 +1,8 @@
+{
+  "kind": "intentional-sorry-warning-quote-parser",
+  "description": "Original parser expected single quotes; Lean used backticks. Corrected census from unchanged saved build log; timing, build, source and dependency evidence unchanged.",
+  "raw_build_log_sha256": "7c481d65acbfb42acc4aa96ebc1c69e41c44a89d209241621a86b09a7d2bd4c0",
+  "original_metrics_sha256": "df1c1bc5765b1aea89a48b190a06842dbbf9a3f20c65e8644f0cff4325c93160",
+  "execution_script_sha256": "b6576b49f90c4c00e52d046953d188a23f50e11c3e1082e9bad9d5a4a40d08c7",
+  "corrected_script_sha256": "6392a3bf352831155a5e6e4878075615dafe416b806eba0b45738fe5505b7ae8"
+}

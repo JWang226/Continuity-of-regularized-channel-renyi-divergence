@@ -5,13 +5,15 @@
 
 """Check publication metadata and provenance; requires Python 3.9+ only.
 
-This validates artifact consistency, not mathematical correspondence. Optional
-dependency source hashes are checked when Lake has installed those sources.
+This validates artifact consistency, not mathematical correspondence. Dated
+assessment inputs are checked against their retained historical snapshot.
 """
 import hashlib
 import json
 from pathlib import Path
 import sys
+
+from source_provenance import historical_bytes, verify_current_identity
 
 ROOT = Path(__file__).resolve().parent.parent
 TARGETS = {
@@ -41,10 +43,8 @@ def local_path(name):
     return ROOT / path
 
 
-def check_hash(name, expected, optional_dependency=False):
+def check_hash(name, expected):
     path = local_path(name)
-    if optional_dependency and name.startswith(".lake/packages/") and not path.exists():
-        return False
     require(path.is_file(), "Missing artifact input: " + name)
     require(digest(path) == expected, "Stale artifact hash: " + name)
     return True
@@ -65,19 +65,7 @@ def main():
         require("copyright" in path.read_text(encoding="utf-8")[:1500].lower(),
                 "Missing script notice: " + str(path.relative_to(ROOT)))
 
-    historical = load("Verification/source-identity.json")
-    current = load("Verification/current-source-identity.json")
-    old_hashes = {r["path"]: r["sha256"] for r in historical["files"]}
-    require({r["path"] for r in current["files"]} == set(old_hashes), "Historical source inventory differs")
-    header = current["added_header"].encode("utf-8")
-    for record in current["files"]:
-        data = local_path(record["path"]).read_bytes()
-        require(hashlib.sha256(data).hexdigest() == record["sha256"], "Current source hash differs: " + record["path"])
-        if record["added_project_header"]:
-            require(data.startswith(header), "Recorded added header differs: " + record["path"])
-            data = data[len(header):]
-        require(hashlib.sha256(data).hexdigest() == old_hashes[record["path"]]
-                == record["historical_sha256"], "More than a header changed: " + record["path"])
+    current, snapshot = verify_current_identity()
 
     mapping = load("docs/paper-mapping.json")
     require(mapping["paper"]["id"] == "arXiv:2609.28635v1", "Unexpected paper version")
@@ -114,20 +102,23 @@ def main():
                     require(node["name"] in nodes[dep][reverse], "Inconsistent dependency edge: " + node["name"])
 
     readback = load("docs/lean-readback.json")
+    require(local_path("docs/lean-readback.json").read_bytes() == snapshot["docs/lean-readback.json"],
+            "Historical read-back assessment was rewritten")
     require(readback["status"] == "agent-readback-not-human-review"
             and readback["human_review_completed"] is False
             and readback["method"]["prohibited_material_consulted"] is False,
             "Read-back provenance/status differs")
     require({r["formal_name"] for r in readback["declarations"]} == TARGETS, "Read-back targets differ")
-    skipped = 0
     for record in readback["input_files"]:
-        skipped += not check_hash(record["path"], record["sha256"], optional_dependency=True)
+        historical_bytes(record["path"], record["sha256"], snapshot)
     comparison = load("docs/paper-comparison.json")
+    require(local_path("docs/paper-comparison.json").read_bytes() == snapshot["docs/paper-comparison.json"],
+            "Historical paper-comparison assessment was rewritten")
     require(comparison["human_review_completed"] is False, "Human review cannot be inferred from agent checks")
     for name, expected in comparison["input_sha256"].items():
-        check_hash(name, expected)
+        historical_bytes(name, expected, snapshot)
     for name, expected in comparison["supporting_signature_source_sha256"].items():
-        check_hash(name, expected)
+        historical_bytes(name, expected, snapshot)
     config = load("ComparatorChallenges/ChannelRenyiContinuity.json")
     require(set(config["theorem_names"]) == TARGETS, "Comparator targets differ")
     require(set(config["permitted_axioms"]) == {"propext", "Classical.choice", "Quot.sound"}, "Comparator axiom policy differs")
@@ -136,15 +127,17 @@ def main():
     for target in TARGETS:
         require('declaration: "' + target + '"' in metadata, "Missing YAML result: " + target)
     statement_audit = load("docs/statement-audit.json")
+    require(local_path("docs/statement-audit.json").read_bytes() == snapshot["docs/statement-audit.json"],
+            "Historical statement-audit assessment was rewritten")
     require(statement_audit["human_review_completed"] is False
             and statement_audit["status"] == "scope-qualified-agent-audit",
             "Statement audit review status differs")
     require({r["declaration"] for r in statement_audit["targets"]} == TARGETS,
             "Statement audit targets differ")
     for record in statement_audit["input_files"]:
-        skipped += not check_hash(record["path"], record["sha256"], optional_dependency=True)
+        historical_bytes(record["path"], record["sha256"], snapshot)
     for target in statement_audit["targets"]:
-        lines = local_path(target["file"]).read_bytes().splitlines(keepends=True)
+        lines = historical_bytes(target["file"], snapshot=snapshot).splitlines(keepends=True)
         for field in ("signature", "declaration_source"):
             loc = target[field]
             data = b"".join(lines[loc["start_line"] - 1:loc["end_line"]])
@@ -156,10 +149,10 @@ def main():
     require(candidate["submitted_upstream"] is False and candidate["human_review_completed"] is False,
             "Upstream review/submission cannot be inferred from local checks")
     print("ARTIFACT CHECK PASSED: " + str(len(lean_files)) + " Lean headers; "
-          + str(len(current["files"])) + " historical proof sources; "
+          + str(len(current["files"])) + " current owned Lean sources; "
           + str(len(mapping["entries"])) + " paper mappings; " + str(len(nodes)) + " indexed declarations.")
-    if skipped:
-        print(str(skipped) + " dependency source hashes skipped; install Lake dependencies to check them too.")
+    print("Historical assessments validated against retained pre-cleanup inputs; "
+          "current provenance is bookkeeping, not a proof certificate.")
     return 0
 
 

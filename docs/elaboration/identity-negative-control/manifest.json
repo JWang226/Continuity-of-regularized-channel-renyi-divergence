@@ -1,0 +1,9 @@
+{
+  "schema": "source-identity-rejection-control-v1",
+  "files_sha256": {
+    "console.log": "6be9e49f85727ee2bec281ae43765cd681ead23ad9bee04ed8fe58e991dadc11",
+    "failure-result.json": "45999a3e265729de4f22688d94cc9224569d522991b05c4a77b14fa6bc165f8a",
+    "helper.txt": "b0f9c96263db25e34c719fece8d85c076ae2a3955f54fe8e6c4aaaa80a044aaa",
+    "result.json": "33778fca95f6792e77cca2958da2faf5b86bd24b369949828b742fd8b5680b27"
+  }
+}

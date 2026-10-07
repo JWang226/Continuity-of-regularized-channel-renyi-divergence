@@ -1,0 +1,25 @@
+{
+  "schema": "elaboration-comparison-v1",
+  "before_commit": "03dde86daf40a3752c273a3017399539e5c7def9",
+  "after_commit": "8765c21753175381a57b29fa9469b35675515b2c",
+  "comparability": {
+    "wall_comparable": false,
+    "matched_implied_parallelism": false,
+    "parallelism_tolerance": 0.1,
+    "contention_indicators": [
+      "same-file logged times moved both up and down by more than 10%"
+    ],
+    "notes": [
+      "Execution script SHAs differ only by the independently checked one-line intentional-sorry warning parser correction. Original execution SHA/timing and false-invalid baseline result are preserved; the saved raw log was reclassified without retiming. This is a documented analysis correction, not silently identical instrumentation.",
+      "Logged implied parallelism differs by more than the report's 10% descriptive tolerance; no wall-speedup claim.",
+      "Contention indicators detected: same-file logged times moved both up and down by more than 10%.",
+      "Co-running Lean/Lake commands were observed. Presence alone neither invalidates the run nor proves contamination; actual source/dependency mutation guards determine validity."
+    ]
+  },
+  "raw_input_sha256": {
+    "before_metrics": "a184b1b29ff1ec58b143aaccd4f5c98fa93b501f41f8c9e754cf786e8ffaaf1c",
+    "after_metrics": "9b6866759285d10ed4900fbccb13860c970985b83fa926c903ccbc92a8eb3d3d",
+    "before_profiles": "e8ddcde8c40881664006c9ac7d50a22ffbf2e265179834c0e6456d30462bcf5f",
+    "after_profiles": "e752721095dca90fe629e72bd40dfd0c93301d7436a85d3f17f79ce4ad8cbde4"
+  }
+}

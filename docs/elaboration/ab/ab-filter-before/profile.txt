@@ -1,0 +1,156 @@
+import took 106s
+typeclass inference of AddCommGroup took 104ms
+typeclass inference of CoeT took 808ms
+typeclass inference of CoeT took 141ms
+simp took 120ms
+typeclass inference of Preorder took 108ms
+typeclass inference of Preorder took 246ms
+typeclass inference of AddLeftMono took 190ms
+tactic execution of Lean.Parser.Tactic.exact took 263ms
+type checking took 125ms
+typeclass inference of AddZeroClass took 179ms
+typeclass inference of HSub took 103ms
+typeclass inference of HSMul took 273ms
+typeclass inference of HSub took 293ms
+tactic execution of Lean.Parser.Tactic.refine took 268ms
+typeclass inference of MulAction took 174ms
+typeclass inference of Module took 206ms
+typeclass inference of Module took 224ms
+typeclass inference of AddMonoidHomClass took 420ms
+typeclass inference of AddHomClass took 162ms
+simp took 634ms
+simp took 359ms
+simp took 420ms
+tactic execution of Lean.Parser.Tactic.simpa took 531ms
+type checking took 287ms
+typeclass inference of HSMul took 126ms
+typeclass inference of CoeFun took 125ms
+typeclass inference of AddCommMonoid took 131ms
+elaboration took 358ms
+tactic execution of Lean.Elab.Tactic.Ext.ext took 127ms
+simp took 391ms
+typeclass inference of CoeFun took 255ms
+tactic execution of Lean.Parser.Tactic.change took 283ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 103ms
+elaboration took 117ms
+simp took 209ms
+typeclass inference of Module took 147ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 229ms
+typeclass inference of CoeFun took 388ms
+typeclass inference of CoeFun took 183ms
+elaboration took 217ms
+tactic execution of Lean.Parser.Tactic.refine took 239ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 403ms
+typeclass inference of CoeFun took 111ms
+typeclass inference of CoeFun took 111ms
+tactic execution of Lean.Parser.Tactic.exact took 136ms
+typeclass inference of CoeFun took 228ms
+typeclass inference of CoeFun took 150ms
+tactic execution of Lean.Parser.Tactic.exact took 180ms
+tactic execution of Lean.Parser.Tactic.obtain took 100ms
+typeclass inference of NonUnitalNonAssocSemiring took 161ms
+typeclass inference of NonUnitalSemiring took 172ms
+typeclass inference of ZeroHomClass took 594ms
+typeclass inference of ZeroHomClass took 107ms
+typeclass inference of ZeroHomClass took 129ms
+typeclass inference of ZeroHomClass took 102ms
+typeclass inference of ZeroHomClass took 110ms
+simp took 102ms
+tactic execution of Lean.Parser.Tactic.simpa took 249ms
+typeclass inference of AddHomClass took 611ms
+type checking took 774ms
+typeclass inference of CoeFun took 130ms
+typeclass inference of Submodule.HasOrthogonalProjection took 115ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 144ms
+typeclass inference of Submodule.HasOrthogonalProjection took 109ms
+type checking took 203ms
+typeclass inference of CoeFun took 242ms
+typeclass inference of CoeFun took 124ms
+typeclass inference of CoeFun took 129ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 373ms
+typeclass inference of CoeFun took 106ms
+typeclass inference of CoeFun took 121ms
+typeclass inference of CoeFun took 107ms
+typeclass inference of CoeFun took 171ms
+typeclass inference of Module took 231ms
+typeclass inference of Algebra took 150ms
+typeclass inference of Algebra took 104ms
+typeclass inference of CoeFun took 165ms
+typeclass inference of Module took 269ms
+typeclass inference of Algebra took 194ms
+typeclass inference of Algebra took 147ms
+typeclass inference of NonUnitalContinuousFunctionalCalculus took 123ms
+type checking took 103ms
+typeclass inference of CoeFun took 220ms
+elaboration took 102ms
+simp took 265ms
+typeclass inference of CoeFun took 114ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 127ms
+tactic execution of Lean.Parser.Tactic.exact took 262ms
+typeclass inference of CoeFun took 138ms
+tactic execution of Lean.Parser.Tactic.obtain took 216ms
+typeclass inference of CoeFun took 112ms
+typeclass inference of CoeFun took 106ms
+tactic execution of Lean.Parser.Tactic.refine took 101ms
+typeclass inference of AddHomClass took 112ms
+simp took 141ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 3.46s
+type checking took 183ms
+typeclass inference of CoeFun took 110ms
+typeclass inference of CoeFun took 144ms
+elaboration took 140ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 111ms
+typeclass inference of CoeFun took 165ms
+typeclass inference of ContinuousSMul took 120ms
+typeclass inference of CoeFun took 164ms
+typeclass inference of CoeFun took 106ms
+tactic execution of Lean.Parser.Tactic.change took 176ms
+typeclass inference of CoeFun took 104ms
+typeclass inference of CoeFun took 161ms
+typeclass inference of CoeFun took 249ms
+typeclass inference of NormedSpace took 106ms
+elaboration took 164ms
+type checking took 149ms
+cumulative profiling times:
+	attribute application 0.484ms
+	congr simp thm 29.4ms
+	elaboration 2.09s
+	fix level params 39.9ms
+	import 106s
+	initialization 359ms
+	instantiate metavars 94.5ms
+	interpretation 8.67s
+	let-to-have transformation 5.12ms
+	linting 165ms
+	norm_num 61.1ms
+	parsing 64.9ms
+	process pre-definitions 117ms
+	ring 128ms
+	share common exprs 113ms
+	simp 3.21s
+	tactic execution 6.45s
+	type checking 2.53s
+	typeclass inference 35s
+	Command being timed: "./run-lake.sh env lean --profile QuantumChannelContinuity/Filter.lean"
+	User time (seconds): 31.46
+	System time (seconds): 21.41
+	Percent of CPU this job got: 38%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:15.87
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1475744
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 437516
+	Minor (reclaiming a frame) page faults: 438782
+	Voluntary context switches: 18241
+	Involuntary context switches: 941441
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

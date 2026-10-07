@@ -1,0 +1,28 @@
+{
+  "export_file_path": "Solution.ndjson",
+  "use_stdin": false,
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "unpermitted_axiom_hard_error": true,
+  "unsafe_permit_all_axioms": false,
+  "num_threads": 1,
+  "nat_extension": true,
+  "string_extension": true,
+  "pp_declars": [
+    "QuantumChannelContinuity.theorem_one",
+    "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+    "QuantumChannelContinuity.blockRelative_tendsto_regularized"
+  ],
+  "unknown_pp_declar_hard_error": true,
+  "pp_options": {
+    "proofs": false,
+    "width": 100
+  },
+  "pp_output_path": "replayed-theorems.txt",
+  "pp_to_stdout": false,
+  "print_axioms": true,
+  "print_success_message": true
+}

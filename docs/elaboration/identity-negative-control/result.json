@@ -1,0 +1,19 @@
+{
+  "started_utc": "2026-10-07T01:27:39.559141+00:00",
+  "control": "One source SHA-256 replaced by 64 zeros in current identity; full statement checker must reject before compilation.",
+  "command": [
+    "python3",
+    "scripts/check-statement-audit.py"
+  ],
+  "original_identity_sha256": "d31b47bf8b63554fcfdb2c6584ad61779fca494b7531752124bc2c1ed56d72c7",
+  "helper_sha256": "b0f9c96263db25e34c719fece8d85c076ae2a3955f54fe8e6c4aaaa80a044aaa",
+  "changed_source_path": "All.lean",
+  "altered_identity_sha256": "ac643f5c50cb19510e8dda23552d74d551e5b4bdd52c09e19d81a7d3a938807e",
+  "exit_status": 1,
+  "failure_result_sha256": "45999a3e265729de4f22688d94cc9224569d522991b05c4a77b14fa6bc165f8a",
+  "console_sha256": "6be9e49f85727ee2bec281ae43765cd681ead23ad9bee04ed8fe58e991dadc11",
+  "expected_error": "Current source hash differs: All.lean",
+  "rejected_for_expected_reason": true,
+  "restored_identity_sha256": "d31b47bf8b63554fcfdb2c6584ad61779fca494b7531752124bc2c1ed56d72c7",
+  "identity_restored_exactly": true
+}

@@ -93,9 +93,10 @@ directly invokes those two identities.
 
 ## Where the earlier hypotheses are discharged
 
-The earlier conditional declarations remain as reusable interfaces. Their
-existence does not make the final result conditional. The final path constructs
-their records from proved quantum facts:
+The live input records and constructions remain reusable interfaces; the
+dead-code sweep removed superseded theorem wrappers. Their existence does not
+make the final result conditional. The final path constructs their records from
+proved quantum facts:
 
 | Earlier input | Completed supplier |
 | --- | --- |

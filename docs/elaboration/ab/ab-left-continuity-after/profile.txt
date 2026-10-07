@@ -1,0 +1,49 @@
+import took 31.2s
+cumulative profiling times:
+	attribute application 0.136ms
+	blocked (unaccounted) 0.45ms
+	compilation (IR) 0.68ms
+	compilation (LCNF base) 7.23ms
+	compilation (LCNF impure) 1.23ms
+	compilation (LCNF mono) 3.61ms
+	congr simp thm 0.117ms
+	dsimp 12.9ms
+	elaboration 81ms
+	fix level params 0.666ms
+	import 31.2s
+	initialization 36.8ms
+	instantiate metavars 1.27ms
+	interpretation 3.15s
+	let-to-have transformation 0.281ms
+	linting 39.7ms
+	norm_num 108ms
+	parsing 13.7ms
+	process pre-definitions 5.78ms
+	share common exprs 2.94ms
+	simp 1.41ms
+	tactic execution 170ms
+	type checking 44.6ms
+	typeclass inference 208ms
+	Command being timed: "./run-lake.sh env lean --profile ChannelContinuity/LeftContinuity.lean"
+	User time (seconds): 3.71
+	System time (seconds): 8.04
+	Percent of CPU this job got: 29%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:40.40
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1398832
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 113304
+	Minor (reclaiming a frame) page faults: 230970
+	Voluntary context switches: 10448
+	Involuntary context switches: 243831
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

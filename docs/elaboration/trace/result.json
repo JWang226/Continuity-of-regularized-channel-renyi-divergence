@@ -1,0 +1,8 @@
+{
+  "probe": "SDPTrace instance-goal trace on original declaration prefix",
+  "exit_code": 0,
+  "sources_unchanged": true,
+  "dependency_artifacts_unchanged": true,
+  "probe_sha256": "959c2943055c01ca5c95a31febc4bac1a271512bc630270176be223bdd2aec1d",
+  "log_sha256": "a045703c0b58d5ce3068d54e853cd8062553807488bf97b9cd1d5689d12ea9d4"
+}

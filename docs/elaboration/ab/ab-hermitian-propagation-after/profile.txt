@@ -1,0 +1,165 @@
+import took 75.7s
+typeclass inference of AddLeftMono took 114ms
+typeclass inference of AddCommSemigroup took 334ms
+typeclass inference of AddRightMono took 230ms
+typeclass inference of AddHomClass took 105ms
+simp took 338ms
+typeclass inference of AddCommSemigroup took 118ms
+typeclass inference of AddRightMono took 159ms
+simp took 184ms
+tactic execution of Lean.Parser.Tactic.exact took 396ms
+typeclass inference of ZeroHomClass took 747ms
+typeclass inference of AddMonoidWithOne took 635ms
+typeclass inference of HSMul took 2.11s
+typeclass inference of SMul took 733ms
+typeclass inference of Module took 132ms
+typeclass inference of Semiring took 736ms
+typeclass inference of AddCommMonoid took 784ms
+typeclass inference of SMul took 2.68s
+typeclass inference of Module took 104ms
+typeclass inference of Semiring took 899ms
+typeclass inference of AddCommMonoid took 505ms
+typeclass inference of SMul took 2.38s
+typeclass inference of LE took 189ms
+typeclass inference of MulAction took 1.58s
+typeclass inference of MulAction took 1.24s
+simp took 267ms
+typeclass inference of AddCommMonoid took 645ms
+typeclass inference of MulAction took 1.03s
+typeclass inference of NonUnitalSemiring took 567ms
+typeclass inference of NonUnitalSemiring took 683ms
+typeclass inference of Module took 297ms
+typeclass inference of PosSMulMono took 221ms
+typeclass inference of RCLike took 122ms
+typeclass inference of Algebra took 102ms
+typeclass inference of MulAction took 7.25s
+simp took 263ms
+tactic execution of Lean.Parser.Tactic.simpa took 167ms
+process pre-definitions took 129ms
+elaboration took 390ms
+type checking took 228ms
+type checking took 763ms
+interpretation of _private.Mathlib.Tactic.Linter.Lint.0.Mathlib.Linter.DupNamespaceLinter.dupNamespace._lam_1._boxed took 107ms
+typeclass inference of CoeT took 121ms
+typeclass inference of CoeFun took 102ms
+typeclass inference of CoeFun took 195ms
+typeclass inference of CoeT took 200ms
+elaboration took 158ms
+typeclass inference of SequentialSpace took 222ms
+interpretation of Mathlib.Tactic.Choose._aux_Mathlib_Tactic_Choose___elabRules_Mathlib_Tactic_Choose_choose_1._boxed took 388ms
+typeclass inference of AddCommGroup took 159ms
+typeclass inference of AddCommGroup took 370ms
+typeclass inference of IsTopologicalAddGroup took 316ms
+typeclass inference of Module took 154ms
+typeclass inference of Module took 632ms
+typeclass inference of NormedSpace took 1.2s
+typeclass inference of ContinuousSMul took 978ms
+tactic execution of Lean.Parser.Tactic.refine took 203ms
+typeclass inference of ProperSpace took 607ms
+typeclass inference of Module took 142ms
+typeclass inference of NormedSpace took 414ms
+typeclass inference of ContinuousSMul took 192ms
+typeclass inference of Module took 192ms
+typeclass inference of Module took 265ms
+typeclass inference of NormedSpace took 506ms
+typeclass inference of ContinuousSMul took 248ms
+tactic execution of Lean.Parser.Tactic.exact took 108ms
+type checking took 195ms
+QuantumChannelContinuity/SDPCone.lean:71:0: warning: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTracePair_symm`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+typeclass inference of CoeT took 243ms
+typeclass inference of CoeT took 203ms
+typeclass inference of CoeFun took 302ms
+tactic execution of Lean.Parser.Tactic.change took 391ms
+typeclass inference of Module took 162ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 137ms
+typeclass inference of CoeFun took 220ms
+typeclass inference of CoeFun took 171ms
+typeclass inference of CoeFun took 159ms
+typeclass inference of CoeFun took 249ms
+elaboration took 409ms
+typeclass inference of AddCommMonoid took 239ms
+typeclass inference of IsTopologicalAddGroup took 295ms
+typeclass inference of Module took 102ms
+typeclass inference of Module took 238ms
+typeclass inference of Module took 166ms
+typeclass inference of Module took 103ms
+typeclass inference of Module took 110ms
+typeclass inference of Module took 462ms
+typeclass inference of Module took 465ms
+typeclass inference of NormedSpace took 849ms
+typeclass inference of Module took 114ms
+typeclass inference of NormedSpace took 518ms
+typeclass inference of ContinuousSMul took 728ms
+typeclass inference of NormedSpace took 836ms
+typeclass inference of LocallyConvexSpace took 133ms
+tactic execution of Lean.Parser.Tactic.obtain took 354ms
+tactic execution of Lean.Parser.Tactic.refine took 197ms
+tactic execution of Lean.Parser.Tactic.refine took 276ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 147ms
+simp took 126ms
+typeclass inference of AddHomClass took 175ms
+typeclass inference of ZeroHomClass took 229ms
+typeclass inference of AddMonoidHomClass took 287ms
+typeclass inference of AddMonoidHomClass took 431ms
+typeclass inference of ZeroHomClass took 511ms
+typeclass inference of ZeroHomClass took 518ms
+typeclass inference of Semiring took 222ms
+typeclass inference of AddMonoidWithOne took 441ms
+simp took 156ms
+typeclass inference of ZeroHomClass took 262ms
+typeclass inference of AddRightMono took 107ms
+simp took 6.4s
+simp took 3.93s
+typeclass inference of AddMonoidHomClass took 911ms
+typeclass inference of Ring took 274ms
+typeclass inference of Ring took 316ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 231ms
+type checking took 454ms
+cumulative profiling times:
+	attribute application 0.279ms
+	congr simp thm 11ms
+	elaboration 1.12s
+	fix level params 8.78ms
+	import 75.7s
+	initialization 91.5ms
+	instantiate metavars 101ms
+	interpretation 5.75s
+	let-to-have transformation 2.47ms
+	linting 375ms
+	norm_num 5.19ms
+	parsing 55.6ms
+	process pre-definitions 159ms
+	ring 44.4ms
+	share common exprs 34.4ms
+	simp 12s
+	tactic execution 3.63s
+	type checking 1.84s
+	typeclass inference 61.1s
+	Command being timed: "./run-lake.sh env lean --profile QuantumChannelContinuity/SDPCone.lean"
+	User time (seconds): 38.15
+	System time (seconds): 19.96
+	Percent of CPU this job got: 37%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:34.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1392528
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 285478
+	Minor (reclaiming a frame) page faults: 464974
+	Voluntary context switches: 20006
+	Involuntary context switches: 1071447
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

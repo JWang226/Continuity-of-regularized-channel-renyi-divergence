@@ -149,7 +149,9 @@
       "axiomPrints": 21,
       "containsMathematicalDeclarations": false,
       "trackedImporters": [],
-      "reason": "Diagnostic-only module compiled by the proof library glob; preserve it as an explicitly runnable audit outside that library."
+      "reason": "Diagnostic-only module already outside the default facade closure: Lake default globs select roots.map Glob.one, not submodule globs. Move is organizational; preserve explicit named diagnostics without claiming ordinary-build work was removed.",
+      "previouslyBuiltByFacade": false,
+      "performanceBenefitClaimed": false
     },
     {
       "from": "QuantumChannelContinuity/StateOrderInterpolationAudit.lean",
@@ -158,7 +160,9 @@
       "axiomPrints": 27,
       "containsMathematicalDeclarations": false,
       "trackedImporters": [],
-      "reason": "Diagnostic-only module compiled by the proof library glob; preserve it as an explicitly runnable audit outside that library."
+      "reason": "Diagnostic-only module already outside the default facade closure: Lake default globs select roots.map Glob.one, not submodule globs. Move is organizational; preserve explicit named diagnostics without claiming ordinary-build work was removed.",
+      "previouslyBuiltByFacade": false,
+      "performanceBenefitClaimed": false
     },
     {
       "from": "QuantumChannelContinuity/StateSupportLimitsAudit.lean",
@@ -167,7 +171,9 @@
       "axiomPrints": 4,
       "containsMathematicalDeclarations": false,
       "trackedImporters": [],
-      "reason": "Diagnostic-only module compiled by the proof library glob; preserve it as an explicitly runnable audit outside that library."
+      "reason": "Diagnostic-only module already outside the default facade closure: Lake default globs select roots.map Glob.one, not submodule globs. Move is organizational; preserve explicit named diagnostics without claiming ordinary-build work was removed.",
+      "previouslyBuiltByFacade": false,
+      "performanceBenefitClaimed": false
     }
   ],
   "retained": [
@@ -201,7 +207,7 @@
     }
   ],
   "postSweepRequired": [
-    "Build all four project library targets without rebuilding upstream dependencies.",
+    "Build all four project facade targets and explicitly build QuantumChannelContinuity.SourceCorrespondence for the final full check, without rebuilding upstream dependencies.",
     "Regenerate proof index and hash-bound metadata; preserve historical certificates and source snapshots.",
     "Run the all-declaration axiom audit and Comparator regression check.",
     "Keep the three certified theorem statements unchanged."
@@ -224,5 +230,26 @@
     "preservedDiagnosticCommands": 52,
     "targetSignatures": "exactly unchanged from baseline",
     "rootAuditIncludesSupplementarySourceCorrespondence": true
+  },
+  "scopeCorrection": {
+    "initialAssumption": "The initial audit incorrectly assumed default Lean library globs compile all submodules, including unimported diagnostic files.",
+    "installedLakeEvidence": {
+      "toolchain": "leanprover/lean4:v4.29.0-rc6",
+      "source": "src/lean/lake/Lake/Config/LeanLibConfig.lean",
+      "documentationLines": [
+        40,
+        42
+      ],
+      "definitionLine": 46,
+      "definition": "globs : Array Glob := roots.map Glob.one"
+    },
+    "correctedInterpretation": "The three audit modules were already outside the facade closure. Their moves organize optional diagnostics; no ordinary-build saving is claimed.",
+    "timedOwnedModules": 83,
+    "solutionAndSupportLibraryModulesInTree": 81,
+    "comparatorSpecificationAndControlModulesInTree": 3,
+    "explicitAuditAndScriptFilesInTree": 5,
+    "supplementalModuleOutsideColdBuild": "QuantumChannelContinuity.SourceCorrespondence",
+    "supplementalCoverage": "Paired direct serial profiles and explicit final full-check build/root audit.",
+    "deadDeclarationRemovalEvidenceUnaffected": true
   }
 }

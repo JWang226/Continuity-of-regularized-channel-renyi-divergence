@@ -18,6 +18,12 @@ The transitive mathlib revision is
 `f156f7abd91ac67adb22bf999e5a71ba22e22e41`.
 All dependency revisions are recorded in `lake-manifest.json`.
 
+The [pre-cleanup source snapshot](Verification/source-snapshots/pre-cleanup-2026-10-06.json)
+also retains five unmodified Lean-Quantum and eleven unmodified mathlib source
+files used as inputs to the dated audits, at the revisions listed above. Their
+original copyright, author and Apache-2.0 notices are preserved. The included
+`LICENSE-MATHLIB` supplies the Apache-2.0 license text for these archived copies.
+
 `QuantumChannelContinuity/Minimax.lean` adapts
 [`Mathlib/Topology/Sion.lean` at `2be1d7728238e3c007b68094fa0abc562f8077df`](https://github.com/leanprover-community/mathlib4/blob/2be1d7728238e3c007b68094fa0abc562f8077df/Mathlib/Topology/Sion.lean).
 The original copyright and author notice is retained. The adaptation supplies

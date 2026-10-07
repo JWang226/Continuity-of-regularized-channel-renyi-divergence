@@ -7,6 +7,13 @@ axioms, independently check proof exports with Nanoda, or
 reproduce the full Comparator check and its rejection tests. The commands below
 use a macOS or Linux terminal and do not require the author's local files.
 
+Fresh checks of the cleanup source are recorded in the
+[unsigned cleanup record](Verification/cleanup-2026-10-06/summary.json).
+The Lean audit accepted **1,318 project declarations, including 1,090 theorems**;
+Comparator checked all three targets with Lean kernel replay and both rejection
+controls. Nanoda replay and current statement/definition probes also passed.
+The v1.0.0 certificate below retains its original source and proof export.
+
 ## Comparator reproducer for this checkout
 
 With elan, Git, native build tools, and Python 3.9+ installed, run from the
@@ -109,7 +116,7 @@ audits the transitive axiom dependencies of every project declaration in the
 proof library. Success means exit status zero and this line in the output:
 
 ```text
-AUDIT PASSED: 1327 project declarations, 1101 theorems; transitive axioms [propext, Quot.sound, Classical.choice].
+AUDIT PASSED: …; transitive axioms [propext, Quot.sound, Classical.choice].
 ```
 
 The build/audit log is saved as `.lake/check.log`. To build just the main proof,
@@ -117,6 +124,10 @@ use `./run-lake.sh build All`. The completed proof contains no `sorry` or extra
 axioms. Warnings about `sorry` in `ComparatorChallenges` are expected: the
 reference and missing-proof control contain deliberate holes, and neither is
 imported by the actual solution or its axiom audit.
+
+The declaration and theorem counts depend on the checkout. The historical
+audit counted 1,327 declarations and 1,101 theorems; later cleanup and supporting
+modules can change those counts without changing the three target statements.
 
 The toolchain and dependency commits are pinned in `lean-toolchain` and
 `lake-manifest.json`: Lean `v4.29.0-rc6`, mathlib, and
@@ -233,8 +244,12 @@ nanoda integration. **Lean kernel replay still runs**; `run-checks.py` runs
 nanoda separately. The archive's `Challenge` and `Solution` module names differ
 from the repository's entry points. Their original mathematical sources match
 the historical public checkout recorded in [Verification/source-identity.json](Verification/source-identity.json).
-The current checkout adds only copyright/license headers to those proof files,
-as checked by [Verification/current-source-identity.json](Verification/current-source-identity.json).
+The pre-cleanup header-only checkout is preserved in a
+[retained source snapshot](Verification/source-snapshots/pre-cleanup-2026-10-06.json).
+Later code cleanup is tracked by
+[Verification/current-source-identity.json](Verification/current-source-identity.json)
+and requires fresh checks of this checkout; the released certificate retains
+its original source and export.
 
 These bundled scripts reproduce the recorded **unsandboxed development mode**.
 For Linux sandbox isolation, follow the
@@ -259,3 +274,28 @@ after proof development. These checks verify the recorded formal statements;
 correspondence to the paper still requires mathematical review. Replaying the
 retained export checks that export; the full reproduction additionally rebuilds
 the proof from source and compares it against the separate reference.
+
+## Check source and assessment provenance
+
+```sh
+python3 scripts/check-artifacts.py
+python3 scripts/check-statement-audit.py
+```
+
+The first command checks the current source inventory, metadata and mappings,
+and validates dated assessments against their retained pre-cleanup inputs.
+It does not check proof terms. The second compiles current exact-type,
+definition, domain and axiom probes, recording the current source hashes before
+and after the run in `.lake/statement-audit/result.json`. It does not repeat the
+historical informal review. A failed full run cannot leave an earlier `passed`
+result. `--hashes-only` validates provenance without compiling probes.
+Fresh probes additionally require the live Quantum and mathlib inputs to match
+their recorded hashes and manifest revisions, with no tracked dependency
+changes. These files and revisions are checked again after the run and recorded
+separately from the archived assessment inputs.
+
+After an intentional source or checker change, maintainers can regenerate the
+current inventory with `python3 scripts/source_provenance.py --refresh`, then
+regenerate the proof index and rerun the checks. Refreshing a hash manifest does
+not certify the change. The dated historical assessments, snapshot and release
+certificate must retain their original bytes.

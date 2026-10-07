@@ -1,6 +1,6 @@
 # Copyright (c) 2026 Jinzhao Wang. All rights reserved.
 # Released under Apache 2.0 license as described in the file LICENSE.
-version: "v0.4"
+version: "v0.5"
 
 project:
   name: "continuity-of-regularized-channel-renyi-divergence"
@@ -101,6 +101,15 @@ review:
     conventions and is checked separately in Lean. The historical certificate
     does not include that new module. Nonzero spaces and totalized off-domain
     orders are explicitly documented; no literal unmodified skill pass is claimed.
+    The dated assessments retain their exact original inputs in the pre-cleanup
+    source archive. Later cleanup is tracked separately in the current source
+    identity and must be checked by fresh reproducer runs; original certificate
+    hashes and assessment verdicts are not reassigned to changed proof bytes.
+    Fresh cleanup checks passed: the complete Lean axiom audit, Comparator
+    comparison and Lean kernel replay with both rejection controls, Nanoda
+    independent replay, and current statement probes with live dependency hashes.
+    Their unsigned record is separate from the historical certificate and
+    does not repeat the informal assessment or claim human review.
 
 artifacts:
   paper_mapping: "docs/paper-mapping.json"
@@ -115,6 +124,14 @@ artifacts:
   source_correspondence: "QuantumChannelContinuity/SourceCorrespondence.lean"
   upstream_candidate: "Contributions/Physlib/trace-power-derivative.json"
   source_identity: "Verification/current-source-identity.json"
+  historical_audit_inputs: "Verification/source-snapshots/pre-cleanup-2026-10-06.json"
+  source_identity_check: "python3 scripts/source_provenance.py"
+  dead_code_sweep: "docs/DEAD_CODE_SWEEP_2026-10-06.md"
+  elaboration_before: "ELABORATION_REPORT_2026-10-06_BEFORE.md"
+  elaboration_after: "ELABORATION_REPORT_2026-10-06_AFTER.md"
+  elaboration_reproduction: "docs/elaboration/README.md"
+  elaboration_comparison: "docs/elaboration/COMPARISON_2026-10-06.md"
+  cleanup_verification: "Verification/cleanup-2026-10-06/summary.json"
   metadata_check: "python3 scripts/check-artifacts.py"
   lemma_search: "./search-lemmas.sh"
   platform_status: "Local Prove2Me-inspired artifacts; no platform upload"

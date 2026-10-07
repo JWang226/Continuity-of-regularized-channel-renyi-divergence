@@ -1,5 +1,15 @@
 # Verification record
 
+The [fresh cleanup record](cleanup-2026-10-06/README.md), assembled on
+7 October 2026 UTC, checks the cleaned source separately. The Lean audit passed
+for **1,318 project declarations and 1,090 theorems**; Comparator accepted all
+three targets, replayed them through Lean's kernel, and rejected both negative
+controls. Nanoda checked **61,840 declarations with no errors**. Current
+statement probes also passed. [Its summary](cleanup-2026-10-06/summary.json)
+binds the source identity, proof index, strict checking policy and logs. This
+unsigned record preserves the historical certificate and assessments below;
+it does not claim a new informal assessment or independent human review.
+
 The formalization has an unsigned local verification record from 29 September
 2026. [Comparator](https://github.com/leanprover/comparator) accepted the
 [main theorem](../QuantumChannelContinuity/Main.lean) and both
@@ -19,18 +29,29 @@ Lean source files to their unchanged historical SHA-256 hashes at public commit
 audit checked 1,327 project declarations, including 1,101 theorems. The proof
 uses only `propext`, `Classical.choice`, and `Quot.sound`.
 
-The current checkout adds copyright/license comment headers to 80 of those 82
-files; the two existing upstream notices are preserved. The
-[current source identity](current-source-identity.json) records both hashes and
-verifies that removing only the exact added header recovers each historical file.
-The historical certificate, hashes, and release assets have not been rewritten.
-Run `python3 scripts/check-artifacts.py` from the repository root to check this
-relationship and the new review/navigation metadata.
+The pre-cleanup checkout added copyright/license comment headers to 80 of those
+82 files; the two existing upstream notices were preserved. Its exact audited
+inputs are retained in the [source snapshot](source-snapshots/pre-cleanup-2026-10-06.json)
+at commit `c1042369444d325216ef75e2c7cf866580e2035b`. The snapshot preserves the
+header-only relationship to the historical source and the bytes used by the
+dated agent assessments.
+
+Later code cleanup is recorded separately by the
+[current source identity](current-source-identity.json), including modified,
+added and removed source paths. It does **not** assign the historical certificate
+or assessments to new proof bytes. The historical certificate, hashes, release
+assets and assessment JSON files have not been rewritten. Run
+`python3 scripts/check-artifacts.py` to validate the retained snapshot and
+current metadata, and the [verification commands](../VERIFYING.md) to check the
+current proof. Source identity is bookkeeping, not a proof certificate.
 
 [Lean read-back](../docs/LEAN_READBACK.md) was produced by a separate agent that
 did not consult the manuscript. A [subsequent paper comparison](../docs/PAPER_COMPARISON.md)
 records its correspondence and scope. Both are AI-assisted review artifacts;
-independent human mathematical review remains outstanding.
+independent human mathematical review remains outstanding. Their input hashes
+are validated against the retained snapshot. The statement-audit reproducer
+compiles fresh mechanical probes against the current source; it does not rerun
+the historical informal interpretation or supply a new human assessment.
 
 The full replayable record is distributed as a
 [GitHub release asset](https://github.com/JWang226/continuity-of-regularized-channel-renyi-divergence/releases/tag/v1.0.0),

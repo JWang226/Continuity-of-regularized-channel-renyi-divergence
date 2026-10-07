@@ -1,0 +1,150 @@
+class QuantumState.Qudit.{u} (a : Type u) : Type u
+number of parameters: 1
+parents:
+  QuantumState.Qudit.toNormedAddCommGroup : NormedAddCommGroup a
+  QuantumState.Qudit.toInnerProductSpace : InnerProductSpace ℂ a
+  QuantumState.Qudit.toCompleteSpace : CompleteSpace a
+  QuantumState.Qudit.toFinite : Module.Finite ℂ a
+fields:
+  Norm.norm : a → ℝ
+  Add.add : a → a → a
+  AddSemigroup.add_assoc : ∀ (a_1 b c : a), a_1 + b + c = a_1 + (b + c)
+  Zero.zero : a
+  AddZeroClass.zero_add : ∀ (a_1 : a), 0 + a_1 = a_1
+  AddZeroClass.add_zero : ∀ (a_1 : a), a_1 + 0 = a_1
+  AddMonoid.nsmul : ℕ → a → a
+  AddMonoid.nsmul_zero : ∀ (x : a), AddMonoid.nsmul 0 x = 0 := by
+    intros; rfl
+  AddMonoid.nsmul_succ : ∀ (n : ℕ) (x : a), AddMonoid.nsmul (n + 1) x = AddMonoid.nsmul n x + x := by
+    intros; rfl
+  Neg.neg : a → a
+  Sub.sub : a → a → a :=
+    SubNegMonoid.sub'
+  SubNegMonoid.sub_eq_add_neg : ∀ (a_1 b : a), a_1 - b = a_1 + -b := by
+    intros; rfl
+  SubNegMonoid.zsmul : ℤ → a → a
+  SubNegMonoid.zsmul_zero' : ∀ (a_1 : a), SubNegMonoid.zsmul 0 a_1 = 0 := by
+    intros; rfl
+  SubNegMonoid.zsmul_succ' : ∀ (n : ℕ) (a_1 : a),
+      SubNegMonoid.zsmul (↑n.succ) a_1 = SubNegMonoid.zsmul (↑n) a_1 + a_1 := by
+    intros; rfl
+  SubNegMonoid.zsmul_neg' : ∀ (n : ℕ) (a_1 : a),
+      SubNegMonoid.zsmul (Int.negSucc n) a_1 = -SubNegMonoid.zsmul (↑n.succ) a_1 := by
+    intros; rfl
+  AddGroup.neg_add_cancel : ∀ (a_1 : a), -a_1 + a_1 = 0
+  AddCommMagma.add_comm : ∀ (a_1 b : a), a_1 + b = b + a_1
+  Dist.dist : a → a → ℝ :=
+    fun x y => ‖-x + y‖
+  PseudoMetricSpace.dist_self : ∀ (x : a), dist x x = 0
+  PseudoMetricSpace.dist_comm : ∀ (x y : a), dist x y = dist y x
+  PseudoMetricSpace.dist_triangle : ∀ (x y z : a), dist x z ≤ dist x y + dist y z
+  PseudoMetricSpace.edist : a → a → ℝ≥0∞ :=
+    fun x y => ↑⟨dist x y, ⋯⟩
+  PseudoMetricSpace.edist_dist : ∀ (x y : a), PseudoMetricSpace.edist x y = ENNReal.ofReal (dist x y) := by
+    intro x y; exact ENNReal.coe_nnreal_eq _
+  PseudoMetricSpace.toUniformSpace : UniformSpace a :=
+    UniformSpace.ofDist dist ⋯ ⋯ ⋯
+  PseudoMetricSpace.uniformity_dist : uniformity a = ⨅ ε, ⨅ (_ : ε > 0), 𝓟 {p | dist p.1 p.2 < ε} := by
+    intros; rfl
+  PseudoMetricSpace.toBornology : Bornology a :=
+    Bornology.ofDist dist ⋯ ⋯
+  PseudoMetricSpace.cobounded_sets : (Bornology.cobounded a).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by
+    intros; rfl
+  MetricSpace.eq_of_dist_eq_zero : ∀ {x y : a}, dist x y = 0 → x = y
+  NormedAddCommGroup.dist_eq : ∀ (x y : a), dist x y = ‖-x + y‖ := by
+    aesop
+  SMul.smul : ℂ → a → a
+  SemigroupAction.mul_smul : ∀ (x y : ℂ) (b : a), (x * y) • b = x • y • b
+  MulAction.one_smul : ∀ (b : a), 1 • b = b
+  DistribMulAction.smul_zero : ∀ (a_1 : ℂ), a_1 • 0 = 0
+  DistribMulAction.smul_add : ∀ (a_1 : ℂ) (x y : a), a_1 • (x + y) = a_1 • x + a_1 • y
+  Module.add_smul : ∀ (r s : ℂ) (x : a), (r + s) • x = r • x + s • x
+  Module.zero_smul : ∀ (x : a), 0 • x = 0
+  NormedSpace.norm_smul_le : ∀ (a_1 : ℂ) (b : a), ‖a_1 • b‖ ≤ ‖a_1‖ * ‖b‖
+  Inner.inner : a → a → ℂ
+  InnerProductSpace.norm_sq_eq_re_inner : ∀ (x : a), ‖x‖ ^ 2 = RCLike.re ⟨x∣x⟩
+  InnerProductSpace.conj_inner_symm : ∀ (x y : a), (starRingEnd ℂ) ⟨y∣x⟩ = ⟨x∣y⟩
+  InnerProductSpace.add_left : ∀ (x y z : a), ⟨x + y∣z⟩ = ⟨x∣z⟩ + ⟨y∣z⟩
+  InnerProductSpace.smul_left : ∀ (x y : a) (r : ℂ), ⟨r • x∣y⟩ = (starRingEnd ℂ) r * ⟨x∣y⟩
+  CompleteSpace.complete : ∀ {f : Filter a}, Cauchy f → ∃ x, f ≤ 𝓝 x
+  Module.Finite.fg_top : ⊤.FG
+constructor:
+  QuantumState.Qudit.mk.{u} {a : Type u} [toNormedAddCommGroup : NormedAddCommGroup a]
+    [toInnerProductSpace : InnerProductSpace ℂ a] [toCompleteSpace : CompleteSpace a] [toFinite : Module.Finite ℂ a] :
+    Qudit a
+field notation resolution order:
+  QuantumState.Qudit, NormedAddCommGroup, InnerProductSpace, CompleteSpace, Module.Finite, Norm, AddCommGroup, MetricSpace, AddGroup, AddCommMonoid, SubNegMonoid, AddMonoid, Neg, Sub, AddCommSemigroup, AddSemigroup, AddZeroClass, AddZero, Zero, AddCommMagma, Add, PseudoMetricSpace, Dist, NormedSpace, Inner, Module, DistribMulAction, MulAction, SemigroupAction, SMul
+structure QuantumChannel.CPTP.{u, v} (ℋ₁ : Type u) (ℋ₂ : Type v) [Qudit ℋ₁] [Qudit ℋ₂] : Type (max u v)
+number of parameters: 4
+parents:
+  QuantumChannel.CPTP.toCompletelyPositiveMap : CompletelyPositiveMap (L ℋ₁) (L ℋ₂)
+fields:
+  AddHom.toFun : L ℋ₁ → L ℋ₂
+  AddHom.map_add' : ∀ (x y : L ℋ₁), self.toFun (x + y) = self.toFun x + self.toFun y
+  MulActionHom.map_smul' : ∀ (m : ℂ) (x : L ℋ₁), self.toFun (m • x) = (RingHom.id ℂ) m • self.toFun x
+  CompletelyPositiveMap.map_cstarMatrix_nonneg' : ∀ (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) (L ℋ₁)),
+      0 ≤ M → 0 ≤ M.map ⇑self.toLinearMap
+  QuantumChannel.CPTP.trace_map : ∀ (ρ : L ℋ₁), Tr ρ = Tr (self.toFun ρ)
+constructor:
+  QuantumChannel.CPTP.mk.{u, v} {ℋ₁ : Type u} {ℋ₂ : Type v} [Qudit ℋ₁] [Qudit ℋ₂]
+    (toCompletelyPositiveMap : CompletelyPositiveMap (L ℋ₁) (L ℋ₂))
+    (trace_map : ∀ (ρ : L ℋ₁), Tr ρ = Tr (toCompletelyPositiveMap.toFun ρ)) : CPTP ℋ₁ ℋ₂
+field notation resolution order:
+  QuantumChannel.CPTP, CompletelyPositiveMap, LinearMap, AddHom, MulActionHom
+structure CompletelyPositiveMap.{u_1, u_2} (A₁ : Type u_1) (A₂ : Type u_2) [NonUnitalCStarAlgebra A₁]
+  [NonUnitalCStarAlgebra A₂] [PartialOrder A₁] [PartialOrder A₂] [StarOrderedRing A₁] [StarOrderedRing A₂] :
+  Type (max u_1 u_2)
+number of parameters: 8
+parents:
+  CompletelyPositiveMap.toLinearMap : A₁ →ₗ[ℂ] A₂
+fields:
+  AddHom.toFun : A₁ → A₂
+  AddHom.map_add' : ∀ (x y : A₁), self.toFun (x + y) = self.toFun x + self.toFun y
+  MulActionHom.map_smul' : ∀ (m : ℂ) (x : A₁), self.toFun (m • x) = (RingHom.id ℂ) m • self.toFun x
+  CompletelyPositiveMap.map_cstarMatrix_nonneg' : ∀ (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) A₁),
+      0 ≤ M → 0 ≤ M.map ⇑self.toLinearMap
+constructor:
+  CompletelyPositiveMap.mk.{u_1, u_2} {A₁ : Type u_1} {A₂ : Type u_2} [NonUnitalCStarAlgebra A₁]
+    [NonUnitalCStarAlgebra A₂] [PartialOrder A₁] [PartialOrder A₂] [StarOrderedRing A₁] [StarOrderedRing A₂]
+    (toLinearMap : A₁ →ₗ[ℂ] A₂)
+    (map_cstarMatrix_nonneg' : ∀ (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) A₁), 0 ≤ M → 0 ≤ M.map ⇑toLinearMap) :
+    CompletelyPositiveMap A₁ A₂
+field notation resolution order:
+  CompletelyPositiveMap, LinearMap, AddHom, MulActionHom
+class Nontrivial.{u_3} (α : Type u_3) : Prop
+number of parameters: 1
+fields:
+  Nontrivial.exists_pair_ne : ∃ x y, x ≠ y
+constructor:
+  Nontrivial.mk.{u_3} {α : Type u_3} (exists_pair_ne : ∃ x y, x ≠ y) : Nontrivial α
+structure QuantumChannelContinuity.DensityState.{u} (H : Type u) [Qudit H] : Type u
+number of parameters: 2
+fields:
+  QuantumChannelContinuity.DensityState.op : L H
+  QuantumChannelContinuity.DensityState.nonneg : 0 ≤ self.op
+  QuantumChannelContinuity.DensityState.trace_one : Tr self.op = 1
+constructor:
+  QuantumChannelContinuity.DensityState.mk.{u} {H : Type u} [Qudit H] (op : L H) (nonneg : 0 ≤ op)
+    (trace_one : Tr op = 1) : QuantumChannelContinuity.DensityState H
+structure QuantumChannelContinuity.PureInput.{u} (H : Type u) [Qudit H] : Type u
+number of parameters: 2
+fields:
+  QuantumChannelContinuity.PureInput.vector : H
+  QuantumChannelContinuity.PureInput.norm_one : ‖self.vector‖ = 1
+constructor:
+  QuantumChannelContinuity.PureInput.mk.{u} {H : Type u} [Qudit H] (vector : H) (norm_one : ‖vector‖ = 1) :
+    QuantumChannelContinuity.PureInput H
+def QuantumChannelContinuity.regularizedRenyi : {H K : Type} →
+  [inst : Qudit H] → [inst_1 : Qudit K] → [Nontrivial H] → [Nontrivial K] → ℝ → CPTP H K → CPTP H K → ℝ≥0∞ :=
+fun {H K} [Qudit H] [Qudit K] [Nontrivial H] [Nontrivial K] α N M =>
+  ⨆ n, ⨆ (_ : 0 < n), QuantumChannelContinuity.blockRenyi α N M n / ↑n
+def QuantumChannelContinuity.regularizedRelative : {H K : Type} →
+  [inst : Qudit H] → [inst_1 : Qudit K] → [Nontrivial H] → [Nontrivial K] → CPTP H K → CPTP H K → ℝ≥0∞ :=
+fun {H K} [Qudit H] [Qudit K] [Nontrivial H] [Nontrivial K] N M =>
+  ⨆ n, ⨆ (_ : 0 < n), QuantumChannelContinuity.blockRelative N M n / ↑n
+'QuantumChannelContinuity.theorem_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuantumChannelContinuity.blockRenyi_tendsto_regularized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuantumChannelContinuity.blockRelative_tendsto_regularized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuantumChannelContinuity.referenceFirstOutput_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuantumChannelContinuity.channelRenyi_eq_referenceFirst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QuantumChannelContinuity.channelRelative_eq_referenceFirst' depends on axioms: [propext, Classical.choice, Quot.sound]

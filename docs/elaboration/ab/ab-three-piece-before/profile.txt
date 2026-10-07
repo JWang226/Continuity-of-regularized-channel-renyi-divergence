@@ -1,0 +1,52 @@
+interpretation of Mathlib.Meta.Positivity.evalRealPi took 184ms
+interpretation of Mathlib.Meta.Positivity.initFn._lam_4._@.Mathlib.Tactic.Positivity.Core.3395534674._hygCtx._hyg.2._boxed took 113ms
+import took 52.3s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 195ms
+cumulative profiling times:
+	attribute application 0.0336ms
+	compilation (IR) 0.177ms
+	compilation (LCNF base) 2.46ms
+	compilation (LCNF impure) 0.303ms
+	compilation (LCNF mono) 3.08ms
+	congr simp thm 1.83ms
+	dsimp 5.58ms
+	elaboration 57.1ms
+	fix level params 0.42ms
+	import 52.3s
+	initialization 88.1ms
+	instantiate metavars 2.24ms
+	interpretation 4.8s
+	let-to-have transformation 0.0685ms
+	linting 33.9ms
+	norm_num 50.4ms
+	parsing 10.4ms
+	process pre-definitions 6.46ms
+	ring 44.3ms
+	share common exprs 4.69ms
+	simp 209ms
+	tactic execution 140ms
+	type checking 61.1ms
+	typeclass inference 533ms
+	Command being timed: "./run-lake.sh env lean --profile ChannelContinuity/ThreePiece.lean"
+	User time (seconds): 5.45
+	System time (seconds): 11.69
+	Percent of CPU this job got: 26%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:05.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2182256
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 244105
+	Minor (reclaiming a frame) page faults: 317372
+	Voluntary context switches: 19522
+	Involuntary context switches: 360836
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

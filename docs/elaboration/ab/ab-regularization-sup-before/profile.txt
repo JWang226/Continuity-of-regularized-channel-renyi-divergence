@@ -1,0 +1,48 @@
+interpretation of ClosedSubmodule._aux_Mathlib_Analysis_InnerProductSpace_Orthogonal___macroRules_ClosedSubmodule_term_ᗮ_1 took 103ms
+import took 85.4s
+QuantumChannelContinuity/RegularizationSup.lean:57:6: warning: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+cumulative profiling times:
+	attribute application 0.0312ms
+	compilation (IR) 0.14ms
+	compilation (LCNF base) 2.32ms
+	compilation (LCNF impure) 0.217ms
+	compilation (LCNF mono) 1.38ms
+	congr simp thm 1.57ms
+	elaboration 39.7ms
+	fix level params 0.115ms
+	import 85.4s
+	initialization 35.4ms
+	instantiate metavars 0.266ms
+	interpretation 6.51s
+	let-to-have transformation 0.0788ms
+	linting 21.9ms
+	parsing 6.56ms
+	process pre-definitions 1.93ms
+	share common exprs 1.32ms
+	simp 89.3ms
+	tactic execution 95.7ms
+	type checking 12.4ms
+	typeclass inference 372ms
+	Command being timed: "./run-lake.sh env lean --profile QuantumChannelContinuity/RegularizationSup.lean"
+	User time (seconds): 4.50
+	System time (seconds): 14.30
+	Percent of CPU this job got: 19%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:36.53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1464000
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 396483
+	Minor (reclaiming a frame) page faults: 415036
+	Voluntary context switches: 20646
+	Involuntary context switches: 605083
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

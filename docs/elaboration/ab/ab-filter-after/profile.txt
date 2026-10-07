@@ -1,0 +1,125 @@
+import took 56.2s
+typeclass inference of CoeT took 219ms
+typeclass inference of AddMonoidHomClass took 217ms
+typeclass inference of AddHomClass took 361ms
+simp took 233ms
+simp took 308ms
+typeclass inference of AddMonoidHomClass took 117ms
+simp took 361ms
+tactic execution of Lean.Parser.Tactic.simpa took 379ms
+type checking took 270ms
+simp took 197ms
+tactic execution of Lean.Parser.Tactic.change took 552ms
+simp took 106ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 107ms
+process pre-definitions took 194ms
+type checking took 114ms
+typeclass inference of CoeFun took 116ms
+typeclass inference of QuantumState.Qudit took 207ms
+elaboration took 245ms
+tactic execution of Lean.Parser.Tactic.refine took 131ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 352ms
+typeclass inference of CoeFun took 102ms
+typeclass inference of CoeFun took 168ms
+tactic execution of Lean.Parser.Tactic.exact took 182ms
+typeclass inference of CoeFun took 136ms
+typeclass inference of CoeFun took 106ms
+tactic execution of Lean.Parser.Tactic.exact took 152ms
+typeclass inference of NonUnitalNonAssocSemiring took 248ms
+typeclass inference of ZeroHomClass took 459ms
+typeclass inference of ZeroHomClass took 150ms
+typeclass inference of ZeroHomClass took 170ms
+simp took 132ms
+simp took 110ms
+tactic execution of Lean.Parser.Tactic.simpa took 364ms
+typeclass inference of AddHomClass took 373ms
+type checking took 540ms
+tactic execution of Lean.Parser.Tactic.change took 101ms
+type checking took 153ms
+typeclass inference of CoeFun took 119ms
+typeclass inference of CoeFun took 106ms
+typeclass inference of CoeFun took 125ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 249ms
+typeclass inference of CoeFun took 205ms
+typeclass inference of CoeFun took 156ms
+typeclass inference of CoeFun took 108ms
+typeclass inference of CoeFun took 105ms
+typeclass inference of Module took 228ms
+typeclass inference of Algebra took 123ms
+typeclass inference of CoeFun took 130ms
+typeclass inference of Module took 194ms
+typeclass inference of Module took 109ms
+typeclass inference of Module took 115ms
+typeclass inference of Module took 105ms
+typeclass inference of Algebra took 141ms
+typeclass inference of Algebra took 154ms
+typeclass inference of NonUnitalContinuousFunctionalCalculus took 172ms
+typeclass inference of CoeFun took 161ms
+tactic execution of Lean.Parser.Tactic.obtain took 111ms
+simp took 264ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 117ms
+tactic execution of Lean.Parser.Tactic.exact took 227ms
+tactic execution of Lean.Parser.Tactic.obtain took 175ms
+typeclass inference of CoeFun took 116ms
+simp took 118ms
+simp took 101ms
+tactic execution of Lean.Parser.Tactic.change took 110ms
+typeclass inference of IsOrderedRing took 105ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 3.49s
+type checking took 154ms
+typeclass inference of CoeFun took 134ms
+typeclass inference of CoeFun took 132ms
+typeclass inference of CoeFun took 115ms
+elaboration took 121ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 128ms
+typeclass inference of CoeFun took 122ms
+typeclass inference of CoeFun took 137ms
+typeclass inference of CoeFun took 109ms
+typeclass inference of CoeFun took 136ms
+interpretation of Lean.Elab.Tactic._aux_Mathlib_Tactic_Widget_Calc___elabRules_Lean_calcTactic_1._boxed took 121ms
+typeclass inference of CoeFun took 117ms
+typeclass inference of CoeFun took 105ms
+elaboration took 126ms
+cumulative profiling times:
+	attribute application 0.47ms
+	congr simp thm 18.7ms
+	elaboration 1.28s
+	fix level params 31.3ms
+	import 56.2s
+	initialization 73.4ms
+	instantiate metavars 61ms
+	interpretation 7.61s
+	let-to-have transformation 3.9ms
+	linting 140ms
+	norm_num 30.9ms
+	parsing 35.2ms
+	process pre-definitions 256ms
+	ring 126ms
+	share common exprs 110ms
+	simp 2.39s
+	tactic execution 5.62s
+	type checking 1.93s
+	typeclass inference 25.5s
+	Command being timed: "./run-lake.sh env lean --profile QuantumChannelContinuity/Filter.lean"
+	User time (seconds): 28.35
+	System time (seconds): 14.41
+	Percent of CPU this job got: 53%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:19.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1526288
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 287367
+	Minor (reclaiming a frame) page faults: 345425
+	Voluntary context switches: 12936
+	Involuntary context switches: 818564
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

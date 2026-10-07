@@ -10,11 +10,14 @@ between the paper and Lean or supply independent human review. Python 3.9+.
 """
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
 import sys
 import tempfile
+
+from source_provenance import historical_bytes, verify_current_identity
 
 ROOT = Path(__file__).resolve().parent.parent
 TARGETS = (
@@ -102,17 +105,50 @@ def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def check_inputs(report):
+def check_inputs(report, snapshot):
     for record in report["input_files"]:
-        name = record["path"]
-        path = Path(name)
-        if path.is_absolute() or ".." in path.parts:
-            raise ValueError("Nonportable input path: " + name)
-        path = ROOT / path
-        if not path.is_file() or sha256(path.read_bytes()) != record["sha256"]:
-            raise ValueError("Missing or changed audit input: " + name)
+        historical_bytes(record["path"], record["sha256"], snapshot)
     if sha256(PROBES.encode("utf-8")) != report["mechanical_checks"]["probe_sha256"]:
         raise ValueError("Probe source differs from the recorded audit")
+
+
+def dependency_inputs(report):
+    """Bind live inputs of fresh probes independently of the historical snapshot."""
+    hashes = {}
+    packages = set()
+    for record in report["input_files"]:
+        name = record["path"]
+        if not name.startswith(".lake/packages/"):
+            continue
+        source = ROOT / name
+        if not source.is_file():
+            raise ValueError("Missing live dependency input needed by current probes: " + name)
+        actual = sha256(source.read_bytes())
+        if actual != record["sha256"]:
+            raise ValueError("Live dependency source differs from the audited pinned input: " + name)
+        hashes[name] = actual
+        packages.add(Path(name).parts[2])
+    manifest = json.loads((ROOT / "lake-manifest.json").read_text(encoding="utf-8"))
+    pins = {package["name"]: package["rev"] for package in manifest["packages"]
+            if "rev" in package}
+    env = os.environ.copy()
+    if sys.platform == "darwin" and Path("/Library/Developer/CommandLineTools").is_dir():
+        env["DEVELOPER_DIR"] = "/Library/Developer/CommandLineTools"
+    revisions = {}
+    for name in sorted(packages):
+        checkout = ROOT / ".lake" / "packages" / name
+        actual = subprocess.check_output(["git", "-C", str(checkout), "rev-parse", "HEAD"],
+                                         env=env, text=True).strip()
+        if name not in pins or actual != pins[name]:
+            raise ValueError("Live dependency revision differs from manifest pin: " + name)
+        for arguments in (["diff", "--quiet"], ["diff", "--cached", "--quiet"]):
+            result = subprocess.run(["git", "-C", str(checkout), *arguments], env=env,
+                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            if result.returncode:
+                raise ValueError("Live dependency has tracked changes or could not be checked: " + name)
+        revisions[name] = {"actual_head": actual, "manifest_pin": pins[name],
+                           "tracked_worktree_clean": True}
+    return {"source_sha256": hashes, "package_revisions": revisions}
 
 
 def run():
@@ -125,11 +161,18 @@ def run():
     if not sys.argv[1:]:
         # A failed or interrupted full rerun must not leave an earlier PASS.
         (logdir / "result.json").unlink(missing_ok=True)
-    report = json.loads((ROOT / "docs/statement-audit.json").read_text(encoding="utf-8"))
-    check_inputs(report)
+    current, snapshot = verify_current_identity()
+    report_path = ROOT / "docs/statement-audit.json"
+    if report_path.read_bytes() != snapshot["docs/statement-audit.json"]:
+        raise ValueError("The dated historical statement assessment was rewritten")
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    check_inputs(report, snapshot)
+    before = {record["path"]: record["sha256"] for record in current["files"]}
+    before.update({record["path"]: record["sha256"] for record in current["checker_inputs"]})
     if sys.argv[1:] == ["--hashes-only"]:
-        print("STATEMENT AUDIT INPUT HASHES PASSED")
+        print("STATEMENT AUDIT INPUT HASHES PASSED: retained historical assessment and current source identity; no fresh Lean run")
         return
+    dependencies = dependency_inputs(report)
     with (logdir / "build.log").open("w", encoding="utf-8") as output:
         subprocess.run([str(ROOT / "run-lake.sh"), "build", "ChannelRenyiContinuity",
                         "QuantumChannelContinuity.SourceCorrespondence"],
@@ -158,6 +201,14 @@ def run():
     for name in bridges:
         if name not in found or not found[name] <= PERMITTED:
             raise ValueError("Missing or unauthorized bridge axiom report: " + name)
+    after, _ = verify_current_identity()
+    after_hashes = {record["path"]: record["sha256"] for record in after["files"]}
+    after_hashes.update({record["path"]: record["sha256"] for record in after["checker_inputs"]})
+    if after_hashes != before:
+        raise ValueError("Current proof or checker sources changed during mechanical checking")
+    after_dependencies = dependency_inputs(report)
+    if after_dependencies != dependencies:
+        raise ValueError("Live dependency inputs changed during mechanical checking")
     evidence = {
         "status": "passed",
         "probe_sha256": sha256(PROBES.encode("utf-8")),
@@ -167,9 +218,17 @@ def run():
         "scope": "exact-type, defining-equation, normalization, domain and axiom probes",
         "semantic_correspondence_automated": False,
         "temporary_lean_source_removed": True,
+        "source_sha256": before,
+        "sources_unchanged": True,
+        "dependency_source_sha256": dependencies["source_sha256"],
+        "dependency_package_revisions": dependencies["package_revisions"],
+        "dependency_inputs_unchanged": True,
+        "historical_assessment_sha256": sha256(report_path.read_bytes()),
+        "historical_input_scope": "retained pre-cleanup snapshot; not a new semantic assessment of current proof bytes",
     }
     (logdir / "result.json").write_text(json.dumps(evidence, indent=2) + "\n", encoding="utf-8")
     print("STATEMENT AUDIT MECHANICAL CHECK PASSED")
+    print("Fresh probes check current types, equations, domains and axioms; the retained semantic assessment remains historical.")
     print("Paper correspondence still requires reading the source and definitions.")
     print("Fresh evidence: .lake/statement-audit/result.json")
 

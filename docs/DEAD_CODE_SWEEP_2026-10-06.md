@@ -37,7 +37,9 @@ Move these files to `scripts/audits/` and preserve their commands for explicit u
 | `StateOrderInterpolationAudit.lean` | 35 | 27 |
 | `StateSupportLimitsAudit.lean` | 11 | 4 |
 
-No tracked Lean module imports these files. They define no mathematical declarations. Their 52 diagnostic commands currently compile under the `QuantumChannelContinuity` library glob. The root [Audit.lean](../Audit.lean), now also importing the supplementary source-correspondence module, checks the transitive axioms of all loaded project declarations, including private helpers and proof fields; moving these extra diagnostics preserves named inspection without treating it as ordinary proof-library elaboration.
+No tracked Lean module imports these files. They define no mathematical declarations. Inspection of the installed Lake `LeanLibConfig` showed that default library globs are `roots.map Glob.one`: they select root modules, rather than every source file under the library directory. These three files were therefore already outside ordinary facade builds before the move. Relocating their 52 diagnostic commands is an **organizational change**, preserving explicit named inspection; it does not remove diagnostic work from a previously measured build. This corrects the initial audit's mistaken submodule-glob assumption.
+
+The root [Audit.lean](../Audit.lean), now also importing the supplementary source-correspondence module, checks the transitive axioms of all loaded project declarations, including private helpers and proof fields. Both timed snapshots use the same 83-module facade closure. The complete tree contains 81 solution/support library modules and three Comparator specification/control modules, plus five explicitly run audit/scripts. `SourceCorrespondence` is the one solution/support module outside the timed closure; paired direct profiles and the final full check cover it separately.
 
 ## Retained deliberately
 
@@ -51,6 +53,20 @@ No tracked Lean module imports these files. They define no mathematical declarat
 
 `ChannelContinuity/Main.lean` has no direct expression dependency on `ChannelContinuity.OperatorAlgebra` or `ChannelContinuity.Testing`. Testing is independently imported by `FoundationsTesting`. If these imports are removed from the scalar consumer, preserve the matrix API in the `ChannelContinuity.lean` facade and validate the full build: expression graphs do not capture every elaboration-time instance dependency. This audit therefore does not claim import removal has been proved safe solely by the graph.
 
-After the sweep, rebuild all project libraries, regenerate the index and current-source metadata, run the exhaustive axiom audit and Comparator regression checks, and confirm the three certified theorem signatures remain unchanged. Historical release certificates must retain their historical source hashes; they must not silently be presented as certificates for modified files.
+After the sweep, rebuild the facade libraries and explicitly include the supplementary `SourceCorrespondence` module in the final full check, regenerate the index and current-source metadata, run the exhaustive axiom audit and Comparator regression checks, and confirm the three certified theorem signatures remain unchanged. Historical release certificates must retain their historical source hashes; they must not silently be presented as certificates for modified files.
 
 The machine-readable [evidence record](elaboration/dead-code-sweep.json) contains the full declaration names, exact source ranges, reverse-user lists, graph snapshot hash and retain decisions. No performance improvement is claimed by this audit; elaboration measurements begin only after this sweep.
+
+## Final declaration-index reconciliation
+
+The regenerated index contains **1,268 declarations and 1,047 theorems**, compared with **1,288 and 1,067** in the exact archived index. The difference is **24 removed and four added**: seven named sweep declarations, two generated simp lemmas from a deleted wrapper, and 15 generated proof auxiliaries disappear; the private `hermitianRealModule` cache and its three generated proof auxiliaries appear. Thus **1,288 − 7 − 2 − 15 + 1 + 3 = 1,268**. The 15 cache-related auxiliaries are elaborator artifacts, rather than 15 further deleted source theorems. Downstream `SDPCone.lean` and `SDPPartialTrace.lean` have unchanged source hashes. Exact names, types and category counts are in [declaration-delta.json](elaboration/declaration-delta.json).
+
+All 794 shared non-internal declarations retain identical printed types. All three targets retain identical printed types and direct type/proof dependencies. The main target closure changes **869 → 858** through 15 removed generated auxiliaries and four cache declarations; the two block-limit closures remain **174** and **258**. Eighteen retained internal proof names have different printed types as generated numbering compacts. Two retained `congr_simp` declarations, `inputRelative.congr_simp` and `inputRenyi.congr_simp`, are attributed to `ContinuityAssembly` instead of `ConcreteMain`, with unchanged names and types. These metadata comparisons supplement the verification checks; they do not replace kernel or Comparator validation.
+
+The index still covers the same **75 defining modules** loaded through `ChannelRenyiContinuity`; its extractor, generator, targets, toolchain and dependency pins are unchanged. **1,268 is the indexed root scope, not the count of every owned declaration.** Both indexes exclude supplementary `SourceCorrespondence` and diagnostic-only audit modules. The source-hash inventory changes **83 → 81 file/config paths** because three audits moved outside the scanned directories and the existing supplemental file is now hashed. Hashing that file does not add its declarations to the index; the full axiom audit covers it separately.
+
+The comparison binds these exact bytes:
+
+- Archived ZIP SHA256: `7e50fd557d5992c00311db0855de653b06810d6b994f58623f40900d4513ead2`.
+- ZIP member `docs/proof-index.json` SHA256: `1016762b8c0e78263a84e8c6d368480ce38e8f0b2dc6dd3d60e19409d993d244`.
+- Regenerated [proof index](proof-index.json) SHA256: `c7f581fcc6c2bb79959ec0cb3fd2d8396d6382f54e18eef50b5b6e0626797850`, for mathematical source commit `8765c21753175381a57b29fa9469b35675515b2c`.

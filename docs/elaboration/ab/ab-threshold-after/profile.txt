@@ -1,0 +1,52 @@
+import took 16.8s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 124ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 132ms
+cumulative profiling times:
+	attribute application 0.248ms
+	blocked (unaccounted) 36.3ms
+	compilation (IR) 0.356ms
+	compilation (LCNF base) 4.38ms
+	compilation (LCNF impure) 0.54ms
+	compilation (LCNF mono) 2.04ms
+	congr simp thm 3.58ms
+	dsimp 6.69ms
+	elaboration 113ms
+	fix level params 0.91ms
+	import 16.8s
+	initialization 44.6ms
+	instantiate metavars 3.5ms
+	interpretation 3.31s
+	let-to-have transformation 0.328ms
+	linting 24.5ms
+	norm_num 265ms
+	parsing 18.4ms
+	process pre-definitions 13.6ms
+	ring 138ms
+	share common exprs 13.3ms
+	simp 284ms
+	tactic execution 262ms
+	type checking 116ms
+	typeclass inference 624ms
+	Command being timed: "./run-lake.sh env lean --profile ChannelContinuity/Threshold.lean"
+	User time (seconds): 4.43
+	System time (seconds): 6.15
+	Percent of CPU this job got: 42%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:25.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2064144
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 68885
+	Minor (reclaiming a frame) page faults: 209236
+	Voluntary context switches: 9568
+	Involuntary context switches: 130772
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

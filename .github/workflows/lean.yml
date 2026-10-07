@@ -19,12 +19,11 @@ jobs:
       - uses: leanprover/lean-action@v1
         with:
           auto-config: "false"
-          build: "true"
-          build-args: "All ChannelContinuity QuantumChannelContinuity ComparatorChallenges"
+          build: "false"
           test: "false"
           lint: "false"
           use-mathlib-cache: "true"
-      - name: Audit all proof axioms
-        run: lake env lean Audit.lean
+      - name: Build proofs and audit all proof axioms
+        run: ./check.sh
       - name: Check publication and review artifacts
         run: python3 scripts/check-artifacts.py

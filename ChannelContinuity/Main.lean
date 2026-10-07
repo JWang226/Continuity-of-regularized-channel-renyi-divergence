@@ -11,6 +11,7 @@ import ChannelContinuity.OperatorAlgebra
 import ChannelContinuity.Parameters
 import ChannelContinuity.Testing
 import ChannelContinuity.Limsup
+import Mathlib.Tactic.Positivity
 
 /-!
 # Conditional formalization of Theorem 1

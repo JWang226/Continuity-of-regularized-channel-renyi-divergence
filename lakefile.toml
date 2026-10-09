@@ -30,4 +30,5 @@ roots = [
   "ComparatorChallenges.ChannelRenyiContinuity",
   "ComparatorChallenges.WrongStatement",
   "ComparatorChallenges.MissingProof",
+  "ComparatorChallenges.OneSidedLimit",
 ]

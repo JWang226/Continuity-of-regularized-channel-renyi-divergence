@@ -10,10 +10,20 @@ they are not part of the solution or the `All` build.
 The [positive configuration](ChannelRenyiContinuity.json) asks
 [Comparator](https://github.com/leanprover/comparator) to match all three theorem
 statements and their referenced definitions, admit only `propext`,
-`Quot.sound`, and `Classical.choice`, and replay the solution in Lean's kernel.
+`Quot.sound`, and `Classical.choice`, and replay the exported target dependency
+closure in Lean's kernel. The theorem comparison uses alpha-equivalent
+elaborated expressions, allowing binder renaming; referenced declarations'
+types and bodies are compared recursively. This checks correspondence to the
+shared formal definitions. Their correspondence to the paper requires
+mathematical review.
 The [wrong-statement](WrongStatement.json) and
 [missing-proof](MissingProof.json) configurations are rejection controls. They
 should fail, respectively, with a statement mismatch and an illegal `sorryAx`.
+The [one-sided-limit control](OneSidedLimit.json) changes only the reference
+filter from `𝓝[≠] 1` to `𝓝[>] 1`, while keeping the completed solution. It must
+fail with a mismatch for `QuantumChannelContinuity.theorem_one`, demonstrating
+that the loss of the left-hand limit is detected. Its reference hole is
+deliberate; statement matching rejects the changed type before axiom checking.
 
 ## One-command reproduction
 
@@ -25,7 +35,7 @@ repository root:
 ```
 
 This builds the pinned tools, runs the positive check and Lean kernel replay,
-and requires both controls to fail for the expected reasons. It saves logs and
+and requires all three controls to fail for the expected reasons. It saves logs and
 a machine-readable result in a fresh `.lake/comparator-check/` directory.
 Success ends with `COMPARATOR CHECK PASSED`. The reproducer uses the upstream
 development launcher without sandbox isolation; nanoda is a separate check.
@@ -65,4 +75,6 @@ The historical check passed all three positive targets and correctly rejected
 both controls. The reference was recorded after proof development, so the
 check establishes a match to this formal specification; correspondence to the
 manuscript still calls for mathematical review. See the [verification
-summary](../Verification/README.md) for the result and trust scope.
+summary](../Verification/README.md) for the result and trust scope. Matching the
+recorded input hashes establishes byte consistency with the recorded inputs;
+it does not authenticate an unsigned run or replace executing the checkers.

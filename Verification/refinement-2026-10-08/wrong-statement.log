@@ -1,0 +1,27 @@
+Building ComparatorChallenges.ChannelRenyiContinuity
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build ComparatorChallenges.ChannelRenyiContinuity
+⚠ [3069/3069] Replayed ComparatorChallenges.ChannelRenyiContinuity
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:24:8: declaration uses `sorry`
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:31:8: declaration uses `sorry`
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:37:8: declaration uses `sorry`
+Build completed successfully (3069 jobs).
+Exporting #[QuantumChannelContinuity.theorem_one, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ComparatorChallenges.ChannelRenyiContinuity
+Building ComparatorChallenges.WrongStatement
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build ComparatorChallenges.WrongStatement
+⚠ [3069/3069] Replayed ComparatorChallenges.WrongStatement
+warning: ComparatorChallenges/WrongStatement.lean:18:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.theorem_one`:
+  [Nontrivial H]
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] [Nontrivial K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ComparatorChallenges/WrongStatement.lean:18:21: unused variable `N`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ComparatorChallenges/WrongStatement.lean:18:23: unused variable `M`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3069 jobs).
+Exporting #[QuantumChannelContinuity.theorem_one, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ComparatorChallenges.WrongStatement
+uncaught exception: Challenge and solution theorem statement do not match: 'QuantumChannelContinuity.theorem_one'

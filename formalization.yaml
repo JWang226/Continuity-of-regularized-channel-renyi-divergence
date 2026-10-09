@@ -110,6 +110,11 @@ review:
     independent replay, and current statement probes with live dependency hashes.
     Their unsigned record is separate from the historical certificate and
     does not repeat the informal assessment or claim human review.
+    The October 8 refinement record contains another successful Lean audit,
+    Comparator comparison and kernel replay, all three rejection controls
+    (including the one-sided-limit near-miss), and current statement probes.
+    This documentation and test refinement did not rerun Nanoda or change
+    the completed theorem statements or proof bodies.
 
 artifacts:
   paper_mapping: "docs/paper-mapping.json"
@@ -132,9 +137,12 @@ artifacts:
   elaboration_reproduction: "docs/elaboration/README.md"
   elaboration_comparison: "docs/elaboration/COMPARISON_2026-10-06.md"
   cleanup_verification: "Verification/cleanup-2026-10-06/summary.json"
+  refinement_verification: "Verification/refinement-2026-10-08/summary.json"
   metadata_check: "python3 scripts/check-artifacts.py"
   lemma_search: "./search-lemmas.sh"
-  platform_status: "Local Prove2Me-inspired artifacts; no platform upload"
+  platform_status: "Public Prove2me contribution through a separate Lean 4.30.0 port"
+  platform_main_result: "https://prove2.me/theorems/08965788-e9da-48ce-a201-544a72cca517"
+  platform_source_commit: "e29274a69978bb499f00497481c6008befb0b84d"
 
 acknowledgements: >-
   Built on Lean, mathlib, and Lean-Quantum. Comparator and nanoda were used for

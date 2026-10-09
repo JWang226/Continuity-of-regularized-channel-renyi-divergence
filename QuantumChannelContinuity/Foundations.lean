@@ -94,7 +94,13 @@ theorem toBits_mono : Monotone toBits := by
 @[simp] theorem toBits_top : toBits ⊤ = ⊤ := by
   exact EReal.mul_top_of_pos (by exact_mod_cast (inv_pos.mpr log_two_pos))
 
-/-- The support-aware sandwiched Rényi divergence in bits. -/
+/-- The support-aware sandwiched Rényi divergence in bits.
+
+Since `H` is finite dimensional, each operator in `L H` has finite spectrum and every
+scalar function is continuous on that spectrum. Thus `CFC.rpow σ.op t` for `t < 0`
+raises positive eigenvalues to `t` and sends zero eigenvalues to zero
+(`NNReal.zero_rpow`), giving the pseudo-inverse power on the support of `σ.op`.
+The separate support test in `sandwichedRenyiDivNN` assigns infinity when required. -/
 noncomputable def stateRenyi (α : ℝ) (ρ σ : DensityState H) : EReal :=
   toBits (sandwichedRenyiDivNN α ρ.op σ.op)
 

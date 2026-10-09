@@ -1,0 +1,13 @@
+{
+  "challenge_module": "ComparatorChallenges.OneSidedLimit",
+  "solution_module": "ChannelRenyiContinuity",
+  "theorem_names": [
+    "QuantumChannelContinuity.theorem_one"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": false
+}

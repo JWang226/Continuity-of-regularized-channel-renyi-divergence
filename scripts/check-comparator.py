@@ -38,11 +38,16 @@ def digest(path):
 
 
 def sources():
+    """Hash the project sources, configurations, and scripts driving this check."""
     paths = list(ROOT.glob("*.lean"))
     for directory in ("ChannelContinuity", "QuantumChannelContinuity", "ComparatorChallenges"):
         paths.extend((ROOT / directory).rglob("*.lean"))
     paths.extend((ROOT / "ComparatorChallenges").glob("*.json"))
-    paths.extend(ROOT / name for name in ("lean-toolchain", "lakefile.toml", "lake-manifest.json"))
+    paths.extend(ROOT / name for name in (
+        "lean-toolchain", "lakefile.toml", "lake-manifest.json",
+        "check-comparator.sh", "run-lake.sh", "scripts/check-comparator.py",
+        "scripts/comparator-development-landrun.sh",
+    ))
     return {str(p.relative_to(ROOT)): digest(p) for p in sorted(paths)}
 
 
@@ -84,7 +89,7 @@ def main():
     try:
         print("Comparator reproduction: UNSANDBOXED development mode", flush=True)
         print("Logs: " + str(output), flush=True)
-        for name in ("ChannelRenyiContinuity", "WrongStatement", "MissingProof"):
+        for name in ("ChannelRenyiContinuity", "WrongStatement", "MissingProof", "OneSidedLimit"):
             config = json.loads((ROOT / "ComparatorChallenges" / (name + ".json")).read_text())
             expected_targets = TARGETS if name == "ChannelRenyiContinuity" else TARGETS[:1]
             if (config["theorem_names"] != expected_targets
@@ -125,6 +130,8 @@ def main():
              ["Challenge and solution theorem statement do not match"]),
             ("missing-proof", "MissingProof", False,
              ["Illegal axiom detected: 'sorryAx'"]),
+            ("one-sided-limit", "OneSidedLimit", False,
+             ["Challenge and solution theorem statement do not match: 'QuantumChannelContinuity.theorem_one'"]),
         ]
         for name, config, expect_success, diagnostics in jobs:
             config_path = "ComparatorChallenges/" + config + ".json"
@@ -143,7 +150,7 @@ def main():
 
         report["proof_sources_unchanged"] = sources() == before
         if not report["proof_sources_unchanged"]:
-            raise RuntimeError("Proof sources or checker configurations changed during checking.")
+            raise RuntimeError("Proof sources, checker configurations, or runner scripts changed during checking.")
         report["status"] = "PASS"
     except Exception as error:
         report["error"] = str(error)
@@ -152,7 +159,7 @@ def main():
         (output / "result.json").write_text(json.dumps(report, indent=2) + "\n")
     if report["status"] != "PASS":
         return 1
-    print("COMPARATOR CHECK PASSED: three theorem targets, Lean kernel replay, and both rejection controls.")
+    print("COMPARATOR CHECK PASSED: three theorem targets, Lean kernel replay, and three rejection controls.")
     print("Result: " + str(output / "result.json"))
     return 0
 

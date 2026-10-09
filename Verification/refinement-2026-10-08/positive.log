@@ -1,0 +1,179 @@
+Building ComparatorChallenges.ChannelRenyiContinuity
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build ComparatorChallenges.ChannelRenyiContinuity
+⚠ [3069/3069] Replayed ComparatorChallenges.ChannelRenyiContinuity
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:24:8: declaration uses `sorry`
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:31:8: declaration uses `sorry`
+warning: ComparatorChallenges/ChannelRenyiContinuity.lean:37:8: declaration uses `sorry`
+Build completed successfully (3069 jobs).
+Exporting #[QuantumChannelContinuity.theorem_one, QuantumChannelContinuity.blockRenyi_tendsto_regularized, QuantumChannelContinuity.blockRelative_tendsto_regularized, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ComparatorChallenges.ChannelRenyiContinuity
+Building ChannelRenyiContinuity
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build ChannelRenyiContinuity
+⚠ [3512/3592] Replayed QuantumChannelContinuity.StateDominationBounds
+warning: QuantumChannelContinuity/StateDominationBounds.lean:52:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3513/3592] Replayed QuantumChannelContinuity.ChoiSupport
+warning: QuantumChannelContinuity/ChoiSupport.lean:106:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.amplifiedOutput_choiInput`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3534/3592] Replayed QuantumChannelContinuity.FilterHockey
+warning: QuantumChannelContinuity/FilterHockey.lean:60:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.fixed_dilation_hockey_filter_of_slack_attainment`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3538/3592] Replayed QuantumChannelContinuity.ThreePieceSchatten
+warning: QuantumChannelContinuity/ThreePieceSchatten.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: QuantumChannelContinuity/ThreePieceSchatten.lean:145:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3543/3592] Replayed QuantumChannelContinuity.ChannelDominationBounds
+warning: QuantumChannelContinuity/ChannelDominationBounds.lean:30:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.cp_domination_constant_ge_one`:
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/ChannelDominationBounds.lean:42:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.cp_domination_amplifiedOutput`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3546/3592] Replayed QuantumChannelContinuity.StateSupportLimits
+warning: QuantumChannelContinuity/StateSupportLimits.lean:334:10: This simp argument is unused:
+  Complex.real_smul
+
+Hint: Omit it from the simp argument list.
+  simp [̵C̵o̵m̵p̵l̵e̵x̵.̵r̵e̵a̵l̵_̵s̵m̵u̵l̵,̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵a̵d̵d̵_̵r̵e̵]̵[̲C̲o̲m̲p̲l̲e̲x̲.̲a̲d̲d̲_̲r̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/StateSupportLimits.lean:307:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateSupportLimits.lean:307:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateSupportLimits.lean:335:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3554/3592] Replayed QuantumChannelContinuity.RegularizationSup
+warning: QuantumChannelContinuity/RegularizationSup.lean:56:6: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+⚠ [3563/3592] Replayed QuantumChannelContinuity.SDPTrace
+warning: QuantumChannelContinuity/SDPTrace.lean:46:36: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵m̵u̵l̵_̵s̵m̵u̵l̵_̵c̵o̵m̵m̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/SDPTrace.lean:48:37: This simp argument is unused:
+  smul_mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵s̵m̵u̵l̵_̵m̵u̵l̵_̵a̵s̵s̵o̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/SDPTrace.lean:50:8: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTracePair_apply`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:75:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitian_nonneg_iff_trace`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:90:36: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  simp [outer_product,̵ ̵s̵m̵u̵l̵_̵s̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: QuantumChannelContinuity/SDPTrace.lean:100:8: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTrace_apply`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:103:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitian_smul_nonneg`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPTrace.lean:115:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTrace_nonneg`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3564/3592] Replayed QuantumChannelContinuity.SlackTester
+warning: QuantumChannelContinuity/SlackTester.lean:111:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.normalized_choi_test_le_hockey`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SlackTester.lean:149:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.reference_choiVector_surjective`:
+  [Nontrivial A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3565/3592] Replayed QuantumChannelContinuity.SDPCone
+warning: QuantumChannelContinuity/SDPCone.lean:71:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianTracePair_symm`:
+  [Nontrivial H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3566/3592] Replayed QuantumChannelContinuity.SDPPartialTrace
+warning: QuantumChannelContinuity/SDPPartialTrace.lean:101:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianLeftTrace_trace`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QuantumChannelContinuity/SDPPartialTrace.lean:106:0: automatically included section variable(s) unused in theorem `QuantumChannelContinuity.hermitianLeftTrace_adjoint`:
+  [Nontrivial A]
+  [Nontrivial B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial A] [Nontrivial B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3568/3592] Replayed QuantumChannelContinuity.SlackAttainment
+warning: QuantumChannelContinuity/SlackAttainment.lean:69:4: 'change leftPartialTrace (Q : L (B ⊗[ℂ] A)) ≤ (ε : ℂ) • (1 : L A)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3581/3592] Replayed QuantumChannelContinuity.StateOrderPowers
+warning: QuantumChannelContinuity/StateOrderPowers.lean:52:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateOrderPowers.lean:58:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3586/3592] Replayed QuantumChannelContinuity.StateOrderFaithful
+warning: QuantumChannelContinuity/StateOrderFaithful.lean:88:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QuantumChannelContinuity/StateOrderFaithful.lean:90:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3592 jobs).
+Exporting #[QuantumChannelContinuity.theorem_one, QuantumChannelContinuity.blockRenyi_tendsto_regularized, QuantumChannelContinuity.blockRelative_tendsto_regularized, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from ChannelRenyiContinuity
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

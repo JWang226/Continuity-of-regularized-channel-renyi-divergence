@@ -7,6 +7,9 @@ Developed with assistance from Codex.
 [Proof map](docs/PROOF_MAP.md) · [Statement audit](docs/STATEMENT_AUDIT.md) ·
 [Verification guide](VERIFYING.md)
 
+A separate Lean 4.30 port has a [public Prove2me entry for Theorem 1](https://prove2.me/theorems/08965788-e9da-48ce-a201-544a72cca517).
+The checks below use this repository's pinned Lean 4.29 toolchain.
+
 ## The statements
 
 | Result | Checked declaration | Conclusion |
@@ -23,24 +26,28 @@ Lean's supremum definitions to the paper's asymptotic limits.
 The declarations are in the `QuantumChannelContinuity` namespace. The
 [paper-to-Lean mapping](docs/paper-mapping.json) records supporting results and
 their scope; the paper's later operational corollaries are outside this formalization.
+The supporting Schatten estimates cover `1 < p ≤ 2`, which suffices near order
+one. The paper's full Lemma 3 for every `p > 1` is outside the claimed scope.
 
 ## How it was verified
 
-- **Lean:** the cleanup build and transitive axiom audit passed for 1,318 project
+- **Lean:** the October 8 build and transitive axiom audit passed for 1,318 project
   declarations, including 1,090 theorems. Only `propext`, `Classical.choice`, and
   `Quot.sound` are permitted; the proof library has no unresolved placeholders
   or project-specific axioms.
-- **Comparator:** a fresh run compared all three statements and referenced definitions
+- **Comparator:** the October 8 run compared all three statements and referenced definitions
   against the [separate challenge](ComparatorChallenges/ChannelRenyiContinuity.lean),
-  checked axioms, and replayed the proofs through Lean's kernel. Both the
-  wrong-statement and missing-proof controls were rejected. The challenge's
+  checked axioms, and replayed the exported target dependency closure through Lean's kernel. The
+  wrong-statement, missing-proof, and one-sided-limit controls were rejected. The challenge's
   deliberate specification holes are excluded from the proof library.
-- **Nanoda:** the independently implemented Rust kernel accepted 61,840
-  declarations in a fresh solution export, including all three theorem targets.
+- **Nanoda:** the October 6 cleanup run of the independently implemented Rust
+  kernel accepted 61,840 declarations, including all three theorem targets.
+  Nanoda was not rerun for the October 8 documentation and test refinements.
 
-The [fresh cleanup record](Verification/cleanup-2026-10-06/README.md) includes
-source hashes, checker results, logs, and current statement probes. These are
-completed local, unsandboxed checks. The record is unsigned, and the
+The [October 8 verification record](Verification/refinement-2026-10-08/README.md)
+includes source hashes, checker results, logs, and current statement probes.
+The [October 6 cleanup record](Verification/cleanup-2026-10-06/README.md)
+retains the Nanoda run. These are completed local, unsandboxed checks. The records are unsigned, and the
 Comparator reference was recorded after proof development. Independent human
 review of correspondence to the paper remains outstanding. The
 [historical verification record](Verification/README.md) and
@@ -87,6 +94,8 @@ Lean and dependencies are pinned in [lean-toolchain](lean-toolchain) and
 proof. The [verification guide](VERIFYING.md) gives expected outputs,
 troubleshooting, and instructions for replaying the exact released certificate.
 The Comparator reproducer uses unsandboxed development mode.
+It also requires rejection of a near-miss reference that changes the main
+theorem's two-sided limit to a right-sided limit.
 
 ## Elaboration cleanup
 

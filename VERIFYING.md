@@ -7,11 +7,13 @@ axioms, independently check proof exports with Nanoda, or
 reproduce the full Comparator check and its rejection tests. The commands below
 use a macOS or Linux terminal and do not require the author's local files.
 
-Fresh checks of the cleanup source are recorded in the
-[unsigned cleanup record](Verification/cleanup-2026-10-06/summary.json).
+Fresh checks of the October 8 refinements are recorded in the
+[unsigned refinement record](Verification/refinement-2026-10-08/README.md).
 The Lean audit accepted **1,318 project declarations, including 1,090 theorems**;
-Comparator checked all three targets with Lean kernel replay and both rejection
-controls. Nanoda replay and current statement/definition probes also passed.
+Comparator checked all three targets with Lean kernel replay and all three rejection
+controls. Current statement/definition probes also passed. The
+[October 6 cleanup record](Verification/cleanup-2026-10-06/summary.json)
+retains the earlier Nanoda replay; Nanoda was not rerun for these refinements.
 The v1.0.0 certificate below retains its original source and proof export.
 
 ## Comparator reproducer for this checkout
@@ -25,19 +27,24 @@ repository root:
 
 The script downloads dependency caches, builds the pinned Comparator and
 exporter, verifies their source revisions, and checks the three theorem targets
-with Lean kernel replay. It then requires the wrong-statement and missing-proof
-controls to fail for their intended reasons. Build failures are not accepted
+with Lean kernel replay of the exported target dependency closure. The theorem
+types are compared as alpha-equivalent elaborated expressions; referenced
+declaration types and bodies are compared recursively. It then requires the
+wrong-statement, missing-proof, and one-sided-limit controls to fail for their
+intended reasons. The last control changes `𝓝[≠] 1` to `𝓝[>] 1` in the reference
+and must report a mismatch for `QuantumChannelContinuity.theorem_one`.
+Build failures are not accepted
 as successful rejection tests. Proof sources and configurations must remain
 unchanged during the run.
 
 Success ends with:
 
 ```text
-COMPARATOR CHECK PASSED: three theorem targets, Lean kernel replay, and both rejection controls.
+COMPARATOR CHECK PASSED: three theorem targets, Lean kernel replay, and three rejection controls.
 ```
 
 Every run gets a new directory under `.lake/comparator-check/`, containing
-`positive.log`, the two rejection logs, source hashes, and `result.json` with
+`positive.log`, the three rejection logs, project and runner source hashes, and `result.json` with
 exit statuses and a final `PASS` or `FAIL`. Use `./check-comparator.sh --skip-cache`
 when dependency caches are already prepared. The script does not install elan;
 follow the setup below if `lake` is missing.
@@ -46,6 +53,9 @@ This reproducer uses the pinned upstream **unsandboxed development launcher**
 on both macOS and Linux. It runs Comparator's Lean kernel replay; the separate
 nanoda replay and historical release-certificate reproduction are described
 below. It does not regenerate or overwrite the released certificate.
+The source hashes bind the recorded inputs and detect changes during the run.
+They do not authenticate an unsigned execution record; independent reproduction
+requires running the checkers.
 
 ## Nanoda reproducer for this checkout
 

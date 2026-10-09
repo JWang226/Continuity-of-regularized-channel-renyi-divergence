@@ -43,7 +43,7 @@ values; **a literal, unmodified skill pass is not claimed**.
 
 | Target | Paper locator | Solution |
 | --- | --- | --- |
-| `QuantumChannelContinuity.theorem_one` | Theorem 1, Eq. (1.1) | [Main.lean](../QuantumChannelContinuity/Main.lean#L54) |
+| `QuantumChannelContinuity.theorem_one` | Theorem 1, Eq. (1.1) | [Main.lean](../QuantumChannelContinuity/Main.lean#L49) |
 | `QuantumChannelContinuity.blockRenyi_tendsto_regularized` | Rényi instance of Eq. (1.5) | [RegularizationLimits.lean](../QuantumChannelContinuity/RegularizationLimits.lean#L118) |
 | `QuantumChannelContinuity.blockRelative_tendsto_regularized` | Relative-entropy instance of Eq. (1.5) | [RegularizationLimits.lean](../QuantumChannelContinuity/RegularizationLimits.lean#L127) |
 
@@ -58,8 +58,8 @@ The common surface binders below apply to all three targets; `A, B` replace
 
 | Binder | Form and type | Bin | Source basis |
 | --- | --- | --- | --- |
-| `H` | implicit `Type` | TYPING | Input-space carrier, §1.1 |
-| `K` | implicit `Type` | TYPING | Output-space carrier, §1.1 |
+| `H` | implicit `Type` (universe zero) | TYPING | Input-space carrier, §1.1 |
+| `K` | implicit `Type` (universe zero) | TYPING | Output-space carrier, §1.1 |
 | `Qudit H` | instance | STANDING | Finite complex Hilbert space, §1.1 |
 | `Qudit K` | instance | STANDING | Same |
 | `Nontrivial H` | instance | STANDING, under the stated convention | Nonzero quantum system; implicit in paper |

@@ -1,0 +1,2 @@
+ARTIFACT CHECK PASSED: 90 Lean headers; 90 current owned Lean sources; 13 paper mappings; 1268 indexed declarations.
+Historical assessments validated against retained pre-cleanup inputs; current provenance is bookkeeping, not a proof certificate.

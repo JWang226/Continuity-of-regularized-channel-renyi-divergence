@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-09T02:54:00.181688+00:00",
+  "sandbox": "none: upstream development launcher",
+  "nanoda": "not run; see VERIFYING.md for independent replay",
+  "tool_pins": {
+    "Comparator": "066c3bc9e966ccad9a633d780ae4de13cd0f27b6",
+    "Lean4Checker": "b7398199245524275543dec6113229c9bb4902e5",
+    "lean4export": "048394e1afeeb52b0fa27bcf3f1ade2ff0f0ab6d"
+  },
+  "theorems": [
+    "QuantumChannelContinuity.theorem_one",
+    "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+    "QuantumChannelContinuity.blockRelative_tendsto_regularized"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "checks": [
+    {
+      "name": "positive",
+      "configuration": "ComparatorChallenges/ChannelRenyiContinuity.json",
+      "configuration_sha256": "e454bc96de78a37ef6853e10d9a7ec34d24c920de11f128722ff5bfd0ea41c5d",
+      "exit_status": 0,
+      "expected_success": true,
+      "expected_diagnostics": [
+        "Lean default kernel accepts the solution",
+        "Your solution is okay!"
+      ],
+      "passed": true,
+      "log": "positive.log",
+      "log_sha256": "54bcf963ac8a9b0f81e5d8bf6df337fe596d194a34901cce482b8f08420b4c22"
+    },
+    {
+      "name": "wrong-statement",
+      "configuration": "ComparatorChallenges/WrongStatement.json",
+      "configuration_sha256": "6346e0083a146edc2428f45234e58e4be7ec81d5dbbd8ecac32a12ccb1967332",
+      "exit_status": 1,
+      "expected_success": false,
+      "expected_diagnostics": [
+        "Challenge and solution theorem statement do not match"
+      ],
+      "passed": true,
+      "log": "wrong-statement.log",
+      "log_sha256": "35e8b856da3c06a92f362ed2f8f6337dc12ec4770919da784ded50fd6ff06667"
+    },
+    {
+      "name": "missing-proof",
+      "configuration": "ComparatorChallenges/MissingProof.json",
+      "configuration_sha256": "65c7e129a29231ef6f4e73dde223477809d0fafc8655396e874896fa8b921a36",
+      "exit_status": 1,
+      "expected_success": false,
+      "expected_diagnostics": [
+        "Illegal axiom detected: 'sorryAx'"
+      ],
+      "passed": true,
+      "log": "missing-proof.log",
+      "log_sha256": "a8f12ff0e2f874b746ad342b4b9145107718d421794894318880336690ce8c4b"
+    },
+    {
+      "name": "one-sided-limit",
+      "configuration": "ComparatorChallenges/OneSidedLimit.json",
+      "configuration_sha256": "6aba05e5e66107a6ae1c5cdf8a226d62fa5cc53082e60620f9cd85044f59fbe0",
+      "exit_status": 1,
+      "expected_success": false,
+      "expected_diagnostics": [
+        "Challenge and solution theorem statement do not match: 'QuantumChannelContinuity.theorem_one'"
+      ],
+      "passed": true,
+      "log": "one-sided-limit.log",
+      "log_sha256": "f4b4f0e79b731aee3743563201417db54882bd768daf0adab10718004dd0310e"
+    }
+  ],
+  "proof_sources_unchanged": true
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "review-refinement-verification-v1",
+  "status": "PASS",
+  "assembled_utc": "2026-10-09T03:10:30.846831+00:00",
+  "baseline_commit": "e29274a69978bb499f00497481c6008befb0b84d",
+  "signed": false,
+  "human_review_completed": false,
+  "scope": "Documentation refinements and a one-sided-limit Comparator rejection control. Fresh Lean build/axiom audit, Comparator comparison/kernel replay and three rejection controls, current statement probes, index regeneration and artifact consistency checks.",
+  "targets": [
+    "QuantumChannelContinuity.theorem_one",
+    "QuantumChannelContinuity.blockRenyi_tendsto_regularized",
+    "QuantumChannelContinuity.blockRelative_tendsto_regularized"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "audit": {
+    "declarations": 1318,
+    "theorems": 1090,
+    "status": "PASS"
+  },
+  "comparator": {
+    "status": "PASS",
+    "checks": [
+      "positive",
+      "wrong-statement",
+      "missing-proof",
+      "one-sided-limit"
+    ],
+    "source_inventory_count": 97,
+    "sandbox": "none: upstream development launcher"
+  },
+  "index": {
+    "declarations": 1268,
+    "baseline_names_types_and_dependency_lists_unchanged": true
+  },
+  "statement_probes": {
+    "status": "passed",
+    "semantic_correspondence_automated": false
+  },
+  "nanoda": {
+    "rerun": false,
+    "historical_record": "../cleanup-2026-10-06/nanoda-result.json"
+  },
+  "note": "Historical certificate/cleanup records and dated assessment JSON are unchanged. Source hashes establish recorded-input consistency, not authentication of an unsigned execution or human correspondence review.",
+  "files": {
+    "artifacts.log": "482e32fd0d895e3ea61324574af93443ad909fd8db5645fc21f5d0a8ef6ec280",
+    "comparator-result.json": "901cbf996fe22c59e1f105ecdd06d75f68e2f0321624416811c301b0cb37d287",
+    "comparator-sources.json": "aa47326cccd01621188175e78cacd6f043f768736232462c16d1a1337af3c167",
+    "current-source-identity.json": "7b6da206c29afb64846f7c816468e92a81b97255897d59a5d7716ddeabe9deb8",
+    "lean-audit.log": "d35e647e2c9308ed938a2ef8189d2e83a193a08868863be12aa90b9fca0b95ce",
+    "missing-proof.log": "a8f12ff0e2f874b746ad342b4b9145107718d421794894318880336690ce8c4b",
+    "one-sided-limit.log": "f4b4f0e79b731aee3743563201417db54882bd768daf0adab10718004dd0310e",
+    "positive.log": "54bcf963ac8a9b0f81e5d8bf6df337fe596d194a34901cce482b8f08420b4c22",
+    "proof-index.json": "1147cb69d7a8c0c88560cce41d93192233a9455a80e41e37e63ccdc77c0cb061",
+    "statement-probes-result.json": "f9486bfb628824755896fcf591247804ff540fac6bacfa301fd93d9d0a405d5d",
+    "wrong-statement.log": "35e8b856da3c06a92f362ed2f8f6337dc12ec4770919da784ded50fd6ff06667"
+  }
+}
